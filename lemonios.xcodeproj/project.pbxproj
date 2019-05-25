@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A4558952299825700250D01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558942299825700250D01 /* AppDelegate.swift */; };
+		2A4558972299825700250D01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558962299825700250D01 /* ViewController.swift */; };
+		2A45589A2299825700250D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4558982299825700250D01 /* Main.storyboard */; };
+		2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A45589B2299825700250D01 /* lemonios.xcdatamodeld */; };
+		2A45589F2299825800250D01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A45589E2299825800250D01 /* Assets.xcassets */; };
+		2A4558A22299825800250D01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4558A02299825800250D01 /* LaunchScreen.storyboard */; };
+		2A4558AD2299825900250D01 /* lemoniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558AC2299825900250D01 /* lemoniosTests.swift */; };
+		2A4558B82299825900250D01 /* lemoniosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558B72299825900250D01 /* lemoniosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A4558A92299825900250D01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A4558902299825700250D01;
+			remoteInfo = lemonios;
+		};
+		2A4558B42299825900250D01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A4558902299825700250D01;
+			remoteInfo = lemonios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A4558912299825700250D01 /* lemonios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lemonios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4558942299825700250D01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A4558962299825700250D01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A4558992299825700250D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A45589C2299825700250D01 /* lemonios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = lemonios.xcdatamodel; sourceTree = "<group>"; };
+		2A45589E2299825800250D01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A4558A12299825800250D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A4558A32299825800250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A4558A82299825900250D01 /* lemoniosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lemoniosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4558AC2299825900250D01 /* lemoniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lemoniosTests.swift; sourceTree = "<group>"; };
+		2A4558AE2299825900250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A4558B32299825900250D01 /* lemoniosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lemoniosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4558B72299825900250D01 /* lemoniosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lemoniosUITests.swift; sourceTree = "<group>"; };
+		2A4558B92299825900250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A45588E2299825700250D01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A4558A52299825900250D01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A4558B02299825900250D01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A4558882299825600250D01 = {
+			isa = PBXGroup;
+			children = (
+				2A4558932299825700250D01 /* lemonios */,
+				2A4558AB2299825900250D01 /* lemoniosTests */,
+				2A4558B62299825900250D01 /* lemoniosUITests */,
+				2A4558922299825700250D01 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A4558922299825700250D01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A4558912299825700250D01 /* lemonios.app */,
+				2A4558A82299825900250D01 /* lemoniosTests.xctest */,
+				2A4558B32299825900250D01 /* lemoniosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A4558932299825700250D01 /* lemonios */ = {
+			isa = PBXGroup;
+			children = (
+				2A4558942299825700250D01 /* AppDelegate.swift */,
+				2A4558962299825700250D01 /* ViewController.swift */,
+				2A4558982299825700250D01 /* Main.storyboard */,
+				2A45589E2299825800250D01 /* Assets.xcassets */,
+				2A4558A02299825800250D01 /* LaunchScreen.storyboard */,
+				2A4558A32299825800250D01 /* Info.plist */,
+				2A45589B2299825700250D01 /* lemonios.xcdatamodeld */,
+			);
+			path = lemonios;
+			sourceTree = "<group>";
+		};
+		2A4558AB2299825900250D01 /* lemoniosTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A4558AC2299825900250D01 /* lemoniosTests.swift */,
+				2A4558AE2299825900250D01 /* Info.plist */,
+			);
+			path = lemoniosTests;
+			sourceTree = "<group>";
+		};
+		2A4558B62299825900250D01 /* lemoniosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2A4558B72299825900250D01 /* lemoniosUITests.swift */,
+				2A4558B92299825900250D01 /* Info.plist */,
+			);
+			path = lemoniosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A4558902299825700250D01 /* lemonios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A4558BC2299825900250D01 /* Build configuration list for PBXNativeTarget "lemonios" */;
+			buildPhases = (
+				2A45588D2299825700250D01 /* Sources */,
+				2A45588E2299825700250D01 /* Frameworks */,
+				2A45588F2299825700250D01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lemonios;
+			productName = lemonios;
+			productReference = 2A4558912299825700250D01 /* lemonios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A4558A72299825900250D01 /* lemoniosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A4558BF2299825900250D01 /* Build configuration list for PBXNativeTarget "lemoniosTests" */;
+			buildPhases = (
+				2A4558A42299825900250D01 /* Sources */,
+				2A4558A52299825900250D01 /* Frameworks */,
+				2A4558A62299825900250D01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A4558AA2299825900250D01 /* PBXTargetDependency */,
+			);
+			name = lemoniosTests;
+			productName = lemoniosTests;
+			productReference = 2A4558A82299825900250D01 /* lemoniosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2A4558B22299825900250D01 /* lemoniosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A4558C22299825900250D01 /* Build configuration list for PBXNativeTarget "lemoniosUITests" */;
+			buildPhases = (
+				2A4558AF2299825900250D01 /* Sources */,
+				2A4558B02299825900250D01 /* Frameworks */,
+				2A4558B12299825900250D01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A4558B52299825900250D01 /* PBXTargetDependency */,
+			);
+			name = lemoniosUITests;
+			productName = lemoniosUITests;
+			productReference = 2A4558B32299825900250D01 /* lemoniosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A4558892299825600250D01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Inkwire Tech (Hangzhou) Co., Ltd.";
+				TargetAttributes = {
+					2A4558902299825700250D01 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					2A4558A72299825900250D01 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 2A4558902299825700250D01;
+					};
+					2A4558B22299825900250D01 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 2A4558902299825700250D01;
+					};
+				};
+			};
+			buildConfigurationList = 2A45588C2299825600250D01 /* Build configuration list for PBXProject "lemonios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A4558882299825600250D01;
+			productRefGroup = 2A4558922299825700250D01 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A4558902299825700250D01 /* lemonios */,
+				2A4558A72299825900250D01 /* lemoniosTests */,
+				2A4558B22299825900250D01 /* lemoniosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A45588F2299825700250D01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A4558A22299825800250D01 /* LaunchScreen.storyboard in Resources */,
+				2A45589F2299825800250D01 /* Assets.xcassets in Resources */,
+				2A45589A2299825700250D01 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A4558A62299825900250D01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A4558B12299825900250D01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A45588D2299825700250D01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */,
+				2A4558972299825700250D01 /* ViewController.swift in Sources */,
+				2A4558952299825700250D01 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A4558A42299825900250D01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A4558AD2299825900250D01 /* lemoniosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A4558AF2299825900250D01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A4558B82299825900250D01 /* lemoniosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A4558AA2299825900250D01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A4558902299825700250D01 /* lemonios */;
+			targetProxy = 2A4558A92299825900250D01 /* PBXContainerItemProxy */;
+		};
+		2A4558B52299825900250D01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A4558902299825700250D01 /* lemonios */;
+			targetProxy = 2A4558B42299825900250D01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A4558982299825700250D01 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A4558992299825700250D01 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A4558A02299825800250D01 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A4558A12299825800250D01 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A4558BA2299825900250D01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A4558BB2299825900250D01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A4558BD2299825900250D01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				INFOPLIST_FILE = lemonios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemonios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A4558BE2299825900250D01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				INFOPLIST_FILE = lemonios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemonios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2A4558C02299825900250D01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				INFOPLIST_FILE = lemoniosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemoniosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lemonios.app/lemonios";
+			};
+			name = Debug;
+		};
+		2A4558C12299825900250D01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				INFOPLIST_FILE = lemoniosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemoniosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lemonios.app/lemonios";
+			};
+			name = Release;
+		};
+		2A4558C32299825900250D01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				INFOPLIST_FILE = lemoniosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemoniosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lemonios;
+			};
+			name = Debug;
+		};
+		2A4558C42299825900250D01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				INFOPLIST_FILE = lemoniosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemoniosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lemonios;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A45588C2299825600250D01 /* Build configuration list for PBXProject "lemonios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A4558BA2299825900250D01 /* Debug */,
+				2A4558BB2299825900250D01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A4558BC2299825900250D01 /* Build configuration list for PBXNativeTarget "lemonios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A4558BD2299825900250D01 /* Debug */,
+				2A4558BE2299825900250D01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A4558BF2299825900250D01 /* Build configuration list for PBXNativeTarget "lemoniosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A4558C02299825900250D01 /* Debug */,
+				2A4558C12299825900250D01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A4558C22299825900250D01 /* Build configuration list for PBXNativeTarget "lemoniosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A4558C32299825900250D01 /* Debug */,
+				2A4558C42299825900250D01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2A45589B2299825700250D01 /* lemonios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2A45589C2299825700250D01 /* lemonios.xcdatamodel */,
+			);
+			currentVersion = 2A45589C2299825700250D01 /* lemonios.xcdatamodel */;
+			path = lemonios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2A4558892299825600250D01 /* Project object */;
+}
