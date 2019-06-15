@@ -28,9 +28,16 @@ class ViewController: UIViewController, WKUIDelegate {
         let bundleId = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String
         let configUrl = String(format: configUrlTmpl, bundleId ?? "help.hdu.lemon.ios")
         
-        Alamofire.request(configUrl).responseJSON { response in
-            if let json = response.result.value {
-                UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
+        Alamofire.request(configUrl).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                if let json = response.result.value {
+                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
+                }
+            case .failure:
+                let alert = UIAlertController(title: "😯喔", message: "杭电助手似乎无法连接到服务器，请检查您的网络连接。", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "好", style: .default))
+                self.present(alert, animated: true, completion: nil)
             }
         }
         
