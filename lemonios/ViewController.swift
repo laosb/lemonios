@@ -20,9 +20,9 @@ class ViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let configUrlTmpl = "https://client-config.hduhelp.lao.sb/%@.json"
+        let configUrlTmpl = "https://config.hduhelp.com/%@.json"
         let urlTemplate = "%@/?__shell_lemonios=%@&utm_source=lemonios/#"
-        let fallbackBaseUrl = "https://ios--hduhelp-fe.netlify.com"
+        let fallbackBaseUrl = "https://ios.app.hduhelp.com"
         let baseUrl = UserDefaults.standard.string(forKey: "baseUrl") ?? fallbackBaseUrl
         let nativeVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
         let bundleId = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String
@@ -41,7 +41,15 @@ class ViewController: UIViewController, WKUIDelegate {
             }
         }
         
-        let urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown")
+        
+        if let shortcut = appDelegate.getShortcutItem() {
+            if shortcut.type == "help.hdu.lemon.ios.schedule" { urlStr += "/app/schedule" }
+            if shortcut.type == "help.hdu.lemon.ios.card" { urlStr += "/app/card" }
+        }
+        
         // print(urlStr)
         let url = URL(string: urlStr)
         let req = URLRequest(url: url!)
