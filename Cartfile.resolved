@@ -1,1 +1,4 @@
 github "Alamofire/Alamofire" "4.8.2"
+github "GEOSwift/GEOSwift" "5.1.0"
+github "GEOSwift/GEOSwiftMapKit" "1.0.0"
+github "GEOSwift/geos" "4.0.2"

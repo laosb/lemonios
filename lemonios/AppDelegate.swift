@@ -14,17 +14,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var shortcutItem: UIApplicationShortcutItem?
+    var shortcutName: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        if let shortcutItem = launchOptions?[UIApplication.LaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
-            self.shortcutItem = shortcutItem
+        return true
+    }
+    
+    func application(_ application: UIApplication,
+                     performActionFor shortcutItem: UIApplicationShortcutItem,
+                     completionHandler: (Bool) -> Void) {
+        
+        completionHandler(handleShortcut(shortcutItem))
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        if #available(iOS 12.0, *) {
+            let activities = ["schedule", "card", "hdumap"]
+            let activity = String(userActivity.activityType.split(separator: ".").last ?? "")
+            if activities.contains(activity) {
+                self.shortcutName = activity
+                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
+            }
         }
         return true
     }
     
-    func getShortcutItem() -> UIApplicationShortcutItem? { return self.shortcutItem }
+    private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
+        self.shortcutName = String(shortcutItem.type.split(separator: ".").last ?? "")
+        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
+        return true
+    }
+    
+    func getShortcutItem() -> String? { return self.shortcutName }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

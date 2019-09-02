@@ -2,25 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>课表</string>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>view_week</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>help.hdu.lemon.ios.schedule</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>一卡通</string>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>credit_card</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>help.hdu.lemon.ios.card</string>
-		</dict>
-	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>开启定位将允许杭电地图等功能展示您的实时位置。</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
@@ -36,16 +19,52 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.9.2</string>
+	<string>0.9.7</string>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>7</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSUserActivityTypes</key>
+	<dict>
+		<key>OpenHdumap</key>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER).hdumap</string>
+		<key>OpenCard</key>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER).card</string>
+		<key>OpenSchedule</key>
+		<string>$(PRODUCT_BUNDLE_IDENTIFIER).schedule</string>
+	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>view_week</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>课表</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>help.hdu.lemon.ios.schedule</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>credit_card</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>一卡通</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>help.hdu.lemon.ios.card</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>map</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>地图</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>help.hdu.lemon.ios.hdumap</string>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
