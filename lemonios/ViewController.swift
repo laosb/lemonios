@@ -70,7 +70,9 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         let nativeVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
+        
+        webView!.navigationDelegate = self
+        webView!.uiDelegate = self
         var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown")
         
         if let shortcut = appDelegate.getShortcutItem() {
@@ -84,8 +86,6 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         // print(urlStr)
         let url = URL(string: urlStr)
         let req = URLRequest(url: url!)
-        webView!.navigationDelegate = self
-        webView!.uiDelegate = self
         webView!.load(req)
     }
     
@@ -147,8 +147,7 @@ extension ViewController: WKNavigationDelegate {
         if navigationAction.navigationType == WKNavigationType.linkActivated {
             let url = navigationAction.request.url
             let safariView = SFSafariViewController(url: url!)
-            safariView.preferredBarTintColor = primaryColor
-            safariView.preferredControlTintColor = UIColor.white
+            safariView.preferredControlTintColor = primaryColor
             present(safariView, animated: true)
             decisionHandler(WKNavigationActionPolicy.cancel)
             return
