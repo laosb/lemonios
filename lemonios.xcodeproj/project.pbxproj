@@ -20,11 +20,8 @@
 		2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (Required, ); }; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
 		2AE679A3230FE95800F26F07 /* geos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE679A1230FE93900F26F07 /* geos.framework */; };
-		2AE679A4230FE95800F26F07 /* geos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE679A1230FE93900F26F07 /* geos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AE679A6230FE99700F26F07 /* GEOSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67999230FE77E00F26F07 /* GEOSwift.framework */; };
-		2AE679A7230FE99700F26F07 /* GEOSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67999230FE77E00F26F07 /* GEOSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AE679A8230FE99900F26F07 /* GEOSwiftMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67998230FE77E00F26F07 /* GEOSwiftMapKit.framework */; };
-		2AE679A9230FE99900F26F07 /* GEOSwiftMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67998230FE77E00F26F07 /* GEOSwiftMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AE679AF230FFC9500F26F07 /* dormArea.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2AE679AC230FFC9300F26F07 /* dormArea.geojson */; };
 		2AE679B0230FFC9500F26F07 /* majorSchoolBuildings.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2AE679AD230FFC9400F26F07 /* majorSchoolBuildings.geojson */; };
 		2AE679B1230FFC9500F26F07 /* zones.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2AE679AE230FFC9400F26F07 /* zones.geojson */; };
@@ -57,9 +54,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2AE679A9230FE99900F26F07 /* GEOSwiftMapKit.framework in Embed Frameworks */,
-				2AE679A7230FE99700F26F07 /* GEOSwift.framework in Embed Frameworks */,
-				2AE679A4230FE95800F26F07 /* geos.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,11 +404,17 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/geos.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GEOSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GEOSwiftMapKit.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/geos.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/GEOSwift.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/GEOSwiftMapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
