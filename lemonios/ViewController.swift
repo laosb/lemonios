@@ -32,6 +32,22 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    func tryLoad(_ configUrl: String) {
+        Alamofire.request(configUrl).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                if let json = response.result.value {
+                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
+                    self.shortcutFired()
+                }
+            case .failure:
+                let alert = UIAlertController(title: "连接服务器失败", message: "请检查您是否允许杭电助手联网，以及您设备的网络连接。", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "重试", style: .default, handler: { _ in self.tryLoad(configUrl) }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,24 +55,9 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         let bundleId = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String
         let configUrl = String(format: configUrlTmpl, bundleId ?? "help.hdu.lemon.ios")
         
-        Alamofire.request(configUrl).validate().responseJSON { response in
-            switch response.result {
-            case .success:
-                if let json = response.result.value {
-                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
-                }
-            case .failure:
-                let alert = UIAlertController(title: "😯喔", message: "杭电助手似乎无法连接到服务器，请检查您的网络连接。", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "好", style: .default))
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
-        
+        tryLoad(configUrl)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "ShortcutFired"), object: nil)
-        
-        self.shortcutFired()
-        
     }
     
     @objc private func shortcutFired () {
