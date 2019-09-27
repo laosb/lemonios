@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if activities.contains(activity) {
                 self.shortcutName = activity
                 NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
+                userActivity.becomeCurrent()
             }
         }
         return true
@@ -43,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
         self.shortcutName = String(shortcutItem.type.split(separator: ".").last ?? "")
         NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
+        NSUserActivity(activityType: shortcutItem.type).becomeCurrent()
         return true
     }
     
