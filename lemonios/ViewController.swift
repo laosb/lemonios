@@ -28,6 +28,8 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
 
     @IBOutlet weak var webView: WKWebView!
     
+    weak var getTokenTimer: Timer?
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
@@ -87,6 +89,27 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         let url = URL(string: urlStr)
         let req = URLRequest(url: url!)
         webView!.load(req)
+        
+        // Try to get the token
+        getTokenTimer?.invalidate()
+        getTokenTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { timer in
+//            print("try to get token")
+            self.webView!.evaluateJavaScript("""
+                (() => {
+                    window._setupDebug(19260817)
+                    return window._hduhelpDebug.store.state.token || null
+                })()
+            """, completionHandler: { returnValue, error in
+                if returnValue != nil && error == nil {
+                    let token = returnValue as? String
+                    let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                    sharedUd?.set(token, forKey: "token")
+                    sharedUd?.synchronize()
+//                    print("user token:", token)
+                    timer.invalidate()
+                }
+            })
+        })
     }
     
     enum LemonAction: String {
@@ -124,6 +147,10 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             vc.delegate = self
             present(vc, animated: true, completion: nil)
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        getTokenTimer?.invalidate()
     }
 
 }

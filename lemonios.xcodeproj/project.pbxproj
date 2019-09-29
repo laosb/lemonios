@@ -16,6 +16,12 @@
 		2A4558AD2299825900250D01 /* lemoniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558AC2299825900250D01 /* lemoniosTests.swift */; };
 		2A4558B82299825900250D01 /* lemoniosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558B72299825900250D01 /* lemoniosUITests.swift */; };
 		2A4558C72299A45200250D01 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4558C62299A45200250D01 /* WebKit.framework */; };
+		2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
+		2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */; };
+		2A5C40D5233F9AC200B9FF02 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5C40D3233F9AC200B9FF02 /* MainInterface.storyboard */; };
+		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A5C40DE233F9B8800B9FF02 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
+		2A5C40DF233F9B8800B9FF02 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A8EA32822B2935300ECDC39 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (Required, ); }; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
@@ -45,9 +51,38 @@
 			remoteGlobalIDString = 2A4558902299825700250D01;
 			remoteInfo = lemonios;
 		};
+		2A5C40D7233F9AC200B9FF02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A5C40CC233F9AC200B9FF02;
+			remoteInfo = schedulewidget;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2A5C40DA233F9AC200B9FF02 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A5C40E0233F9B8800B9FF02 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A5C40DF233F9B8800B9FF02 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AE679A5230FE95800F26F07 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +111,12 @@
 		2A4558B72299825900250D01 /* lemoniosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lemoniosUITests.swift; sourceTree = "<group>"; };
 		2A4558B92299825900250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A4558C62299A45200250D01 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2A5C40CD233F9AC200B9FF02 /* 下节课.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "下节课.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		2A5C40D4233F9AC200B9FF02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		2A5C40D6233F9AC200B9FF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A5C40E12340B23900B9FF02 /* 快捷课表.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "快捷课表.entitlements"; sourceTree = "<group>"; };
 		2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HduMapViewController.swift; sourceTree = "<group>"; };
 		2AD799DB22B267590053BB4E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -127,6 +168,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A5C40CA233F9AC200B9FF02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */,
+				2A5C40DE233F9B8800B9FF02 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AEC50E022BFD92C0005781E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +195,7 @@
 				2A4558932299825700250D01 /* lemonios */,
 				2A4558AB2299825900250D01 /* lemoniosTests */,
 				2A4558B62299825900250D01 /* lemoniosUITests */,
+				2A5C40D0233F9AC200B9FF02 /* schedulewidget */,
 				2A4558922299825700250D01 /* Products */,
 				2A4558C52299A45200250D01 /* Frameworks */,
 			);
@@ -157,6 +208,7 @@
 				2A4558A82299825900250D01 /* lemoniosTests.xctest */,
 				2A4558B32299825900250D01 /* lemoniosUITests.xctest */,
 				2AEC50E322BFD92C0005781E /* opensubapp.appex */,
+				2A5C40CD233F9AC200B9FF02 /* 下节课.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,8 +262,20 @@
 				2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */,
 				2AD799DD22B271900053BB4E /* Alamofire.framework */,
 				2A4558C62299A45200250D01 /* WebKit.framework */,
+				2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A5C40D0233F9AC200B9FF02 /* schedulewidget */ = {
+			isa = PBXGroup;
+			children = (
+				2A5C40E12340B23900B9FF02 /* 快捷课表.entitlements */,
+				2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */,
+				2A5C40D3233F9AC200B9FF02 /* MainInterface.storyboard */,
+				2A5C40D6233F9AC200B9FF02 /* Info.plist */,
+			);
+			path = schedulewidget;
 			sourceTree = "<group>";
 		};
 		2AE679AB230FFC5200F26F07 /* Resources */ = {
@@ -236,10 +300,12 @@
 				2A45588F2299825700250D01 /* Resources */,
 				2AD799DC22B270FC0053BB4E /* ShellScript */,
 				2AE679A5230FE95800F26F07 /* Embed Frameworks */,
+				2A5C40DA233F9AC200B9FF02 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2A5C40D8233F9AC200B9FF02 /* PBXTargetDependency */,
 			);
 			name = lemonios;
 			productName = lemonios;
@@ -282,6 +348,24 @@
 			productReference = 2A4558B32299825900250D01 /* lemoniosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2A5C40CC233F9AC200B9FF02 /* schedulewidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A5C40DD233F9AC200B9FF02 /* Build configuration list for PBXNativeTarget "schedulewidget" */;
+			buildPhases = (
+				2A5C40C9233F9AC200B9FF02 /* Sources */,
+				2A5C40CA233F9AC200B9FF02 /* Frameworks */,
+				2A5C40CB233F9AC200B9FF02 /* Resources */,
+				2A5C40E0233F9B8800B9FF02 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = schedulewidget;
+			productName = schedulewidget;
+			productReference = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2AEC50E222BFD92C0005781E /* opensubapp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AEC50EB22BFD92C0005781E /* Build configuration list for PBXNativeTarget "opensubapp" */;
@@ -305,7 +389,7 @@
 		2A4558892299825600250D01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Inkwire Tech (Hangzhou) Co., Ltd.";
 				TargetAttributes = {
@@ -331,6 +415,9 @@
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 2A4558902299825700250D01;
 					};
+					2A5C40CC233F9AC200B9FF02 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					2AEC50E222BFD92C0005781E = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -353,6 +440,7 @@
 				2A4558A72299825900250D01 /* lemoniosTests */,
 				2A4558B22299825900250D01 /* lemoniosUITests */,
 				2AEC50E222BFD92C0005781E /* opensubapp */,
+				2A5C40CC233F9AC200B9FF02 /* schedulewidget */,
 			);
 		};
 /* End PBXProject section */
@@ -382,6 +470,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A5C40CB233F9AC200B9FF02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5C40D5233F9AC200B9FF02 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +546,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A5C40C9233F9AC200B9FF02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AEC50DF22BFD92C0005781E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -470,6 +574,11 @@
 			target = 2A4558902299825700250D01 /* lemonios */;
 			targetProxy = 2A4558B42299825900250D01 /* PBXContainerItemProxy */;
 		};
+		2A5C40D8233F9AC200B9FF02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A5C40CC233F9AC200B9FF02 /* schedulewidget */;
+			targetProxy = 2A5C40D7233F9AC200B9FF02 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -487,6 +596,14 @@
 				2A4558A12299825800250D01 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2A5C40D3233F9AC200B9FF02 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A5C40D4233F9AC200B9FF02 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -611,6 +728,7 @@
 		2A4558BD2299825900250D01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -625,6 +743,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -635,6 +754,7 @@
 		2A4558BE2299825900250D01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -649,6 +769,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -738,6 +859,56 @@
 			};
 			name = Release;
 		};
+		2A5C40DB233F9AC200B9FF02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = schedulewidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
+				PRODUCT_NAME = "下节课";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A5C40DC233F9AC200B9FF02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = schedulewidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
+				PRODUCT_NAME = "下节课";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2AEC50EC22BFD92C0005781E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -811,6 +982,15 @@
 			buildConfigurations = (
 				2A4558C32299825900250D01 /* Debug */,
 				2A4558C42299825900250D01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A5C40DD233F9AC200B9FF02 /* Build configuration list for PBXNativeTarget "schedulewidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A5C40DB233F9AC200B9FF02 /* Debug */,
+				2A5C40DC233F9AC200B9FF02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
