@@ -95,6 +95,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="110"/>
                     <connections>
+                        <outlet property="signInBtn" destination="5TT-5g-x6O" id="yMf-eH-cTJ"/>
                         <outlet property="statusLabel" destination="nlR-n0-QZk" id="CAm-bH-BuZ"/>
                         <outlet property="table" destination="qWw-zo-qoH" id="NcF-TM-85p"/>
                     </connections>

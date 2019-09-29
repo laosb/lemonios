@@ -20,8 +20,7 @@
 		2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */; };
 		2A5C40D5233F9AC200B9FF02 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5C40D3233F9AC200B9FF02 /* MainInterface.storyboard */; };
 		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A5C40DE233F9B8800B9FF02 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
-		2A5C40DF233F9B8800B9FF02 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A5C40E42340E42800B9FF02 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32822B2935300ECDC39 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (Required, ); }; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
@@ -70,17 +69,6 @@
 				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A5C40E0233F9B8800B9FF02 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2A5C40DF233F9B8800B9FF02 /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2AE679A5230FE95800F26F07 /* Embed Frameworks */ = {
@@ -173,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */,
-				2A5C40DE233F9B8800B9FF02 /* Alamofire.framework in Frameworks */,
+				2A5C40E42340E42800B9FF02 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +343,6 @@
 				2A5C40C9233F9AC200B9FF02 /* Sources */,
 				2A5C40CA233F9AC200B9FF02 /* Frameworks */,
 				2A5C40CB233F9AC200B9FF02 /* Resources */,
-				2A5C40E0233F9B8800B9FF02 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -732,6 +719,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -758,6 +746,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -864,6 +853,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -876,6 +866,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -889,6 +880,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -901,6 +893,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;

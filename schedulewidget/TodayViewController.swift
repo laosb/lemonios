@@ -14,6 +14,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var signInBtn: UIButton!
     
     var scheduleData: Array<NSDictionary>?
     var isTomorow: Bool = false
@@ -38,11 +39,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 self.statusLabel.text = self.scheduleData?.count ?? 0 > 0
                     ? ""
                     : "今天明天都没有课程。享受生活！"
+                if self.scheduleData?.count ?? 0 == 0 {
+                    self.signInBtn.isHidden = true
+                } else {
+                    self.signInBtn.isHidden = false
+                }
                 self.table.reloadData()
             case .failure:
                 self.statusLabel.text = "获取课表失败"
                 self.scheduleData = []
                 self.table.reloadData()
+                self.signInBtn.isHidden = true
             }
         })
     }
@@ -57,6 +64,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             loadQuickScheduleData(token: token!)
         } else {
             statusLabel.text = "您尚未登录杭电助手，或者您的会话已过期。请打开杭电助手尝试登录。"
+            self.signInBtn.isHidden = true
         }
     }
         
