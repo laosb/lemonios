@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,7 @@
 		2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */; };
 		2A5C40D5233F9AC200B9FF02 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5C40D3233F9AC200B9FF02 /* MainInterface.storyboard */; };
-		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A5C40E42340E42800B9FF02 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32822B2935300ECDC39 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -563,6 +563,7 @@
 		};
 		2A5C40D8233F9AC200B9FF02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 2A5C40CC233F9AC200B9FF02 /* schedulewidget */;
 			targetProxy = 2A5C40D7233F9AC200B9FF02 /* PBXContainerItemProxy */;
 		};
@@ -719,7 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -734,6 +735,7 @@
 				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -746,7 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -761,6 +763,7 @@
 				MARKETING_VERSION = 0.9.8;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -853,7 +856,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -870,6 +873,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -880,7 +884,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -897,6 +901,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

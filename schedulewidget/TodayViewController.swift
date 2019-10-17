@@ -18,12 +18,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     var scheduleData: Array<NSDictionary>?
     var isTomorow: Bool = false
+    var token: String = ""
     
     @IBAction func signInBtnTapped(_ sender: Any) {
         self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/#/sign/in")!, completionHandler: nil)
     }
     
     func loadQuickScheduleData(token: String) {
+//        print("load data")
         Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
             "Authorization": "token \(token)"
         ]).validate().responseJSON(completionHandler: { response in
@@ -39,7 +41,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 self.statusLabel.text = self.scheduleData?.count ?? 0 > 0
                     ? ""
                     : "今天明天都没有课程。享受生活！"
-                if self.scheduleData?.count ?? 0 == 0 {
+                if self.scheduleData == nil || self.scheduleData!.count == 0 {
                     self.signInBtn.isHidden = true
                 } else {
                     self.signInBtn.isHidden = false
@@ -60,12 +62,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
         let token = sharedUd?.string(forKey: "token")
+        self.token = token ?? ""
         if token != nil {
             loadQuickScheduleData(token: token!)
         } else {
             statusLabel.text = "您尚未登录杭电助手，或者您的会话已过期。请打开杭电助手尝试登录。"
             self.signInBtn.isHidden = true
         }
+        
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.labelTapped))
+        self.statusLabel.addGestureRecognizer(labelTap)
+    }
+    
+    @IBAction func labelTapped(sender:UITapGestureRecognizer) {
+        self.loadQuickScheduleData(token: self.token)
     }
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
