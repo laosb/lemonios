@@ -70,8 +70,16 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             self.signInBtn.isHidden = true
         }
         
+        // Reload on tap
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.labelTapped))
         self.statusLabel.addGestureRecognizer(labelTap)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        // Make sure we show exactly 2 rows in widget.
+        super.viewDidLayoutSubviews()
+        self.table.rowHeight = self.table.bounds.height / 2 + 0.5
+
     }
     
     @IBAction func labelTapped(sender:UITapGestureRecognizer) {
