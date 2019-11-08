@@ -10,7 +10,7 @@ import SwiftUI
 import Alamofire
 
 struct LMWidgetSunRun {
-    var speed: Double?
+    var speed: String?
     var validTimes: Int?
     var mileage: Int?
     var isValid: Bool?
@@ -26,7 +26,7 @@ struct SunRunWidget: View {
     var srData: LMWidgetSunRun?
 
     var body: some View {
-        VStack {
+        VStack() {
             if srData?.available ?? false {
                 VStack {
                     HStack {
@@ -49,16 +49,17 @@ struct SunRunWidget: View {
                                 .foregroundColor(.orange)
                         }
                     }
+                    Spacer()
                     HStack {
-                        Text("\(self.srData?.speed ?? 0) m/s")
+                        Text("\(self.srData?.speed ?? "") m/s")
                             .font(.headline)
-                            .foregroundColor(.black)
+                            .foregroundColor(.orange)
                         Spacer()
                         Text("\(self.srData?.date ?? "") \(self.srData?.domain ?? "")")
                             .font(.headline)
-                            .foregroundColor(.black)
-                    }.padding()
-                }
+                            .foregroundColor(.orange)
+                    }
+                }.padding()
             } else {
                 VStack {
                     Text("您登陆已过期，或者还未登陆杭电助手")
