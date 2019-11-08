@@ -21,7 +21,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         self.addChild(srVc)
         srVc.didMove(toParent: self)
     }
-        
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +47,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                             let latestData = indexData?.object(forKey: "latest") as? NSDictionary
                             srData.domain = latestData?.object(forKey: "domain") as? String
                             srData.isValid = latestData?.object(forKey: "isvalid") as? Bool
-                            srData.speed = latestData?.object(forKey: "speed") as? Double
+                            let tempSpeed = latestData?.object(forKey: "speed") as? Double
+                            srData.speed = String(format:"%.2lf",tempSpeed ?? 0)
                             srData.validTimes = indexData?.object(forKey: "validTimes") as? Int
                             srData.mileage = latestData?.object(forKey: "mileage") as? Int
                             srData.date = latestData?.object(forKey: "date") as? String
