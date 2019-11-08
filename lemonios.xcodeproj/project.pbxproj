@@ -36,6 +36,14 @@
 		2A8EA32822B2935300ECDC39 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (Required, ); }; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
+		2ADBF3B02375B928001BE5D5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AF2375B928001BE5D5 /* .gitignore */; };
+		2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
+		2ADBF3B92375BD31001BE5D5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3B82375BD31001BE5D5 /* TodayViewController.swift */; };
+		2ADBF3BC2375BD31001BE5D5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBF3BA2375BD31001BE5D5 /* MainInterface.storyboard */; };
+		2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */; };
+		2ADBF3C52375C220001BE5D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
+		2ADBF3C62375C220001BE5D5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AE679A3230FE95800F26F07 /* geos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE679A1230FE93900F26F07 /* geos.framework */; };
 		2AE679A6230FE99700F26F07 /* GEOSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67999230FE77E00F26F07 /* GEOSwift.framework */; };
 		2AE679A8230FE99900F26F07 /* GEOSwiftMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67998230FE77E00F26F07 /* GEOSwiftMapKit.framework */; };
@@ -83,6 +91,13 @@
 			remoteGlobalIDString = 2A5C40CC233F9AC200B9FF02;
 			remoteInfo = schedulewidget;
 		};
+		2ADBF3BE2375BD31001BE5D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ADBF3B42375BD31001BE5D5;
+			remoteInfo = sunrunwidget;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,8 +130,20 @@
 			dstSubfolderSpec = 13;
 			files = (
 				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
+				2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ADBF3C72375C220001BE5D5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2ADBF3C62375C220001BE5D5 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2AE679A5230FE95800F26F07 /* Embed Frameworks */ = {
@@ -172,6 +199,13 @@
 		2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HduMapViewController.swift; sourceTree = "<group>"; };
 		2AD799DB22B267590053BB4E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		2AD799DD22B271900053BB4E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRunWidget.swift; sourceTree = "<group>"; };
+		2ADBF3AF2375B928001BE5D5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "阳光长跑.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ADBF3B82375BD31001BE5D5 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		2ADBF3BB2375BD31001BE5D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		2ADBF3BD2375BD31001BE5D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ADBF3C82375D510001BE5D5 /* 阳光长跑.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "阳光长跑.entitlements"; sourceTree = "<group>"; };
 		2AE67998230FE77E00F26F07 /* GEOSwiftMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GEOSwiftMapKit.framework; path = Carthage/Build/iOS/GEOSwiftMapKit.framework; sourceTree = "<group>"; };
 		2AE67999230FE77E00F26F07 /* GEOSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GEOSwift.framework; path = Carthage/Build/iOS/GEOSwift.framework; sourceTree = "<group>"; };
 		2AE6799F230FE93900F26F07 /* geos.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = geos.framework.dSYM; path = Carthage/Build/iOS/geos.framework.dSYM; sourceTree = "<group>"; };
@@ -235,6 +269,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2ADBF3B22375BD31001BE5D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */,
+				2ADBF3C52375C220001BE5D5 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AEC50E022BFD92C0005781E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +326,7 @@
 		2A4558882299825600250D01 = {
 			isa = PBXGroup;
 			children = (
+				2ADBF3AF2375B928001BE5D5 /* .gitignore */,
 				2AE679AB230FFC5200F26F07 /* Resources */,
 				2AD799DB22B267590053BB4E /* Cartfile */,
 				2A4558932299825700250D01 /* lemonios */,
@@ -291,6 +335,7 @@
 				2A5C40D0233F9AC200B9FF02 /* schedulewidget */,
 				2A17FA28235CB81A00BBFE8A /* watch */,
 				2A17FA37235CB81C00BBFE8A /* watch Extension */,
+				2ADBF3B72375BD31001BE5D5 /* sunrunwidget */,
 				2A4558922299825700250D01 /* Products */,
 				2A4558C52299A45200250D01 /* Frameworks */,
 			);
@@ -306,6 +351,7 @@
 				2A5C40CD233F9AC200B9FF02 /* 下节课.appex */,
 				2A17FA27235CB81A00BBFE8A /* 杭电助手.app */,
 				2A17FA33235CB81C00BBFE8A /* 杭电助手 Apple Watch.appex */,
+				2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,6 +421,18 @@
 			path = schedulewidget;
 			sourceTree = "<group>";
 		};
+		2ADBF3B72375BD31001BE5D5 /* sunrunwidget */ = {
+			isa = PBXGroup;
+			children = (
+				2ADBF3C82375D510001BE5D5 /* 阳光长跑.entitlements */,
+				2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */,
+				2ADBF3B82375BD31001BE5D5 /* TodayViewController.swift */,
+				2ADBF3BA2375BD31001BE5D5 /* MainInterface.storyboard */,
+				2ADBF3BD2375BD31001BE5D5 /* Info.plist */,
+			);
+			path = sunrunwidget;
+			sourceTree = "<group>";
+		};
 		2AE679AB230FFC5200F26F07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +497,7 @@
 			dependencies = (
 				2A5C40D8233F9AC200B9FF02 /* PBXTargetDependency */,
 				2A17FA4C235CB81D00BBFE8A /* PBXTargetDependency */,
+				2ADBF3BF2375BD31001BE5D5 /* PBXTargetDependency */,
 			);
 			name = lemonios;
 			productName = lemonios;
@@ -498,6 +557,24 @@
 			productReference = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		2ADBF3B42375BD31001BE5D5 /* sunrunwidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ADBF3C12375BD31001BE5D5 /* Build configuration list for PBXNativeTarget "sunrunwidget" */;
+			buildPhases = (
+				2ADBF3B12375BD31001BE5D5 /* Sources */,
+				2ADBF3B22375BD31001BE5D5 /* Frameworks */,
+				2ADBF3B32375BD31001BE5D5 /* Resources */,
+				2ADBF3C72375C220001BE5D5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sunrunwidget;
+			productName = sunrunwidget;
+			productReference = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2AEC50E222BFD92C0005781E /* opensubapp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AEC50EB22BFD92C0005781E /* Build configuration list for PBXNativeTarget "opensubapp" */;
@@ -521,7 +598,7 @@
 		2A4558892299825600250D01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Inkwire Tech (Hangzhou) Co., Ltd.";
 				TargetAttributes = {
@@ -556,6 +633,9 @@
 					2A5C40CC233F9AC200B9FF02 = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					2ADBF3B42375BD31001BE5D5 = {
+						CreatedOnToolsVersion = 11.2;
+					};
 					2AEC50E222BFD92C0005781E = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -581,6 +661,7 @@
 				2A5C40CC233F9AC200B9FF02 /* schedulewidget */,
 				2A17FA26235CB81A00BBFE8A /* watch */,
 				2A17FA32235CB81C00BBFE8A /* watch Extension */,
+				2ADBF3B42375BD31001BE5D5 /* sunrunwidget */,
 			);
 		};
 /* End PBXProject section */
@@ -609,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE679AF230FFC9500F26F07 /* dormArea.geojson in Resources */,
+				2ADBF3B02375B928001BE5D5 /* .gitignore in Resources */,
 				2A4558A22299825800250D01 /* LaunchScreen.storyboard in Resources */,
 				2A45589F2299825800250D01 /* Assets.xcassets in Resources */,
 				2A45589A2299825700250D01 /* Main.storyboard in Resources */,
@@ -636,6 +718,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5C40D5233F9AC200B9FF02 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ADBF3B32375BD31001BE5D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ADBF3BC2375BD31001BE5D5 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +815,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2ADBF3B12375BD31001BE5D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */,
+				2ADBF3B92375BD31001BE5D5 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AEC50DF22BFD92C0005781E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -761,6 +860,11 @@
 			target = 2A5C40CC233F9AC200B9FF02 /* schedulewidget */;
 			targetProxy = 2A5C40D7233F9AC200B9FF02 /* PBXContainerItemProxy */;
 		};
+		2ADBF3BF2375BD31001BE5D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2ADBF3B42375BD31001BE5D5 /* sunrunwidget */;
+			targetProxy = 2ADBF3BE2375BD31001BE5D5 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -792,6 +896,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				2A5C40D4233F9AC200B9FF02 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		2ADBF3BA2375BD31001BE5D5 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ADBF3BB2375BD31001BE5D5 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -940,7 +1052,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -995,7 +1107,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1019,7 +1131,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = lemonios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1047,7 +1159,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = lemonios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1199,6 +1311,58 @@
 			};
 			name = Release;
 		};
+		2ADBF3C22375BD31001BE5D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = sunrunwidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
+				PRODUCT_NAME = "阳光长跑";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2ADBF3C32375BD31001BE5D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = sunrunwidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
+				PRODUCT_NAME = "阳光长跑";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2AEC50EC22BFD92C0005781E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1299,6 +1463,15 @@
 			buildConfigurations = (
 				2A5C40DB233F9AC200B9FF02 /* Debug */,
 				2A5C40DC233F9AC200B9FF02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ADBF3C12375BD31001BE5D5 /* Build configuration list for PBXNativeTarget "sunrunwidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ADBF3C22375BD31001BE5D5 /* Debug */,
+				2ADBF3C32375BD31001BE5D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
