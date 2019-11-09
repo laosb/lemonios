@@ -23,25 +23,29 @@ struct LMWidgetSunRun {
 }
 //@available(iOS 13.0.0, *)
 struct SunRunWidget: View {
+    
     var srData: LMWidgetSunRun?
     var body: some View {
-        VStack() {
+        
+        VStack (alignment: .center) {
+//            Text("tmp")
+//            .foregroundColor(.black)
+//            SunRunImage()
+//                .offset(y: -230)
+//                .padding(.bottom, -230)
             if srData?.available ?? false {
                 VStack {
                     HStack {
-//                        SunRunImage()
-//                            .offset(y: -230)
-//                            .padding(.bottom, -230)
                         VStack(alignment: .leading){
 //                            Image("sunrun")
                             Text("阳光长跑")
                                 .font(.subheadline)
-                                .foregroundColor(.black)
+                                .foregroundColor(.secondary)
+                                
                             Text("截止于 \(self.srData?.endTime ?? "")")
                                 .font(.subheadline)
-                                .foregroundColor(.black)
+                                .foregroundColor(.secondary)
                         }
-                        .background(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.0))
                         Spacer()
                     }
                     Spacer()
@@ -49,32 +53,27 @@ struct SunRunWidget: View {
                         VStack(alignment: .leading) {
                             Text("\(self.srData?.date ?? "") \(self.srData?.domain ?? "")")
                                 .font(.subheadline)
-                                .foregroundColor(.black)
+                                .foregroundColor(.secondary)
                             Text("\(self.srData?.speed ?? "") m/s")
                                 .font(.largeTitle)
-                                .foregroundColor(.black)
+                                .foregroundColor(.secondary)
                         }
-                        .background(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.0))
                         Spacer()
                         VStack {
                             Text("达标次数")
                                 .font(.subheadline)
-                                .foregroundColor(.black)
+                                .foregroundColor(.secondary)
                             Text("\(self.srData?.validTimes ?? 0)")
                                 .font(.largeTitle)
-                                .foregroundColor(.black)
+                                .foregroundColor(.secondary)
                         }
-                        .background(Color(red: 0.1, green: 0.1, blue: 0.1, opacity: 0.0))
                     }
                 }.padding()
-            } else {
-                VStack {
-                    Text("您登陆已过期，或者还未登陆杭电助手")
-                        .font(.subheadline)
-                        .foregroundColor(.black)
-                        .background(Color(red: 0.1, green: 0.1, blue: 0.1, opacity: 0.0))
-                }
-                .background(Color(red: 0.1, green: 0.1, blue: 0.1, opacity: 0.0))
+            }
+            else {
+                Text("您尚未登录杭电助手")
+                    .foregroundColor(.secondary)
+                    
             }
         }
     }

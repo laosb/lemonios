@@ -53,7 +53,6 @@
 		2AE92062231C29BB002C9538 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE92061231C29BB002C9538 /* MapKit.framework */; };
 		2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50EF22BFE1260005781E /* Intents.framework */; };
 		2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50F022BFE1260005781E /* IntentsUI.framework */; };
-		4EC8433D23768C9500177148 /* SunRunImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8433C23768C9500177148 /* SunRunImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,7 +220,6 @@
 		2AEC50E322BFD92C0005781E /* opensubapp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = opensubapp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEC50EF22BFE1260005781E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2AEC50F022BFE1260005781E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		4EC8433C23768C9500177148 /* SunRunImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRunImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,7 +426,6 @@
 			children = (
 				2ADBF3C82375D510001BE5D5 /* 阳光长跑.entitlements */,
 				2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */,
-				4EC8433C23768C9500177148 /* SunRunImage.swift */,
 				2ADBF3B82375BD31001BE5D5 /* TodayViewController.swift */,
 				2ADBF3BA2375BD31001BE5D5 /* MainInterface.storyboard */,
 				2ADBF3BD2375BD31001BE5D5 /* Info.plist */,
@@ -823,7 +820,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */,
-				4EC8433D23768C9500177148 /* SunRunImage.swift in Sources */,
 				2ADBF3B92375BD31001BE5D5 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1327,7 +1323,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1353,7 +1349,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

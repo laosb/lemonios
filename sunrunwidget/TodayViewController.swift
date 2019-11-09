@@ -29,7 +29,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let token = sharedUd?.string(forKey: "token")
 //        print(token)
         var srData = LMWidgetSunRun()
-        
+//        let token = ""
         if token != nil {
             Alamofire.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON(completionHandler:
                 {
