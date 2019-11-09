@@ -16,11 +16,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var signInBtn: UIButton!
     
+    
+    
     var scheduleData: Array<NSDictionary>?
     var isTomorow: Bool = false
     var token: String = ""
     
     @IBAction func signInBtnTapped(_ sender: Any) {
+        
         self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/#/sign/in")!, completionHandler: nil)
     }
     
@@ -57,6 +60,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     override func viewDidLoad() {
+        statusLabel.textColor = .secondaryLabel
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
