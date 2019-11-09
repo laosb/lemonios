@@ -500,6 +500,8 @@
 				2ADBF3BF2375BD31001BE5D5 /* PBXTargetDependency */,
 			);
 			name = lemonios;
+			packageProductDependencies = (
+			);
 			productName = lemonios;
 			productReference = 2A4558912299825700250D01 /* lemonios.app */;
 			productType = "com.apple.product-type.application";
@@ -650,6 +652,8 @@
 				Base,
 			);
 			mainGroup = 2A4558882299825600250D01;
+			packageReferences = (
+			);
 			productRefGroup = 2A4558922299825700250D01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
