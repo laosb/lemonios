@@ -15,8 +15,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func renderData(srData: LMWidgetSunRun) {
         let srVc = UIHostingController(rootView: SunRunWidget(srData: srData))
+        srVc.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
         srVc.view.frame = self.view.bounds
-        
         self.view.addSubview(srVc.view)
         self.addChild(srVc)
         srVc.didMove(toParent: self)
