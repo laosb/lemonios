@@ -183,11 +183,11 @@ extension ViewController: WKNavigationDelegate {
         decisionHandler(WKNavigationActionPolicy.allow)
     }
     
-    open func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-    }
+//    open func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//    }
+//
+//    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//    }
 }
