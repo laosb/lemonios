@@ -19,6 +19,14 @@
 		2A17FA45235CB81D00BBFE8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A17FA44235CB81D00BBFE8A /* Assets.xcassets */; };
 		2A17FA48235CB81D00BBFE8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A17FA47235CB81D00BBFE8A /* Preview Assets.xcassets */; };
 		2A17FA4D235CB81D00BBFE8A /* 杭电助手.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2A17FA27235CB81A00BBFE8A /* 杭电助手.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A1E41272377F72B002FA52A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
+		2A1E412A2377F72B002FA52A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41292377F72B002FA52A /* TodayViewController.swift */; };
+		2A1E412D2377F72B002FA52A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1E412B2377F72B002FA52A /* MainInterface.storyboard */; };
+		2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A1E41262377F72B002FA52A /* 一卡通.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A1E41362377F766002FA52A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
+		2A1E41372377F766002FA52A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
+		2A39868223780BE0005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868123780BE0005AB8AF /* WidgetNumberView.swift */; };
 		2A4558952299825700250D01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558942299825700250D01 /* AppDelegate.swift */; };
 		2A4558972299825700250D01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558962299825700250D01 /* ViewController.swift */; };
 		2A45589A2299825700250D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4558982299825700250D01 /* Main.storyboard */; };
@@ -69,6 +77,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2A17FA26235CB81A00BBFE8A;
 			remoteInfo = watch;
+		};
+		2A1E412F2377F72B002FA52A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A1E41252377F72B002FA52A;
+			remoteInfo = cardwidget;
 		};
 		2A4558A92299825900250D01 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -123,12 +138,24 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A1E41382377F767002FA52A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A1E41372377F766002FA52A /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A5C40DA233F9AC200B9FF02 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */,
 				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
 				2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */,
 			);
@@ -174,6 +201,13 @@
 		2A17FA47235CB81D00BBFE8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A17FA49235CB81D00BBFE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A17FA4A235CB81D00BBFE8A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2A1E41262377F72B002FA52A /* 一卡通.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "一卡通.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1E41292377F72B002FA52A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		2A1E412C2377F72B002FA52A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		2A1E412E2377F72B002FA52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A1E41352377F742002FA52A /* cardwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cardwidget.entitlements; sourceTree = "<group>"; };
+		2A1E41392377F7D4002FA52A /* CardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidget.swift; sourceTree = "<group>"; };
+		2A39868123780BE0005AB8AF /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
 		2A4558912299825700250D01 /* lemonios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lemonios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4558942299825700250D01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A4558962299825700250D01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +261,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A1E41232377F72B002FA52A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A1E41272377F72B002FA52A /* NotificationCenter.framework in Frameworks */,
+				2A1E41362377F766002FA52A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +366,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2A1E41282377F72B002FA52A /* cardwidget */ = {
+			isa = PBXGroup;
+			children = (
+				2A1E41352377F742002FA52A /* cardwidget.entitlements */,
+				2A1E41292377F72B002FA52A /* TodayViewController.swift */,
+				2A1E412B2377F72B002FA52A /* MainInterface.storyboard */,
+				2A1E412E2377F72B002FA52A /* Info.plist */,
+				2A1E41392377F7D4002FA52A /* CardWidget.swift */,
+				2A39868123780BE0005AB8AF /* WidgetNumberView.swift */,
+			);
+			path = cardwidget;
+			sourceTree = "<group>";
+		};
 		2A4558882299825600250D01 = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +392,7 @@
 				2A17FA28235CB81A00BBFE8A /* watch */,
 				2A17FA37235CB81C00BBFE8A /* watch Extension */,
 				2ADBF3B72375BD31001BE5D5 /* sunrunwidget */,
+				2A1E41282377F72B002FA52A /* cardwidget */,
 				2A4558922299825700250D01 /* Products */,
 				2A4558C52299A45200250D01 /* Frameworks */,
 			);
@@ -352,6 +409,7 @@
 				2A17FA27235CB81A00BBFE8A /* 杭电助手.app */,
 				2A17FA33235CB81C00BBFE8A /* 杭电助手 Apple Watch.appex */,
 				2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */,
+				2A1E41262377F72B002FA52A /* 一卡通.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,6 +538,24 @@
 			productReference = 2A17FA33235CB81C00BBFE8A /* 杭电助手 Apple Watch.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		2A1E41252377F72B002FA52A /* cardwidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A1E41342377F72B002FA52A /* Build configuration list for PBXNativeTarget "cardwidget" */;
+			buildPhases = (
+				2A1E41222377F72B002FA52A /* Sources */,
+				2A1E41232377F72B002FA52A /* Frameworks */,
+				2A1E41242377F72B002FA52A /* Resources */,
+				2A1E41382377F767002FA52A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cardwidget;
+			productName = cardwidget;
+			productReference = 2A1E41262377F72B002FA52A /* 一卡通.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2A4558902299825700250D01 /* lemonios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A4558BC2299825900250D01 /* Build configuration list for PBXNativeTarget "lemonios" */;
@@ -498,6 +574,7 @@
 				2A5C40D8233F9AC200B9FF02 /* PBXTargetDependency */,
 				2A17FA4C235CB81D00BBFE8A /* PBXTargetDependency */,
 				2ADBF3BF2375BD31001BE5D5 /* PBXTargetDependency */,
+				2A1E41302377F72B002FA52A /* PBXTargetDependency */,
 			);
 			name = lemonios;
 			packageProductDependencies = (
@@ -610,6 +687,9 @@
 					2A17FA32235CB81C00BBFE8A = {
 						CreatedOnToolsVersion = 11.1;
 					};
+					2A1E41252377F72B002FA52A = {
+						CreatedOnToolsVersion = 11.2;
+					};
 					2A4558902299825700250D01 = {
 						CreatedOnToolsVersion = 10.2.1;
 						SystemCapabilities = {
@@ -666,6 +746,7 @@
 				2A17FA26235CB81A00BBFE8A /* watch */,
 				2A17FA32235CB81C00BBFE8A /* watch Extension */,
 				2ADBF3B42375BD31001BE5D5 /* sunrunwidget */,
+				2A1E41252377F72B002FA52A /* cardwidget */,
 			);
 		};
 /* End PBXProject section */
@@ -686,6 +767,14 @@
 			files = (
 				2A17FA48235CB81D00BBFE8A /* Preview Assets.xcassets in Resources */,
 				2A17FA45235CB81D00BBFE8A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A1E41242377F72B002FA52A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A1E412D2377F72B002FA52A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +873,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A1E41222377F72B002FA52A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A39868223780BE0005AB8AF /* WidgetNumberView.swift in Sources */,
+				2A1E412A2377F72B002FA52A /* TodayViewController.swift in Sources */,
+				2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A45588D2299825700250D01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -848,6 +947,11 @@
 			target = 2A17FA26235CB81A00BBFE8A /* watch */;
 			targetProxy = 2A17FA4B235CB81D00BBFE8A /* PBXContainerItemProxy */;
 		};
+		2A1E41302377F72B002FA52A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A1E41252377F72B002FA52A /* cardwidget */;
+			targetProxy = 2A1E412F2377F72B002FA52A /* PBXContainerItemProxy */;
+		};
 		2A4558AA2299825900250D01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2A4558902299825700250D01 /* lemonios */;
@@ -878,6 +982,14 @@
 				2A17FA2A235CB81A00BBFE8A /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		2A1E412B2377F72B002FA52A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A1E412C2377F72B002FA52A /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		2A4558982299825700250D01 /* Main.storyboard */ = {
@@ -1002,6 +1114,58 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+			};
+			name = Release;
+		};
+		2A1E41322377F72B002FA52A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = cardwidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
+				PRODUCT_NAME = "一卡通";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A1E41332377F72B002FA52A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = cardwidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
+				PRODUCT_NAME = "一卡通";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1422,6 +1586,15 @@
 			buildConfigurations = (
 				2A17FA4F235CB81D00BBFE8A /* Debug */,
 				2A17FA50235CB81D00BBFE8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A1E41342377F72B002FA52A /* Build configuration list for PBXNativeTarget "cardwidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A1E41322377F72B002FA52A /* Debug */,
+				2A1E41332377F72B002FA52A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
