@@ -36,7 +36,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     response in switch response.result
                     {
                         case .success:
-                            print(response.result)
+//                            print(response.result)
                             let json = response.result.value
                             let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                             let SunRunData = newRawData.object(forKey: "sunrun") as? NSDictionary
@@ -54,7 +54,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                             srData.date = latestData?.object(forKey: "date") as? String
                             self.renderData(srData: srData)
                         case .failure:
-                            print(response)
+//                            print(response)
                             srData.available = false
                             self.renderData(srData: srData)
                     }
