@@ -30,7 +30,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 //        print(token)
         var srData = LMWidgetSunRun()
 //        let token = ""
- //       if token != nil {
+        if token != nil {
             Alamofire.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON(completionHandler:
                 {
                     response in switch response.result
@@ -60,10 +60,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     }
                 }
             )
-//        } else {
-//            srData.available = false
-//            self.renderData(srData: srData)
-//        }
+        } else {
+            srData.available = false
+            self.renderData(srData: srData)
+        }
     }
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {

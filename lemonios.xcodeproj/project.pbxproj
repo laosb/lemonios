@@ -27,6 +27,7 @@
 		2A1E41372377F766002FA52A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
 		2A39868223780BE0005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868123780BE0005AB8AF /* WidgetNumberView.swift */; };
+		2A39868423780E74005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
 		2A4558952299825700250D01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558942299825700250D01 /* AppDelegate.swift */; };
 		2A4558972299825700250D01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558962299825700250D01 /* ViewController.swift */; };
 		2A45589A2299825700250D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4558982299825700250D01 /* Main.storyboard */; };
@@ -208,6 +209,7 @@
 		2A1E41352377F742002FA52A /* cardwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cardwidget.entitlements; sourceTree = "<group>"; };
 		2A1E41392377F7D4002FA52A /* CardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidget.swift; sourceTree = "<group>"; };
 		2A39868123780BE0005AB8AF /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
+		2A39868323780E74005AB8AF /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
 		2A4558912299825700250D01 /* lemonios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lemonios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4558942299825700250D01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A4558962299825700250D01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 				2ADBF3B82375BD31001BE5D5 /* TodayViewController.swift */,
 				2ADBF3BA2375BD31001BE5D5 /* MainInterface.storyboard */,
 				2ADBF3BD2375BD31001BE5D5 /* Info.plist */,
+				2A39868323780E74005AB8AF /* WidgetNumberView.swift */,
 			);
 			path = sunrunwidget;
 			sourceTree = "<group>";
@@ -922,6 +925,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A39868423780E74005AB8AF /* WidgetNumberView.swift in Sources */,
 				2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */,
 				2ADBF3B92375BD31001BE5D5 /* TodayViewController.swift in Sources */,
 			);

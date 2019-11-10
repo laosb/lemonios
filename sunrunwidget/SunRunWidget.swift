@@ -32,34 +32,13 @@ struct SunRunWidget: View {
                 VStack {
                     HStack(alignment: .center) {
                         Spacer()
-                        VStack(alignment: .center) {
-                            Text("\(self.srData?.date ?? "") \(self.srData?.domain ?? "")")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                                .bold()
-                            HStack(alignment: .firstTextBaseline) {
-                                Text("\(self.srData?.speed ?? "")")
-                                    .font(.largeTitle)
-                                    .bold()
-                                Text("m/s")
-                                    .bold()
-                            }
-                        }
+                        WidgetNumberView(
+                            number: self.srData?.speed ?? "",
+                            title: "\(self.srData?.date ?? "") \(self.srData?.domain ?? "")",
+                            unit: "m/s"
+                        )
                         Spacer()
-                        VStack {
-                            Text("达标次数")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                                .bold()
-                            HStack(alignment: .firstTextBaseline) {
-                                Text("\(self.srData?.validTimes ?? 0)")
-                                    .font(.largeTitle)
-                                    .bold()
-                                Text("次")
-                                    .bold()
-                            }
-                            
-                        }
+                        WidgetNumberView(number: "\(self.srData?.validTimes ?? 0)", title: "达标次数", unit: "次")
                         Spacer()
                     }
                     Text("阳光长跑将于 \(self.srData?.endTime ?? "") 截止")
@@ -67,7 +46,7 @@ struct SunRunWidget: View {
                         .foregroundColor(.secondary)
                 }.padding()
             } else {
-                Text("您尚未登录杭电助手")
+                Text("数据获取失败。请尝试打开杭电助手并登录。")
                     .foregroundColor(.secondary)
                     
             }
