@@ -44,7 +44,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                             
                             let remaining = indexData?.object(forKey: "remaining") as? Double ?? 0
                             cardData.remaining = String(format:"%.2lf", remaining)
-                            let today = indexData?.object(forKey: "today") as? Double ?? 0
+                            let today = (indexData?.object(forKey: "today") as? Double ?? 0) * -1
                             cardData.today = String(format:"%.2lf", today)
                             
                             if remaining <= 15.0 {
