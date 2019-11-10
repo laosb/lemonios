@@ -47,9 +47,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                             let today = indexData?.object(forKey: "today") as? Double ?? 0
                             cardData.today = String(format:"%.2lf", today)
                             
-//                            if remaining <= 15.0 {
+                            if remaining <= 15.0 {
                                 cardData.tip = "⚠️ 余额较少，记得充值"
-//                            }
+                            }
                             
                             self.renderData(cardData: cardData)
                         case .failure:
