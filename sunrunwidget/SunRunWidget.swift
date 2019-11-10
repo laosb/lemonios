@@ -42,7 +42,7 @@ struct SunRunWidget: View {
                         Spacer()
                     }
                     Text("阳光长跑将于 \(self.srData?.endTime ?? "") 截止")
-                        .font(.subheadline)
+                        .font(.footnote)
                         .foregroundColor(.secondary)
                 }.padding()
             } else {

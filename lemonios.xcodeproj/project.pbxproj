@@ -24,7 +24,6 @@
 		2A1E412D2377F72B002FA52A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1E412B2377F72B002FA52A /* MainInterface.storyboard */; };
 		2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A1E41262377F72B002FA52A /* 一卡通.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A1E41362377F766002FA52A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
-		2A1E41372377F766002FA52A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
 		2A39868223780BE0005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868123780BE0005AB8AF /* WidgetNumberView.swift */; };
 		2A39868423780E74005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
@@ -52,7 +51,6 @@
 		2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */; };
 		2ADBF3C52375C220001BE5D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
-		2ADBF3C62375C220001BE5D5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AE679A3230FE95800F26F07 /* geos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE679A1230FE93900F26F07 /* geos.framework */; };
 		2AE679A6230FE99700F26F07 /* GEOSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67999230FE77E00F26F07 /* GEOSwift.framework */; };
 		2AE679A8230FE99900F26F07 /* GEOSwiftMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67998230FE77E00F26F07 /* GEOSwiftMapKit.framework */; };
@@ -139,17 +137,6 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A1E41382377F767002FA52A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2A1E41372377F766002FA52A /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2A5C40DA233F9AC200B9FF02 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,17 +148,6 @@
 				2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2ADBF3C72375C220001BE5D5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2ADBF3C62375C220001BE5D5 /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2AE679A5230FE95800F26F07 /* Embed Frameworks */ = {
@@ -548,7 +524,6 @@
 				2A1E41222377F72B002FA52A /* Sources */,
 				2A1E41232377F72B002FA52A /* Frameworks */,
 				2A1E41242377F72B002FA52A /* Resources */,
-				2A1E41382377F767002FA52A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -646,7 +621,6 @@
 				2ADBF3B12375BD31001BE5D5 /* Sources */,
 				2ADBF3B22375BD31001BE5D5 /* Frameworks */,
 				2ADBF3B32375BD31001BE5D5 /* Resources */,
-				2ADBF3C72375C220001BE5D5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
