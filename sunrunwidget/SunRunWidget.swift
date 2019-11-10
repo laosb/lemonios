@@ -27,57 +27,46 @@ struct SunRunWidget: View {
     var srData: LMWidgetSunRun?
     var body: some View {
         
-        VStack (alignment: .leading){
-//            Text("tmp")
-//            .foregroundColor(.black)
-//            SunRunImage()
-//                .offset(y: -230)
-//                .padding(.bottom, -230)
+        VStack (alignment: .center){
             if srData?.available ?? false {
-                Text("\(self.srData?.endTime ?? "") 截止")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-  //              VStack {
-//                    Spacer()
-                HStack(alignment: .center) {
-                    Spacer()
-                    VStack(alignment: .center) {
-                        Text("\(self.srData?.date ?? "") \(self.srData?.domain ?? "")")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .bold()
-                        HStack(alignment: .firstTextBaseline) {
-                            Text("\(self.srData?.speed ?? "")")
-                                .font(.largeTitle)
+                VStack {
+                    HStack(alignment: .center) {
+                        Spacer()
+                        VStack(alignment: .center) {
+                            Text("\(self.srData?.date ?? "") \(self.srData?.domain ?? "")")
+                                .font(.subheadline)
                                 .foregroundColor(.secondary)
                                 .bold()
-                            Text("m/s")
-                            .bold()
-                            .foregroundColor(.secondary)
+                            HStack(alignment: .firstTextBaseline) {
+                                Text("\(self.srData?.speed ?? "")")
+                                    .font(.largeTitle)
+                                    .bold()
+                                Text("m/s")
+                                    .bold()
+                            }
                         }
-                    }
-                    Spacer()
-                    VStack {
-                        Text("达标次数")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .bold()
-                        HStack(alignment: .firstTextBaseline) {
-                            Text("\(self.srData?.validTimes ?? 0)")
-                                .font(.largeTitle)
+                        Spacer()
+                        VStack {
+                            Text("达标次数")
+                                .font(.subheadline)
                                 .foregroundColor(.secondary)
                                 .bold()
-                            Text("次")
-                                .bold()
-                                .foregroundColor(.secondary)
+                            HStack(alignment: .firstTextBaseline) {
+                                Text("\(self.srData?.validTimes ?? 0)")
+                                    .font(.largeTitle)
+                                    .bold()
+                                Text("次")
+                                    .bold()
+                            }
+                            
                         }
-                        
+                        Spacer()
                     }
-                    Spacer()
+                    Text("阳光长跑将于 \(self.srData?.endTime ?? "") 截止")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                 }.padding()
- //               }.padding()
-            }
-            else {
+            } else {
                 Text("您尚未登录杭电助手")
                     .foregroundColor(.secondary)
                     
