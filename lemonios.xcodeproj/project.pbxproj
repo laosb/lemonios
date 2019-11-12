@@ -31,6 +31,7 @@
 		2A5C40E42340E42800B9FF02 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32822B2935300ECDC39 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (Required, ); }; };
+		2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A981807237AC39A005C5141 /* NewFuncGuideController.swift */; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
 		2ADBF3B02375B928001BE5D5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AF2375B928001BE5D5 /* .gitignore */; };
 		2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
@@ -48,7 +49,7 @@
 		2AE92062231C29BB002C9538 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE92061231C29BB002C9538 /* MapKit.framework */; };
 		2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50EF22BFE1260005781E /* Intents.framework */; };
 		2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50F022BFE1260005781E /* IntentsUI.framework */; };
-		4E937B0D237A46AB009D93E0 /* newFuncRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B0C237A46AB009D93E0 /* newFuncRow.swift */; };
+		4E937B0D237A46AB009D93E0 /* NewFuncRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B0C237A46AB009D93E0 /* NewFuncRow.swift */; };
 		4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B12237A61C9009D93E0 /* newFuncView.swift */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +148,7 @@
 		2A5C40D6233F9AC200B9FF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A5C40E12340B23900B9FF02 /* 快捷课表.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "快捷课表.entitlements"; sourceTree = "<group>"; };
 		2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		2A981807237AC39A005C5141 /* NewFuncGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFuncGuideController.swift; sourceTree = "<group>"; };
 		2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HduMapViewController.swift; sourceTree = "<group>"; };
 		2AD799DB22B267590053BB4E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		2AD799DD22B271900053BB4E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -171,7 +173,7 @@
 		2AEC50E322BFD92C0005781E /* opensubapp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = opensubapp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEC50EF22BFE1260005781E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2AEC50F022BFE1260005781E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		4E937B0C237A46AB009D93E0 /* newFuncRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFuncRow.swift; sourceTree = "<group>"; };
+		4E937B0C237A46AB009D93E0 /* NewFuncRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFuncRow.swift; sourceTree = "<group>"; };
 		4E937B12237A61C9009D93E0 /* newFuncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFuncView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -300,6 +302,7 @@
 				2A4558A02299825800250D01 /* LaunchScreen.storyboard */,
 				2A4558A32299825800250D01 /* Info.plist */,
 				2A45589B2299825700250D01 /* lemonios.xcdatamodeld */,
+				2A981807237AC39A005C5141 /* NewFuncGuideController.swift */,
 			);
 			path = lemonios;
 			sourceTree = "<group>";
@@ -379,7 +382,7 @@
 		4E937B0723799BF1009D93E0 /* newFuncGuide */ = {
 			isa = PBXGroup;
 			children = (
-				4E937B0C237A46AB009D93E0 /* newFuncRow.swift */,
+				4E937B0C237A46AB009D93E0 /* NewFuncRow.swift */,
 				4E937B12237A61C9009D93E0 /* newFuncView.swift */,
 			);
 			path = newFuncGuide;
@@ -695,8 +698,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */,
+				2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */,
 				2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */,
-				4E937B0D237A46AB009D93E0 /* newFuncRow.swift in Sources */,
+				4E937B0D237A46AB009D93E0 /* NewFuncRow.swift in Sources */,
 				2A4558972299825700250D01 /* ViewController.swift in Sources */,
 				2A4558952299825700250D01 /* AppDelegate.swift in Sources */,
 				2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */,
@@ -824,7 +828,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -850,7 +854,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -994,7 +998,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1022,7 +1026,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1130,7 +1134,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1158,7 +1162,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1186,7 +1190,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1212,7 +1216,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

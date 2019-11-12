@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var shortcutName: String?
+    var token: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -41,6 +42,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    internal func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        func getQueryStringParameter(url: String, param: String) -> String? {
+          guard let url = URLComponents(string: url) else { return nil }
+          return url.queryItems?.first(where: { $0.name == param })?.value
+        }
+        
+        let message = getQueryStringParameter(url: url.absoluteString, param: "auth")
+        if (message != nil) {
+            self.token = message
+            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
+        }
+        return true
+    }
+    
     private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
         self.shortcutName = String(shortcutItem.type.split(separator: ".").last ?? "")
         NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
@@ -49,6 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func getShortcutItem() -> String? { return self.shortcutName }
+    
+    func getIncomingToken() -> String? { return self.token }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
