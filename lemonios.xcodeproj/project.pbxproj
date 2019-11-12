@@ -60,6 +60,8 @@
 		2AE92062231C29BB002C9538 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE92061231C29BB002C9538 /* MapKit.framework */; };
 		2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50EF22BFE1260005781E /* Intents.framework */; };
 		2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50F022BFE1260005781E /* IntentsUI.framework */; };
+		4E937B0D237A46AB009D93E0 /* newFuncRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B0C237A46AB009D93E0 /* newFuncRow.swift */; };
+		4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B12237A61C9009D93E0 /* newFuncView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +234,8 @@
 		2AEC50E322BFD92C0005781E /* opensubapp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = opensubapp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEC50EF22BFE1260005781E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2AEC50F022BFE1260005781E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		4E937B0C237A46AB009D93E0 /* newFuncRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFuncRow.swift; sourceTree = "<group>"; };
+		4E937B12237A61C9009D93E0 /* newFuncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFuncView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +399,7 @@
 		2A4558932299825700250D01 /* lemonios */ = {
 			isa = PBXGroup;
 			children = (
+				4E937B0723799BF1009D93E0 /* newFuncGuide */,
 				2AEC50DC22BFD71F0005781E /* lemonios.entitlements */,
 				2A4558942299825700250D01 /* AppDelegate.swift */,
 				2A4558962299825700250D01 /* ViewController.swift */,
@@ -478,6 +483,15 @@
 				2AE679AE230FFC9400F26F07 /* zones.geojson */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4E937B0723799BF1009D93E0 /* newFuncGuide */ = {
+			isa = PBXGroup;
+			children = (
+				4E937B0C237A46AB009D93E0 /* newFuncRow.swift */,
+				4E937B12237A61C9009D93E0 /* newFuncView.swift */,
+			);
+			path = newFuncGuide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -864,7 +878,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */,
 				2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */,
+				4E937B0D237A46AB009D93E0 /* newFuncRow.swift in Sources */,
 				2A4558972299825700250D01 /* ViewController.swift in Sources */,
 				2A4558952299825700250D01 /* AppDelegate.swift in Sources */,
 				2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */,
