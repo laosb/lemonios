@@ -56,13 +56,24 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         let configUrlTmpl = "https://config.hduhelp.com/%@.json"
         let bundleId = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String
         let configUrl = String(format: configUrlTmpl, bundleId ?? "help.hdu.lemon.ios")
+        let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+        
+        let currentVersion = Int(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)
+        let savedVersion = sharedUd?.integer(forKey: "lastVersionGuided")
+//        print(currentVersion, savedVersion)
+        if savedVersion == nil || (currentVersion ?? 0) > (savedVersion ?? 0) {
+            self.performSegue(withIdentifier: "gotoNewFuncGuide", sender: self)
+        }
         
         tryLoad(configUrl)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "ShortcutFired"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "IncomingToken"), object: nil)
     }
     
     @objc private func shortcutFired () {
+        let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+
         let urlTemplate = "%@/?__shell_lemonios=%@&utm_source=lemonios/#"
         let fallbackBaseUrl = "https://ios.app.hduhelp.com"
         let baseUrl = UserDefaults.standard.string(forKey: "baseUrl") ?? fallbackBaseUrl
@@ -77,7 +88,11 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         webView!.uiDelegate = self
         var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown")
         
-        if let shortcut = appDelegate.getShortcutItem() {
+        if let token = appDelegate.getIncomingToken() {
+            urlStr += "/login?auth=\(token)"
+            sharedUd?.set(token, forKey: "token")
+            sharedUd?.synchronize()
+        } else if let shortcut = appDelegate.getShortcutItem() {
             if shortcut == "schedule" { urlStr += "/app/schedule" }
             if shortcut == "card" { urlStr += "/app/card" }
             if shortcut == "hdumap" {
@@ -85,24 +100,33 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             }
         }
         
-        // print(urlStr)
+//        print(urlStr)
         let url = URL(string: urlStr)
         let req = URLRequest(url: url!)
         webView!.load(req)
         
         // Try to get the token
         getTokenTimer?.invalidate()
-        getTokenTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { timer in
+        getTokenTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { timer in
 //            print("try to get token")
             self.webView!.evaluateJavaScript("""
                 (() => {
                     window._setupDebug(19260817)
+                    const siwaBtn = document.getElementById('appleid-signin')
+                    if (siwaBtn) {
+                        siwaBtn.onclick = () => {
+                            console.log('Try SIWA')
+                            const btnLink = document.createElement('a')
+                            btnLink.href = "https://api.hduhelp.com/login/direct/apple?clientID=app&redirect=hduhelplemon%3A%2F%2Fapp.hduhelp.com"
+                            document.body.appendChild(btnLink)
+                            btnLink.click()
+                        }
+                    }
                     return window._hduhelpDebug.store.state.token || null
                 })()
             """, completionHandler: { returnValue, error in
                 if returnValue != nil && error == nil {
                     let token = returnValue as? String
-                    let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
                     sharedUd?.set(token, forKey: "token")
                     sharedUd?.synchronize()
 //                    print("user token:", token)
