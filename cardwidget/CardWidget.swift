@@ -21,7 +21,7 @@ struct CardWidget: View {
     @State var tipMessage: String = ""
     
     var cardData: LMWidgetCard?
-    var chargeFunc: (() -> Bool)?
+    var chargeFunc: ((@escaping (Bool) -> Void) -> Void)?
     var body: some View {
         
         VStack (alignment: .center){
@@ -41,9 +41,10 @@ struct CardWidget: View {
                     }.padding()
                     HStack {
                         Button(action: {
-                            let result = self.chargeFunc?()
-                            if !(result ?? false) {
-                                self.tipMessage = "⚠️充值依赖支付宝。请确认您安装了支付宝。"
+                            self.chargeFunc? { success in
+                                if !success {
+                                    self.tipMessage = "⚠️充值依赖支付宝。请检查您是否安装支付宝。"
+                                }
                             }
                         }) {
                             VStack {
