@@ -32,6 +32,7 @@
 		2A8EA32822B2935300ECDC39 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
 		2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (Required, ); }; };
 		2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A981807237AC39A005C5141 /* NewFuncGuideController.swift */; };
+		2AA008232385674800A05B03 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA008222385674800A05B03 /* DeviceKit */; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
 		2ADBF3B02375B928001BE5D5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AF2375B928001BE5D5 /* .gitignore */; };
 		2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
@@ -192,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AE679A3230FE95800F26F07 /* geos.framework in Frameworks */,
+				2AA008232385674800A05B03 /* DeviceKit in Frameworks */,
 				2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */,
 				2AE679A8230FE99900F26F07 /* GEOSwiftMapKit.framework in Frameworks */,
 				2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */,
@@ -428,6 +430,7 @@
 			);
 			name = lemonios;
 			packageProductDependencies = (
+				2AA008222385674800A05B03 /* DeviceKit */,
 			);
 			productName = lemonios;
 			productReference = 2A4558912299825700250D01 /* lemonios.app */;
@@ -576,6 +579,7 @@
 			);
 			mainGroup = 2A4558882299825600250D01;
 			packageReferences = (
+				2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */,
 			);
 			productRefGroup = 2A4558922299825700250D01 /* Products */;
 			projectDirPath = "";
@@ -1351,6 +1355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AA008222385674800A05B03 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2A45589B2299825700250D01 /* lemonios.xcdatamodeld */ = {
