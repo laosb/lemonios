@@ -10,17 +10,37 @@ import UIKit
 import WebKit
 import IntentsUI
 import SafariServices
+import UserNotifications
 import Alamofire
 
 let primaryColor = UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)
 
 class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewControllerDelegate {
-    @available(iOS 12.0, *)
+    func enableNotification () {
+        UNUserNotificationCenter.current()
+          .requestAuthorization(options: [.alert, .sound, .badge]) {
+            [weak self] granted, error in
+              
+//            print("Permission granted: \(granted)")
+            guard granted else { return }
+            self?.getNotificationSettings()
+        }
+    }
+    
+    func getNotificationSettings() {
+      UNUserNotificationCenter.current().getNotificationSettings { settings in
+        print("Notification settings: \(settings)")
+        guard settings.authorizationStatus == .authorized else { return }
+        DispatchQueue.main.async {
+          UIApplication.shared.registerForRemoteNotifications()
+        }
+      }
+    }
+    
     func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
         dismiss(animated: true, completion: nil)
     }
     
-    @available(iOS 12.0, *)
     func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
         dismiss(animated: true, completion: nil)
     }
@@ -92,6 +112,9 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             urlStr += "/login?auth=\(token)"
             sharedUd?.set(token, forKey: "token")
             sharedUd?.synchronize()
+            if token != "" {
+                enableNotification()
+            }
         } else if let shortcut = appDelegate.getShortcutItem() {
             if shortcut == "schedule" { urlStr += "/app/schedule" }
             if shortcut == "card" { urlStr += "/app/card" }
@@ -127,10 +150,13 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             """, completionHandler: { returnValue, error in
                 if returnValue != nil && error == nil {
                     let token = returnValue as? String
-                    sharedUd?.set(token, forKey: "token")
-                    sharedUd?.synchronize()
+                    if token != nil && token != "" {
+                        sharedUd?.set(token, forKey: "token")
+                        sharedUd?.synchronize()
+                        self.enableNotification()
+                        timer.invalidate()
+                    }
 //                    print("user token:", token)
-                    timer.invalidate()
                 }
             })
         })

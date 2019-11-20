@@ -8,9 +8,17 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+import Alamofire
+import DeviceKit
+
+struct LMDeviceInfo: Encodable {
+    let DeviceToken: String
+    let DeviceDesc: String
+}
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -54,6 +62,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
         }
         return true
+    }
+    
+    func application(
+      _ application: UIApplication,
+      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+    ) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        
+        let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+        let userToken = sharedUd?.string(forKey: "token")
+        
+        let deviceInfo: Parameters = [
+            "DeviceToken": token,
+            "DeviceDesc": Device.current.description
+        ]
+        Alamofire.request(
+            "https://api.hduhelp.com/devices/token/apple",
+            method: .post,
+            parameters: deviceInfo,
+            encoding: JSONEncoding.default,
+            headers:["Authorization": "token \(userToken ?? "")"]
+        ).validate().responseJSON { response in
+            print(response)
+        }
+//      print("Device Token: \(token)")
+    }
+
+    func application(
+      _ application: UIApplication,
+      didFailToRegisterForRemoteNotificationsWithError error: Error) {
+//      print("Failed to register: \(error)")
     }
     
     private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
