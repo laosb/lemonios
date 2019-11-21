@@ -22,7 +22,6 @@ struct scheduleWidget: View {
     @State var tipMessage: String = ""
     var sData: Array<LMSchedule>?
     var availabe: Bool
-//    @Binding var rect: CGRect
     var chargeFunc: ((@escaping (Bool) -> Void) -> Void)?
     
     var body: some View {
@@ -38,7 +37,6 @@ struct scheduleWidget: View {
                 else if self.sData!.count != 0 {
                         List {
                             scheduleDataView(realData: self.sData![0])
-                                
                             if self.sData!.count == 2 {
                                 scheduleDataView(realData: self.sData![1])
                             }
