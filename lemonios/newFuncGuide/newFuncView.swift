@@ -23,6 +23,7 @@ struct NewFuncView: View {
                     NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
                         version: "1.1", content: [
                             "一卡通组件新增「充值」功能，点击即可直达支付宝校园一卡通充值。",
+                            "支持iOS系统通知推送，可以在「我」-「设置」-「通知设置」中具体调整。",
                             "「发现」新增搜索功能。",
                             "全新的通知管理设置，更多自定义设置。",
                         ]
