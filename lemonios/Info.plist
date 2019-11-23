@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
+	<string>杭电助手</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -31,6 +31,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -39,8 +41,6 @@
 	<dict>
 		<key>OpenCard</key>
 		<string>$(PRODUCT_BUNDLE_IDENTIFIER).card</string>
-		<key>OpenHdumap</key>
-		<string>$(PRODUCT_BUNDLE_IDENTIFIER).hdumap</string>
 		<key>OpenSchedule</key>
 		<string>$(PRODUCT_BUNDLE_IDENTIFIER).schedule</string>
 	</dict>
@@ -48,6 +48,22 @@
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneClassName</key>
+					<string>UIWindowScene</string>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main</string>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 	<key>UIApplicationShortcutItems</key>
 	<array>
@@ -66,14 +82,6 @@
 			<string>一卡通</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>help.hdu.lemon.ios.card</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconFile</key>
-			<string>map</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>地图</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>help.hdu.lemon.ios.hdumap</string>
 		</dict>
 	</array>
 	<key>UIBackgroundModes</key>

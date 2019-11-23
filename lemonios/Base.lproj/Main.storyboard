@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nao-XZ-uh5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,43 +54,12 @@
                     <navigationItem key="navigationItem" title="杭电助手" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="jp1-fw-MgH"/>
                     <connections>
                         <outlet property="webView" destination="XTj-fi-Y8X" id="EvO-ah-WID"/>
-                        <segue destination="OZ5-fd-LvJ" kind="show" identifier="gotoHduMap" id="Ary-g6-iH2"/>
                         <segue destination="CLS-2S-TuF" kind="presentation" identifier="gotoNewFuncGuide" modalPresentationStyle="formSheet" id="f9I-1a-SFT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="113.16964285714285"/>
-        </scene>
-        <!--杭电地图-->
-        <scene sceneID="ahE-p5-2wy">
-            <objects>
-                <viewController title="杭电地图" id="OZ5-fd-LvJ" customClass="HduMapViewController" customModule="lemonios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7j1-2D-FTr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJd-3Y-usu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="CJd-3Y-usu" firstAttribute="centerX" secondItem="7j1-2D-FTr" secondAttribute="centerX" id="FTK-up-TaS"/>
-                            <constraint firstAttribute="bottom" secondItem="CJd-3Y-usu" secondAttribute="bottom" id="egY-I4-k8k"/>
-                            <constraint firstItem="CJd-3Y-usu" firstAttribute="top" secondItem="7j1-2D-FTr" secondAttribute="top" id="qfy-Yj-WGq"/>
-                            <constraint firstItem="CJd-3Y-usu" firstAttribute="leading" secondItem="7j1-2D-FTr" secondAttribute="leading" id="s8W-z3-T9C"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="skk-s6-8dw"/>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="CJd-3Y-usu" id="yWR-uN-A6l"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dLX-CS-8GJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1882.608695652174" y="113.16964285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9jX-I1-7BQ">
@@ -116,7 +85,7 @@
                 <hostingController id="CLS-2S-TuF" customClass="NewFuncGuideController" customModule="lemonios" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qem-mJ-auE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="-596"/>
+            <point key="canvasLocation" x="1884" y="113"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
