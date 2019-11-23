@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1796D42387F42A00E79489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1796D32387F42A00E79489 /* Alamofire */; };
+		2A1796D92387F51100E79489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1796D82387F51100E79489 /* Alamofire */; };
+		2A1796DB2387F51E00E79489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1796DA2387F51E00E79489 /* Alamofire */; };
+		2A1796DD2387F52600E79489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1796DC2387F52600E79489 /* Alamofire */; };
+		2A1796E12388271700E79489 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1796E02388271700E79489 /* SceneDelegate.swift */; };
 		2A1E41272377F72B002FA52A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		2A1E412A2377F72B002FA52A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41292377F72B002FA52A /* TodayViewController.swift */; };
 		2A1E412D2377F72B002FA52A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1E412B2377F72B002FA52A /* MainInterface.storyboard */; };
-		2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A1E41262377F72B002FA52A /* 一卡通.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A1E41362377F766002FA52A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
+		2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A1E41262377F72B002FA52A /* 一卡通.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
 		2A39868223780BE0005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868123780BE0005AB8AF /* WidgetNumberView.swift */; };
 		2A39868423780E74005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
@@ -27,9 +31,6 @@
 		2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */; };
 		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A5C40E42340E42800B9FF02 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
-		2A8EA32822B2935300ECDC39 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
-		2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */; settings = {ATTRIBUTES = (Required, ); }; };
 		2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A981807237AC39A005C5141 /* NewFuncGuideController.swift */; };
 		2AA008232385674800A05B03 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA008222385674800A05B03 /* DeviceKit */; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
@@ -37,16 +38,8 @@
 		2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		2ADBF3B92375BD31001BE5D5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3B82375BD31001BE5D5 /* TodayViewController.swift */; };
 		2ADBF3BC2375BD31001BE5D5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBF3BA2375BD31001BE5D5 /* MainInterface.storyboard */; };
-		2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */; };
-		2ADBF3C52375C220001BE5D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD799DD22B271900053BB4E /* Alamofire.framework */; };
-		2AE679A3230FE95800F26F07 /* geos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE679A1230FE93900F26F07 /* geos.framework */; };
-		2AE679A6230FE99700F26F07 /* GEOSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67999230FE77E00F26F07 /* GEOSwift.framework */; };
-		2AE679A8230FE99900F26F07 /* GEOSwiftMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE67998230FE77E00F26F07 /* GEOSwiftMapKit.framework */; };
-		2AE679AF230FFC9500F26F07 /* dormArea.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2AE679AC230FFC9300F26F07 /* dormArea.geojson */; };
-		2AE679B0230FFC9500F26F07 /* majorSchoolBuildings.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2AE679AD230FFC9400F26F07 /* majorSchoolBuildings.geojson */; };
-		2AE679B1230FFC9500F26F07 /* zones.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2AE679AE230FFC9400F26F07 /* zones.geojson */; };
-		2AE92062231C29BB002C9538 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE92061231C29BB002C9538 /* MapKit.framework */; };
 		2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50EF22BFE1260005781E /* Intents.framework */; };
 		2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50F022BFE1260005781E /* IntentsUI.framework */; };
 		4E2661882386A6DF00B42004 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2661872386A6DF00B42004 /* MainInterface.storyboard */; };
@@ -121,6 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A1796E02388271700E79489 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A1E41262377F72B002FA52A /* 一卡通.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "一卡通.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1E41292377F72B002FA52A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2A1E412C2377F72B002FA52A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -152,7 +146,6 @@
 		2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		2A981807237AC39A005C5141 /* NewFuncGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFuncGuideController.swift; sourceTree = "<group>"; };
 		2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HduMapViewController.swift; sourceTree = "<group>"; };
-		2AD799DB22B267590053BB4E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		2AD799DD22B271900053BB4E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRunWidget.swift; sourceTree = "<group>"; };
 		2ADBF3AF2375B928001BE5D5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -167,9 +160,6 @@
 		2AE679A0230FE93900F26F07 /* GEOSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GEOSwift.framework.dSYM; path = Carthage/Build/iOS/GEOSwift.framework.dSYM; sourceTree = "<group>"; };
 		2AE679A1230FE93900F26F07 /* geos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = geos.framework; path = Carthage/Build/iOS/geos.framework; sourceTree = "<group>"; };
 		2AE679A2230FE93900F26F07 /* GEOSwiftMapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GEOSwiftMapKit.framework.dSYM; path = Carthage/Build/iOS/GEOSwiftMapKit.framework.dSYM; sourceTree = "<group>"; };
-		2AE679AC230FFC9300F26F07 /* dormArea.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dormArea.geojson; sourceTree = "<group>"; };
-		2AE679AD230FFC9400F26F07 /* majorSchoolBuildings.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = majorSchoolBuildings.geojson; sourceTree = "<group>"; };
-		2AE679AE230FFC9400F26F07 /* zones.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zones.geojson; sourceTree = "<group>"; };
 		2AE92061231C29BB002C9538 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2AEC50DC22BFD71F0005781E /* lemonios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lemonios.entitlements; sourceTree = "<group>"; };
 		2AEC50E322BFD92C0005781E /* opensubapp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = opensubapp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,7 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1E41272377F72B002FA52A /* NotificationCenter.framework in Frameworks */,
-				2A1E41362377F766002FA52A /* Alamofire.framework in Frameworks */,
+				2A1796DD2387F52600E79489 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,16 +186,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE679A3230FE95800F26F07 /* geos.framework in Frameworks */,
 				2AA008232385674800A05B03 /* DeviceKit in Frameworks */,
 				2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */,
-				2AE679A8230FE99900F26F07 /* GEOSwiftMapKit.framework in Frameworks */,
 				2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */,
-				2AE92062231C29BB002C9538 /* MapKit.framework in Frameworks */,
+				2A1796D42387F42A00E79489 /* Alamofire in Frameworks */,
 				2A4558C72299A45200250D01 /* WebKit.framework in Frameworks */,
-				2A8EA32A22B2935300ECDC39 /* Alamofire.framework.dSYM in Frameworks */,
-				2AE679A6230FE99700F26F07 /* GEOSwift.framework in Frameworks */,
-				2A8EA32822B2935300ECDC39 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */,
-				2A5C40E42340E42800B9FF02 /* Alamofire.framework in Frameworks */,
+				2A1796D92387F51100E79489 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */,
-				2ADBF3C52375C220001BE5D5 /* Alamofire.framework in Frameworks */,
+				2A1796DB2387F51E00E79489 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				2ADBF3AF2375B928001BE5D5 /* .gitignore */,
-				2AE679AB230FFC5200F26F07 /* Resources */,
-				2AD799DB22B267590053BB4E /* Cartfile */,
 				2A4558932299825700250D01 /* lemonios */,
 				2A4558AB2299825900250D01 /* lemoniosTests */,
 				2A4558B62299825900250D01 /* lemoniosUITests */,
@@ -309,6 +292,7 @@
 				2A4558A32299825800250D01 /* Info.plist */,
 				2A45589B2299825700250D01 /* lemonios.xcdatamodeld */,
 				2A981807237AC39A005C5141 /* NewFuncGuideController.swift */,
+				2A1796E02388271700E79489 /* SceneDelegate.swift */,
 			);
 			path = lemonios;
 			sourceTree = "<group>";
@@ -377,16 +361,6 @@
 			path = sunrunwidget;
 			sourceTree = "<group>";
 		};
-		2AE679AB230FFC5200F26F07 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2AE679AC230FFC9300F26F07 /* dormArea.geojson */,
-				2AE679AD230FFC9400F26F07 /* majorSchoolBuildings.geojson */,
-				2AE679AE230FFC9400F26F07 /* zones.geojson */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		4E937B0723799BF1009D93E0 /* newFuncGuide */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +386,9 @@
 			dependencies = (
 			);
 			name = cardwidget;
+			packageProductDependencies = (
+				2A1796DC2387F52600E79489 /* Alamofire */,
+			);
 			productName = cardwidget;
 			productReference = 2A1E41262377F72B002FA52A /* 一卡通.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -423,7 +400,6 @@
 				2A45588D2299825700250D01 /* Sources */,
 				2A45588E2299825700250D01 /* Frameworks */,
 				2A45588F2299825700250D01 /* Resources */,
-				2AD799DC22B270FC0053BB4E /* ShellScript */,
 				2AE679A5230FE95800F26F07 /* Embed Frameworks */,
 				2A5C40DA233F9AC200B9FF02 /* Embed App Extensions */,
 			);
@@ -437,6 +413,7 @@
 			name = lemonios;
 			packageProductDependencies = (
 				2AA008222385674800A05B03 /* DeviceKit */,
+				2A1796D32387F42A00E79489 /* Alamofire */,
 			);
 			productName = lemonios;
 			productReference = 2A4558912299825700250D01 /* lemonios.app */;
@@ -491,6 +468,9 @@
 			dependencies = (
 			);
 			name = schedulewidget;
+			packageProductDependencies = (
+				2A1796D82387F51100E79489 /* Alamofire */,
+			);
 			productName = schedulewidget;
 			productReference = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -508,6 +488,9 @@
 			dependencies = (
 			);
 			name = sunrunwidget;
+			packageProductDependencies = (
+				2A1796DA2387F51E00E79489 /* Alamofire */,
+			);
 			productName = sunrunwidget;
 			productReference = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -586,6 +569,7 @@
 			mainGroup = 2A4558882299825600250D01;
 			packageReferences = (
 				2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */,
 			);
 			productRefGroup = 2A4558922299825700250D01 /* Products */;
 			projectDirPath = "";
@@ -615,13 +599,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE679AF230FFC9500F26F07 /* dormArea.geojson in Resources */,
 				2ADBF3B02375B928001BE5D5 /* .gitignore in Resources */,
 				2A4558A22299825800250D01 /* LaunchScreen.storyboard in Resources */,
 				2A45589F2299825800250D01 /* Assets.xcassets in Resources */,
 				2A45589A2299825700250D01 /* Main.storyboard in Resources */,
-				2AE679B0230FFC9500F26F07 /* majorSchoolBuildings.geojson in Resources */,
-				2AE679B1230FFC9500F26F07 /* zones.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,34 +645,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2AD799DC22B270FC0053BB4E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/geos.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/GEOSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/GEOSwiftMapKit.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/geos.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/GEOSwift.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/GEOSwiftMapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		2A1E41222377F72B002FA52A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -712,6 +665,7 @@
 				2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */,
 				4E937B0D237A46AB009D93E0 /* NewFuncRow.swift in Sources */,
 				2A4558972299825700250D01 /* ViewController.swift in Sources */,
+				2A1796E12388271700E79489 /* SceneDelegate.swift in Sources */,
 				2A4558952299825700250D01 /* AppDelegate.swift in Sources */,
 				2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */,
 			);
@@ -765,6 +719,7 @@
 /* Begin PBXTargetDependency section */
 		2A1E41302377F72B002FA52A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 2A1E41252377F72B002FA52A /* cardwidget */;
 			targetProxy = 2A1E412F2377F72B002FA52A /* PBXContainerItemProxy */;
 		};
@@ -786,6 +741,7 @@
 		};
 		2ADBF3BF2375BD31001BE5D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 2ADBF3B42375BD31001BE5D5 /* sunrunwidget */;
 			targetProxy = 2ADBF3BE2375BD31001BE5D5 /* PBXContainerItemProxy */;
 		};
@@ -832,12 +788,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = LG57TUQ726;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -849,6 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -859,12 +812,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = LG57TUQ726;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -876,6 +825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1004,12 +954,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LG57TUQ726;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = lemonios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1019,7 +968,7 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1032,12 +981,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LG57TUQ726;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = lemonios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1047,7 +995,7 @@
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1140,12 +1088,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = LG57TUQ726;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1168,12 +1112,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = LG57TUQ726;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1196,12 +1136,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = LG57TUQ726;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1213,6 +1149,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1223,12 +1160,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = LG57TUQ726;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1240,6 +1173,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1361,6 +1295,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alamofire/alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.1;
+			};
+		};
 		2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devicekit/DeviceKit";
@@ -1372,6 +1314,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2A1796D32387F42A00E79489 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A1796D82387F51100E79489 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A1796DA2387F51E00E79489 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A1796DC2387F52600E79489 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
 		2AA008222385674800A05B03 /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */;

@@ -117,8 +117,14 @@
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "Slice.png",
+      "filename" : "Frame 1.png",
       "scale" : "1x"
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "Frame 1@2x.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
