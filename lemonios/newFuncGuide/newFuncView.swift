@@ -22,17 +22,20 @@ struct NewFuncView: View {
                 List {
                     NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
                         version: "1.1", content: [
-                            "一卡通组件新增「充值」功能，点击即可直达支付宝校园一卡通充值。",
-                            "支持iOS系统通知推送，可以在「我」-「设置」-「通知设置」中具体调整。",
+                            "[MACONLY]杭电助手现已提供macOS App。",
+                            "支持系统通知推送，可以在「我」-「设置」-「通知设置」中具体调整。",
+                            "[NOMAC]一卡通组件新增「充值」功能，点击即可直达支付宝校园一卡通充值。",
                             "「发现」新增搜索功能。",
                             "全新的通知管理设置，更多自定义设置。",
                         ]
                     ))
+                    #if !targetEnvironment(macCatalyst)
                     NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
                         version: "1.0", content: [
                             "新的通知中心小组件：阳光长跑、一卡通。前往通知中心的左侧，点击底部「编辑」将他们添加进来即可使用。",
                         ]
                     ))
+                    #endif
                 }
                     .navigationBarTitle("杭电助手·新功能")
             }
