@@ -92,10 +92,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
         let userToken = sharedUd?.string(forKey: "token")
         
+        // https://github.com/devicekit/DeviceKit/issues/214
+        #if targetEnvironment(macCatalyst)
+        let deviceDesc = "Mac"
+        #else
+        let deviceDesc = Device.current.description
+        #endif
         let deviceInfo: Parameters = [
             "DeviceToken": token,
-            "DeviceDesc": Device.current.description
+            "DeviceDesc": deviceDesc
         ]
+        
         Alamofire.request(
             "https://api.hduhelp.com/devices/token/apple",
             method: .post,
