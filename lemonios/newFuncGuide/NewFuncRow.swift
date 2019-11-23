@@ -29,9 +29,23 @@ struct NewFuncRow: View {
                 .font(.title)
                 .padding(.bottom)
             VStack (alignment: .leading, spacing: 7.0) {
-                ForEach(versionContent.content, id: \.self) { row in
+                #if targetEnvironment(macCatalyst)
+                ForEach(self.versionContent.content.filter{ line in
+                    return !line.hasPrefix("[NOMAC]")
+                }.map{ line in
+                    return line.replacingOccurrences(of: "[MACONLY]", with: "")
+                }, id: \.self) { row in
                     Text(row)
                 }
+                #else
+                ForEach(self.versionContent.content.map{ line in
+                    return line.replacingOccurrences(of: "[NOMAC]", with: "")
+                }.filter{ line in
+                    return !line.hasPrefix("[MACONLY]")
+                }, id: \.self) { row in
+                    Text(row)
+                }
+                #endif
             }
         }.padding(.vertical)
     }
