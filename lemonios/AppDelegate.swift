@@ -177,6 +177,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         })
         return container
     }()
+    
+    // MARK: - Mac Catalyst Menu Support
+    
+    #if targetEnvironment(macCatalyst)
+    
+    var menuController: MenuController!
+    
+    /** Add the various menus to the menu bar.
+        The system only asks UIApplication and UIApplicationDelegate for the main menus.
+        Main menus appear regardless of who is in the responder chain.
+    
+        Note: These menus and menu commands are localized to Chinese (Simplified) in this sample.
+        To change the app to run in to Chinese, refer to Xcode Help on Testing localizations:
+            https://help.apple.com/xcode/mac/current/#/dev499a9529e
+    */
+    override func buildMenu(with builder: UIMenuBuilder) {
+        
+        /** First check if the builder object is using the main system menu, which is the main menu bar.
+            If you want to check if the builder is for a contextual menu, check for: UIMenuSystem.context
+         */
+        if builder.system == .main {
+            menuController = MenuController(with: builder)
+        }
+    }
+    
+    #endif
 
     // MARK: - Core Data Saving support
 

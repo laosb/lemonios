@@ -17,6 +17,7 @@
 		2A1E412D2377F72B002FA52A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1E412B2377F72B002FA52A /* MainInterface.storyboard */; };
 		2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A1E41262377F72B002FA52A /* 一卡通.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
+		2A31BE9E2389107200AA9CFC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A31BE9D2389107200AA9CFC /* MenuController.swift */; };
 		2A39868223780BE0005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868123780BE0005AB8AF /* WidgetNumberView.swift */; };
 		2A39868423780E74005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
 		2A4558952299825700250D01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558942299825700250D01 /* AppDelegate.swift */; };
@@ -121,6 +122,7 @@
 		2A1E412E2377F72B002FA52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A1E41352377F742002FA52A /* cardwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cardwidget.entitlements; sourceTree = "<group>"; };
 		2A1E41392377F7D4002FA52A /* CardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidget.swift; sourceTree = "<group>"; };
+		2A31BE9D2389107200AA9CFC /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		2A39868123780BE0005AB8AF /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
 		2A39868323780E74005AB8AF /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
 		2A4558912299825700250D01 /* lemonios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lemonios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +295,7 @@
 				2A45589B2299825700250D01 /* lemonios.xcdatamodeld */,
 				2A981807237AC39A005C5141 /* NewFuncGuideController.swift */,
 				2A1796E02388271700E79489 /* SceneDelegate.swift */,
+				2A31BE9D2389107200AA9CFC /* MenuController.swift */,
 			);
 			path = lemonios;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */,
+				2A31BE9E2389107200AA9CFC /* MenuController.swift in Sources */,
 				2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */,
 				2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */,
 				4E937B0D237A46AB009D93E0 /* NewFuncRow.swift in Sources */,
