@@ -100,11 +100,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         #endif
         let deviceInfo: Parameters = [
             "DeviceToken": token,
-            "DeviceDesc": deviceDesc
+            "DeviceDesc": deviceDesc,
+            "DeviceType": "apple"
         ]
         
+        #if DEBUG
+        let tokenReportUrl = "https://api.hduhelp.com/devices/token?debug=1"
+        #else
+        let tokenReportUrl = "https://api.hduhelp.com/devices/token"
+        #endif
+        
         Alamofire.request(
-            "https://api.hduhelp.com/devices/token/apple",
+            tokenReportUrl,
             method: .post,
             parameters: deviceInfo,
             encoding: JSONEncoding.default,
