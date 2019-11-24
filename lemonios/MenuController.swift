@@ -12,5 +12,6 @@ class MenuController {
     init(with builder: UIMenuBuilder) {
         builder.remove(menu: .format)
         builder.remove(menu: .file)
+        builder.remove(menu: .help)
     }
 }
