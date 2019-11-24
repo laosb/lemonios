@@ -125,7 +125,7 @@
 		2A31BE9D2389107200AA9CFC /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		2A39868123780BE0005AB8AF /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
 		2A39868323780E74005AB8AF /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
-		2A4558912299825700250D01 /* lemonios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lemonios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4558912299825700250D01 /* 杭电助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "杭电助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4558942299825700250D01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A4558962299825700250D01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A4558992299825700250D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,10 +133,10 @@
 		2A45589E2299825800250D01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A4558A12299825800250D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A4558A32299825800250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A4558A82299825900250D01 /* lemoniosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lemoniosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4558A82299825900250D01 /* 杭电助手Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "杭电助手Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4558AC2299825900250D01 /* lemoniosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lemoniosTests.swift; sourceTree = "<group>"; };
 		2A4558AE2299825900250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A4558B32299825900250D01 /* lemoniosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lemoniosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4558B32299825900250D01 /* 杭电助手UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "杭电助手UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4558B72299825900250D01 /* lemoniosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lemoniosUITests.swift; sourceTree = "<group>"; };
 		2A4558B92299825900250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A4558C62299A45200250D01 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -269,9 +269,9 @@
 		2A4558922299825700250D01 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A4558912299825700250D01 /* lemonios.app */,
-				2A4558A82299825900250D01 /* lemoniosTests.xctest */,
-				2A4558B32299825900250D01 /* lemoniosUITests.xctest */,
+				2A4558912299825700250D01 /* 杭电助手.app */,
+				2A4558A82299825900250D01 /* 杭电助手Tests.xctest */,
+				2A4558B32299825900250D01 /* 杭电助手UITests.xctest */,
 				2AEC50E322BFD92C0005781E /* opensubapp.appex */,
 				2A5C40CD233F9AC200B9FF02 /* 下节课.appex */,
 				2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */,
@@ -396,9 +396,9 @@
 			productReference = 2A1E41262377F72B002FA52A /* 一卡通.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		2A4558902299825700250D01 /* lemonios */ = {
+		2A4558902299825700250D01 /* 杭电助手 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A4558BC2299825900250D01 /* Build configuration list for PBXNativeTarget "lemonios" */;
+			buildConfigurationList = 2A4558BC2299825900250D01 /* Build configuration list for PBXNativeTarget "杭电助手" */;
 			buildPhases = (
 				2A45588D2299825700250D01 /* Sources */,
 				2A45588E2299825700250D01 /* Frameworks */,
@@ -413,18 +413,18 @@
 				2ADBF3BF2375BD31001BE5D5 /* PBXTargetDependency */,
 				2A1E41302377F72B002FA52A /* PBXTargetDependency */,
 			);
-			name = lemonios;
+			name = "杭电助手";
 			packageProductDependencies = (
 				2AA008222385674800A05B03 /* DeviceKit */,
 				2A1796D32387F42A00E79489 /* Alamofire */,
 			);
 			productName = lemonios;
-			productReference = 2A4558912299825700250D01 /* lemonios.app */;
+			productReference = 2A4558912299825700250D01 /* 杭电助手.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2A4558A72299825900250D01 /* lemoniosTests */ = {
+		2A4558A72299825900250D01 /* 杭电助手Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A4558BF2299825900250D01 /* Build configuration list for PBXNativeTarget "lemoniosTests" */;
+			buildConfigurationList = 2A4558BF2299825900250D01 /* Build configuration list for PBXNativeTarget "杭电助手Tests" */;
 			buildPhases = (
 				2A4558A42299825900250D01 /* Sources */,
 				2A4558A52299825900250D01 /* Frameworks */,
@@ -435,14 +435,14 @@
 			dependencies = (
 				2A4558AA2299825900250D01 /* PBXTargetDependency */,
 			);
-			name = lemoniosTests;
+			name = "杭电助手Tests";
 			productName = lemoniosTests;
-			productReference = 2A4558A82299825900250D01 /* lemoniosTests.xctest */;
+			productReference = 2A4558A82299825900250D01 /* 杭电助手Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2A4558B22299825900250D01 /* lemoniosUITests */ = {
+		2A4558B22299825900250D01 /* 杭电助手UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A4558C22299825900250D01 /* Build configuration list for PBXNativeTarget "lemoniosUITests" */;
+			buildConfigurationList = 2A4558C22299825900250D01 /* Build configuration list for PBXNativeTarget "杭电助手UITests" */;
 			buildPhases = (
 				2A4558AF2299825900250D01 /* Sources */,
 				2A4558B02299825900250D01 /* Frameworks */,
@@ -453,9 +453,9 @@
 			dependencies = (
 				2A4558B52299825900250D01 /* PBXTargetDependency */,
 			);
-			name = lemoniosUITests;
+			name = "杭电助手UITests";
 			productName = lemoniosUITests;
-			productReference = 2A4558B32299825900250D01 /* lemoniosUITests.xctest */;
+			productReference = 2A4558B32299825900250D01 /* 杭电助手UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		2A5C40CC233F9AC200B9FF02 /* schedulewidget */ = {
@@ -561,7 +561,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2A45588C2299825600250D01 /* Build configuration list for PBXProject "lemonios" */;
+			buildConfigurationList = 2A45588C2299825600250D01 /* Build configuration list for PBXProject "杭电助手" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -578,9 +578,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A4558902299825700250D01 /* lemonios */,
-				2A4558A72299825900250D01 /* lemoniosTests */,
-				2A4558B22299825900250D01 /* lemoniosUITests */,
+				2A4558902299825700250D01 /* 杭电助手 */,
+				2A4558A72299825900250D01 /* 杭电助手Tests */,
+				2A4558B22299825900250D01 /* 杭电助手UITests */,
 				2AEC50E222BFD92C0005781E /* opensubapp */,
 				2A5C40CC233F9AC200B9FF02 /* schedulewidget */,
 				2ADBF3B42375BD31001BE5D5 /* sunrunwidget */,
@@ -729,12 +729,12 @@
 		};
 		2A4558AA2299825900250D01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A4558902299825700250D01 /* lemonios */;
+			target = 2A4558902299825700250D01 /* 杭电助手 */;
 			targetProxy = 2A4558A92299825900250D01 /* PBXContainerItemProxy */;
 		};
 		2A4558B52299825900250D01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A4558902299825700250D01 /* lemonios */;
+			target = 2A4558902299825700250D01 /* 杭电助手 */;
 			targetProxy = 2A4558B42299825900250D01 /* PBXContainerItemProxy */;
 		};
 		2A5C40D8233F9AC200B9FF02 /* PBXTargetDependency */ = {
@@ -1022,7 +1022,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lemonios.app/lemonios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/杭电助手.app/杭电助手";
 			};
 			name = Debug;
 		};
@@ -1043,7 +1043,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lemonios.app/lemonios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/杭电助手.app/杭电助手";
 			};
 			name = Release;
 		};
@@ -1233,7 +1233,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A45588C2299825600250D01 /* Build configuration list for PBXProject "lemonios" */ = {
+		2A45588C2299825600250D01 /* Build configuration list for PBXProject "杭电助手" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A4558BA2299825900250D01 /* Debug */,
@@ -1242,7 +1242,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A4558BC2299825900250D01 /* Build configuration list for PBXNativeTarget "lemonios" */ = {
+		2A4558BC2299825900250D01 /* Build configuration list for PBXNativeTarget "杭电助手" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A4558BD2299825900250D01 /* Debug */,
@@ -1251,7 +1251,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A4558BF2299825900250D01 /* Build configuration list for PBXNativeTarget "lemoniosTests" */ = {
+		2A4558BF2299825900250D01 /* Build configuration list for PBXNativeTarget "杭电助手Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A4558C02299825900250D01 /* Debug */,
@@ -1260,7 +1260,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A4558C22299825900250D01 /* Build configuration list for PBXNativeTarget "lemoniosUITests" */ = {
+		2A4558C22299825900250D01 /* Build configuration list for PBXNativeTarget "杭电助手UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A4558C32299825900250D01 /* Debug */,
