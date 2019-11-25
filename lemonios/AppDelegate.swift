@@ -8,9 +8,17 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+import Alamofire
+import DeviceKit
+
+struct LMDeviceInfo: Encodable {
+    let DeviceToken: String
+    let DeviceDesc: String
+}
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -29,9 +37,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         completionHandler(handleShortcut(shortcutItem))
     }
     
+    //https://fleetingpixels.com/blog/2019/6/7/customising-nstoolbar-in-uikit-for-mac-marzipancatalyst
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+            // Called when a new scene session is being created.
+            // Use this method to select a configuration to create
+            // the new scene with.
+            return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+            // Called when the user discards a scene session.
+            // If any sessions were discarded while the application
+            // was not running, this will be called shortly after
+            // application:didFinishLaunchingWithOptions.
+      
+            // Use this method to release any resources that were
+            // specific to the discarded scenes, as they will not return.
+    }
+    
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         if #available(iOS 12.0, *) {
-            let activities = ["schedule", "card", "hdumap"]
+            let activities = ["schedule", "card"]
             let activity = String(userActivity.activityType.split(separator: ".").last ?? "")
             if activities.contains(activity) {
                 self.shortcutName = activity
@@ -54,6 +80,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
         }
         return true
+    }
+    
+    func application(
+      _ application: UIApplication,
+      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+    ) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        
+        let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+        let userToken = sharedUd?.string(forKey: "token")
+        
+        // https://github.com/devicekit/DeviceKit/issues/214
+        #if targetEnvironment(macCatalyst)
+        let deviceDesc = "Mac"
+        #else
+        let deviceDesc = Device.current.description
+        #endif
+        let deviceInfo: Parameters = [
+            "DeviceToken": token,
+            "DeviceDesc": deviceDesc,
+            "DeviceType": "apple"
+        ]
+        
+        #if DEBUG
+        let tokenReportUrl = "https://api.hduhelp.com/devices/token?debug=1"
+        #else
+        let tokenReportUrl = "https://api.hduhelp.com/devices/token"
+        #endif
+        
+        Alamofire.request(
+            tokenReportUrl,
+            method: .post,
+            parameters: deviceInfo,
+            encoding: JSONEncoding.default,
+            headers:["Authorization": "token \(userToken ?? "")"]
+        ).validate().responseJSON { response in
+//            print(response)
+        }
+//      print("Device Token: \(token)")
+    }
+
+    func application(
+      _ application: UIApplication,
+      didFailToRegisterForRemoteNotificationsWithError error: Error) {
+//      print("Failed to register: \(error)")
     }
     
     private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
@@ -119,6 +191,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    
+    // MARK: - Mac Catalyst Menu Support
+    
+    #if targetEnvironment(macCatalyst)
+    
+    var menuController: MenuController!
+    
+    /** Add the various menus to the menu bar.
+        The system only asks UIApplication and UIApplicationDelegate for the main menus.
+        Main menus appear regardless of who is in the responder chain.
+    
+        Note: These menus and menu commands are localized to Chinese (Simplified) in this sample.
+        To change the app to run in to Chinese, refer to Xcode Help on Testing localizations:
+            https://help.apple.com/xcode/mac/current/#/dev499a9529e
+    */
+    override func buildMenu(with builder: UIMenuBuilder) {
+        
+        /** First check if the builder object is using the main system menu, which is the main menu bar.
+            If you want to check if the builder is for a contextual menu, check for: UIMenuSystem.context
+         */
+        if builder.system == .main {
+            menuController = MenuController(with: builder)
+        }
+    }
+    
+    #endif
 
     // MARK: - Core Data Saving support
 

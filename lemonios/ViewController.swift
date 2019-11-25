@@ -10,17 +10,38 @@ import UIKit
 import WebKit
 import IntentsUI
 import SafariServices
+import UserNotifications
 import Alamofire
+import DeviceKit
 
 let primaryColor = UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)
 
 class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewControllerDelegate {
-    @available(iOS 12.0, *)
+    func enableNotification () {
+        UNUserNotificationCenter.current()
+          .requestAuthorization(options: [.alert, .sound, .badge]) {
+            [weak self] granted, error in
+              
+//            print("Permission granted: \(granted)")
+            guard granted else { return }
+            self?.getNotificationSettings()
+        }
+    }
+    
+    func getNotificationSettings() {
+      UNUserNotificationCenter.current().getNotificationSettings { settings in
+//        print("Notification settings: \(settings)")
+        guard settings.authorizationStatus == .authorized else { return }
+        DispatchQueue.main.async {
+          UIApplication.shared.registerForRemoteNotifications()
+        }
+      }
+    }
+    
     func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
         dismiss(animated: true, completion: nil)
     }
     
-    @available(iOS 12.0, *)
     func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
         dismiss(animated: true, completion: nil)
     }
@@ -32,6 +53,14 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        #if targetEnvironment(macCatalyst)
+        self.webView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.webView.heightAnchor.constraint(equalTo: self.view.heightAnchor).isActive = true
+        self.view.layoutIfNeeded()
+        #endif
+        if Device.current.isPad {
+            self.webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        }
     }
     
     func tryLoad(_ configUrl: String) {
@@ -73,11 +102,17 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     
     @objc private func shortcutFired () {
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
-
-        let urlTemplate = "%@/?__shell_lemonios=%@&utm_source=lemonios/#"
+        
+        #if targetEnvironment(macCatalyst)
+        let shellCode = "lemonmac"
+        #else
+        let shellCode = "lemonios"
+        #endif
+        let urlTemplate = "%@/?__shell_\(shellCode)=%@&utm_source=\(shellCode)/#"
         let fallbackBaseUrl = "https://ios.app.hduhelp.com"
         let baseUrl = UserDefaults.standard.string(forKey: "baseUrl") ?? fallbackBaseUrl
 //        let baseUrl = "https://appdev.hduhelp.com" // Debug
+//        let baseUrl = "https://ios.app.hduhelp.com" // Debug
 //        let baseUrl = "https://client-config.hduhelp.lao.sb/lemon-bridge-test.html" // Debug
 
         let nativeVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
@@ -92,12 +127,15 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             urlStr += "/login?auth=\(token)"
             sharedUd?.set(token, forKey: "token")
             sharedUd?.synchronize()
+            if token != "" {
+                enableNotification()
+            }
         } else if let shortcut = appDelegate.getShortcutItem() {
             if shortcut == "schedule" { urlStr += "/app/schedule" }
             if shortcut == "card" { urlStr += "/app/card" }
-            if shortcut == "hdumap" {
-                return self.performSegue(withIdentifier: "gotoHduMap", sender: self)
-            }
+//            if shortcut == "hdumap" {
+//                return self.performSegue(withIdentifier: "gotoHduMap", sender: self)
+//            }
         }
         
 //        print(urlStr)
@@ -127,10 +165,13 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             """, completionHandler: { returnValue, error in
                 if returnValue != nil && error == nil {
                     let token = returnValue as? String
-                    sharedUd?.set(token, forKey: "token")
-                    sharedUd?.synchronize()
+                    if token != nil && token != "" {
+                        sharedUd?.set(token, forKey: "token")
+                        sharedUd?.synchronize()
+                        self.enableNotification()
+                        timer.invalidate()
+                    }
 //                    print("user token:", token)
-                    timer.invalidate()
                 }
             })
         })
@@ -139,38 +180,38 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     enum LemonAction: String {
         case OpenSchedule = "schedule"
         case OpenCard = "card"
-        case OpenHdumap = "hdumap"
+//        case OpenHdumap = "hdumap"
     }
     
     func setupIntentForSiri(_ action: LemonAction) {
-        var activity: NSUserActivity
-        var actionIdentifier: String
-        switch (action) {
-            case .OpenSchedule:
-                actionIdentifier = "help.hdu.lemon.ios.schedule"
-                activity = NSUserActivity(activityType: actionIdentifier)
-                activity.title = "打开课表"
-                activity.userInfo = ["speech" : "课表"]
-            case .OpenCard:
-                actionIdentifier = "help.hdu.lemon.ios.card"
-                activity = NSUserActivity(activityType: actionIdentifier)
-                activity.title = "查看一卡通情况"
-                activity.userInfo = ["speech" : "一卡通"]
-            case .OpenHdumap:
-                actionIdentifier = "help.hdu.lemon.ios.hdumap"
-                activity = NSUserActivity(activityType: actionIdentifier)
-                activity.title = "打开杭电地图"
-                activity.userInfo = ["speech" : "杭电地图"]
-        }
-        activity.isEligibleForSearch = true
-        if #available(iOS 12.0, *) {
+        #if !targetEnvironment(macCatalyst)
+            var activity: NSUserActivity
+            var actionIdentifier: String
+            switch (action) {
+                case .OpenSchedule:
+                    actionIdentifier = "help.hdu.lemon.ios.schedule"
+                    activity = NSUserActivity(activityType: actionIdentifier)
+                    activity.title = "打开课表"
+                    activity.userInfo = ["speech" : "课表"]
+                case .OpenCard:
+                    actionIdentifier = "help.hdu.lemon.ios.card"
+                    activity = NSUserActivity(activityType: actionIdentifier)
+                    activity.title = "查看一卡通情况"
+                    activity.userInfo = ["speech" : "一卡通"]
+    //            case .OpenHdumap:
+    //                actionIdentifier = "help.hdu.lemon.ios.hdumap"
+    //                activity = NSUserActivity(activityType: actionIdentifier)
+    //                activity.title = "打开杭电地图"
+    //                activity.userInfo = ["speech" : "杭电地图"]
+            }
+            activity.isEligibleForSearch = true
             activity.isEligibleForPrediction = true
             activity.persistentIdentifier = NSUserActivityPersistentIdentifier(actionIdentifier)
             let shortcut = INShortcut(userActivity: activity)
             let vc = INUIAddVoiceShortcutViewController(shortcut: shortcut)
             vc.delegate = self
             present(vc, animated: true, completion: nil)
-        }
+        #endif
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -188,9 +229,9 @@ extension ViewController: WKNavigationDelegate {
             if (url!.pathComponents.contains("addSiriShortcut")) {
                 self.setupIntentForSiri(LemonAction(rawValue: url!.lastPathComponent)!)
             }
-            if (url!.pathComponents.contains("hduMap")) {
-                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
-            }
+//            if (url!.pathComponents.contains("hduMap")) {
+//                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
+//            }
             decisionHandler(WKNavigationActionPolicy.cancel)
             return
         }

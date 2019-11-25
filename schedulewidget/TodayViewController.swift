@@ -1,95 +1,79 @@
 //
-//  TodayViewController.swift
+//  scheduleWidget.swift
 //  schedulewidget
 //
-//  Created by Wexpo Lyu on 2019/9/28.
+//  Created by ljz on 2019/11/20.
 //  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
 //
-
 import UIKit
 import NotificationCenter
+import SwiftUI
 import Alamofire
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var table: UITableView!
-    @IBOutlet weak var signInBtn: UIButton!
     
-    
-    
-    var scheduleData: Array<NSDictionary>?
-    var isTomorow: Bool = false
-    var token: String = ""
-    
-    @IBAction func signInBtnTapped(_ sender: Any) {
-        
-        self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/#/sign/in")!, completionHandler: nil)
-    }
-    
-    func loadQuickScheduleData(token: String) {
-//        print("load data")
-        Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
-            "Authorization": "token \(token)"
-        ]).validate().responseJSON(completionHandler: { response in
-            switch response.result {
-            case .success:
-                let json = response.result.value
-//                print(json)
-                let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
-//                print(newRawData)
-                self.scheduleData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
-//                print(self.scheduleData?.count)
-                self.isTomorow = newRawData.object(forKey: "IsTomorrow") as! Bool
-                self.statusLabel.text = self.scheduleData?.count ?? 0 > 0
-                    ? ""
-                    : "今天明天都没有课程。享受生活！"
-                if self.scheduleData == nil || self.scheduleData!.count == 0 {
-                    self.signInBtn.isHidden = true
-                } else {
-                    self.signInBtn.isHidden = false
-                }
-                self.table.reloadData()
-            case .failure:
-                self.statusLabel.text = "获取课表失败"
-                self.scheduleData = []
-                self.table.reloadData()
-                self.signInBtn.isHidden = true
-            }
+    func renderData(sData: Array<LMSchedule> , isA: Bool) {
+        let sVc = UIHostingController(rootView: scheduleWidget(sData: sData , availabe: isA){ cb in
+            self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/#/sign/in")!) { success in cb(success) }
         })
+        sVc.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
+        sVc.view.frame = self.view.bounds
+        self.view.addSubview(sVc.view)
+        self.addChild(sVc)
+        sVc.didMove(toParent: self)
     }
-    
+
     override func viewDidLoad() {
-        statusLabel.textColor = .secondaryLabel
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
         let token = sharedUd?.string(forKey: "token")
-        self.token = token ?? ""
+        var sData = Array<LMSchedule>()
+        
         if token != nil {
-            loadQuickScheduleData(token: token!)
+            Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
+                "Authorization": "token \(token ?? "")"
+            ]).validate().responseJSON(completionHandler: { response in
+                switch response.result {
+                        case .success:
+                            let json = response.result.value
+                            let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
+                            let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
+                            
+                            for i in 0..<tempData.count {
+                                let course = tempData[i].object(forKey: "COURSE") as! String
+                                let classRoom = tempData[i].object(forKey: "CLASSROOM") as! String
+                                let isTomorrow = newRawData.object(forKey: "IsTomorrow") as! Bool
+                                let startTime = tempData[i].object(forKey: "STARTTIME") as! String
+                                let endTime = tempData[i].object(forKey: "ENDTIME") as! String
+                                let teacher = tempData[i].object(forKey: "TEACHER") as! String
+                                
+                                var tempSData = LMSchedule()
+                                tempSData.classRoom = classRoom
+                                tempSData.course = course
+                                tempSData.teacher = teacher
+                                tempSData.isTomorrow = isTomorrow
+                                tempSData.endTime = endTime
+                                tempSData.startTime = startTime
+                                
+                                if tempSData.course != nil {
+                                    sData.append(tempSData)
+                                }
+                            }
+                            print("!!!!!!!!!!!!!!!!!!!")
+                            print(tempData.count)
+                            print(sData.count)
+                            self.renderData(sData: sData, isA: true)
+                        case .failure:
+                            self.renderData(sData: sData, isA: false)
+                    }
+                }
+            )
         } else {
-            statusLabel.text = "您尚未登录杭电助手，或者您的会话已过期。请打开杭电助手尝试登录。"
-            self.signInBtn.isHidden = true
+            self.renderData(sData: sData, isA: false)
         }
-        
-        // Reload on tap
-        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.labelTapped))
-        self.statusLabel.addGestureRecognizer(labelTap)
     }
     
-    override func viewDidLayoutSubviews() {
-        // Make sure we show exactly 2 rows in widget.
-        super.viewDidLayoutSubviews()
-        self.table.rowHeight = self.table.bounds.height / 2 + 0.5
-
-    }
-    
-    @IBAction func labelTapped(sender:UITapGestureRecognizer) {
-        self.loadQuickScheduleData(token: self.token)
-    }
-        
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
         
@@ -101,37 +85,3 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
 }
-
-extension TodayViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print(scheduleData?.count ?? 0)
-        return scheduleData?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellData = self.scheduleData?[indexPath.row]
-//        print(cellData)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath)
-        cell.textLabel?.text = cellData?.object(forKey: "COURSE") as? String
-        
-        let dayHint = self.isTomorow ? "明天" : ""
-        let timePeriod = "\(dayHint)\(cellData?.object(forKey: "STARTTIME") ?? "") - \(cellData?.object(forKey: "ENDTIME") ?? "")"
-        let teacher = "\(cellData?.object(forKey: "TEACHER") ?? "")"
-        let place = "\(cellData?.object(forKey: "CLASSROOM") ?? "")"
-        cell.detailTextLabel?.text = "\(timePeriod)  ·  \(teacher)  ·  \(place)"
-                
-        return cell
-    }
-    
-//    func tableView (_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let sklAction = UIContextualAction(style: .normal, title: "签到", handler: { _,_,_ in
-//            self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/#/sign/in")!, completionHandler: nil)
-//        })
-//        return UISwipeActionsConfiguration(actions: [sklAction])
-//    }
-}
-
