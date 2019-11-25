@@ -14,7 +14,9 @@ import Alamofire
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     func renderData(cardData: LMWidgetCard) {
-        let srVc = UIHostingController(rootView: CardWidget(cardData: cardData))
+        let srVc = UIHostingController(rootView: CardWidget(cardData: cardData){ cb in
+            self.extensionContext?.open(URL(string: "alipays://platformapi/startapp?saId=10000007&qrcode=https%3A%2F%2Fqr.alipay.com%2Fs7x07977akyiot2uv5pme45%3F_s%3Dweb-other")!) { success in cb(success) }
+        })
         srVc.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
         srVc.view.frame = self.view.bounds
         self.view.addSubview(srVc.view)
