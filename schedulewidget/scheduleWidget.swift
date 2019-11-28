@@ -31,7 +31,7 @@ struct scheduleWidget: View {
                 if self.availabe == false {
                     VStack {
                         Text("获取课表失败")
-                            .font(.headline)
+                            .foregroundColor(.secondary)
                     }
                 }
                 else if self.sData!.count != 0 {
@@ -64,6 +64,7 @@ struct scheduleWidget: View {
                 else {
                     Text("今明两天都没有课。享受生活！")
                         .font(.headline)
+                        .foregroundColor(.secondary)
                 }
                 
             }

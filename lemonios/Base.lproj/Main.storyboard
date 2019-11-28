@@ -10,7 +10,7 @@
         <!--杭电助手-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lemonios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="杭电助手" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,6 +55,7 @@
                     <connections>
                         <outlet property="webView" destination="XTj-fi-Y8X" id="EvO-ah-WID"/>
                         <segue destination="CLS-2S-TuF" kind="presentation" identifier="gotoNewFuncGuide" modalPresentationStyle="formSheet" id="f9I-1a-SFT"/>
+                        <segue destination="uUS-IR-8pm" kind="presentation" identifier="gotoLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Oqp-Ji-DpY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,13 +80,23 @@
             </objects>
             <point key="canvasLocation" x="134.78260869565219" y="113.16964285714285"/>
         </scene>
+        <!--Login Controller-->
+        <scene sceneID="8ya-b0-wDh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDI-yK-Isy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="uUS-IR-8pm" customClass="LoginController" customModule="杭电助手" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uoL-XH-MbX"/>
+                </hostingController>
+            </objects>
+            <point key="canvasLocation" x="1951" y="-552"/>
+        </scene>
         <!--New Func Guide Controller-->
         <scene sceneID="ohG-5S-dBN">
             <objects>
-                <hostingController id="CLS-2S-TuF" customClass="NewFuncGuideController" customModule="lemonios" customModuleProvider="target" sceneMemberID="viewController"/>
+                <hostingController id="CLS-2S-TuF" customClass="NewFuncGuideController" customModule="杭电助手" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qem-mJ-auE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="113"/>
+            <point key="canvasLocation" x="1951" y="113"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>

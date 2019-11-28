@@ -1,0 +1,27 @@
+{
+  "Mac" : [
+    {
+      "name" : "GEOSwiftMapKit",
+      "hash" : "c5f2be7bc5a44270329d7554ddbeffc8879017c09fcb7ec7a3d908c913b0d287",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "GEOSwiftMapKit",
+      "hash" : "90afffc84c1d6228caa22cffdd1e662e17be388a11bcaca7727864ccf5a84953",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ],
+  "commitish" : "1.2.0",
+  "iOS" : [
+    {
+      "name" : "GEOSwiftMapKit",
+      "hash" : "34c1a712f5636cd68d1b648389772997c6b26eb94c97686b2e2b6a5f8e528bca",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}

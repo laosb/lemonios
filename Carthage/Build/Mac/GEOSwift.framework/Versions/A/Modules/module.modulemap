@@ -1,0 +1,11 @@
+framework module GEOSwift {
+  umbrella header "GEOSwift.h"
+
+  export *
+  module * { export * }
+}
+
+module GEOSwift.Swift {
+    header "GEOSwift-Swift.h"
+    requires objc
+}
