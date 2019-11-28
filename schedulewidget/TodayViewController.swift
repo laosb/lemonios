@@ -60,9 +60,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                                     sData.append(tempSData)
                                 }
                             }
-                            print("!!!!!!!!!!!!!!!!!!!")
-                            print(tempData.count)
-                            print(sData.count)
+//                            print("!!!!!!!!!!!!!!!!!!!")
+//                            print(tempData.count)
+//                            print(sData.count)
                             self.renderData(sData: sData, isA: true)
                         case .failure:
                             self.renderData(sData: sData, isA: false)

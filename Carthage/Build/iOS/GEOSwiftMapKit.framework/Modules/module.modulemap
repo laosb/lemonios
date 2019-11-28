@@ -1,0 +1,11 @@
+framework module GEOSwiftMapKit {
+  umbrella header "GEOSwiftMapKit.h"
+
+  export *
+  module * { export * }
+}
+
+module GEOSwiftMapKit.Swift {
+    header "GEOSwiftMapKit-Swift.h"
+    requires objc
+}

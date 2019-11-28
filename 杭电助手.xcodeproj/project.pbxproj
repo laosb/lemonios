@@ -44,8 +44,12 @@
 		2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50EF22BFE1260005781E /* Intents.framework */; };
 		2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50F022BFE1260005781E /* IntentsUI.framework */; };
 		4E2661882386A6DF00B42004 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2661872386A6DF00B42004 /* MainInterface.storyboard */; };
+		4E7E7C7E238CC72900B097AD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C7D238CC72900B097AD /* LoginController.swift */; };
+		4E7E7C802390006500B097AD /* KeyboardGuardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C7F2390006500B097AD /* KeyboardGuardian.swift */; };
+		4E7E7C82239000DA00B097AD /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C81239000DA00B097AD /* GeometryGetter.swift */; };
 		4E937B0D237A46AB009D93E0 /* NewFuncRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B0C237A46AB009D93E0 /* NewFuncRow.swift */; };
 		4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B12237A61C9009D93E0 /* newFuncView.swift */; };
+		4EBDAA82238BEAD9009AB925 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBDAA81238BEAD9009AB925 /* LoginView.swift */; };
 		4ECFFB5C23857E94005B775B /* scheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* scheduleWidget.swift */; };
 		4ECFFB5E23857EB6005B775B /* scheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */; };
 /* End PBXBuildFile section */
@@ -168,8 +172,12 @@
 		2AEC50EF22BFE1260005781E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2AEC50F022BFE1260005781E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		4E2661872386A6DF00B42004 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		4E7E7C7D238CC72900B097AD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		4E7E7C7F2390006500B097AD /* KeyboardGuardian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardGuardian.swift; sourceTree = "<group>"; };
+		4E7E7C81239000DA00B097AD /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		4E937B0C237A46AB009D93E0 /* NewFuncRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFuncRow.swift; sourceTree = "<group>"; };
 		4E937B12237A61C9009D93E0 /* newFuncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFuncView.swift; sourceTree = "<group>"; };
+		4EBDAA81238BEAD9009AB925 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4ECFFB5B23857E94005B775B /* scheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleWidget.swift; sourceTree = "<group>"; };
 		4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -296,6 +304,10 @@
 				2A981807237AC39A005C5141 /* NewFuncGuideController.swift */,
 				2A1796E02388271700E79489 /* SceneDelegate.swift */,
 				2A31BE9D2389107200AA9CFC /* MenuController.swift */,
+				4EBDAA81238BEAD9009AB925 /* LoginView.swift */,
+				4E7E7C7D238CC72900B097AD /* LoginController.swift */,
+				4E7E7C7F2390006500B097AD /* KeyboardGuardian.swift */,
+				4E7E7C81239000DA00B097AD /* GeometryGetter.swift */,
 			);
 			path = lemonios;
 			sourceTree = "<group>";
@@ -664,13 +676,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */,
+				4E7E7C802390006500B097AD /* KeyboardGuardian.swift in Sources */,
+				4E7E7C7E238CC72900B097AD /* LoginController.swift in Sources */,
 				2A31BE9E2389107200AA9CFC /* MenuController.swift in Sources */,
+				4E7E7C82239000DA00B097AD /* GeometryGetter.swift in Sources */,
 				2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */,
 				2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */,
 				4E937B0D237A46AB009D93E0 /* NewFuncRow.swift in Sources */,
 				2A4558972299825700250D01 /* ViewController.swift in Sources */,
 				2A1796E12388271700E79489 /* SceneDelegate.swift in Sources */,
 				2A4558952299825700250D01 /* AppDelegate.swift in Sources */,
+				4EBDAA82238BEAD9009AB925 /* LoginView.swift in Sources */,
 				2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
