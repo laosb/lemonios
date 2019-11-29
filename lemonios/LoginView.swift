@@ -69,7 +69,7 @@ struct LoginView: View {
                 Text(tip)
                     .font(.footnote)
                //     .padding(.top, 5)
-                    .padding(.bottom, 5)
+                    .padding(.bottom, 2.5)
                 Button(action: {
                     self.password = self.password.trimmingCharacters(in: [" ","\t"])
                     let data = self.password.data(using: String.Encoding.utf8)
@@ -98,6 +98,10 @@ struct LoginView: View {
                                 }
                                 else {
                                     self.tip = "登录失败，请检查账号或密码"
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+                                    //                // Put your code which should be executed with a delay here
+                                            self.tip = ""
+                                        })
                                 }
 //                                print("\(msg) \n")
 //                                print(parameters)

@@ -1,6 +1,0 @@
-framework module geos {
-  umbrella header "geos.h"
-
-  export *
-  module * { export * }
-}
