@@ -107,6 +107,10 @@ struct LoginView: View {
 //                                print(parameters)
                             case .failure:
                                 self.tip = "登录失败，请检查网络"
+                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+                                //                // Put your code which should be executed with a delay here
+                                        self.tip = ""
+                                    })
                         }
                     })
                 }){

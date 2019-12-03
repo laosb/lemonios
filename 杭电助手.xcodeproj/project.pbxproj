@@ -49,6 +49,13 @@
 		4E7E7C82239000DA00B097AD /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C81239000DA00B097AD /* GeometryGetter.swift */; };
 		4E937B0D237A46AB009D93E0 /* NewFuncRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B0C237A46AB009D93E0 /* NewFuncRow.swift */; };
 		4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E937B12237A61C9009D93E0 /* newFuncView.swift */; };
+		4E9E83E12395F66400001387 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
+		4E9E83E42395F66400001387 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83E32395F66400001387 /* TodayViewController.swift */; };
+		4E9E83E72395F66400001387 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9E83E52395F66400001387 /* MainInterface.storyboard */; };
+		4E9E83EB2395F66400001387 /* 智能电费.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4E9E83E02395F66400001387 /* 智能电费.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4E9E83F12395F68900001387 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4E9E83F02395F68900001387 /* Alamofire */; };
+		4E9E83F32395F73800001387 /* ElectricNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F22395F73800001387 /* ElectricNumberView.swift */; };
+		4E9E83F52395F75300001387 /* ElectricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F42395F75300001387 /* ElectricWidget.swift */; };
 		4EBDAA82238BEAD9009AB925 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBDAA81238BEAD9009AB925 /* LoginView.swift */; };
 		4ECFFB5C23857E94005B775B /* scheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* scheduleWidget.swift */; };
 		4ECFFB5E23857EB6005B775B /* scheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */; };
@@ -90,6 +97,13 @@
 			remoteGlobalIDString = 2ADBF3B42375BD31001BE5D5;
 			remoteInfo = sunrunwidget;
 		};
+		4E9E83E92395F66400001387 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E9E83DF2395F66400001387;
+			remoteInfo = electrictwidget;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,6 +113,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				4E9E83EB2395F66400001387 /* 智能电费.appex in Embed App Extensions */,
 				2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */,
 				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
 				2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */,
@@ -177,6 +192,13 @@
 		4E7E7C81239000DA00B097AD /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
 		4E937B0C237A46AB009D93E0 /* NewFuncRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFuncRow.swift; sourceTree = "<group>"; };
 		4E937B12237A61C9009D93E0 /* newFuncView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newFuncView.swift; sourceTree = "<group>"; };
+		4E9E83E02395F66400001387 /* 智能电费.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "智能电费.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E9E83E32395F66400001387 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		4E9E83E62395F66400001387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4E9E83E82395F66400001387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E9E83EF2395F67500001387 /* electrictwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = electrictwidget.entitlements; sourceTree = "<group>"; };
+		4E9E83F22395F73800001387 /* ElectricNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricNumberView.swift; sourceTree = "<group>"; };
+		4E9E83F42395F75300001387 /* ElectricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricWidget.swift; sourceTree = "<group>"; };
 		4EBDAA81238BEAD9009AB925 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4ECFFB5B23857E94005B775B /* scheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleWidget.swift; sourceTree = "<group>"; };
 		4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleDataView.swift; sourceTree = "<group>"; };
@@ -243,6 +265,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4E9E83DD2395F66400001387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E9E83E12395F66400001387 /* NotificationCenter.framework in Frameworks */,
+				4E9E83F12395F68900001387 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -269,6 +300,7 @@
 				2A5C40D0233F9AC200B9FF02 /* schedulewidget */,
 				2ADBF3B72375BD31001BE5D5 /* sunrunwidget */,
 				2A1E41282377F72B002FA52A /* cardwidget */,
+				4E9E83E22395F66400001387 /* electrictwidget */,
 				2A4558922299825700250D01 /* Products */,
 				2A4558C52299A45200250D01 /* Frameworks */,
 			);
@@ -284,6 +316,7 @@
 				2A5C40CD233F9AC200B9FF02 /* 下节课.appex */,
 				2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */,
 				2A1E41262377F72B002FA52A /* 一卡通.appex */,
+				4E9E83E02395F66400001387 /* 智能电费.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -385,6 +418,19 @@
 			path = newFuncGuide;
 			sourceTree = "<group>";
 		};
+		4E9E83E22395F66400001387 /* electrictwidget */ = {
+			isa = PBXGroup;
+			children = (
+				4E9E83EF2395F67500001387 /* electrictwidget.entitlements */,
+				4E9E83E32395F66400001387 /* TodayViewController.swift */,
+				4E9E83E52395F66400001387 /* MainInterface.storyboard */,
+				4E9E83E82395F66400001387 /* Info.plist */,
+				4E9E83F22395F73800001387 /* ElectricNumberView.swift */,
+				4E9E83F42395F75300001387 /* ElectricWidget.swift */,
+			);
+			path = electrictwidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,6 +470,7 @@
 				2A5C40D8233F9AC200B9FF02 /* PBXTargetDependency */,
 				2ADBF3BF2375BD31001BE5D5 /* PBXTargetDependency */,
 				2A1E41302377F72B002FA52A /* PBXTargetDependency */,
+				4E9E83EA2395F66400001387 /* PBXTargetDependency */,
 			);
 			name = "杭电助手";
 			packageProductDependencies = (
@@ -527,6 +574,26 @@
 			productReference = 2AEC50E322BFD92C0005781E /* opensubapp.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		4E9E83DF2395F66400001387 /* electrictwidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E9E83EE2395F66400001387 /* Build configuration list for PBXNativeTarget "electrictwidget" */;
+			buildPhases = (
+				4E9E83DC2395F66400001387 /* Sources */,
+				4E9E83DD2395F66400001387 /* Frameworks */,
+				4E9E83DE2395F66400001387 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = electrictwidget;
+			packageProductDependencies = (
+				4E9E83F02395F68900001387 /* Alamofire */,
+			);
+			productName = electrictwidget;
+			productReference = 4E9E83E02395F66400001387 /* 智能电费.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -571,6 +638,9 @@
 					2AEC50E222BFD92C0005781E = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					4E9E83DF2395F66400001387 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 2A45588C2299825600250D01 /* Build configuration list for PBXProject "杭电助手" */;
@@ -597,6 +667,7 @@
 				2A5C40CC233F9AC200B9FF02 /* schedulewidget */,
 				2ADBF3B42375BD31001BE5D5 /* sunrunwidget */,
 				2A1E41252377F72B002FA52A /* cardwidget */,
+				4E9E83DF2395F66400001387 /* electrictwidget */,
 			);
 		};
 /* End PBXProject section */
@@ -655,6 +726,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E9E83DE2395F66400001387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E9E83E72395F66400001387 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +813,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4E9E83DC2395F66400001387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E9E83F32395F73800001387 /* ElectricNumberView.swift in Sources */,
+				4E9E83E42395F66400001387 /* TodayViewController.swift in Sources */,
+				4E9E83F52395F75300001387 /* ElectricWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -764,6 +853,11 @@
 			platformFilter = ios;
 			target = 2ADBF3B42375BD31001BE5D5 /* sunrunwidget */;
 			targetProxy = 2ADBF3BE2375BD31001BE5D5 /* PBXContainerItemProxy */;
+		};
+		4E9E83EA2395F66400001387 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E9E83DF2395F66400001387 /* electrictwidget */;
+			targetProxy = 4E9E83E92395F66400001387 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -796,6 +890,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				2ADBF3BB2375BD31001BE5D5 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		4E9E83E52395F66400001387 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E9E83E62395F66400001387 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -1237,6 +1339,48 @@
 			};
 			name = Release;
 		};
+		4E9E83EC2395F66400001387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = electrictwidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
+				PRODUCT_NAME = "智能电费";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E9E83ED2395F66400001387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = electrictwidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
+				PRODUCT_NAME = "智能电费";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1312,6 +1456,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4E9E83EE2395F66400001387 /* Build configuration list for PBXNativeTarget "electrictwidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E9E83EC2395F66400001387 /* Debug */,
+				4E9E83ED2395F66400001387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1358,6 +1511,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */;
 			productName = DeviceKit;
+		};
+		4E9E83F02395F68900001387 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
