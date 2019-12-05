@@ -19,7 +19,12 @@ class LoginController: UIHostingController<LoginView> {
                 (self.presentingViewController?.children[0] as! ViewController).shortcutFired(nativeLogin: true)
             },
             triggerNewFuncGuideFunc: {
-                (self.presentingViewController?.children[0] as! ViewController).performSegue(withIdentifier: "gotoNewFuncGuide", sender: self)
+                let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                let lastShowedVersion = Int(sharedUd?.string(forKey: "lastVersionGuided") ?? "0")
+                let currentVersion = Int(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)
+                if currentVersion ?? 0 > lastShowedVersion ?? 0 {
+                    (self.presentingViewController?.children[0] as! ViewController).performSegue(withIdentifier: "gotoNewFuncGuide", sender: self)
+                }
             },
             dismissFunc: {
                 self.dismiss(animated: true)
