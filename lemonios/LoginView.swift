@@ -90,6 +90,7 @@ struct LoginView: View {
                                     let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
                                     let token = newRawData.object(forKey: "access_token") as! String
                                     sharedUd?.set(token, forKey: "token")
+                                    sharedUd?.synchronize()
                                     print(token)
                                     self.triggerWebViewFunc?()
                                     self.dismissFunc?()

@@ -269,6 +269,13 @@ extension ViewController: WKNavigationDelegate {
             if (url!.pathComponents.contains("addSiriShortcut")) {
                 self.setupIntentForSiri(LemonAction(rawValue: url!.lastPathComponent)!)
             }
+            if (url!.pathComponents.contains("logout")) {
+                let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                sharedUd?.set(nil, forKey: "token")
+                sharedUd?.synchronize()
+                print("get logout")
+                self.performSegue(withIdentifier: "gotoLogin", sender: self)
+            }
 //            if (url!.pathComponents.contains("hduMap")) {
 //                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
 //            }
