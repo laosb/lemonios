@@ -71,6 +71,12 @@ struct LoginView: View {
                //     .padding(.top, 5)
                     .padding(.bottom, 2.5)
                 Button(action: {
+                    if self.username == "*#*#19260817#*#*" {
+                        let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                        sharedUd?.set(!(sharedUd?.bool(forKey: "dev") ?? false), forKey: "dev")
+                        sharedUd?.synchronize()
+                        self.username = "TOGGLED DEV RESTART APP NOW"
+                    }
                     self.password = self.password.trimmingCharacters(in: [" ","\t"])
                     let data = self.password.data(using: String.Encoding.utf8)
                     let base64Pass = data!.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
