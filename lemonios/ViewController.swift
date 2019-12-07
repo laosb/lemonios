@@ -140,10 +140,16 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         #else
         let shellCode = "lemonios"
         #endif
-        let urlTemplate = "%@/?__shell_\(shellCode)=%@&utm_source=\(shellCode)/#"
+        let urlTemplate = "%@/?__shell_\(shellCode)=%@%@&utm_source=\(shellCode)/#"
         let fallbackBaseUrl = "https://ios.app.hduhelp.com"
-        let baseUrl = UserDefaults.standard.string(forKey: "baseUrl") ?? fallbackBaseUrl
-//        let baseUrl = "https://appdev.hduhelp.com" // Debug
+        var baseUrl = ""
+        var isDev = ""
+        if sharedUd?.bool(forKey: "dev") ?? false {
+            baseUrl = "https://appdev.hduhelp.com"
+            isDev = "_running_lemon_devel"
+        } else {
+            baseUrl = UserDefaults.standard.string(forKey: "baseUrl") ?? fallbackBaseUrl
+        }
 //        let baseUrl = "https://ios.app.hduhelp.com" // Debug
 //        let baseUrl = "https://client-config.hduhelp.lao.sb/lemon-bridge-test.html" // Debug
 
@@ -153,7 +159,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         
         webView!.navigationDelegate = self
         webView!.uiDelegate = self
-        var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown")
+        var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown", isDev)
         
         if let token = appDelegate.getIncomingToken() {
             urlStr += "/login?auth=\(token)"
@@ -180,6 +186,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             webView.load(URLRequest(url: URL(string: "about:blank")!))
         }
         let url = URL(string: urlStr)
+        print(urlStr)
         let req = URLRequest(url: url!)
         webView!.load(req)
         
@@ -275,6 +282,11 @@ extension ViewController: WKNavigationDelegate {
                 sharedUd?.synchronize()
                 print("get logout")
                 self.performSegue(withIdentifier: "gotoLogin", sender: self)
+            }
+            if (url!.pathComponents.contains("toggleDev")) {
+                let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                sharedUd?.set(sharedUd?.bool(forKey: "dev"), forKey: "dev")
+                sharedUd?.synchronize()
             }
 //            if (url!.pathComponents.contains("hduMap")) {
 //                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
