@@ -911,7 +911,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -920,7 +920,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
@@ -935,7 +935,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -944,7 +944,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
@@ -1077,7 +1077,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1088,7 +1088,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -1104,7 +1104,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1115,7 +1115,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -1211,7 +1211,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1220,7 +1220,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -1235,7 +1235,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1244,7 +1244,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -1259,7 +1259,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1268,7 +1268,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
@@ -1283,7 +1283,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1292,7 +1292,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
@@ -1345,16 +1345,16 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
@@ -1368,16 +1368,16 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
