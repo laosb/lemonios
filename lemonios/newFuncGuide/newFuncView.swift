@@ -21,6 +21,14 @@ struct NewFuncView: View {
             NavigationView {
                 List {
                     NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
+                        version: "1.2", content: [
+                            "新增空教室、电费模块及首页信息流板块。",
+                            "[NOMAC]新增智能电费小组件。",
+                            "全新登录页面，登录更快捷。",
+                            "新增寝室电费不足提醒和长跑次数更新的推送，可以前往我 - 设置 - 通知管理开启。",
+                        ]
+                    ))
+                    NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
                         version: "1.1", content: [
                             "[MACONLY]杭电助手现已提供macOS App。",
                             "支持系统通知推送，可以在「我」-「设置」-「通知设置」中具体调整。",

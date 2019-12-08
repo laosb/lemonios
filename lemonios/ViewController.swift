@@ -69,7 +69,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             case .success:
                 if let json = response.result.value {
                     UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
-                    self.shortcutFired()
+                    self.shortcutFired(nativeLogin: false)
                 }
             case .failure:
                 let alert = UIAlertController(title: "连接服务器失败", message: "请检查您是否允许杭电助手联网，以及您设备的网络连接。", preferredStyle: .alert)
@@ -82,25 +82,57 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "ShortcutFired"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "IncomingToken"), object: nil)
+        
         let configUrlTmpl = "https://config.hduhelp.com/%@.json"
         let bundleId = Bundle.main.infoDictionary?["CFBundleIdentifier"] as? String
         let configUrl = String(format: configUrlTmpl, bundleId ?? "help.hdu.lemon.ios")
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+//        var isDelay = false
         
         let currentVersion = Int(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)
         let savedVersion = sharedUd?.integer(forKey: "lastVersionGuided")
 //        print(currentVersion, savedVersion)
-        if savedVersion == nil || (currentVersion ?? 0) > (savedVersion ?? 0) {
+        let token = sharedUd?.string(forKey: "token")
+        
+        if (savedVersion == nil || (currentVersion ?? 0) > (savedVersion ?? 0)) && token != nil{
             self.performSegue(withIdentifier: "gotoNewFuncGuide", sender: self)
         }
         
+        Alamofire.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON {
+            response in switch response.result {
+                case .success:
+                    //self.tryLoad(configUrl)
+                    let json = response.result.value
+                    let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
+                    let isValid = (newRawData.object(forKey: "isValid")) as! Bool
+                    if isValid == false {
+                        return self.performSegue(withIdentifier: "gotoLogin", sender: self)
+                    }
+                case .failure:
+                    return self.performSegue(withIdentifier: "gotoLogin", sender: self)
+//                    isDelay = true
+                    //self.tryLoad(configUrl)
+//                    print("!!!!!!!!!!!!!!!!!!")
+            }
+        }
         tryLoad(configUrl)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "ShortcutFired"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "IncomingToken"), object: nil)
+//        if isDelay == true {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+//                // Put your code which should be executed with a delay here
+//                let url = "https://ios.app.hduhelp.com/#/login?auth="+"\(token)"
+//
+//                //ios.app.hduhelp.com/#/login?auth={token}
+//            })
+//        }else {
+//            let url = "https://ios.app.hduhelp.com/#/login?auth="+"\(token)"
+//            self.tryLoad(url)
+//        }
+//
     }
     
-    @objc private func shortcutFired () {
+    @objc func shortcutFired (nativeLogin: Bool) {
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
         
         #if targetEnvironment(macCatalyst)
@@ -130,6 +162,10 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             if token != "" {
                 enableNotification()
             }
+        } else if nativeLogin == true {
+            let token = sharedUd?.string(forKey: "token")
+            urlStr += "/login?auth=\(token ?? "")"
+            enableNotification()
         } else if let shortcut = appDelegate.getShortcutItem() {
             if shortcut == "schedule" { urlStr += "/app/schedule" }
             if shortcut == "card" { urlStr += "/app/card" }
@@ -139,6 +175,10 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         }
         
 //        print(urlStr)
+        
+        if nativeLogin == true {
+            webView.load(URLRequest(url: URL(string: "about:blank")!))
+        }
         let url = URL(string: urlStr)
         let req = URLRequest(url: url!)
         webView!.load(req)
@@ -228,6 +268,13 @@ extension ViewController: WKNavigationDelegate {
             let url = navigationAction.request.url
             if (url!.pathComponents.contains("addSiriShortcut")) {
                 self.setupIntentForSiri(LemonAction(rawValue: url!.lastPathComponent)!)
+            }
+            if (url!.pathComponents.contains("logout")) {
+                let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                sharedUd?.set(nil, forKey: "token")
+                sharedUd?.synchronize()
+                print("get logout")
+                self.performSegue(withIdentifier: "gotoLogin", sender: self)
             }
 //            if (url!.pathComponents.contains("hduMap")) {
 //                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
