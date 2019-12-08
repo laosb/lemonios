@@ -1,0 +1,59 @@
+//
+//  ElectricNumberView.swift
+//  watch Extension
+//
+//  Created by ljz on 2019/12/9.
+//  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//
+
+import SwiftUI
+
+struct ElectricNumberView: View {
+    @State var number: String
+    @State var title: String
+    @State var unit: String
+    @State var pos: String
+    @State var perfix: String
+    @State var suffix: String
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                .bold()
+            if number != ""
+            {
+                HStack(alignment: .firstTextBaseline) {
+                    Text(number)
+                        .font(.system(size: 28, weight: .light , design: .default))
+                        .lineLimit(1)
+                        //.font(.callout)
+                    Text(unit)
+                        .bold()
+                        .font(.footnote)
+                }
+                Spacer()
+            }
+            else if pos != "" {
+                VStack(alignment: .leading) {
+                    Text("\(perfix)")
+                        .font(.system(size: 12, weight: .light , design: .default))
+                        //.bold()
+                        .lineLimit(1)
+                        //.font(.callout)
+                    Text("\(suffix)")
+                        .font(.system(size: 12, weight: .light , design: .default))
+                        //.bold()
+                        //.font(.callout)
+                }
+                Spacer()
+            }
+        }
+    }
+}
+
+struct ElectricNumberView_Previews: PreviewProvider {
+    static var previews: some View {
+        ElectricNumberView(number: "123.1", title: "测试", unit: "元", pos: "xxx", perfix: "",suffix: "")
+    }
+}
