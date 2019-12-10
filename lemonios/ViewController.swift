@@ -288,6 +288,14 @@ extension ViewController: WKNavigationDelegate {
                 sharedUd?.set(sharedUd?.bool(forKey: "dev"), forKey: "dev")
                 sharedUd?.synchronize()
             }
+            if (url!.pathComponents.contains("setIcon")) {
+                let iconName = url!.lastPathComponent
+                if iconName == "default" {
+                    UIApplication.shared.setAlternateIconName(nil)
+                } else {
+                    UIApplication.shared.setAlternateIconName(iconName)
+                }
+            }
 //            if (url!.pathComponents.contains("hduMap")) {
 //                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
 //            }
