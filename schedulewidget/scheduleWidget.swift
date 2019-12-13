@@ -30,14 +30,14 @@ struct scheduleWidget: View {
             HStack {
                 if self.availabe == false {
                     VStack {
-                        Text("获取课表失败")
+                        Text("获取课表失败，请尝试打开杭电助手并登录。嘤~")
                             .foregroundColor(.secondary)
                     }
                 }
                 else if self.sData!.count != 0 {
                         List {
                             scheduleDataView(realData: self.sData![0])
-                            if self.sData!.count == 2 {
+                            if self.sData!.count >= 2 {
                                 scheduleDataView(realData: self.sData![1])
                             }
                         }.environment(\.defaultMinListRowHeight, geometry.size.height/2)

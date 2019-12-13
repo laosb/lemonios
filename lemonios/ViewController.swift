@@ -11,12 +11,17 @@ import WebKit
 import IntentsUI
 import SafariServices
 import UserNotifications
+import WatchConnectivity
 import Alamofire
 import DeviceKit
 
 let primaryColor = UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)
 
-class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewControllerDelegate {
+class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewControllerDelegate, WCSessionDelegate {
+    
+    var wcSession : WCSession! = nil
+    var token: String? = nil
+    
     func enableNotification () {
         UNUserNotificationCenter.current()
           .requestAuthorization(options: [.alert, .sound, .badge]) {
@@ -95,9 +100,16 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         let savedVersion = sharedUd?.integer(forKey: "lastVersionGuided")
 //        print(currentVersion, savedVersion)
         let token = sharedUd?.string(forKey: "token")
+        self.token = token
         
         if (savedVersion == nil || (currentVersion ?? 0) > (savedVersion ?? 0)) && token != nil{
             self.performSegue(withIdentifier: "gotoNewFuncGuide", sender: self)
+        }
+        
+        if token != nil {
+            wcSession = WCSession.default
+            wcSession.delegate = self
+            wcSession.activate()
         }
         
         Alamofire.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON {
@@ -313,6 +325,28 @@ extension ViewController: WKNavigationDelegate {
         }
         
         decisionHandler(WKNavigationActionPolicy.allow)
+    }
+    
+    // MARK: WCSession Methods
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("yes go")
+        
+        let message = [ "token": self.token ?? "" ]
+        wcSession.sendMessage(message, replyHandler: nil) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+        // Code
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+        // Code
+        
     }
     
 //    open func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
