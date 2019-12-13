@@ -55,13 +55,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                                 if msg == "success" {
                                     elecData.available = true
                                 }
-                                elecData.remaining = fee
+                                elecData.remaining = String(fee!.prefix(5))
                                 elecData.room = pos
                                 elecData.room!.remove(at: (elecData.room?.index(before: elecData.room!.endIndex))!)
-                                elecData.remaining!.remove(at: (elecData.remaining?.index(before: elecData.remaining!.endIndex))!)
+                                //elecData.remaining!.remove(at: (elecData.remaining?.index(before: elecData.remaining!.endIndex))!)
     //                            cardData.available = CardData?.object(forKey: "available") as? Bool
     //                            let indexData = CardData?.object(forKey: "data") as? NSDictionary
-    //
                                 let feeDouble = (elecData.remaining! as NSString).doubleValue
     //                            cardData.remaining = String(format:"%.2lf", abs(remaining) < 0.01 ? 0.0 : remaining)
     //                            let today = (indexData?.object(forKey: "today") as? Double ?? 0) * -1
