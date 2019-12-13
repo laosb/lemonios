@@ -8,6 +8,66 @@
 	<string>杭电助手</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIcons~ipad</key>
+	<dict>
+		<key>CFBundleAlternateIcons</key>
+		<dict>
+			<key>blue</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ic_blue</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+			<key>classic</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ic_classic</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+			<key>dark</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ic_dark</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+			<key>purple</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ic_purple</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+			<key>pride</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ic_pride</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+			<key>pride2</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ic_pride2</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
@@ -19,7 +79,7 @@
 					<string>ic_blue</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>classic</key>
 			<dict>
@@ -28,7 +88,7 @@
 					<string>ic_classic</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>dark</key>
 			<dict>
@@ -37,7 +97,7 @@
 					<string>ic_dark</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>purple</key>
 			<dict>
@@ -46,7 +106,7 @@
 					<string>ic_purple</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>pride</key>
 			<dict>
@@ -55,7 +115,7 @@
 					<string>ic_pride</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>pride2</key>
 			<dict>
@@ -64,7 +124,7 @@
 					<string>ic_pride2</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
-				<false/>
+				<true/>
 			</dict>
 		</dict>
 	</dict>
