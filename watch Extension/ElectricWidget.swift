@@ -20,7 +20,7 @@ class LMElectric: ObservableObject{
     @Published var suffix: String?
     
     init(_ token: String) {
-        Alamofire.request("https://api.hduhelp.com/electric/fee", headers:["Authorization": "token \(token)"]).validate().responseJSON(completionHandler:
+        Alamofire.request("https://api.hduhelp.com/electric/fee", headers:["Authorization": "token \(token)", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
                          {
                              response in switch response.result
                              {

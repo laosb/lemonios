@@ -21,6 +21,14 @@ struct NewFuncView: View {
             NavigationView {
                 List {
                     NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
+                        version: "1.3", content: [
+                            "[NOMAC]提供了Apple Watch app。在配对了Apple Watch的iPhone上前往Watch应用安装杭电助手。",
+                            "完全适配了暗色模式",
+                            "[NOMAC]支持应用图标替换。前往我 - 设置 - 外观与体验设置。",
+                            "新增若干图书馆相关应用",
+                        ]
+                    ))
+                    NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
                         version: "1.2", content: [
                             "新增空教室、电费模块及首页信息流板块。",
                             "[NOMAC]新增智能电费小组件。",
@@ -28,22 +36,6 @@ struct NewFuncView: View {
                             "新增寝室电费不足提醒和长跑次数更新的推送，可以前往我 - 设置 - 通知管理开启。",
                         ]
                     ))
-                    NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
-                        version: "1.1", content: [
-                            "[MACONLY]杭电助手现已提供macOS App。",
-                            "支持系统通知推送，可以在「我」-「设置」-「通知设置」中具体调整。",
-                            "[NOMAC]一卡通组件新增「充值」功能，点击即可直达支付宝校园一卡通充值。",
-                            "「发现」新增搜索功能。",
-                            "全新的通知管理设置，更多自定义设置。",
-                        ]
-                    ))
-                    #if !targetEnvironment(macCatalyst)
-                    NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
-                        version: "1.0", content: [
-                            "新的通知中心小组件：阳光长跑、一卡通。前往通知中心的左侧，点击底部「编辑」将他们添加进来即可使用。",
-                        ]
-                    ))
-                    #endif
                 }
                     .navigationBarTitle("杭电助手·新功能")
             }

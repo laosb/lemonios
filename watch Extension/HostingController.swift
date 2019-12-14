@@ -52,9 +52,6 @@ class HostingController: WKHostingController<ContentView>, WCSessionDelegate {
         self.sharedUd?.set(token, forKey: "token")
         self.sharedUd?.synchronize()
         
-        self.setNeedsBodyUpdate()
-        self.updateBodyIfNeeded()
-        
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

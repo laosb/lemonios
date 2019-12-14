@@ -12,10 +12,24 @@ struct ContentView: View {
     @State var token: String
     var body: some View {
         List {
-            Text("Token: \(token)")
+//            Text("Token: \(token)")
+            if token == "" {
+                Button(action: {
+                    let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                    let token = sharedUd?.string(forKey: "token")
+                    if token != "" {
+                        self.token = token ?? ""
+                    }
+                }) {
+                    HStack {
+                        Image(systemName: "goforward")
+                        Text("重试")
+                    }
+                }
+            }
+            ScheduleWidget(token)
             CardWidget(token)
             SunRunWidget(token)
-            ScheduleWidget(token)
             ElectricWidget(token)
         }
     }
