@@ -56,16 +56,17 @@
 		2AAE59B223A36F6000233D56 /* ic_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599D23A36F6000233D56 /* ic_blue@3x.png */; };
 		2AAE59B323A36F6000233D56 /* ic_pride2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599E23A36F6000233D56 /* ic_pride2@2x.png */; };
 		2AC9F92923996CD900D46B61 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F92723996CD900D46B61 /* Interface.storyboard */; };
+		2AC9F92B23996CDE00D46B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F92A23996CDE00D46B61 /* Assets.xcassets */; };
 		2AC9F93223996CDE00D46B61 /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AC9F93123996CDE00D46B61 /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AC9F93723996CDE00D46B61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93623996CDE00D46B61 /* ContentView.swift */; };
 		2AC9F93923996CDE00D46B61 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93823996CDE00D46B61 /* HostingController.swift */; };
 		2AC9F93B23996CDE00D46B61 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93A23996CDE00D46B61 /* ExtensionDelegate.swift */; };
 		2AC9F93D23996CDE00D46B61 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93C23996CDE00D46B61 /* NotificationController.swift */; };
 		2AC9F93F23996CDE00D46B61 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93E23996CDE00D46B61 /* NotificationView.swift */; };
+		2AC9F94123996CDF00D46B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F94023996CDF00D46B61 /* Assets.xcassets */; };
 		2AC9F94423996CDF00D46B61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F94323996CDF00D46B61 /* Preview Assets.xcassets */; };
-		2AC9F94923996CDF00D46B61 /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2AC9F92523996CD900D46B61 /* watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC9F94923996CDF00D46B61 /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2AC9F92523996CD900D46B61 /* watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AC9F95323996D1D00D46B61 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2AC9F95223996D1D00D46B61 /* Alamofire */; };
-		2ACFE09C23A3AE68003D6E2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACFE09B23A3AE68003D6E2D /* Images.xcassets */; };
 		2AD63D8D23997D6C0005C4F8 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */; };
 		2AD63D9123997EAA0005C4F8 /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD63D9023997EAA0005C4F8 /* CardWidget.swift */; };
 		2AD63D9223997ECF0005C4F8 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868123780BE0005AB8AF /* WidgetNumberView.swift */; };
@@ -95,6 +96,19 @@
 		4E9E83F12395F68900001387 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4E9E83F02395F68900001387 /* Alamofire */; };
 		4E9E83F32395F73800001387 /* ElectricNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F22395F73800001387 /* ElectricNumberView.swift */; };
 		4E9E83F52395F75300001387 /* ElectricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F42395F75300001387 /* ElectricWidget.swift */; };
+		4EBC6EDD23A3C12300C44339 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
+		4EBC6EE023A3C12300C44339 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */; };
+		4EBC6EE323A3C12300C44339 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */; };
+		4EBC6EE723A3C12300C44339 /* all in widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EBC6EDC23A3C12300C44339 /* all in widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4EBC6EEC23A3C13200C44339 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4EBC6EEB23A3C13200C44339 /* Alamofire */; };
+		4EBC6EEF23A3C2C800C44339 /* ScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EEE23A3C2C800C44339 /* ScheduleWidget.swift */; };
+		4EBC6EF123A3C32800C44339 /* ScheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF023A3C32800C44339 /* ScheduleDataView.swift */; };
+		4EBC6EF323A3C34D00C44339 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF223A3C34D00C44339 /* SunRunWidget.swift */; };
+		4EBC6EF523A3C37100C44339 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF423A3C37100C44339 /* WidgetNumberView.swift */; };
+		4EBC6EF723A3C39200C44339 /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF623A3C39200C44339 /* CardWidget.swift */; };
+		4EBC6EF923A3C3B000C44339 /* ElectricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF823A3C3B000C44339 /* ElectricWidget.swift */; };
+		4EBC6EFB23A3C3EC00C44339 /* ElectricNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EFA23A3C3EC00C44339 /* ElectricNumberView.swift */; };
+		4EBC6EFD23A3C55500C44339 /* AllInWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */; };
 		4EBDAA82238BEAD9009AB925 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBDAA81238BEAD9009AB925 /* LoginView.swift */; };
 		4ECFFB5C23857E94005B775B /* scheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* scheduleWidget.swift */; };
 		4ECFFB5E23857EB6005B775B /* scheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */; };
@@ -157,6 +171,13 @@
 			remoteGlobalIDString = 4E9E83DF2395F66400001387;
 			remoteInfo = electrictwidget;
 		};
+		4EBC6EE523A3C12300C44339 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EBC6EDB23A3C12300C44339;
+			remoteInfo = "all in widget";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -166,6 +187,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				4EBC6EE723A3C12300C44339 /* all in widget.appex in Embed App Extensions */,
 				4E9E83EB2395F66400001387 /* 智能电费.appex in Embed App Extensions */,
 				2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */,
 				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
@@ -265,6 +287,7 @@
 		2AAE599E23A36F6000233D56 /* ic_pride2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_pride2@2x.png"; sourceTree = "<group>"; };
 		2AC9F92523996CD900D46B61 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC9F92823996CD900D46B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2AC9F92A23996CDE00D46B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AC9F92C23996CDE00D46B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC9F93123996CDE00D46B61 /* watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC9F93623996CDE00D46B61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -272,11 +295,11 @@
 		2AC9F93A23996CDE00D46B61 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		2AC9F93C23996CDE00D46B61 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		2AC9F93E23996CDE00D46B61 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2AC9F94023996CDF00D46B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AC9F94323996CDF00D46B61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2AC9F94523996CDF00D46B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC9F94623996CDF00D46B61 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2AC9F9542399755400D46B61 /* watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watch.entitlements; sourceTree = "<group>"; };
-		2ACFE09B23A3AE68003D6E2D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2AD63D8A239975720005C4F8 /* watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watch Extension.entitlements"; sourceTree = "<group>"; };
 		2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
 		2AD63D9023997EAA0005C4F8 /* CardWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardWidget.swift; path = Widgets/CardWidget.swift; sourceTree = "<group>"; };
@@ -317,6 +340,19 @@
 		4E9E83EF2395F67500001387 /* electrictwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = electrictwidget.entitlements; sourceTree = "<group>"; };
 		4E9E83F22395F73800001387 /* ElectricNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricNumberView.swift; sourceTree = "<group>"; };
 		4E9E83F42395F75300001387 /* ElectricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricWidget.swift; sourceTree = "<group>"; };
+		4EBC6EDC23A3C12300C44339 /* all in widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "all in widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		4EBC6EE223A3C12300C44339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4EBC6EE423A3C12300C44339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EBC6EED23A3C13600C44339 /* all in widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "all in widget.entitlements"; sourceTree = "<group>"; };
+		4EBC6EEE23A3C2C800C44339 /* ScheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleWidget.swift; sourceTree = "<group>"; };
+		4EBC6EF023A3C32800C44339 /* ScheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDataView.swift; sourceTree = "<group>"; };
+		4EBC6EF223A3C34D00C44339 /* SunRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRunWidget.swift; sourceTree = "<group>"; };
+		4EBC6EF423A3C37100C44339 /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
+		4EBC6EF623A3C39200C44339 /* CardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidget.swift; sourceTree = "<group>"; };
+		4EBC6EF823A3C3B000C44339 /* ElectricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricWidget.swift; sourceTree = "<group>"; };
+		4EBC6EFA23A3C3EC00C44339 /* ElectricNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricNumberView.swift; sourceTree = "<group>"; };
+		4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInWidget.swift; sourceTree = "<group>"; };
 		4EBDAA81238BEAD9009AB925 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4ECFFB5B23857E94005B775B /* scheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleWidget.swift; sourceTree = "<group>"; };
 		4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleDataView.swift; sourceTree = "<group>"; };
@@ -400,6 +436,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EBC6ED923A3C12300C44339 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBC6EDD23A3C12300C44339 /* NotificationCenter.framework in Frameworks */,
+				4EBC6EEC23A3C13200C44339 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -429,6 +474,7 @@
 				4E9E83E22395F66400001387 /* electrictwidget */,
 				2AC9F92623996CD900D46B61 /* watch */,
 				2AC9F93523996CDE00D46B61 /* watch Extension */,
+				4EBC6EDE23A3C12300C44339 /* all in widget */,
 				2A4558922299825700250D01 /* Products */,
 				2A4558C52299A45200250D01 /* Frameworks */,
 			);
@@ -447,6 +493,7 @@
 				4E9E83E02395F66400001387 /* 智能电费.appex */,
 				2AC9F92523996CD900D46B61 /* watch.app */,
 				2AC9F93123996CDE00D46B61 /* watch Extension.appex */,
+				4EBC6EDC23A3C12300C44339 /* all in widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -454,7 +501,6 @@
 		2A4558932299825700250D01 /* lemonios */ = {
 			isa = PBXGroup;
 			children = (
-				2AAE598923A36F6000233D56 /* icons */,
 				4E937B0723799BF1009D93E0 /* newFuncGuide */,
 				2AEC50DC22BFD71F0005781E /* lemonios.entitlements */,
 				2A4558942299825700250D01 /* AppDelegate.swift */,
@@ -560,8 +606,8 @@
 			children = (
 				2AC9F9542399755400D46B61 /* watch.entitlements */,
 				2AC9F92723996CD900D46B61 /* Interface.storyboard */,
+				2AC9F92A23996CDE00D46B61 /* Assets.xcassets */,
 				2AC9F92C23996CDE00D46B61 /* Info.plist */,
-				2ACFE09B23A3AE68003D6E2D /* Images.xcassets */,
 			);
 			path = watch;
 			sourceTree = "<group>";
@@ -578,6 +624,7 @@
 				2AC9F93C23996CDE00D46B61 /* NotificationController.swift */,
 				2AC9F93E23996CDE00D46B61 /* NotificationView.swift */,
 				4E80CC35239A895C0080AB3D /* ScheduleWidget.swift */,
+				2AC9F94023996CDF00D46B61 /* Assets.xcassets */,
 				2AC9F94523996CDF00D46B61 /* Info.plist */,
 				2AC9F94623996CDF00D46B61 /* PushNotificationPayload.apns */,
 				2AC9F94223996CDF00D46B61 /* Preview Content */,
@@ -632,6 +679,25 @@
 			path = electrictwidget;
 			sourceTree = "<group>";
 		};
+		4EBC6EDE23A3C12300C44339 /* all in widget */ = {
+			isa = PBXGroup;
+			children = (
+				4EBC6EED23A3C13600C44339 /* all in widget.entitlements */,
+				4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */,
+				4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */,
+				4EBC6EE423A3C12300C44339 /* Info.plist */,
+				4EBC6EEE23A3C2C800C44339 /* ScheduleWidget.swift */,
+				4EBC6EF023A3C32800C44339 /* ScheduleDataView.swift */,
+				4EBC6EF223A3C34D00C44339 /* SunRunWidget.swift */,
+				4EBC6EF423A3C37100C44339 /* WidgetNumberView.swift */,
+				4EBC6EF623A3C39200C44339 /* CardWidget.swift */,
+				4EBC6EF823A3C3B000C44339 /* ElectricWidget.swift */,
+				4EBC6EFA23A3C3EC00C44339 /* ElectricNumberView.swift */,
+				4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */,
+			);
+			path = "all in widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -674,6 +740,7 @@
 				2A1E41302377F72B002FA52A /* PBXTargetDependency */,
 				4E9E83EA2395F66400001387 /* PBXTargetDependency */,
 				2AC9F94823996CDF00D46B61 /* PBXTargetDependency */,
+				4EBC6EE623A3C12300C44339 /* PBXTargetDependency */,
 			);
 			name = "杭电助手";
 			packageProductDependencies = (
@@ -834,13 +901,33 @@
 			productReference = 4E9E83E02395F66400001387 /* 智能电费.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		4EBC6EDB23A3C12300C44339 /* all in widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBC6EEA23A3C12300C44339 /* Build configuration list for PBXNativeTarget "all in widget" */;
+			buildPhases = (
+				4EBC6ED823A3C12300C44339 /* Sources */,
+				4EBC6ED923A3C12300C44339 /* Frameworks */,
+				4EBC6EDA23A3C12300C44339 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "all in widget";
+			packageProductDependencies = (
+				4EBC6EEB23A3C13200C44339 /* Alamofire */,
+			);
+			productName = "all in widget";
+			productReference = 4EBC6EDC23A3C12300C44339 /* all in widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2A4558892299825600250D01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Inkwire Tech (Hangzhou) Co., Ltd.";
 				TargetAttributes = {
@@ -887,6 +974,9 @@
 					4E9E83DF2395F66400001387 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					4EBC6EDB23A3C12300C44339 = {
+						CreatedOnToolsVersion = 11.3;
+					};
 				};
 			};
 			buildConfigurationList = 2A45588C2299825600250D01 /* Build configuration list for PBXProject "杭电助手" */;
@@ -916,6 +1006,7 @@
 				4E9E83DF2395F66400001387 /* electrictwidget */,
 				2AC9F92423996CD900D46B61 /* watch */,
 				2AC9F93023996CDE00D46B61 /* watch Extension */,
+				4EBC6EDB23A3C12300C44339 /* all in widget */,
 			);
 		};
 /* End PBXProject section */
@@ -987,8 +1078,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC9F92B23996CDE00D46B61 /* Assets.xcassets in Resources */,
 				2AC9F92923996CD900D46B61 /* Interface.storyboard in Resources */,
-				2ACFE09C23A3AE68003D6E2D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,6 +1088,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AC9F94423996CDF00D46B61 /* Preview Assets.xcassets in Resources */,
+				2AC9F94123996CDF00D46B61 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,6 +1112,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9E83E72395F66400001387 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBC6EDA23A3C12300C44339 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBC6EE323A3C12300C44339 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1128,6 +1228,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EBC6ED823A3C12300C44339 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBC6EFD23A3C55500C44339 /* AllInWidget.swift in Sources */,
+				4EBC6EF923A3C3B000C44339 /* ElectricWidget.swift in Sources */,
+				4EBC6EF323A3C34D00C44339 /* SunRunWidget.swift in Sources */,
+				4EBC6EFB23A3C3EC00C44339 /* ElectricNumberView.swift in Sources */,
+				4EBC6EF523A3C37100C44339 /* WidgetNumberView.swift in Sources */,
+				4EBC6EF123A3C32800C44339 /* ScheduleDataView.swift in Sources */,
+				4EBC6EF723A3C39200C44339 /* CardWidget.swift in Sources */,
+				4EBC6EEF23A3C2C800C44339 /* ScheduleWidget.swift in Sources */,
+				4EBC6EE023A3C12300C44339 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1160,7 +1276,6 @@
 		};
 		2AC9F94823996CDF00D46B61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
 			target = 2AC9F92423996CD900D46B61 /* watch */;
 			targetProxy = 2AC9F94723996CDF00D46B61 /* PBXContainerItemProxy */;
 		};
@@ -1175,6 +1290,11 @@
 			platformFilter = ios;
 			target = 4E9E83DF2395F66400001387 /* electrictwidget */;
 			targetProxy = 4E9E83E92395F66400001387 /* PBXContainerItemProxy */;
+		};
+		4EBC6EE623A3C12300C44339 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EBC6EDB23A3C12300C44339 /* all in widget */;
+			targetProxy = 4EBC6EE523A3C12300C44339 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1227,6 +1347,14 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
+		4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EBC6EE223A3C12300C44339 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1235,7 +1363,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1244,7 +1372,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
@@ -1259,7 +1387,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1268,7 +1396,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
@@ -1401,7 +1529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1412,7 +1540,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -1428,7 +1556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1439,7 +1567,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -1535,7 +1663,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1544,7 +1672,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -1559,7 +1687,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1568,7 +1696,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -1584,7 +1712,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "watch Extension/watch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_PREVIEWS = YES;
@@ -1594,7 +1722,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1611,7 +1739,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "watch Extension/watch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_PREVIEWS = YES;
@@ -1621,7 +1749,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1639,11 +1767,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = watch/watch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1661,11 +1789,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = watch/watch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1681,7 +1809,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1690,7 +1818,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
@@ -1705,7 +1833,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1714,7 +1842,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
@@ -1767,7 +1895,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1776,7 +1904,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
@@ -1790,7 +1918,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 31;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1799,9 +1927,57 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4EBC6EE823A3C12300C44339 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "all in widget/all in widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 31;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = "all in widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.all-in-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EBC6EE923A3C12300C44339 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "all in widget/all in widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 31;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = "all in widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.all-in-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1910,6 +2086,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4EBC6EEA23A3C12300C44339 /* Build configuration list for PBXNativeTarget "all in widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBC6EE823A3C12300C44339 /* Debug */,
+				4EBC6EE923A3C12300C44339 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1963,6 +2148,11 @@
 			productName = Alamofire;
 		};
 		4E9E83F02395F68900001387 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		4EBC6EEB23A3C13200C44339 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
 			productName = Alamofire;
