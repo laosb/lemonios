@@ -56,7 +56,7 @@ struct ScheduleWidget: View {
                                     Spacer()
                                 }
                             }
-                                .frame(width: 25.0)
+                                .frame(width: 25.0, height: 75)
                                 .background(Color(red:0.20, green:0.60, blue:0.86))
                                 .cornerRadius(12.5)
                         }.padding(10.0)

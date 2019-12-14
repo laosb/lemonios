@@ -199,7 +199,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         if activeDisplayMode == .expanded {
-            self.preferredContentSize = CGSize(width: maxSize.width, height: 410)
+            self.preferredContentSize = CGSize(width: maxSize.width, height: 430)
             self.isEx = true
             //self.removeFromParent()
             //self.delete(Any?.self)
