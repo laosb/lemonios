@@ -24,6 +24,7 @@ struct AllInWidget: View {
     var body: some View {
         VStack {
             if self.isExpanded == true {
+                Divider()
                 ScheduleWidget(sData: self.sData, availabe: self.availabe ?? false, chargeFunc: self.scheduleChargeFunc).frame(height: 110)
                 Divider()
                 CardWidget(cardData: self.cardData, chargeFunc: self.cardChargeFunc).frame(height: 90)
@@ -36,7 +37,7 @@ struct AllInWidget: View {
                 Spacer()
             }
             else {
-                CardWidget(cardData: self.cardData, chargeFunc: self.cardChargeFunc).frame(height: 110)
+                CardWidget(cardData: self.cardData, chargeFunc: self.cardChargeFunc).frame(height: 100)
             }
             
         }
