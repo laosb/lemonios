@@ -25,43 +25,44 @@ class LMSchedule: ObservableObject {
     @Published var available: Bool?
     init(_ token: String) {
         Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
-                        "Authorization": "token \(token)"
-                    ]).validate().responseJSON(completionHandler: { response in
-                        switch response.result {
-                                case .success:
-                                    let json = response.result.value
-                                    let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
-                                    let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
-                                    
-                                    for i in 0..<tempData.count {
-                                        let course = tempData[i].object(forKey: "COURSE") as! String
-                                        let classRoom = tempData[i].object(forKey: "CLASSROOM") as! String
-                                        let isTomorrow = newRawData.object(forKey: "IsTomorrow") as! Bool
-                                        let startTime = tempData[i].object(forKey: "STARTTIME") as! String
-                                        let endTime = tempData[i].object(forKey: "ENDTIME") as! String
-                                        let teacher = tempData[i].object(forKey: "TEACHER") as! String
-                                        
-                                        var tempSData = LMScheduleData()
-                                        tempSData.classRoom = classRoom
-                                        tempSData.course = course
-                                        tempSData.teacher = teacher
-                                        tempSData.isTomorrow = isTomorrow
-                                        tempSData.endTime = endTime
-                                        tempSData.startTime = startTime
-                                        
-                                        if tempSData.course != nil {
-                                            self.LMData.append(tempSData)
-                                        }
-                                    }
-        //                            print("!!!!!!!!!!!!!!!!!!!")
-        //                            print(tempData.count)
-        //                            print(sData.count)
-                                    //self.available = true
-                                case .failure:
-                                    self.available = false
+            "Authorization": "token \(token)",
+            "User-Agent": "Alamofire Lemon_iOS",
+        ]).validate().responseJSON(completionHandler: { response in
+            switch response.result {
+                    case .success:
+                        let json = response.result.value
+                        let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
+                        let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
+                        
+                        for i in 0..<tempData.count {
+                            let course = tempData[i].object(forKey: "COURSE") as! String
+                            let classRoom = tempData[i].object(forKey: "CLASSROOM") as! String
+                            let isTomorrow = newRawData.object(forKey: "IsTomorrow") as! Bool
+                            let startTime = tempData[i].object(forKey: "STARTTIME") as! String
+                            let endTime = tempData[i].object(forKey: "ENDTIME") as! String
+                            let teacher = tempData[i].object(forKey: "TEACHER") as! String
+                            
+                            var tempSData = LMScheduleData()
+                            tempSData.classRoom = classRoom
+                            tempSData.course = course
+                            tempSData.teacher = teacher
+                            tempSData.isTomorrow = isTomorrow
+                            tempSData.endTime = endTime
+                            tempSData.startTime = startTime
+                            
+                            if tempSData.course != nil {
+                                self.LMData.append(tempSData)
                             }
                         }
-                    )
+//                            print("!!!!!!!!!!!!!!!!!!!")
+//                            print(tempData.count)
+//                            print(sData.count)
+                        self.available = true
+                    case .failure:
+                        self.available = false
+                }
+            }
+        )
     }
     
 }
@@ -82,7 +83,7 @@ struct ScheduleWidget: View {
         
         //GeometryReader {geometry in
             VStack {
-                if self.scheduleData.available ?? false{
+                if self.scheduleData.available == nil || !self.scheduleData.available! {
                     VStack {
                         Text("获取课表失败，请尝试打开杭电助手并登录。嘤~")
                             .foregroundColor(.secondary)

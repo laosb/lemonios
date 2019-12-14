@@ -112,7 +112,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             wcSession.activate()
         }
         
-        Alamofire.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON {
+        Alamofire.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON {
             response in switch response.result {
                 case .success:
                     //self.tryLoad(configUrl)
@@ -302,6 +302,7 @@ extension ViewController: WKNavigationDelegate {
             }
             if (url!.pathComponents.contains("setIcon")) {
                 let iconName = url!.lastPathComponent
+//                print("icon name", iconName)
                 if iconName == "default" {
                     UIApplication.shared.setAlternateIconName(nil)
                 } else {

@@ -115,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             method: .post,
             parameters: deviceInfo,
             encoding: JSONEncoding.default,
-            headers:["Authorization": "token \(userToken ?? "")"]
+            headers:["Authorization": "token \(userToken ?? "")", "User-Agent": "Alamofire Lemon_iOS"]
         ).validate().responseJSON { response in
 //            print(response)
         }
