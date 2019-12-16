@@ -17,7 +17,7 @@
 		<key>electrictwidget.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>lemonios.xcscheme_^#shared#^_</key>
 		<dict>
@@ -27,7 +27,7 @@
 		<key>opensubapp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>schedulewidget.xcscheme_^#shared#^_</key>
 		<dict>
