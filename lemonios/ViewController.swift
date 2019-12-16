@@ -11,12 +11,17 @@ import WebKit
 import IntentsUI
 import SafariServices
 import UserNotifications
+import WatchConnectivity
 import Alamofire
 import DeviceKit
 
 let primaryColor = UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)
 
-class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewControllerDelegate {
+class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewControllerDelegate, WCSessionDelegate {
+    
+    var wcSession : WCSession! = nil
+    var token: String? = nil
+    
     func enableNotification () {
         UNUserNotificationCenter.current()
           .requestAuthorization(options: [.alert, .sound, .badge]) {
@@ -95,12 +100,19 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         let savedVersion = sharedUd?.integer(forKey: "lastVersionGuided")
 //        print(currentVersion, savedVersion)
         let token = sharedUd?.string(forKey: "token")
+        self.token = token
         
         if (savedVersion == nil || (currentVersion ?? 0) > (savedVersion ?? 0)) && token != nil{
             self.performSegue(withIdentifier: "gotoNewFuncGuide", sender: self)
         }
         
-        Alamofire.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON {
+        if token != nil {
+            wcSession = WCSession.default
+            wcSession.delegate = self
+            wcSession.activate()
+        }
+        
+        Alamofire.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON {
             response in switch response.result {
                 case .success:
                     //self.tryLoad(configUrl)
@@ -140,10 +152,16 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         #else
         let shellCode = "lemonios"
         #endif
-        let urlTemplate = "%@/?__shell_\(shellCode)=%@&utm_source=\(shellCode)/#"
+        let urlTemplate = "%@/?__shell_\(shellCode)=%@%@&utm_source=\(shellCode)/#"
         let fallbackBaseUrl = "https://ios.app.hduhelp.com"
-        let baseUrl = UserDefaults.standard.string(forKey: "baseUrl") ?? fallbackBaseUrl
-//        let baseUrl = "https://appdev.hduhelp.com" // Debug
+        var baseUrl = ""
+        var isDev = ""
+        if sharedUd?.bool(forKey: "dev") ?? false {
+            baseUrl = "https://appdev.hduhelp.com"
+            isDev = "_running_lemon_devel"
+        } else {
+            baseUrl = UserDefaults.standard.string(forKey: "baseUrl") ?? fallbackBaseUrl
+        }
 //        let baseUrl = "https://ios.app.hduhelp.com" // Debug
 //        let baseUrl = "https://client-config.hduhelp.lao.sb/lemon-bridge-test.html" // Debug
 
@@ -153,7 +171,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         
         webView!.navigationDelegate = self
         webView!.uiDelegate = self
-        var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown")
+        var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown", isDev)
         
         if let token = appDelegate.getIncomingToken() {
             urlStr += "/login?auth=\(token)"
@@ -180,6 +198,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             webView.load(URLRequest(url: URL(string: "about:blank")!))
         }
         let url = URL(string: urlStr)
+        print(urlStr)
         let req = URLRequest(url: url!)
         webView!.load(req)
         
@@ -276,6 +295,20 @@ extension ViewController: WKNavigationDelegate {
                 print("get logout")
                 self.performSegue(withIdentifier: "gotoLogin", sender: self)
             }
+            if (url!.pathComponents.contains("toggleDev")) {
+                let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                sharedUd?.set(sharedUd?.bool(forKey: "dev"), forKey: "dev")
+                sharedUd?.synchronize()
+            }
+            if (url!.pathComponents.contains("setIcon")) {
+                let iconName = url!.lastPathComponent
+//                print("icon name", iconName)
+                if iconName == "default" {
+                    UIApplication.shared.setAlternateIconName(nil)
+                } else {
+                    UIApplication.shared.setAlternateIconName(iconName)
+                }
+            }
 //            if (url!.pathComponents.contains("hduMap")) {
 //                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
 //            }
@@ -293,6 +326,28 @@ extension ViewController: WKNavigationDelegate {
         }
         
         decisionHandler(WKNavigationActionPolicy.allow)
+    }
+    
+    // MARK: WCSession Methods
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("yes go")
+        
+        let message = [ "token": self.token ?? "" ]
+        wcSession.sendMessage(message, replyHandler: nil) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+        // Code
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+        // Code
+        
     }
     
 //    open func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {

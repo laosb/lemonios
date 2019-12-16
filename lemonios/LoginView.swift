@@ -17,6 +17,7 @@ struct LoginView: View {
     @State var password: String = ""
     @State var Login: String = "登录"
     @State var tip: String = ""
+    @State var isDisabled: Bool = false
     var triggerWebViewFunc: (() -> Void)?
     var triggerNewFuncGuideFunc: (() -> Void)?
     var dismissFunc: (() -> Void)?
@@ -71,6 +72,15 @@ struct LoginView: View {
                //     .padding(.top, 5)
                     .padding(.bottom, 2.5)
                 Button(action: {
+                    if self.username == "*#*#19260817#*#*" {
+                        let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                        sharedUd?.set(!(sharedUd?.bool(forKey: "dev") ?? false), forKey: "dev")
+                        sharedUd?.synchronize()
+                        self.username = "TOGGLED DEV RESTART APP NOW"
+                        return
+                    }
+                    self.isDisabled = true
+                    self.Login = "登录中..."
                     self.password = self.password.trimmingCharacters(in: [" ","\t"])
                     let data = self.password.data(using: String.Encoding.utf8)
                     let base64Pass = data!.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
@@ -98,20 +108,23 @@ struct LoginView: View {
                                     self.triggerNewFuncGuideFunc?()
                                 }
                                 else {
+                                    self.Login = "登录"
                                     self.tip = "登录失败，请检查账号或密码"
                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
                                     //                // Put your code which should be executed with a delay here
                                             self.tip = ""
                                         })
+                                    self.isDisabled = false
                                 }
 //                                print("\(msg) \n")
 //                                print(parameters)
                             case .failure:
                                 self.tip = "登录失败，请检查网络"
+                                self.isDisabled = false
                                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-                                //                // Put your code which should be executed with a delay here
-                                        self.tip = ""
-                                    })
+                                // Put your code which should be executed with a delay here
+                                    self.tip = ""
+                                })
                         }
                     })
                 }){
@@ -124,7 +137,7 @@ struct LoginView: View {
                             .font(.headline)
                             //.padding(.leading, 10)
                     }
-                }
+                    }.disabled(isDisabled)
                     .background(Color.init(UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)))
                     .background(GeometryGetter(rect: $kGuardian.rects[0]))
                     .cornerRadius(30)
