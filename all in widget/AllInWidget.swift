@@ -32,7 +32,7 @@ struct AllInWidget: View {
                 SunRunWidget(srData: self.srData).frame(height: 90)
                 Divider()
                 ElectricWidget(elecData: self.elecData).frame(height: 90)
-            }else if sData!.count > 0{
+            }else if sData!.count > 0 || self.availabe == false{
                 ScheduleWidget(sData: self.sData, availabe: self.availabe ?? false, chargeFunc: self.scheduleChargeFunc).frame(height: 100)
                 Spacer()
             }

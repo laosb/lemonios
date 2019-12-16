@@ -17,6 +17,7 @@ struct ScheduleDataView: View {
         VStack(alignment: .leading) {
             Text("\(realData.course!)")
                 .font(.headline)
+                .lineLimit(1)
             Text("\(realData.isTomorrow! == true ? "明天" : "")\(realData.startTime!) - \(realData.endTime!)  ·  \(realData.teacher!)  ·  \(realData.classRoom!)")
                 .font(.footnote)
                 .lineLimit(1)
