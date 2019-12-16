@@ -41,32 +41,31 @@ struct ScheduleWidget: View {
                                 ScheduleDataView(realData: self.sData![1])
                             }
                         }.environment(\.defaultMinListRowHeight, geometry.size.height/2)
-                        VStack {
-                            Button(action: {
-                                self.chargeFunc? { success in
-                                    if !success {
-                                        self.tipMessage = ""
-                                    }
-                                }
-                            }) {
-                                VStack {
-                                    Spacer()
-                                    Text("签到")
-                                        .accentColor(Color.white)
-                                    Spacer()
-                                }
-                            }
-                                .frame(width: 25.0, height: 75)
-                                .background(Color(red:0.20, green:0.60, blue:0.86))
-                                .cornerRadius(12.5)
-                        }.padding(10.0)
                 }
                 else {
                     Text("今明两天都没有课。享受生活！")
                         .font(.headline)
                         .foregroundColor(.secondary)
                 }
-                
+                VStack {
+                    Button(action: {
+                        self.chargeFunc? { success in
+                            if !success {
+                                self.tipMessage = ""
+                            }
+                        }
+                    }) {
+                        VStack {
+                            Spacer()
+                            Text("签到")
+                                .accentColor(Color.white)
+                            Spacer()
+                        }
+                    }
+                        .frame(width: 25.0, height: 75)
+                        .background(Color(red:0.20, green:0.60, blue:0.86))
+                        .cornerRadius(12.5)
+                }.padding(10.0)
             }
         }
     }
