@@ -84,8 +84,35 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         }
     }
     
+    func alertLoad() {
+//        Alamofire.request(configUrl).validate().responseJSON { response in
+//            switch response.result {
+//            case .success:
+//                if let json = response.result.value {
+//                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
+//                    self.shortcutFired(nativeLogin: false)
+//                }
+                let alert = UIAlertController(title: "内测邀请", message: "亲爱的杭电助手用户，我们诚挚邀请您参与我们的内测活动", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "加入内测群", style: .default, handler: { _ in
+                    self.extensionContext?.open(URL(string: "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv")!)
+                }))
+                alert.addAction(UIAlertAction(title: "参与内测", style: .default, handler: { _ in
+                    self.extensionContext?.open(URL(string: "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv")!)
+                }))
+                self.present(alert, animated: true, completion: nil)
+//            case .failure:
+//                break
+//                let alert = UIAlertController(title: "连接服务器失败", message: "请检查您是否允许杭电助手联网，以及您设备的网络连接。", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "重试", style: .default, handler: { _ in self.alertLoad(configUrl) }))
+//                self.present(alert, animated: true, completion: nil)
+//            }
+//        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "ShortcutFired"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "IncomingToken"), object: nil)
@@ -130,6 +157,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             }
         }
         tryLoad(configUrl)
+        alertLoad()
 //        if isDelay == true {
 //            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
 //                // Put your code which should be executed with a delay here
