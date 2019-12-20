@@ -89,11 +89,11 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
                     group = (NS.object(forKey: "forceTestflight") as? String ?? nil)
                     isForce = (NS.object(forKey: "testflightGroupLink") as? Bool ?? nil)
                 }
-                title = "内测邀请"
-                desc = "我们诚挚邀请您参与杭电助手内测"
-                group = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
-                isForce = false
-                link = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
+//                title = "内测邀请"
+//                desc = "我们诚挚邀请您参与杭电助手内测"
+//                group = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
+//                isForce = false
+//                link = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
                 if title != nil && desc != nil && link != nil && group != nil {
                     let alert = UIAlertController(title: "\(title!)", message: "\(desc!)", preferredStyle: .alert)
                     let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
