@@ -72,10 +72,54 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         Alamofire.request(configUrl).validate().responseJSON { response in
             switch response.result {
             case .success:
-                if let json = response.result.value {
-                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
+                let json = response.result.value
+                print("!!!!!!")
+                print(json)
+                var title: String?
+                var desc: String?
+                var link: String?
+                var group: String?
+                var isForce: Bool?
+                if json != nil {
+                    let NS = json as! NSDictionary
+                    print(NS)
+                    title = (NS.object(forKey: "testflightDialogTitle") as? String ?? nil)
+                    desc = (NS.object(forKey: "testflightDialogDesc") as? String ?? nil)
+                    link = (NS.object(forKey: "testflightLink") as? String ?? nil)
+                    group = (NS.object(forKey: "forceTestflight") as? String ?? nil)
+                    isForce = (NS.object(forKey: "testflightGroupLink") as? Bool ?? nil)
+                }
+                title = "内测邀请"
+                desc = "我们诚挚邀请您参与杭电助手内测"
+                group = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
+                isForce = false
+                link = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
+                if title != nil && desc != nil && link != nil && group != nil {
+                    let alert = UIAlertController(title: "\(title!)", message: "\(desc!)", preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                    if isForce == false {
+                        alert.addAction(cancelAction)
+                        alert.addAction(UIAlertAction(title: "加入内测群", style: .default, handler: { _ in
+                            UIApplication.shared.open(URL(string: "\(group!)")!)
+                        }))
+                        alert.addAction(UIAlertAction(title: "参与内测", style: .default, handler: { _ in
+                            UIApplication.shared.open(URL(string: "\(link!)")!)
+                        }))
+                    }
+                    else if isForce == true {
+                        alert.addAction(UIAlertAction(title: "加入内测群", style: .default, handler: { _ in
+                            UIApplication.shared.open(URL(string: "\(group!)")!)
+                        }))
+                        alert.addAction(UIAlertAction(title: "参与内测", style: .default, handler: { _ in
+                            UIApplication.shared.open(URL(string: "\(link!)")!)
+                        }))
+                    }
+                    self.present(alert, animated: true, completion: nil)
+                }
+                if json != nil {
                     self.shortcutFired(nativeLogin: false)
                 }
+                
             case .failure:
                 let alert = UIAlertController(title: "连接服务器失败", message: "请检查您是否允许杭电助手联网，以及您设备的网络连接。", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "重试", style: .default, handler: { _ in self.tryLoad(configUrl) }))
@@ -84,22 +128,21 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         }
     }
     
-    func alertLoad() {
+//    func alertLoad(_ configUrl: String) {
 //        Alamofire.request(configUrl).validate().responseJSON { response in
 //            switch response.result {
 //            case .success:
 //                if let json = response.result.value {
-//                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
-//                    self.shortcutFired(nativeLogin: false)
+//                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "testFiligt"), forKey: "baseUrl")
 //                }
-                let alert = UIAlertController(title: "内测邀请", message: "亲爱的杭电助手用户，我们诚挚邀请您参与我们的内测活动", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "加入内测群", style: .default, handler: { _ in
-                    self.extensionContext?.open(URL(string: "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv")!)
-                }))
-                alert.addAction(UIAlertAction(title: "参与内测", style: .default, handler: { _ in
-                    self.extensionContext?.open(URL(string: "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv")!)
-                }))
-                self.present(alert, animated: true, completion: nil)
+//                let alert = UIAlertController(title: "内测邀请", message: "亲爱的杭电助手用户，我们诚挚邀请您参与我们的内测活动", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "加入内测群", style: .default, handler: { _ in
+//                    UIApplication.shared.open(URL(string: "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv")!)
+//                }))
+//                alert.addAction(UIAlertAction(title: "参与内测", style: .default, handler: { _ in
+//                    UIApplication.shared.open(URL(string: "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv")!)
+//                }))
+//                self.present(alert, animated: true, completion: nil)
 //            case .failure:
 //                break
 //                let alert = UIAlertController(title: "连接服务器失败", message: "请检查您是否允许杭电助手联网，以及您设备的网络连接。", preferredStyle: .alert)
@@ -107,7 +150,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
 //                self.present(alert, animated: true, completion: nil)
 //            }
 //        }
-    }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -157,7 +200,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             }
         }
         tryLoad(configUrl)
-        alertLoad()
+
 //        if isDelay == true {
 //            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
 //                // Put your code which should be executed with a delay here

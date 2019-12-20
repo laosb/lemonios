@@ -43,9 +43,13 @@ struct ScheduleWidget: View {
                         }.environment(\.defaultMinListRowHeight, geometry.size.height/2)
                 }
                 else {
-                    Text("今明两天都没有课。享受生活！")
+                    Spacer()
+                    VStack {
+                        Text("今明两天都没有课。享受生活！")
                         .font(.headline)
                         .foregroundColor(.secondary)
+                    }
+                    Spacer()
                 }
                 VStack {
                     Button(action: {
