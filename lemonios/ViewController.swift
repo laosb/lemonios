@@ -74,7 +74,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             case .success:
                 let json = response.result.value
                 //print("!!!!!!")
-                print(json)
+                //print(json)
                 var title: String?
                 var desc: String?
                 var link: String?
@@ -94,12 +94,12 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
 //                group = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
 //                isForce = false
 //                link = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
-                print("@@@@")
-                print(title!)
-                print(desc!)
-                print(link!)
-                print(group)
-                print("@@@@")
+//                print("@@@@")
+//                print(title!)
+//                print(desc!)
+//                print(link!)
+//                print(group)
+//                print("@@@@")
                 if title != nil && desc != nil && link != nil && group != nil {
                     print("????")
                     let alert = UIAlertController(title: "\(title!)", message: "\(desc!)", preferredStyle: .alert)
@@ -276,7 +276,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             webView.load(URLRequest(url: URL(string: "about:blank")!))
         }
         let url = URL(string: urlStr)
-        print(urlStr)
+        //print(urlStr)
         let req = URLRequest(url: url!)
         webView!.load(req)
         
@@ -370,7 +370,7 @@ extension ViewController: WKNavigationDelegate {
                 let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
                 sharedUd?.set(nil, forKey: "token")
                 sharedUd?.synchronize()
-                print("get logout")
+                //print("get logout")
                 self.performSegue(withIdentifier: "gotoLogin", sender: self)
             }
             if (url!.pathComponents.contains("toggleDev")) {
@@ -408,7 +408,7 @@ extension ViewController: WKNavigationDelegate {
     
     // MARK: WCSession Methods
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("yes go")
+        //print("yes go")
         
         let message = [ "token": self.token ?? "" ]
         wcSession.sendMessage(message, replyHandler: nil) { (error) in
