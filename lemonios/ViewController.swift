@@ -73,7 +73,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             switch response.result {
             case .success:
                 let json = response.result.value
-                print("!!!!!!")
+                //print("!!!!!!")
                 print(json)
                 var title: String?
                 var desc: String?
@@ -82,19 +82,26 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
                 var isForce: Bool?
                 if json != nil {
                     let NS = json as! NSDictionary
-                    print(NS)
+                    //print(NS)
                     title = (NS.object(forKey: "testflightDialogTitle") as? String ?? nil)
                     desc = (NS.object(forKey: "testflightDialogDesc") as? String ?? nil)
                     link = (NS.object(forKey: "testflightLink") as? String ?? nil)
-                    group = (NS.object(forKey: "forceTestflight") as? String ?? nil)
-                    isForce = (NS.object(forKey: "testflightGroupLink") as? Bool ?? nil)
+                    isForce = (NS.object(forKey: "forceTestflight") as? Bool ?? nil)
+                    group = (NS.object(forKey: "testflightGroupLink") as? String ?? nil)
                 }
 //                title = "内测邀请"
 //                desc = "我们诚挚邀请您参与杭电助手内测"
 //                group = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
 //                isForce = false
 //                link = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
+                print("@@@@")
+                print(title!)
+                print(desc!)
+                print(link!)
+                print(group)
+                print("@@@@")
                 if title != nil && desc != nil && link != nil && group != nil {
+                    print("????")
                     let alert = UIAlertController(title: "\(title!)", message: "\(desc!)", preferredStyle: .alert)
                     let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                     if isForce == false {
