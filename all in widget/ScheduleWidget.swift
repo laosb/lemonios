@@ -34,7 +34,7 @@ struct ScheduleWidget: View {
                             .foregroundColor(.secondary)
                     }
                 }
-                else if self.sData!.count > 0 {
+                else if self.sData!.count != 0 {
                         List {
                             ScheduleDataView(realData: self.sData![0])
                             if self.sData!.count >= 2 {

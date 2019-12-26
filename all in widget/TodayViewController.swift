@@ -29,7 +29,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 viewContoller.removeFromParent()
                }
            }
-        print(self.sData.count)
+        //print(self.sData.count)
         allVc = UIHostingController(rootView:
             AllInWidget(elecData: self.elecData, cardData: self.cardData, srData: self.srData, sData: self.sData, availabe: self.Av, isExpanded: self.isEx, cardChargeFunc: { cb in
                 self.extensionContext?.open(URL(string: "alipays://platformapi/startapp?saId=10000007&qrcode=https%3A%2F%2Fqr.alipay.com%2Fs7x07977akyiot2uv5pme45%3F_s%3Dweb-other")!) {success in cb(success)}
@@ -55,6 +55,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
         let token = sharedUd?.string(forKey: "token")
         if token != nil {
+            sData.removeAll()
             Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
                 "Authorization": "token \(token ?? "")"
             ]).validate().responseJSON(completionHandler: { response in
@@ -85,8 +86,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                         }
                     }
                     //                            print("!!!!!!!!!!!!!!!!!!!")
-                    //                            print(tempData.count)
-                    //                            print(sData.count)
+                    //print(tempData.count)
+                    //print(self.sData.count)
                 //self.renderData(sData: sData, isA: true)
                     self.Av = true
                 case .failure:
