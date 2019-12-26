@@ -69,6 +69,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     }
     
     func tryLoad(_ configUrl: String) {
+        let currentVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
         Alamofire.request(configUrl).validate().responseJSON { response in
             switch response.result {
             case .success:
@@ -80,7 +81,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
                 var link: String?
                 var group: String?
                 var isForce: Bool?
-                if json != nil {
+                if json != nil && currentVersion > "38"{
                     let NS = json as! NSDictionary
                     //print(NS)
                     title = (NS.object(forKey: "testflightDialogTitle") as? String ?? nil)
