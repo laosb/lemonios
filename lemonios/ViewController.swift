@@ -81,7 +81,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
                 var link: String?
                 var group: String?
                 var isForce: Bool?
-                if json != nil && currentVersion > "38"{
+                if json != nil && currentVersion < "38"{
                     let NS = json as! NSDictionary
                     //print(NS)
                     title = (NS.object(forKey: "testflightDialogTitle") as? String ?? nil)
