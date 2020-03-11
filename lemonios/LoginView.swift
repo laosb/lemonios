@@ -21,6 +21,25 @@ struct LoginView: View {
     var triggerWebViewFunc: (() -> Void)?
     var triggerNewFuncGuideFunc: (() -> Void)?
     var dismissFunc: (() -> Void)?
+    
+    func login(token: String) {
+        let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+        sharedUd?.set(token, forKey: "token")
+        sharedUd?.synchronize()
+        print(token)
+        self.triggerWebViewFunc?()
+        self.dismissFunc?()
+        self.tip = ""
+        self.triggerNewFuncGuideFunc?()
+    }
+    func setTip(_ tip: String) {
+        self.Login = "登录"
+        self.tip = tip
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+            self.tip = ""
+        })
+        self.isDisabled = false
+    }
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         //限制只能输入数字，不能输入特殊字符
         let length = string.lengthOfBytes(using: String.Encoding.utf8)
@@ -43,9 +62,21 @@ struct LoginView: View {
                 .clipShape(Circle())
                 .offset(y: -100)
             VStack {
-                Text("智慧杭电登录")
+                SignInWithAppleView(onFinish: { success, tokenOrReason in
+                    if success {
+                        self.login(token: tokenOrReason)
+                    } else {
+                        self.setTip(tokenOrReason)
+                    }
+                })
+                    .frame(width: 250, height: 60)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color.white, lineWidth: 1)
+                    )
+                Text("或者通过智慧杭电登录")
                     .font(.headline)
-                    .padding(.bottom)
+                    .padding(.vertical)
                 VStack {
                     
                     TextField("学工号", text: $username, onEditingChanged: { target in
@@ -96,35 +127,16 @@ struct LoginView: View {
                                 let msg = (json as! NSDictionary).object(forKey: "msg") as! String
                                 if msg == "success" {
                                     let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
-                                    //let isValid = newRawData.object(forKey: "isValid") as! Bool
-                                    let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
                                     let token = newRawData.object(forKey: "access_token") as! String
-                                    sharedUd?.set(token, forKey: "token")
-                                    sharedUd?.synchronize()
-                                    print(token)
-                                    self.triggerWebViewFunc?()
-                                    self.dismissFunc?()
-                                    self.tip = ""
-                                    self.triggerNewFuncGuideFunc?()
+                                    self.login(token: token)
                                 }
                                 else {
-                                    self.Login = "登录"
-                                    self.tip = "登录失败，请检查账号或密码"
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-                                    //                // Put your code which should be executed with a delay here
-                                            self.tip = ""
-                                        })
-                                    self.isDisabled = false
+                                    self.setTip("登录失败，请检查账号或密码")
                                 }
 //                                print("\(msg) \n")
 //                                print(parameters)
                             case .failure:
-                                self.tip = "登录失败，请检查网络"
-                                self.isDisabled = false
-                                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
-                                // Put your code which should be executed with a delay here
-                                    self.tip = ""
-                                })
+                                self.setTip("登录失败，请检查网络")
                         }
                     })
                 }){

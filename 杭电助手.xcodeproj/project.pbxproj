@@ -55,6 +55,7 @@
 		2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */; };
 		2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50EF22BFE1260005781E /* Intents.framework */; };
 		2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50F022BFE1260005781E /* IntentsUI.framework */; };
+		2AFF4F112419132100D2E411 /* SignInWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F102419132100D2E411 /* SignInWithAppleView.swift */; };
 		4E2661882386A6DF00B42004 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2661872386A6DF00B42004 /* MainInterface.storyboard */; };
 		4E4E377823ACF7AF00AAE077 /* ic_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376323ACF7AF00AAE077 /* ic_blue.png */; };
 		4E4E377923ACF7AF00AAE077 /* ic_pride2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376423ACF7AF00AAE077 /* ic_pride2.png */; };
@@ -319,6 +320,7 @@
 		2AEC50E322BFD92C0005781E /* opensubapp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = opensubapp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEC50EF22BFE1260005781E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2AEC50F022BFE1260005781E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		2AFF4F102419132100D2E411 /* SignInWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleView.swift; sourceTree = "<group>"; };
 		4E2661872386A6DF00B42004 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		4E4E376323ACF7AF00AAE077 /* ic_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_blue.png; sourceTree = "<group>"; };
 		4E4E376423ACF7AF00AAE077 /* ic_pride2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pride2.png; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 				4E7E7C7D238CC72900B097AD /* LoginController.swift */,
 				4E7E7C7F2390006500B097AD /* KeyboardGuardian.swift */,
 				4E7E7C81239000DA00B097AD /* GeometryGetter.swift */,
+				2AFF4F102419132100D2E411 /* SignInWithAppleView.swift */,
 			);
 			path = lemonios;
 			sourceTree = "<group>";
@@ -1188,6 +1191,7 @@
 				4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */,
 				4E7E7C802390006500B097AD /* KeyboardGuardian.swift in Sources */,
 				4E7E7C7E238CC72900B097AD /* LoginController.swift in Sources */,
+				2AFF4F112419132100D2E411 /* SignInWithAppleView.swift in Sources */,
 				2A31BE9E2389107200AA9CFC /* MenuController.swift in Sources */,
 				4E7E7C82239000DA00B097AD /* GeometryGetter.swift in Sources */,
 				2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */,
