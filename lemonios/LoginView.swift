@@ -60,7 +60,7 @@ struct LoginView: View {
                 .resizable()
                 .frame(width: 200, height: 200, alignment: .center)
                 .clipShape(Circle())
-                .offset(y: -100)
+                .padding()
             VStack {
                 SignInWithAppleView(onFinish: { success, tokenOrReason in
                     if success {
@@ -69,7 +69,7 @@ struct LoginView: View {
                         self.setTip(tokenOrReason)
                     }
                 })
-                    .frame(width: 250, height: 60)
+                    .frame(width: 250, height: 55)
                     .overlay(
                         RoundedRectangle(cornerRadius: 30)
                             .stroke(Color.white, lineWidth: 1)
@@ -82,26 +82,18 @@ struct LoginView: View {
                     TextField("学工号", text: $username, onEditingChanged: { target in
                         if target { self.kGuardian.showField = 0 }
                     })
-                        .cornerRadius(3)
-                        .lineSpacing(15)
-                        .padding()
-                        .frame(width: 250, alignment: .center)
+                        .padding(.horizontal)
+                        .frame(width: 250, height: 55, alignment: .center)
                         .background(Color.init(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.3)))
                         .cornerRadius(30)
                     SecureField("密码", text: $password, onCommit: {
                         self.kGuardian.showField = 0
                     })
-                        .cornerRadius(3)
-                        .lineSpacing(15)
-                        .padding()
-                        .frame(width: 250, alignment: .center)
+                        .padding(.horizontal)
+                        .frame(width: 250, height: 55, alignment: .center)
                         .background(Color.init(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.3)))
                         .cornerRadius(30)
                 }
-                Text(tip)
-                    .font(.footnote)
-               //     .padding(.top, 5)
-                    .padding(.bottom, 2.5)
                 Button(action: {
                     if self.username == "*#*#19260817#*#*" {
                         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
@@ -143,18 +135,19 @@ struct LoginView: View {
                     VStack {
                         Text("\(Login)")
                             .foregroundColor(Color.white)
-                            .padding(.horizontal, 105)
-                            .padding(.top, 15)
-                            .padding(.bottom, 15)
+                            .frame(width: 250, height: 55, alignment: .center)
                             .font(.headline)
                             //.padding(.leading, 10)
                     }
-                    }.disabled(isDisabled)
+                }
+                    .disabled(isDisabled)
                     .background(Color.init(UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)))
                     .background(GeometryGetter(rect: $kGuardian.rects[0]))
                     .cornerRadius(30)
             }
-            
+            Text(tip)
+                .font(.footnote)
+                .padding(.vertical)
         }
             .padding(.horizontal, 40)
             .offset(y: kGuardian.slide)
