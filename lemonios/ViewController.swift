@@ -53,6 +53,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     
 
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var loadingCover: UIView!
     
     weak var getTokenTimer: Timer?
     
@@ -223,6 +224,16 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
 //
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == #keyPath(WKWebView.estimatedProgress) {
+            if webView.estimatedProgress == 1.0 {
+                loadingCover.isHidden = true
+            } else {
+                loadingCover.isHidden = false
+            }
+        }
+    }
+    
     @objc func shortcutFired (nativeLogin: Bool) {
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
         
@@ -248,8 +259,9 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        webView!.navigationDelegate = self
-        webView!.uiDelegate = self
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown", isDev)
         
         if let token = appDelegate.getIncomingToken() {
@@ -288,16 +300,6 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             self.webView!.evaluateJavaScript("""
                 (() => {
                     window._setupDebug(19260817)
-                    const siwaBtn = document.getElementById('appleid-signin')
-                    if (siwaBtn) {
-                        siwaBtn.onclick = () => {
-                            console.log('Try SIWA')
-                            const btnLink = document.createElement('a')
-                            btnLink.href = "https://api.hduhelp.com/login/direct/apple?clientID=app&redirect=hduhelplemon%3A%2F%2Fapp.hduhelp.com"
-                            document.body.appendChild(btnLink)
-                            btnLink.click()
-                        }
-                    }
                     return window._hduhelpDebug.store.state.token || null
                 })()
             """, completionHandler: { returnValue, error in
