@@ -43,7 +43,7 @@
 		2AC9F93D23996CDE00D46B61 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93C23996CDE00D46B61 /* NotificationController.swift */; };
 		2AC9F93F23996CDE00D46B61 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93E23996CDE00D46B61 /* NotificationView.swift */; };
 		2AC9F94423996CDF00D46B61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F94323996CDF00D46B61 /* Preview Assets.xcassets */; };
-		2AC9F94923996CDF00D46B61 /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2AC9F92523996CD900D46B61 /* watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AC9F94923996CDF00D46B61 /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2AC9F92523996CD900D46B61 /* watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AC9F95323996D1D00D46B61 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2AC9F95223996D1D00D46B61 /* Alamofire */; };
 		2AD63D8D23997D6C0005C4F8 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */; };
 		2AD63D9123997EAA0005C4F8 /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD63D9023997EAA0005C4F8 /* CardWidget.swift */; };
@@ -97,7 +97,7 @@
 		4EBC6EDD23A3C12300C44339 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		4EBC6EE023A3C12300C44339 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */; };
 		4EBC6EE323A3C12300C44339 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */; };
-		4EBC6EE723A3C12300C44339 /* all in widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EBC6EDC23A3C12300C44339 /* all in widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4EBC6EE723A3C12300C44339 /* all in widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EBC6EDC23A3C12300C44339 /* all in widget.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4EBC6EEC23A3C13200C44339 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4EBC6EEB23A3C13200C44339 /* Alamofire */; };
 		4EBC6EEF23A3C2C800C44339 /* ScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EEE23A3C2C800C44339 /* ScheduleWidget.swift */; };
 		4EBC6EF123A3C32800C44339 /* ScheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF023A3C32800C44339 /* ScheduleDataView.swift */; };
@@ -1321,6 +1321,7 @@
 		};
 		2AC9F94823996CDF00D46B61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 2AC9F92423996CD900D46B61 /* watch */;
 			targetProxy = 2AC9F94723996CDF00D46B61 /* PBXContainerItemProxy */;
 		};
@@ -1338,6 +1339,7 @@
 		};
 		4EBC6EE623A3C12300C44339 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 4EBC6EDB23A3C12300C44339 /* all in widget */;
 			targetProxy = 4EBC6EE523A3C12300C44339 /* PBXContainerItemProxy */;
 		};
