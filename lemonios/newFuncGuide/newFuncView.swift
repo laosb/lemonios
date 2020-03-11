@@ -21,18 +21,12 @@ struct NewFuncView: View {
             NavigationView {
                 List {
                     NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
-                        version: "1.4", content: [
-                            "[NOMAC]负一屏小组件更新，所有小组件被整合为一个可折叠的大号组件",
-                            "[NOMAC]现在小组件中签到按钮无论何时都会显示了",
-                            "嘤~",
-                        ]
-                    ))
-                    NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
-                        version: "1.3", content: [
-                            "[NOMAC]提供了Apple Watch app。在配对了Apple Watch的iPhone上前往Watch应用安装杭电助手。",
-                            "完全适配了暗色模式",
-                            "[NOMAC]支持应用图标替换。前往我 - 设置 - 外观与体验设置。",
-                            "新增若干图书馆相关应用",
+                        version: "2.0", content: [
+                            "通知中心全新上线",
+                            "自定义主题颜色与课表背景",
+                            "现已支持通过Apple登录",
+                            "全面更换图标，助手不再缺手指了",
+                            "架构大调整，性能++，体验更流畅"
                         ]
                     ))
                 }

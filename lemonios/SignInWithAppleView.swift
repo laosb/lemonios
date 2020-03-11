@@ -101,7 +101,7 @@ struct SignInWithAppleView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> ASAuthorizationAppleIDButton {
         let button = ASAuthorizationAppleIDButton(
-            authorizationButtonType: .continue,
+            authorizationButtonType: .signIn,
             authorizationButtonStyle: .black
         )
         button.frame = .zero
