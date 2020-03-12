@@ -49,7 +49,7 @@ struct SunRunWidget: View {
                 Text("数据获取失败。请尝试打开杭电助手并登录。嘤~")
                     .foregroundColor(.secondary)
             }
-        }.padding()
+        }
     }
 }
 
