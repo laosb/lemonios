@@ -38,6 +38,7 @@ struct LMUtils {
     
     static func setPrimaryColor(hex: String) {
         sharedUd?.set(hex, forKey: "primaryColor")
+        sharedUd?.synchronize()
     }
     
     static func getPrimaryColor() -> UIColor {
