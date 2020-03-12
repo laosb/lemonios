@@ -80,6 +80,7 @@
                     <navigationItem key="navigationItem" title="杭电助手" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="jp1-fw-MgH"/>
                     <connections>
                         <outlet property="loadingCover" destination="naI-Y0-9EK" id="Swx-Ux-4fD"/>
+                        <outlet property="statusBar" destination="8Ch-jE-sNu" id="UHi-RJ-dwa"/>
                         <outlet property="webView" destination="XTj-fi-Y8X" id="EvO-ah-WID"/>
                         <segue destination="CLS-2S-TuF" kind="presentation" identifier="gotoNewFuncGuide" modalPresentationStyle="formSheet" id="f9I-1a-SFT"/>
                         <segue destination="uUS-IR-8pm" kind="presentation" identifier="gotoLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Oqp-Ji-DpY"/>
