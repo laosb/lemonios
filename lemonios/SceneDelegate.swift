@@ -15,20 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     func routeUrl(urlContexts: Set<UIOpenURLContext>) {
-        print("url routing start")
         if let url = urlContexts.first?.url {
-            print("url got", url)
             guard
                 let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
                 let path = components.path,
                 let params = components.queryItems
                 else { return }
-            print("url path", path)
             if path == "/login" {
                 let app = UIApplication.shared.delegate as! AppDelegate
                 app.token = params.first { $0.name == "auth" }?.value
-                print("token from scene", app.token)
-//                (window?.rootViewController as! ViewController).shortcutFired(nativeLogin: false)
                 NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
             }
         }
