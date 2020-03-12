@@ -54,6 +54,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
 
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var loadingCover: UIView!
+    @IBOutlet weak var statusBar: UIView!
     
     weak var getTokenTimer: Timer?
     
@@ -392,6 +393,18 @@ extension ViewController: WKNavigationDelegate {
                     UIApplication.shared.setAlternateIconName(iconName)
                 }
             }
+            if (url!.pathComponents.contains("setStatusBarColor")) {
+                let color = url!.lastPathComponent
+                print("setStatusBarColor", color)
+                UIView.animate(withDuration: 0.3) {
+                    self.statusBar.backgroundColor = UIColor(dynamicProvider: { coll in
+                        switch coll.userInterfaceStyle {
+                        case .dark: return UIColor(named: "status_bar_color")!
+                        default: return LMUtils.hexStringToUIColor(hex: color)
+                        }
+                    })
+                }
+            }
 //            if (url!.pathComponents.contains("hduMap")) {
 //                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
 //            }
@@ -399,7 +412,7 @@ extension ViewController: WKNavigationDelegate {
             return
         }
         
-        if navigationAction.navigationType == WKNavigationType.linkActivated {
+        if navigationAction.navigationType == .linkActivated {
             let url = navigationAction.request.url
             let safariView = SFSafariViewController(url: url!)
             safariView.preferredControlTintColor = primaryColor
