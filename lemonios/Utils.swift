@@ -12,7 +12,7 @@ import UIKit
 struct LMUtils {
     
     // https://stackoverflow.com/a/27203691
-    static func hexStringToUIColor (hex:String) -> UIColor {
+    static func hexStringToUIColor(hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
@@ -32,5 +32,16 @@ struct LMUtils {
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: CGFloat(1.0)
         )
+    }
+    
+    static let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+    
+    static func setPrimaryColor(hex: String) {
+        sharedUd?.set(hex, forKey: "primaryColor")
+    }
+    
+    static func getPrimaryColor() -> UIColor {
+        let hex = sharedUd?.string(forKey: "primaryColor")
+        return hexStringToUIColor(hex: hex ?? "3498DB")
     }
 }
