@@ -45,7 +45,6 @@
 		2AC9F94423996CDF00D46B61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F94323996CDF00D46B61 /* Preview Assets.xcassets */; };
 		2AC9F94923996CDF00D46B61 /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2AC9F92523996CD900D46B61 /* watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AC9F95323996D1D00D46B61 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2AC9F95223996D1D00D46B61 /* Alamofire */; };
-		2AD63D8D23997D6C0005C4F8 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */; };
 		2AD63D9123997EAA0005C4F8 /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD63D9023997EAA0005C4F8 /* CardWidget.swift */; };
 		2AD63D9223997ECF0005C4F8 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868123780BE0005AB8AF /* WidgetNumberView.swift */; };
 		2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
@@ -79,6 +78,18 @@
 		4E4E378A23ACF7AF00AAE077 /* ic_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377523ACF7AF00AAE077 /* ic_blue@2x.png */; };
 		4E4E378B23ACF7AF00AAE077 /* ic_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377623ACF7AF00AAE077 /* ic_blue@3x.png */; };
 		4E4E378C23ACF7AF00AAE077 /* ic_pride2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377723ACF7AF00AAE077 /* ic_pride2@2x.png */; };
+		4E715613241A3AB500486040 /* ScheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* ScheduleDataView.swift */; };
+		4E715614241A3AB800486040 /* ScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* ScheduleWidget.swift */; };
+		4E715615241A3B5000486040 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */; };
+		4E715616241A3BA500486040 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
+		4E715617241A3BCF00486040 /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
+		4E715618241A3C1100486040 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
+		4E715619241A3C1300486040 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
+		4E71561A241A3C3000486040 /* ElectricNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F22395F73800001387 /* ElectricNumberView.swift */; };
+		4E71561B241A3C3200486040 /* ElectricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F42395F75300001387 /* ElectricWidget.swift */; };
+		4E715621241A5B1400486040 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F12241A366300D2E411 /* Utils.swift */; };
+		4E715623241A5B3100486040 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F12241A366300D2E411 /* Utils.swift */; };
+		4E715624241A5B3300486040 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F12241A366300D2E411 /* Utils.swift */; };
 		4E7E7C7E238CC72900B097AD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C7D238CC72900B097AD /* LoginController.swift */; };
 		4E7E7C802390006500B097AD /* KeyboardGuardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C7F2390006500B097AD /* KeyboardGuardian.swift */; };
 		4E7E7C82239000DA00B097AD /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C81239000DA00B097AD /* GeometryGetter.swift */; };
@@ -101,17 +112,10 @@
 		4EBC6EE323A3C12300C44339 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */; };
 		4EBC6EE723A3C12300C44339 /* all in widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EBC6EDC23A3C12300C44339 /* all in widget.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4EBC6EEC23A3C13200C44339 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4EBC6EEB23A3C13200C44339 /* Alamofire */; };
-		4EBC6EEF23A3C2C800C44339 /* ScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EEE23A3C2C800C44339 /* ScheduleWidget.swift */; };
-		4EBC6EF123A3C32800C44339 /* ScheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF023A3C32800C44339 /* ScheduleDataView.swift */; };
-		4EBC6EF323A3C34D00C44339 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF223A3C34D00C44339 /* SunRunWidget.swift */; };
-		4EBC6EF523A3C37100C44339 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF423A3C37100C44339 /* WidgetNumberView.swift */; };
-		4EBC6EF723A3C39200C44339 /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF623A3C39200C44339 /* CardWidget.swift */; };
-		4EBC6EF923A3C3B000C44339 /* ElectricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EF823A3C3B000C44339 /* ElectricWidget.swift */; };
-		4EBC6EFB23A3C3EC00C44339 /* ElectricNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EFA23A3C3EC00C44339 /* ElectricNumberView.swift */; };
 		4EBC6EFD23A3C55500C44339 /* AllInWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */; };
 		4EBDAA82238BEAD9009AB925 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBDAA81238BEAD9009AB925 /* LoginView.swift */; };
-		4ECFFB5C23857E94005B775B /* scheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* scheduleWidget.swift */; };
-		4ECFFB5E23857EB6005B775B /* scheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */; };
+		4ECFFB5C23857E94005B775B /* ScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* ScheduleWidget.swift */; };
+		4ECFFB5E23857EB6005B775B /* ScheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* ScheduleDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,7 +304,6 @@
 		2AC9F94623996CDF00D46B61 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2AC9F9542399755400D46B61 /* watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watch.entitlements; sourceTree = "<group>"; };
 		2AD63D8A239975720005C4F8 /* watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watch Extension.entitlements"; sourceTree = "<group>"; };
-		2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
 		2AD63D9023997EAA0005C4F8 /* CardWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardWidget.swift; path = Widgets/CardWidget.swift; sourceTree = "<group>"; };
 		2AD799DD22B271900053BB4E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRunWidget.swift; sourceTree = "<group>"; };
@@ -367,17 +370,10 @@
 		4EBC6EE223A3C12300C44339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		4EBC6EE423A3C12300C44339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EBC6EED23A3C13600C44339 /* all in widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "all in widget.entitlements"; sourceTree = "<group>"; };
-		4EBC6EEE23A3C2C800C44339 /* ScheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleWidget.swift; sourceTree = "<group>"; };
-		4EBC6EF023A3C32800C44339 /* ScheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDataView.swift; sourceTree = "<group>"; };
-		4EBC6EF223A3C34D00C44339 /* SunRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRunWidget.swift; sourceTree = "<group>"; };
-		4EBC6EF423A3C37100C44339 /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
-		4EBC6EF623A3C39200C44339 /* CardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWidget.swift; sourceTree = "<group>"; };
-		4EBC6EF823A3C3B000C44339 /* ElectricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricWidget.swift; sourceTree = "<group>"; };
-		4EBC6EFA23A3C3EC00C44339 /* ElectricNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricNumberView.swift; sourceTree = "<group>"; };
 		4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInWidget.swift; sourceTree = "<group>"; };
 		4EBDAA81238BEAD9009AB925 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		4ECFFB5B23857E94005B775B /* scheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleWidget.swift; sourceTree = "<group>"; };
-		4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleDataView.swift; sourceTree = "<group>"; };
+		4ECFFB5B23857E94005B775B /* ScheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleWidget.swift; sourceTree = "<group>"; };
+		4ECFFB5D23857EB6005B775B /* ScheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,7 +474,6 @@
 				2A1E412B2377F72B002FA52A /* MainInterface.storyboard */,
 				2A1E412E2377F72B002FA52A /* Info.plist */,
 				2A1E41392377F7D4002FA52A /* CardWidget.swift */,
-				2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */,
 			);
 			path = cardwidget;
 			sourceTree = "<group>";
@@ -592,8 +587,8 @@
 				2A5C40E12340B23900B9FF02 /* 快捷课表.entitlements */,
 				2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */,
 				4E2661872386A6DF00B42004 /* MainInterface.storyboard */,
-				4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */,
-				4ECFFB5B23857E94005B775B /* scheduleWidget.swift */,
+				4ECFFB5D23857EB6005B775B /* ScheduleDataView.swift */,
+				4ECFFB5B23857E94005B775B /* ScheduleWidget.swift */,
 				2A5C40D6233F9AC200B9FF02 /* Info.plist */,
 			);
 			path = schedulewidget;
@@ -739,13 +734,6 @@
 				4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */,
 				4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */,
 				4EBC6EE423A3C12300C44339 /* Info.plist */,
-				4EBC6EEE23A3C2C800C44339 /* ScheduleWidget.swift */,
-				4EBC6EF023A3C32800C44339 /* ScheduleDataView.swift */,
-				4EBC6EF223A3C34D00C44339 /* SunRunWidget.swift */,
-				4EBC6EF423A3C37100C44339 /* WidgetNumberView.swift */,
-				4EBC6EF623A3C39200C44339 /* CardWidget.swift */,
-				4EBC6EF823A3C3B000C44339 /* ElectricWidget.swift */,
-				4EBC6EFA23A3C3EC00C44339 /* ElectricNumberView.swift */,
 				4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */,
 			);
 			path = "all in widget";
@@ -1182,8 +1170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1E412A2377F72B002FA52A /* TodayViewController.swift in Sources */,
-				2AD63D8D23997D6C0005C4F8 /* WidgetNumberView.swift in Sources */,
+				4E715619241A3C1300486040 /* WidgetNumberView.swift in Sources */,
 				2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */,
+				4E715624241A5B3300486040 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1229,9 +1218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECFFB5C23857E94005B775B /* scheduleWidget.swift in Sources */,
-				4ECFFB5E23857EB6005B775B /* scheduleDataView.swift in Sources */,
+				4ECFFB5C23857E94005B775B /* ScheduleWidget.swift in Sources */,
+				4ECFFB5E23857EB6005B775B /* ScheduleDataView.swift in Sources */,
 				2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */,
+				4E715623241A5B3100486040 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1276,6 +1266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9E83F32395F73800001387 /* ElectricNumberView.swift in Sources */,
+				4E715618241A3C1100486040 /* WidgetNumberView.swift in Sources */,
 				4E9E83E42395F66400001387 /* TodayViewController.swift in Sources */,
 				4E9E83F52395F75300001387 /* ElectricWidget.swift in Sources */,
 			);
@@ -1285,15 +1276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E71561A241A3C3000486040 /* ElectricNumberView.swift in Sources */,
 				4EBC6EFD23A3C55500C44339 /* AllInWidget.swift in Sources */,
-				4EBC6EF923A3C3B000C44339 /* ElectricWidget.swift in Sources */,
-				4EBC6EF323A3C34D00C44339 /* SunRunWidget.swift in Sources */,
-				4EBC6EFB23A3C3EC00C44339 /* ElectricNumberView.swift in Sources */,
-				4EBC6EF523A3C37100C44339 /* WidgetNumberView.swift in Sources */,
-				4EBC6EF123A3C32800C44339 /* ScheduleDataView.swift in Sources */,
-				4EBC6EF723A3C39200C44339 /* CardWidget.swift in Sources */,
-				4EBC6EEF23A3C2C800C44339 /* ScheduleWidget.swift in Sources */,
+				4E715616241A3BA500486040 /* WidgetNumberView.swift in Sources */,
+				4E715613241A3AB500486040 /* ScheduleDataView.swift in Sources */,
+				4E715614241A3AB800486040 /* ScheduleWidget.swift in Sources */,
+				4E715621241A5B1400486040 /* Utils.swift in Sources */,
+				4E715617241A3BCF00486040 /* CardWidget.swift in Sources */,
+				4E715615241A3B5000486040 /* SunRunWidget.swift in Sources */,
 				4EBC6EE023A3C12300C44339 /* TodayViewController.swift in Sources */,
+				4E71561B241A3C3200486040 /* ElectricWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
