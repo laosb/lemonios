@@ -130,7 +130,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
                     self.present(alert, animated: true, completion: nil)
                 }
                 if json != nil {
-                    self.shortcutFired(nativeLogin: false)
+                    self.shortcutFired(nativeLogin: false, route: nil)
                 }
                 
             case .failure:
@@ -238,7 +238,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         }
     }
     
-    @objc func shortcutFired (nativeLogin: Bool) {
+    @objc func shortcutFired (nativeLogin: Bool, route: String?) {
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
         print("shortcutFired func")
         
@@ -284,6 +284,8 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
 //            if shortcut == "hdumap" {
 //                return self.performSegue(withIdentifier: "gotoHduMap", sender: self)
 //            }
+        } else if route != nil && (route?.starts(with: "/"))! {
+            urlStr += route!
         }
         
 //        print(urlStr)

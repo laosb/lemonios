@@ -21,10 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let path = components.path,
                 let params = components.queryItems
                 else { return }
-            if path == "/login" {
-                let app = UIApplication.shared.delegate as! AppDelegate
-                app.token = params.first { $0.name == "auth" }?.value
+            let app = UIApplication.shared.delegate as! AppDelegate
+
+            if path == "/login", let auth = params.first(where: { $0.name == "auth" }) {
+                app.token = auth.value
                 NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
+            } else {
+                let vc = window?.rootViewController as! ViewController
+                vc.shortcutFired(nativeLogin: false, route: path)
             }
         }
     }

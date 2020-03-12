@@ -16,7 +16,7 @@ class LoginController: UIHostingController<LoginView> {
     //    let vc = self.presentingViewController?.children[0] as! ViewController
         self.rootView = LoginView(
             triggerWebViewFunc: {
-                (self.presentingViewController?.children[0] as! ViewController).shortcutFired(nativeLogin: true)
+                (self.presentingViewController?.children[0] as! ViewController).shortcutFired(nativeLogin: true, route: nil)
             },
             triggerNewFuncGuideFunc: {
                 let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
