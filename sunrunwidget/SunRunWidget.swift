@@ -29,7 +29,7 @@ struct SunRunWidget: View {
         
         VStack (alignment: .center){
             if srData?.available ?? false {
-                VStack {
+//                VStack {
                     HStack(alignment: .center) {
                         Spacer()
                         WidgetNumberView(
@@ -44,7 +44,7 @@ struct SunRunWidget: View {
                     Text("阳光长跑将于 \(self.srData?.endTime ?? "") 截止")
                         .font(.footnote)
                         .foregroundColor(.secondary)
-                }.padding()
+//                }.padding()
             } else {
                 Text("数据获取失败。请尝试打开杭电助手并登录。嘤~")
                     .foregroundColor(.secondary)

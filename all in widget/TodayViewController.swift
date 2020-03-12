@@ -21,6 +21,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     var isEx: Bool = false
     var allVc: UIHostingController<AllInWidget>?
     func renderData() {
+        print((Color(LMUtils.getPrimaryColor())))
         if self.children.count > 0{
             let viewControllers:[UIViewController] = self.children
                for viewContoller in viewControllers{
@@ -61,11 +62,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             ]).validate().responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success:
+                    self.sData.removeAll()
                     let json = response.result.value
                     let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                     let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
-                    
-                    for i in 0..<tempData.count {
+                    var rip: Int
+                    if (tempData.count >= 2) {
+                        rip = 2
+                    } else {rip = tempData.count}
+                    for i in 0..<rip {
                         let course = tempData[i].object(forKey: "COURSE") as! String
                         let classRoom = tempData[i].object(forKey: "CLASSROOM") as! String
                         let isTomorrow = newRawData.object(forKey: "IsTomorrow") as! Bool

@@ -6,8 +6,6 @@
 //  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
 //
 
-// TODO: Extract this into a framework so we won't deplicate this to all widgets.
-
 import SwiftUI
 
 struct WidgetNumberView: View {

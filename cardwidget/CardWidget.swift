@@ -55,7 +55,7 @@ struct CardWidget: View {
                             }
                         }
                             .frame(width: 25.0)
-                            .background(Color(red:0.20, green:0.60, blue:0.86))
+                            .background(Color(LMUtils.getPrimaryColor()))
                             .cornerRadius(12.5)
                     }.padding(10.0)
                 }
