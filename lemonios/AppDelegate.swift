@@ -68,20 +68,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
-    internal func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        func getQueryStringParameter(url: String, param: String) -> String? {
-          guard let url = URLComponents(string: url) else { return nil }
-          return url.queryItems?.first(where: { $0.name == param })?.value
-        }
-        
-        let message = getQueryStringParameter(url: url.absoluteString, param: "auth")
-        if (message != nil) {
-            self.token = message
-            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
-        }
-        return true
-    }
-    
     func application(
       _ application: UIApplication,
       didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data

@@ -13,6 +13,26 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    func routeUrl(urlContexts: Set<UIOpenURLContext>) {
+        print("url routing start")
+        if let url = urlContexts.first?.url {
+            print("url got", url)
+            guard
+                let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
+                let path = components.path,
+                let params = components.queryItems
+                else { return }
+            print("url path", path)
+            if path == "/login" {
+                let app = UIApplication.shared.delegate as! AppDelegate
+                app.token = params.first { $0.name == "auth" }?.value
+                print("token from scene", app.token)
+//                (window?.rootViewController as! ViewController).shortcutFired(nativeLogin: false)
+                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
+            }
+        }
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the
@@ -26,13 +46,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         #if targetEnvironment(macCatalyst)
-            if let windowScene = scene as? UIWindowScene {
-                if let titlebar = windowScene.titlebar {
-                    titlebar.titleVisibility = .hidden
-                    titlebar.autoHidesToolbarInFullScreen = true
-                }
+        if let windowScene = scene as? UIWindowScene {
+            if let titlebar = windowScene.titlebar {
+                titlebar.titleVisibility = .hidden
+                titlebar.autoHidesToolbarInFullScreen = true
             }
+        }
         #endif
+        
+        routeUrl(urlContexts: connectionOptions.urlContexts)
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        routeUrl(urlContexts: URLContexts)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
