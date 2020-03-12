@@ -62,13 +62,16 @@ struct LoginView: View {
                 .clipShape(Circle())
                 .padding()
             VStack {
-                SignInWithAppleView(onFinish: { success, tokenOrReason in
-                    if success {
-                        self.login(token: tokenOrReason)
-                    } else {
-                        self.setTip(tokenOrReason)
-                    }
-                })
+                SignInWithAppleView(
+                    onFinish: { success, tokenOrReason in
+                        if success {
+                            self.login(token: tokenOrReason)
+                        } else {
+                            self.setTip(tokenOrReason)
+                        }
+                    },
+                    dismissLogin: dismissFunc ?? {}
+                )
                     .frame(width: 250, height: 55)
                     .overlay(
                         RoundedRectangle(cornerRadius: 30)

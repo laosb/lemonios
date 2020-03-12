@@ -67,6 +67,9 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         if Device.current.isPad {
             self.webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         }
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }
     
     func tryLoad(_ configUrl: String) {
@@ -236,6 +239,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     
     @objc func shortcutFired (nativeLogin: Bool) {
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+        print("shortcutFired func")
         
         #if targetEnvironment(macCatalyst)
         let shellCode = "lemonmac"
@@ -259,12 +263,10 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        webView.navigationDelegate = self
-        webView.uiDelegate = self
-        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown", isDev)
         
         if let token = appDelegate.getIncomingToken() {
+            print("token", token)
             urlStr += "/login?auth=\(token)"
             sharedUd?.set(token, forKey: "token")
             sharedUd?.synchronize()
