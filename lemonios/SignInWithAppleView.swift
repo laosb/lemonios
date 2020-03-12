@@ -68,7 +68,6 @@ struct SignInWithAppleView: UIViewRepresentable {
                 switch res.result {
                 case .success:
                     let value = res.value as! NSDictionary
-                    print("siwa callback suc", value)
                     let data = value.object(forKey: "data") as! NSDictionary
                     let isAuthed = data.object(forKey: "authorize") as? Bool ?? false
                     if isAuthed {
@@ -87,7 +86,6 @@ struct SignInWithAppleView: UIViewRepresentable {
                         }
                     }
                 case .failure:
-                    print("siwa callback request fail", res.debugDescription)
                     self.parent?.onFinish(false, "Apple 登录失败。请尝试智慧杭电登录。")
                 }
             }
