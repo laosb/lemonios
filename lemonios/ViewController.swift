@@ -395,7 +395,6 @@ extension ViewController: WKNavigationDelegate {
             }
             if (url!.pathComponents.contains("setStatusBarColor")) {
                 let color = url!.lastPathComponent
-                print("setStatusBarColor", color)
                 UIView.animate(withDuration: 0.3) {
                     self.statusBar.backgroundColor = UIColor(dynamicProvider: { coll in
                         switch coll.userInterfaceStyle {
@@ -404,6 +403,7 @@ extension ViewController: WKNavigationDelegate {
                         }
                     })
                 }
+                LMUtils.setPrimaryColor(hex: color)
             }
 //            if (url!.pathComponents.contains("hduMap")) {
 //                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
