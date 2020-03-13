@@ -279,6 +279,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             urlStr += "/login?auth=\(token ?? "")"
             enableNotification()
         } else if let shortcut = appDelegate.getShortcutItem() {
+            print("shortcut", shortcut)
             if shortcut == "schedule" { urlStr += "/app/schedule" }
             if shortcut == "card" { urlStr += "/app/card" }
 //            if shortcut == "hdumap" {

@@ -24,6 +24,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var shortcutName: String?
     var token: String?
+    
+    // MARK: URL Routing
+    func routeUrl(url: URL, window: UIWindow?) {
+        guard
+            let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true)
+            else { return }
+        let path = components.path
+        let params = components.queryItems
+        let hash = components.fragment
+        let app = UIApplication.shared.delegate as! AppDelegate
+        let naviVc = window?.rootViewController as? UINavigationController
+        let vc = naviVc?.topViewController as? ViewController
+        
+        if path == "/login", let auth = params?.first(where: { $0.name == "auth" }) {
+            app.token = auth.value
+            vc?.shortcutFired(nativeLogin: false, route: nil)
+        } else {
+            vc?.shortcutFired(nativeLogin: false, route: hash)
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -33,7 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication,
                      performActionFor shortcutItem: UIApplicationShortcutItem,
                      completionHandler: (Bool) -> Void) {
-        
         completionHandler(handleShortcut(shortcutItem))
     }
     
@@ -53,19 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       
             // Use this method to release any resources that were
             // specific to the discarded scenes, as they will not return.
-    }
-    
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        if #available(iOS 12.0, *) {
-            let activities = ["schedule", "card"]
-            let activity = String(userActivity.activityType.split(separator: ".").last ?? "")
-            if activities.contains(activity) {
-                self.shortcutName = activity
-                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
-                userActivity.becomeCurrent()
-            }
-        }
-        return true
     }
     
     func application(
@@ -116,8 +122,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
         self.shortcutName = String(shortcutItem.type.split(separator: ".").last ?? "")
-        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
-        NSUserActivity(activityType: shortcutItem.type).becomeCurrent()
+        let naviVc = window?.rootViewController as? UINavigationController
+        let vc = naviVc?.topViewController as? ViewController
+        vc?.shortcutFired(nativeLogin: false, route: nil)
         return true
     }
     
