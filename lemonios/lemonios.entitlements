@@ -11,7 +11,11 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:appdev.hduhelp.com</string>
+		<string>applinks:app.hduhelp.com</string>
+		<string>applinks:applite.hduhelp.com</string>
 		<string>webcredentials:appdev.hduhelp.com</string>
+		<string>webcredentials:app.hduhelp.com</string>
+		<string>webcredentials:applite.hduhelp.com</string>
 	</array>
 	<key>com.apple.developer.siri</key>
 	<true/>

@@ -17,18 +17,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func routeUrl(urlContexts: Set<UIOpenURLContext>) {
         if let url = urlContexts.first?.url {
             guard
-                let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
-                let path = components.path,
-                let params = components.queryItems
-                else { return }
+                let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true)
+            else { return }
+            
+            let path = components.path
+            let params = components.queryItems
+            let hash = components.fragment
+            
             let app = UIApplication.shared.delegate as! AppDelegate
+            let naviVc = window?.rootViewController as? UINavigationController
+            let vc = naviVc?.topViewController as? ViewController
 
-            if path == "/login", let auth = params.first(where: { $0.name == "auth" }) {
+            if path == "/login", let auth = params?.first(where: { $0.name == "auth" }) {
                 app.token = auth.value
-                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
+                vc?.shortcutFired(nativeLogin: false, route: nil)
             } else {
-                let vc = window?.rootViewController as! ViewController
-                vc.shortcutFired(nativeLogin: false, route: path)
+                vc?.shortcutFired(nativeLogin: false, route: hash)
             }
         }
     }
@@ -52,11 +56,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         #endif
-        
+        print("url in first")
         routeUrl(urlContexts: connectionOptions.urlContexts)
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        print("url in")
         routeUrl(urlContexts: URLContexts)
     }
 
