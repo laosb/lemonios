@@ -39,6 +39,15 @@
 				<key>UIPrerenderedIcon</key>
 				<true/>
 			</dict>
+			<key>neon</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ic_neon</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
 			<key>pride</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -66,30 +75,12 @@
 				<key>UIPrerenderedIcon</key>
 				<true/>
 			</dict>
-			<key>neon</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>ic_neon</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<true/>
-			</dict>
 		</dict>
 	</dict>
 	<key>CFBundleIcons~ipad</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>neon</key>
-			<dict>
-				<key>CFBundleIconFiles</key>
-				<array>
-					<string>ic_neon</string>
-				</array>
-				<key>UIPrerenderedIcon</key>
-				<true/>
-			</dict>
 			<key>blue</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
@@ -113,6 +104,15 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>ic_dark</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<true/>
+			</dict>
+			<key>neon</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ic_neon</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<true/>
