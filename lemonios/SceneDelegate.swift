@@ -9,37 +9,71 @@
 //https://fleetingpixels.com/blog/2019/6/7/customising-nstoolbar-in-uikit-for-mac-marzipancatalyst
 
 import UIKit
+import os.log
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var fired = false
     
     let app = UIApplication.shared.delegate as! AppDelegate
     
     func routeUrl(urlContexts: Set<UIOpenURLContext>) {
         if let url = urlContexts.first?.url {
-            app.routeUrl(url: url, window: window)
+            routeUrl(url: url)
+        } else {
+            fire(nativeLogin: false, route: nil)
         }
     }
     
+    func fire(nativeLogin: Bool, route: String?) {
+        if fired { return }
+        fired = true
+        let _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+            self.fired = false
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as? UINavigationController
+        window?.rootViewController = vc
+        window?.makeKeyAndVisible()
+        let innerVc = vc?.viewControllers[0] as? ViewController
+        innerVc?.loadViewIfNeeded()
+        innerVc?.shortcutFired(nativeLogin: nativeLogin, route: route)
+    }
+    
     func routeUrl(url: URL) {
-        app.routeUrl(url: url, window: window)
+        // MARK: URL Routing
+        guard
+            let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true)
+        else {
+            fire(nativeLogin: false, route: nil)
+            return
+        }
+        let path = components.path
+        let params = components.queryItems
+        let hash = components.fragment
+        
+        if path == "/login", let auth = params?.first(where: { $0.name == "auth" }) {
+            app.token = auth.value
+            fire(nativeLogin: false, route: nil)
+        } else {
+            fire(nativeLogin: false, route: hash)
+        }
     }
     
     func routeShortcut(_ shortcut: String) {
         let activities = ["schedule", "card"]
         let sc = String(shortcut.split(separator: ".").last ?? "")
         if activities.contains(sc) {
-            app.shortcutName = sc
-            
-            let naviVc = window?.rootViewController as? UINavigationController
-            let vc = naviVc?.topViewController as? ViewController
-            vc?.shortcutFired(nativeLogin: false, route: nil)
+            fire(nativeLogin: false, route: "/app/\(sc)")
         }
     }
 
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(
+        _ scene: UIScene, willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions
+    ) {
         // Use this method to optionally configure and attach the
         // UIWindow `window` to the provided UIWindowScene `scene`.
       
@@ -58,7 +92,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         #endif
-        print("url in first")
+        os_log("sh item %@", connectionOptions.shortcutItem?.type ?? "")
         if let shortcutItem = connectionOptions.shortcutItem {
             routeShortcut(shortcutItem.type)
         }
@@ -66,11 +100,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        print("activity", userActivity.activityType)
         if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
             if let url = userActivity.webpageURL {
                 routeUrl(url: url)
             }
+        } else {
+            fire(nativeLogin: false, route: nil)
         }
     }
     
@@ -79,12 +114,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         performActionFor shortcutItem: UIApplicationShortcutItem,
         completionHandler: @escaping (Bool) -> Void
     ) {
-        print("shortcut in")
         routeShortcut(shortcutItem.type)
     }
-    
+
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        print("url in")
         routeUrl(urlContexts: URLContexts)
     }
 
