@@ -14,6 +14,7 @@ import UserNotifications
 import WatchConnectivity
 import Alamofire
 import DeviceKit
+import os.log
 
 let primaryColor = UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)
 
@@ -88,24 +89,12 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
                 var isForce: Bool?
                 if json != nil && currentVersion < "38"{
                     let NS = json as! NSDictionary
-                    //print(NS)
                     title = (NS.object(forKey: "testflightDialogTitle") as? String ?? nil)
                     desc = (NS.object(forKey: "testflightDialogDesc") as? String ?? nil)
                     link = (NS.object(forKey: "testflightLink") as? String ?? nil)
                     isForce = (NS.object(forKey: "forceTestflight") as? Bool ?? nil)
                     group = (NS.object(forKey: "testflightGroupLink") as? String ?? nil)
                 }
-//                title = "内测邀请"
-//                desc = "我们诚挚邀请您参与杭电助手内测"
-//                group = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
-//                isForce = false
-//                link = "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv"
-//                print("@@@@")
-//                print(title!)
-//                print(desc!)
-//                print(link!)
-//                print(group)
-//                print("@@@@")
                 if title != nil && desc != nil && link != nil && group != nil {
                     print("????")
                     let alert = UIAlertController(title: "\(title!)", message: "\(desc!)", preferredStyle: .alert)
@@ -129,9 +118,6 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
                     }
                     self.present(alert, animated: true, completion: nil)
                 }
-                if json != nil {
-                    self.shortcutFired(nativeLogin: false, route: nil)
-                }
                 
             case .failure:
                 let alert = UIAlertController(title: "连接服务器失败", message: "请检查您是否允许杭电助手联网，以及您设备的网络连接。", preferredStyle: .alert)
@@ -141,34 +127,8 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         }
     }
     
-//    func alertLoad(_ configUrl: String) {
-//        Alamofire.request(configUrl).validate().responseJSON { response in
-//            switch response.result {
-//            case .success:
-//                if let json = response.result.value {
-//                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "testFiligt"), forKey: "baseUrl")
-//                }
-//                let alert = UIAlertController(title: "内测邀请", message: "亲爱的杭电助手用户，我们诚挚邀请您参与我们的内测活动", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "加入内测群", style: .default, handler: { _ in
-//                    UIApplication.shared.open(URL(string: "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv")!)
-//                }))
-//                alert.addAction(UIAlertAction(title: "参与内测", style: .default, handler: { _ in
-//                    UIApplication.shared.open(URL(string: "https://qm.qq.com/cgi-bin/qm/qr?k=js9HOOUhRumi_NZCmpYdy4UVeuy9t39h&authKey=bv%2BglKZnvToSgmWvUAkc0ZtM%2FS%2FQfTg0NofbWL76quK9BC0RDRhMTUpSR8hp70%2Fv")!)
-//                }))
-//                self.present(alert, animated: true, completion: nil)
-//            case .failure:
-//                break
-//                let alert = UIAlertController(title: "连接服务器失败", message: "请检查您是否允许杭电助手联网，以及您设备的网络连接。", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "重试", style: .default, handler: { _ in self.alertLoad(configUrl) }))
-//                self.present(alert, animated: true, completion: nil)
-//            }
-//        }
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "ShortcutFired"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.shortcutFired), name: Notification.Name(rawValue: "IncomingToken"), object: nil)
@@ -213,19 +173,6 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             }
         }
         tryLoad(configUrl)
-
-//        if isDelay == true {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-//                // Put your code which should be executed with a delay here
-//                let url = "https://ios.app.hduhelp.com/#/login?auth="+"\(token)"
-//
-//                //ios.app.hduhelp.com/#/login?auth={token}
-//            })
-//        }else {
-//            let url = "https://ios.app.hduhelp.com/#/login?auth="+"\(token)"
-//            self.tryLoad(url)
-//        }
-//
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -240,7 +187,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     
     @objc func shortcutFired (nativeLogin: Bool, route: String?) {
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
-        print("shortcutFired func")
+        os_log("shortcutFired func")
         
         #if targetEnvironment(macCatalyst)
         let shellCode = "lemonmac"

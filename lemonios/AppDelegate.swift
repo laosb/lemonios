@@ -24,36 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var shortcutName: String?
     var token: String?
-    
-    // MARK: URL Routing
-    func routeUrl(url: URL, window: UIWindow?) {
-        guard
-            let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true)
-            else { return }
-        let path = components.path
-        let params = components.queryItems
-        let hash = components.fragment
-        let app = UIApplication.shared.delegate as! AppDelegate
-        let naviVc = window?.rootViewController as? UINavigationController
-        let vc = naviVc?.topViewController as? ViewController
-        
-        if path == "/login", let auth = params?.first(where: { $0.name == "auth" }) {
-            app.token = auth.value
-            vc?.shortcutFired(nativeLogin: false, route: nil)
-        } else {
-            vc?.shortcutFired(nativeLogin: false, route: hash)
-        }
-    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
-    }
-    
-    func application(_ application: UIApplication,
-                     performActionFor shortcutItem: UIApplicationShortcutItem,
-                     completionHandler: (Bool) -> Void) {
-        completionHandler(handleShortcut(shortcutItem))
     }
     
     //https://fleetingpixels.com/blog/2019/6/7/customising-nstoolbar-in-uikit-for-mac-marzipancatalyst
@@ -118,14 +92,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       _ application: UIApplication,
       didFailToRegisterForRemoteNotificationsWithError error: Error) {
 //      print("Failed to register: \(error)")
-    }
-    
-    private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
-        self.shortcutName = String(shortcutItem.type.split(separator: ".").last ?? "")
-        let naviVc = window?.rootViewController as? UINavigationController
-        let vc = naviVc?.topViewController as? ViewController
-        vc?.shortcutFired(nativeLogin: false, route: nil)
-        return true
     }
     
     func getShortcutItem() -> String? {
