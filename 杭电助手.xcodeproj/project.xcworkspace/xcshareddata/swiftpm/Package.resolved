@@ -12,11 +12,11 @@
       },
       {
         "package": "DeviceKit",
-        "repositoryURL": "https://github.com/devicekit/DeviceKit",
+        "repositoryURL": "https://github.com/devicekit/devicekit",
         "state": {
           "branch": null,
-          "revision": "4a1c9aa580ae1db763791015e119c4331c95ad02",
-          "version": "2.3.0"
+          "revision": "9625ce4f054249814e865d7b21c6724cf0324e8c",
+          "version": "3.0.0"
         }
       }
     ]
