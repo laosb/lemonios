@@ -57,7 +57,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let token = sharedUd?.string(forKey: "token")
         if token != nil {
             sData.removeAll()
-            Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
+            AF.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
                 "Authorization": "token \(token ?? "")"
             ]).validate().responseJSON(completionHandler: { response in
                 switch response.result {
@@ -102,7 +102,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             }
             )
             
-            Alamofire.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON(completionHandler:
+            AF.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON(completionHandler:
                 {
                     response in switch response.result
                     {
@@ -148,7 +148,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     }
             }
             )
-            Alamofire.request("https://api.hduhelp.com/electric/fee", headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON(completionHandler:
+            AF.request("https://api.hduhelp.com/electric/fee", headers:["Authorization": "token \(token ?? "")"]).validate().responseJSON(completionHandler:
                 {
                     response in switch response.result
                     {

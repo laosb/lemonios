@@ -48,7 +48,7 @@ struct SignInWithAppleView: UIViewRepresentable {
                 return
             }
             
-            Alamofire.request(
+            AF.request(
                 "https://api.hduhelp.com/login/callback/apple",
                 method: .post,
                 parameters: [

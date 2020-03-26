@@ -71,12 +71,13 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         }
         webView.navigationDelegate = self
         webView.uiDelegate = self
+        webView.scrollView.bounces = false
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }
     
     func tryLoad(_ configUrl: String) {
         let currentVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
-        Alamofire.request(configUrl).validate().responseJSON { response in
+        AF.request(configUrl).validate().responseJSON { response in
             switch response.result {
             case .success:
                 let json = response.result.value
@@ -155,7 +156,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             wcSession.activate()
         }
         
-        Alamofire.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON {
+        AF.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON {
             response in switch response.result {
                 case .success:
                     //self.tryLoad(configUrl)

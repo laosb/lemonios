@@ -31,7 +31,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let token = sharedUd?.string(forKey: "token")
         var cardData = LMWidgetCard()
         if token != nil {
-            Alamofire.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
+            AF.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
                 {
                     response in switch response.result
                     {

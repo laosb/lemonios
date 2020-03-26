@@ -115,7 +115,7 @@ struct LoginView: View {
                     //print(temp)
                     //print("!!!!!!!!!!!")
                     //https://api.hduhelp.com/login/cas?clientID=app
-                    Alamofire.request("https://api.hduhelp.com/login/cas?clientID=app",method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
+                    AF.request("https://api.hduhelp.com/login/cas?clientID=app",method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
                         switch response.result {
                             case .success:
                                 let json = response.result.value

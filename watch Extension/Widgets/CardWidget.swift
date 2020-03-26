@@ -17,7 +17,7 @@ class LMWidgetCard: ObservableObject {
     @Published var available: Bool?
     
     init (_ token: String) {
-        Alamofire.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token)", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
+        AF.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token)", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
             {
                 response in switch response.result
                 {
