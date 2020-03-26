@@ -24,7 +24,7 @@ class LMSchedule: ObservableObject {
     @Published var LMData = Array<LMScheduleData>()
     @Published var available: Bool?
     init(_ token: String) {
-        Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
+        AF.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
             "Authorization": "token \(token)",
             "User-Agent": "Alamofire Lemon_iOS",
         ]).validate().responseJSON(completionHandler: { response in

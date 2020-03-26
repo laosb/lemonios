@@ -31,7 +31,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         var sData = Array<LMSchedule>()
         
         if token != nil {
-            Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
+            AF.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
                 "Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"
             ]).validate().responseJSON(completionHandler: { response in
                 switch response.result {

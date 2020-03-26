@@ -17,6 +17,20 @@
 		2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A1E41262377F72B002FA52A /* 一卡通.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
 		2A31BE9E2389107200AA9CFC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A31BE9D2389107200AA9CFC /* MenuController.swift */; };
+		2A364C40242CC29400D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C3F242CC29400D8EEB4 /* Alamofire */; };
+		2A364C43242CC2AE00D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C42242CC2AE00D8EEB4 /* DeviceKit */; };
+		2A364C45242CC2C800D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C44242CC2C800D8EEB4 /* Alamofire */; };
+		2A364C47242CC2C800D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C46242CC2C800D8EEB4 /* DeviceKit */; };
+		2A364C49242CC2CD00D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C48242CC2CD00D8EEB4 /* Alamofire */; };
+		2A364C4B242CC2CD00D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C4A242CC2CD00D8EEB4 /* DeviceKit */; };
+		2A364C4D242CC2D300D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C4C242CC2D300D8EEB4 /* Alamofire */; };
+		2A364C4F242CC2D300D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C4E242CC2D300D8EEB4 /* DeviceKit */; };
+		2A364C51242CC2D900D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C50242CC2D900D8EEB4 /* Alamofire */; };
+		2A364C53242CC2D900D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C52242CC2D900D8EEB4 /* DeviceKit */; };
+		2A364C55242CC2F200D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C54242CC2F200D8EEB4 /* Alamofire */; };
+		2A364C57242CC2F200D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C56242CC2F200D8EEB4 /* DeviceKit */; };
+		2A364C59242CC2F900D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C58242CC2F900D8EEB4 /* Alamofire */; };
+		2A364C5B242CC2F900D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C5A242CC2F900D8EEB4 /* DeviceKit */; };
 		2A39868423780E74005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
 		2A4558952299825700250D01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558942299825700250D01 /* AppDelegate.swift */; };
 		2A4558972299825700250D01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558962299825700250D01 /* ViewController.swift */; };
@@ -30,8 +44,6 @@
 		2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */; };
 		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2A601DB8242B35B900E62580 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A601DB7242B35B900E62580 /* DeviceKit */; };
-		2A601DBB242B361800E62580 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A601DBA242B361800E62580 /* Alamofire */; };
 		2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A981807237AC39A005C5141 /* NewFuncGuideController.swift */; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
 		2AC9F92923996CD900D46B61 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F92723996CD900D46B61 /* Interface.storyboard */; };
@@ -374,6 +386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1E41272377F72B002FA52A /* NotificationCenter.framework in Frameworks */,
+				2A364C4D242CC2D300D8EEB4 /* Alamofire in Frameworks */,
+				2A364C4F242CC2D300D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +395,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A601DBB242B361800E62580 /* Alamofire in Frameworks */,
 				2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */,
-				2A601DB8242B35B900E62580 /* DeviceKit in Frameworks */,
+				2A364C43242CC2AE00D8EEB4 /* DeviceKit in Frameworks */,
+				2A364C40242CC29400D8EEB4 /* Alamofire in Frameworks */,
 				2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */,
 				2A4558C72299A45200250D01 /* WebKit.framework in Frameworks */,
 			);
@@ -408,6 +422,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */,
+				2A364C45242CC2C800D8EEB4 /* Alamofire in Frameworks */,
+				2A364C47242CC2C800D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +431,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A364C55242CC2F200D8EEB4 /* Alamofire in Frameworks */,
+				2A364C57242CC2F200D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +441,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */,
+				2A364C49242CC2CD00D8EEB4 /* Alamofire in Frameworks */,
+				2A364C4B242CC2CD00D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +458,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9E83E12395F66400001387 /* NotificationCenter.framework in Frameworks */,
+				2A364C51242CC2D900D8EEB4 /* Alamofire in Frameworks */,
+				2A364C53242CC2D900D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +468,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EBC6EDD23A3C12300C44339 /* NotificationCenter.framework in Frameworks */,
+				2A364C59242CC2F900D8EEB4 /* Alamofire in Frameworks */,
+				2A364C5B242CC2F900D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +761,8 @@
 			);
 			name = cardwidget;
 			packageProductDependencies = (
+				2A364C4C242CC2D300D8EEB4 /* Alamofire */,
+				2A364C4E242CC2D300D8EEB4 /* DeviceKit */,
 			);
 			productName = cardwidget;
 			productReference = 2A1E41262377F72B002FA52A /* 一卡通.appex */;
@@ -765,8 +791,8 @@
 			);
 			name = "杭电助手";
 			packageProductDependencies = (
-				2A601DB7242B35B900E62580 /* DeviceKit */,
-				2A601DBA242B361800E62580 /* Alamofire */,
+				2A364C3F242CC29400D8EEB4 /* Alamofire */,
+				2A364C42242CC2AE00D8EEB4 /* DeviceKit */,
 			);
 			productName = lemonios;
 			productReference = 2A4558912299825700250D01 /* 杭电助手.app */;
@@ -822,6 +848,8 @@
 			);
 			name = schedulewidget;
 			packageProductDependencies = (
+				2A364C44242CC2C800D8EEB4 /* Alamofire */,
+				2A364C46242CC2C800D8EEB4 /* DeviceKit */,
 			);
 			productName = schedulewidget;
 			productReference = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */;
@@ -858,6 +886,8 @@
 			);
 			name = "watch Extension";
 			packageProductDependencies = (
+				2A364C54242CC2F200D8EEB4 /* Alamofire */,
+				2A364C56242CC2F200D8EEB4 /* DeviceKit */,
 			);
 			productName = "watch Extension";
 			productReference = 2AC9F93123996CDE00D46B61 /* watch Extension.appex */;
@@ -877,6 +907,8 @@
 			);
 			name = sunrunwidget;
 			packageProductDependencies = (
+				2A364C48242CC2CD00D8EEB4 /* Alamofire */,
+				2A364C4A242CC2CD00D8EEB4 /* DeviceKit */,
 			);
 			productName = sunrunwidget;
 			productReference = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */;
@@ -913,6 +945,8 @@
 			);
 			name = electrictwidget;
 			packageProductDependencies = (
+				2A364C50242CC2D900D8EEB4 /* Alamofire */,
+				2A364C52242CC2D900D8EEB4 /* DeviceKit */,
 			);
 			productName = electrictwidget;
 			productReference = 4E9E83E02395F66400001387 /* 智能电费.appex */;
@@ -932,6 +966,8 @@
 			);
 			name = "all in widget";
 			packageProductDependencies = (
+				2A364C58242CC2F900D8EEB4 /* Alamofire */,
+				2A364C5A242CC2F900D8EEB4 /* DeviceKit */,
 			);
 			productName = "all in widget";
 			productReference = 4EBC6EDC23A3C12300C44339 /* all in widget.appex */;
@@ -1005,8 +1041,8 @@
 			);
 			mainGroup = 2A4558882299825600250D01;
 			packageReferences = (
-				2A601DB6242B35B900E62580 /* XCRemoteSwiftPackageReference "devicekit" */,
-				2A601DB9242B361800E62580 /* XCRemoteSwiftPackageReference "alamofire" */,
+				2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */,
+				2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */,
 			);
 			productRefGroup = 2A4558922299825700250D01 /* Products */;
 			projectDirPath = "";
@@ -1489,6 +1525,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -1543,6 +1580,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1572,6 +1610,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1602,6 +1641,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2133,7 +2173,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2A601DB6242B35B900E62580 /* XCRemoteSwiftPackageReference "devicekit" */ = {
+		2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alamofire/alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.5;
+			};
+		};
+		2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devicekit/devicekit";
 			requirement = {
@@ -2141,26 +2189,78 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		2A601DB9242B361800E62580 /* XCRemoteSwiftPackageReference "alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/alamofire/alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.9.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2A601DB7242B35B900E62580 /* DeviceKit */ = {
+		2A364C3F242CC29400D8EEB4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2A601DB6242B35B900E62580 /* XCRemoteSwiftPackageReference "devicekit" */;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C42242CC2AE00D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
 			productName = DeviceKit;
 		};
-		2A601DBA242B361800E62580 /* Alamofire */ = {
+		2A364C44242CC2C800D8EEB4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2A601DB9242B361800E62580 /* XCRemoteSwiftPackageReference "alamofire" */;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
 			productName = Alamofire;
+		};
+		2A364C46242CC2C800D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C48242CC2CD00D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C4A242CC2CD00D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C4C242CC2D300D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C4E242CC2D300D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C50242CC2D900D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C52242CC2D900D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C54242CC2F200D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C56242CC2F200D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C58242CC2F900D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C5A242CC2F900D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let tokenReportUrl = "https://api.hduhelp.com/devices/token"
         #endif
         
-        Alamofire.request(
+        AF.request(
             tokenReportUrl,
             method: .post,
             parameters: deviceInfo,
