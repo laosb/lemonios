@@ -29,8 +29,8 @@ class LMSchedule: ObservableObject {
             "User-Agent": "Alamofire Lemon_iOS",
         ]).validate().responseJSON(completionHandler: { response in
             switch response.result {
-                    case .success:
-                        let json = response.result.value
+                    case .success(let value):
+                        let json = value
                         let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                         let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
                         

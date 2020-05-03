@@ -117,8 +117,8 @@ struct LoginView: View {
                     //https://api.hduhelp.com/login/cas?clientID=app
                     AF.request("https://api.hduhelp.com/login/cas?clientID=app",method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
                         switch response.result {
-                            case .success:
-                                let json = response.result.value
+                            case .success(let value):
+                                let json = value
                                 let msg = (json as! NSDictionary).object(forKey: "msg") as! String
                                 if msg == "success" {
                                     let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary

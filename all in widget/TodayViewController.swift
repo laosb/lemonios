@@ -61,9 +61,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 "Authorization": "token \(token ?? "")"
             ]).validate().responseJSON(completionHandler: { response in
                 switch response.result {
-                case .success:
+                case .success(let value):
                     self.sData.removeAll()
-                    let json = response.result.value
+                    let json = value
                     let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                     let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
                     var rip: Int
@@ -106,9 +106,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 {
                     response in switch response.result
                     {
-                    case .success:
+                    case .success(let value):
                         //                            print(response.result)
-                        let json = response.result.value
+                        let json = value
                         let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                         let SunRunData = newRawData.object(forKey: "sunrun") as? NSDictionary
                         
@@ -152,9 +152,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 {
                     response in switch response.result
                     {
-                    case .success:
+                    case .success(let value):
                         //                            print(response.result)
-                        let json = response.result.value
+                        let json = value
                         let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                         let fee = newRawData.object(forKey: "fee") as? String
                         let pos = newRawData.object(forKey: "roomName") as? String
