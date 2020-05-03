@@ -79,8 +79,8 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         let currentVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
         AF.request(configUrl).validate().responseJSON { response in
             switch response.result {
-            case .success:
-                let json = response.result.value
+            case .success(let value):
+                let json = value
                 //print("!!!!!!")
                 //print(json)
                 var title: String?
@@ -88,7 +88,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
                 var link: String?
                 var group: String?
                 var isForce: Bool?
-                if json != nil && currentVersion < "38"{
+                if currentVersion < "38"{
                     let NS = json as! NSDictionary
                     title = (NS.object(forKey: "testflightDialogTitle") as? String ?? nil)
                     desc = (NS.object(forKey: "testflightDialogDesc") as? String ?? nil)
@@ -158,9 +158,9 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         
         AF.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON {
             response in switch response.result {
-                case .success:
+                case .success(let value):
                     //self.tryLoad(configUrl)
-                    let json = response.result.value
+                    let json = value
                     let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                     let isValid = (newRawData.object(forKey: "isValid")) as! Bool
                     if isValid == false {

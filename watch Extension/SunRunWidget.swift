@@ -27,9 +27,9 @@ class LMWidgetSunRun: ObservableObject{
                         {
                             response in switch response.result
                             {
-                                case .success:
+                                case .success(let value):
         //                            print(response.result)
-                                    let json = response.result.value
+                                    let json = value
                                     let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                                     let SunRunData = newRawData.object(forKey: "sunrun") as? NSDictionary
                                     

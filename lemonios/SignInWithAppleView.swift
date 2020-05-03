@@ -66,8 +66,8 @@ struct SignInWithAppleView: UIViewRepresentable {
                 headers: [ "User-Agent": "Lemon_iOS" ]
             ).validate().responseJSON { res in
                 switch res.result {
-                case .success:
-                    let value = res.value as! NSDictionary
+                case .success(let val):
+                    let value = val as! NSDictionary
                     let data = value.object(forKey: "data") as! NSDictionary
                     let isAuthed = data.object(forKey: "authorize") as? Bool ?? false
                     if isAuthed {
