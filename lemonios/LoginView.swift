@@ -16,8 +16,8 @@ struct LoginView: View {
     @State var username: String = ""
     @State var password: String = ""
     @State var Login: String = "登录"
-    @State var tip: String = ""
-    @State var isDisabled: Bool = false
+    @State var tip: String = "智慧杭电登录暂不可用，请尝试通过Apple登录"
+    @State var isDisabled: Bool = true
     var triggerWebViewFunc: (() -> Void)?
     var triggerNewFuncGuideFunc: (() -> Void)?
     var dismissFunc: (() -> Void)?
@@ -89,6 +89,7 @@ struct LoginView: View {
                         .frame(width: 250, height: 55, alignment: .center)
                         .background(Color.init(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.3)))
                         .cornerRadius(30)
+                        .disabled(true)
                     SecureField("密码", text: $password, onCommit: {
                         self.kGuardian.showField = 0
                     })
@@ -96,6 +97,7 @@ struct LoginView: View {
                         .frame(width: 250, height: 55, alignment: .center)
                         .background(Color.init(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.3)))
                         .cornerRadius(30)
+                        .disabled(true)
                 }
                 Button(action: {
                     if self.username == "*#*#19260817#*#*" {
