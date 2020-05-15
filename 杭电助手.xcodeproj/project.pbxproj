@@ -117,6 +117,8 @@
 		4E9E83EB2395F66400001387 /* 智能电费.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4E9E83E02395F66400001387 /* 智能电费.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4E9E83F32395F73800001387 /* ElectricNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F22395F73800001387 /* ElectricNumberView.swift */; };
 		4E9E83F52395F75300001387 /* ElectricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F42395F75300001387 /* ElectricWidget.swift */; };
+		4EB70CD4246EAD9800B6926B /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB70CD3246EAD9800B6926B /* Stickers.xcassets */; };
+		4EB70CD8246EAD9800B6926B /* 杭电助手贴纸包.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EB70CD1246EAD9700B6926B /* 杭电助手贴纸包.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4EBC6EDD23A3C12300C44339 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		4EBC6EE023A3C12300C44339 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */; };
 		4EBC6EE323A3C12300C44339 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */; };
@@ -184,6 +186,13 @@
 			remoteGlobalIDString = 4E9E83DF2395F66400001387;
 			remoteInfo = electrictwidget;
 		};
+		4EB70CD6246EAD9800B6926B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB70CD0246EAD9700B6926B;
+			remoteInfo = "HDU help sticker";
+		};
 		4EBC6EE523A3C12300C44339 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A4558892299825600250D01 /* Project object */;
@@ -201,6 +210,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				4EBC6EE723A3C12300C44339 /* all in widget.appex in Embed App Extensions */,
+				4EB70CD8246EAD9800B6926B /* 杭电助手贴纸包.appex in Embed App Extensions */,
 				4E9E83EB2395F66400001387 /* 智能电费.appex in Embed App Extensions */,
 				2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */,
 				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
@@ -369,6 +379,9 @@
 		4E9E83EF2395F67500001387 /* electrictwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = electrictwidget.entitlements; sourceTree = "<group>"; };
 		4E9E83F22395F73800001387 /* ElectricNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricNumberView.swift; sourceTree = "<group>"; };
 		4E9E83F42395F75300001387 /* ElectricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricWidget.swift; sourceTree = "<group>"; };
+		4EB70CD1246EAD9700B6926B /* 杭电助手贴纸包.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "杭电助手贴纸包.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB70CD3246EAD9800B6926B /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		4EB70CD5246EAD9800B6926B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EBC6EDC23A3C12300C44339 /* all in widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "all in widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		4EBC6EE223A3C12300C44339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -502,6 +515,7 @@
 				2AC9F92623996CD900D46B61 /* watch */,
 				2AC9F93523996CDE00D46B61 /* watch Extension */,
 				4EBC6EDE23A3C12300C44339 /* all in widget */,
+				4EB70CD2246EAD9700B6926B /* HDU help sticker */,
 				2A4558922299825700250D01 /* Products */,
 				2A4558C52299A45200250D01 /* Frameworks */,
 				4E4E376123ACF74C00AAE077 /* Recovered References */,
@@ -522,6 +536,7 @@
 				2AC9F92523996CD900D46B61 /* watch.app */,
 				2AC9F93123996CDE00D46B61 /* watch Extension.appex */,
 				4EBC6EDC23A3C12300C44339 /* all in widget.appex */,
+				4EB70CD1246EAD9700B6926B /* 杭电助手贴纸包.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -732,6 +747,15 @@
 			path = electrictwidget;
 			sourceTree = "<group>";
 		};
+		4EB70CD2246EAD9700B6926B /* HDU help sticker */ = {
+			isa = PBXGroup;
+			children = (
+				4EB70CD3246EAD9800B6926B /* Stickers.xcassets */,
+				4EB70CD5246EAD9800B6926B /* Info.plist */,
+			);
+			path = "HDU help sticker";
+			sourceTree = "<group>";
+		};
 		4EBC6EDE23A3C12300C44339 /* all in widget */ = {
 			isa = PBXGroup;
 			children = (
@@ -788,6 +812,7 @@
 				4E9E83EA2395F66400001387 /* PBXTargetDependency */,
 				2AC9F94823996CDF00D46B61 /* PBXTargetDependency */,
 				4EBC6EE623A3C12300C44339 /* PBXTargetDependency */,
+				4EB70CD7246EAD9800B6926B /* PBXTargetDependency */,
 			);
 			name = "杭电助手";
 			packageProductDependencies = (
@@ -952,6 +977,21 @@
 			productReference = 4E9E83E02395F66400001387 /* 智能电费.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		4EB70CD0246EAD9700B6926B /* HDU help sticker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB70CDB246EAD9800B6926B /* Build configuration list for PBXNativeTarget "HDU help sticker" */;
+			buildPhases = (
+				4EB70CCF246EAD9700B6926B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HDU help sticker";
+			productName = "HDU help sticker";
+			productReference = 4EB70CD1246EAD9700B6926B /* 杭电助手贴纸包.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		4EBC6EDB23A3C12300C44339 /* all in widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EBC6EEA23A3C12300C44339 /* Build configuration list for PBXNativeTarget "all in widget" */;
@@ -1026,6 +1066,9 @@
 					4E9E83DF2395F66400001387 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					4EB70CD0246EAD9700B6926B = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
 					4EBC6EDB23A3C12300C44339 = {
 						CreatedOnToolsVersion = 11.3;
 					};
@@ -1059,6 +1102,7 @@
 				2AC9F92423996CD900D46B61 /* watch */,
 				2AC9F93023996CDE00D46B61 /* watch Extension */,
 				4EBC6EDB23A3C12300C44339 /* all in widget */,
+				4EB70CD0246EAD9700B6926B /* HDU help sticker */,
 			);
 		};
 /* End PBXProject section */
@@ -1165,6 +1209,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9E83E72395F66400001387 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EB70CCF246EAD9700B6926B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB70CD4246EAD9800B6926B /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1350,6 +1402,11 @@
 			platformFilter = ios;
 			target = 4E9E83DF2395F66400001387 /* electrictwidget */;
 			targetProxy = 4E9E83E92395F66400001387 /* PBXContainerItemProxy */;
+		};
+		4EB70CD7246EAD9800B6926B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EB70CD0246EAD9700B6926B /* HDU help sticker */;
+			targetProxy = 4EB70CD6246EAD9800B6926B /* PBXContainerItemProxy */;
 		};
 		4EBC6EE623A3C12300C44339 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2009,6 +2066,40 @@
 			};
 			name = Release;
 		};
+		4EB70CD9246EAD9800B6926B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = "HDU help sticker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.HDU-help-sticker";
+				PRODUCT_NAME = "杭电助手贴纸包";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EB70CDA246EAD9800B6926B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = "HDU help sticker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.HDU-help-sticker";
+				PRODUCT_NAME = "杭电助手贴纸包";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4EBC6EE823A3C12300C44339 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2157,6 +2248,15 @@
 			buildConfigurations = (
 				4E9E83EC2395F66400001387 /* Debug */,
 				4E9E83ED2395F66400001387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EB70CDB246EAD9800B6926B /* Build configuration list for PBXNativeTarget "HDU help sticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB70CD9246EAD9800B6926B /* Debug */,
+				4EB70CDA246EAD9800B6926B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
