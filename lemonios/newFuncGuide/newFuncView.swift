@@ -33,7 +33,8 @@ struct NewFuncView: View {
                         version: "2.1", content: [
                             "智慧杭电登录暂不可用，目前只能通过Apple登录",
                             "Apple登录有几率会失败，建议多次尝试",
-                            "小组件中签到按钮已经恢复使用了"
+                            "小组件中签到按钮已经恢复使用了",
+                            "添加了杭电助手iMessage贴纸，可以在iMessage和telegram中使用"
                         ]
                     ))
                 }
