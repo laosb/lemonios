@@ -14,7 +14,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func renderData(sData: Array<LMSchedule> , isA: Bool) {
         let sVc = UIHostingController(rootView: ScheduleWidget(sData: sData , availabe: isA){ cb in
-            self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/#/sign/in")!) { success in cb(success) }
+            self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/?type=2&v=5")!) { success in cb(success) }
         })
         sVc.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
         sVc.view.frame = self.view.bounds

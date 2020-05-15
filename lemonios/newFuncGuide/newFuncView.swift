@@ -29,6 +29,13 @@ struct NewFuncView: View {
                             "架构大调整，性能++，体验更流畅"
                         ]
                     ))
+                    NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
+                        version: "2.1", content: [
+                            "智慧杭电登录暂不可用，目前只能通过Apple登录",
+                            "Apple登录有几率会失败，建议多次尝试",
+                            "小组件中签到按钮已经恢复使用了"
+                        ]
+                    ))
                 }
                     .navigationBarTitle("杭电助手·新功能")
             }
