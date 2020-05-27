@@ -16,6 +16,7 @@ struct SignInWithAppleView: UIViewRepresentable {
     // Failure: false, reason
     var onFinish: (Bool, String) -> Void
     var dismissLogin: () -> Void
+    var alertToBind: (Bool, URL) -> Void
     
     class Coordinator: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
         let parent: SignInWithAppleView?
@@ -76,11 +77,14 @@ struct SignInWithAppleView: UIViewRepresentable {
                     } else {
                         let needBind = data.object(forKey: "needBind") as? Bool ?? false
                         if needBind {
+                            
+                            
                             let urlStr = data.object(forKey: "bindURL") as! String
                             let url = URL(string: urlStr)
                             guard url != nil else { return }
-                            UIApplication.shared.open(url!)
-                            self.parent?.dismissLogin()
+//                            UIApplication.shared.open(url!)
+                            self.parent?.alertToBind(true, url!)
+//                            self.parent?.dismissLogin()
                         } else {
                             self.parent?.onFinish(false, "Apple 登录失败。请尝试智慧杭电登录。")
                         }
@@ -119,9 +123,9 @@ struct SignInWithAppleView: UIViewRepresentable {
     }
 }
 
-struct SignInWithAppleView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInWithAppleView(onFinish: {_,_ in }, dismissLogin: {})
-    }
-}
+//struct SignInWithAppleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignInWithAppleView(onFinish: {_,_ in }, dismissLogin: {})
+//    }
+//}
 
