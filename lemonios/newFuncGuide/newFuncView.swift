@@ -21,20 +21,9 @@ struct NewFuncView: View {
             NavigationView {
                 List {
                     NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
-                        version: "2.0", content: [
-                            "通知中心全新上线",
-                            "自定义主题颜色与课表背景",
-                            "现已支持通过Apple登录",
-                            "全面更换图标，助手不再缺手指了",
-                            "架构大调整，性能++，体验更流畅"
-                        ]
-                    ))
-                    NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
                         version: "2.2", content: [
-                            "智慧杭电登录暂不可用，目前只能通过Apple登录",
-                            "Apple登录有几率会失败，建议多次尝试",
-                            "小组件中签到按钮已经恢复使用了",
-                            "添加了杭电助手iMessage贴纸，可以在iMessage和telegram中使用"
+                            "修复了课表小组件中的「签到」功能。",
+                            "新增杭电助手拟人形象「时柒」贴纸包，可以在iMessage中使用。该贴纸包亦将或已在其它IM平台发布。"
                         ]
                     ))
                 }
