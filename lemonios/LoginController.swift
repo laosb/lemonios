@@ -11,10 +11,22 @@ import SwiftUI
 import UIKit
 
 class LoginController: UIHostingController<LoginView> {
+    var url: URL?
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! BindController
+        dest.url = self.url!
+        print("222")
+    }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder, rootView: LoginView())
     //    let vc = self.presentingViewController?.children[0] as! ViewController
         self.rootView = LoginView(
+            triggerBindFunc: {
+                url in
+                print("!!!")
+                self.url = url
+                self.performSegue(withIdentifier: "gotoBind", sender: url)
+            },
             triggerWebViewFunc: {
                 (self.presentingViewController?.children[0] as! ViewController).shortcutFired(nativeLogin: true, route: nil)
             },

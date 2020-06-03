@@ -19,10 +19,11 @@ struct LoginView: View {
     @State var tip: String = ""
     @State var isDisabled: Bool = false
     @State var showBindAlert: Bool = false
+    var triggerBindFunc: ((URL) -> Void)?
     var triggerWebViewFunc: (() -> Void)?
     var triggerNewFuncGuideFunc: (() -> Void)?
     var dismissFunc: (() -> Void)?
-    var bindAlert: String = "确认跳转到浏览器进行Apple账户绑定"
+    
     @State var alt: Alert = Alert(title: Text("tis"), message: Text("123"), dismissButton: .default(Text("Got it!")))
     
     func login(token: String) {
@@ -78,13 +79,16 @@ struct LoginView: View {
                         if need {
                             self.showBindAlert = true
 //                            print("!!!!!!")
-                            self.alt = Alert(title: Text("账户绑定提示"), message: Text("请先前往绑定Apple账户再通过Apple登录"), dismissButton: .default(Text("好！")){UIApplication.shared.open(url); self.dismissFunc?()})
+                            self.alt = Alert(title: Text("账户绑定提示"), message: Text("确认进行Apple账户绑定"), dismissButton: .default(Text("好！")) {
+//                                    UIApplication.shared.open(url)
+                                    self.triggerBindFunc?(url)
+                                })
                         }
                     }
                 )
                     .alert(isPresented: $showBindAlert) {
 //                        print("alt")
-                        return self.alt
+                        self.alt
                     }
                     .frame(width: 250, height: 55)
                     .overlay(
@@ -131,7 +135,7 @@ struct LoginView: View {
 //                    //print(temp)
 //                    //print("!!!!!!!!!!!")
 //                    //https://api.hduhelp.com/login/cas?clientID=app
-//                    AF.request("https://api.hduhelp.com/login/cas?clientID=app",method: .post,parameters: parameters, encoding: JSONEncoding.default, headers: ["User-Agent": "Alamofire Lemon_iOS"]).responseJSON(completionHandler: { response in
+//                    AF.request("https://api.hduhelp.com/login/cas?clientID=app", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: ["User-Agent": "Alamofire Lemon_iOS"]).responseJSON(completionHandler: { response in
 //                        switch response.result {
 //                            case .success(let value):
 //                                let json = value
