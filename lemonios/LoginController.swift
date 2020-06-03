@@ -15,7 +15,7 @@ class LoginController: UIHostingController<LoginView> {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! BindController
         dest.url = self.url!
-        print("222")
+//        print("222")
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder, rootView: LoginView())
@@ -23,7 +23,7 @@ class LoginController: UIHostingController<LoginView> {
         self.rootView = LoginView(
             triggerBindFunc: {
                 url in
-                print("!!!")
+//                print("!!!")
                 self.url = url
                 self.performSegue(withIdentifier: "gotoBind", sender: url)
             },

@@ -16,7 +16,7 @@ class BindController: UIHostingController<BindView> {
         super.init(coder: aDecoder, rootView: BindView())
         DispatchQueue.main.asyncAfter(deadline: .now() + .microseconds(500), execute: {
         //                // Put your code which should be executed with a delay here
-            print(self.url)
+//            print(self.url)
             
             self.rootView = BindView(
                 url: self.url,
