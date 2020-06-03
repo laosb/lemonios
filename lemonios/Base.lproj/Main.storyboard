@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nao-XZ-uh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nao-XZ-uh5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044.9275362318842" y="113.16964285714285"/>
+            <point key="canvasLocation" x="1038" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9jX-I1-7BQ">
@@ -106,17 +106,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIM-kp-8Lx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.78260869565219" y="113.16964285714285"/>
+            <point key="canvasLocation" x="129" y="113"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="8ya-b0-wDh">
             <objects>
                 <hostingController id="uUS-IR-8pm" customClass="LoginController" customModule="杭电助手" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uoL-XH-MbX"/>
+                    <connections>
+                        <segue destination="GVm-mt-UKS" kind="presentation" identifier="gotoBind" modalPresentationStyle="formSheet" id="vLK-br-6Zw"/>
+                    </connections>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDI-yK-Isy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951" y="-552"/>
+            <point key="canvasLocation" x="1951" y="-704"/>
         </scene>
         <!--New Func Guide Controller-->
         <scene sceneID="ohG-5S-dBN">
@@ -124,9 +127,18 @@
                 <hostingController id="CLS-2S-TuF" customClass="NewFuncGuideController" customModule="杭电助手" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qem-mJ-auE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951" y="113"/>
+            <point key="canvasLocation" x="1978" y="113"/>
+        </scene>
+        <!--Bind Controller-->
+        <scene sceneID="IgR-ZT-t0d">
+            <objects>
+                <hostingController id="GVm-mt-UKS" customClass="BindController" customModule="杭电助手" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qY-Bz-13S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925" y="-704"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
         <namedColor name="bottom_padding_color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -135,5 +147,4 @@
             <color red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>
