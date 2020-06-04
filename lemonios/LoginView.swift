@@ -79,7 +79,7 @@ struct LoginView: View {
                         if need {
                             self.showBindAlert = true
 //                            print("!!!!!!")
-                            self.alt = Alert(title: Text("账户绑定提示"), message: Text("确认进行Apple账户绑定"), dismissButton: .default(Text("好！")) {
+                            self.alt = Alert(title: Text("需要绑定"), message: Text("您的智慧杭电账号暂未绑定Apple ID"), dismissButton: .default(Text("前往绑定")) {
 //                                    UIApplication.shared.open(url)
                                     self.triggerBindFunc?(url)
                                 })

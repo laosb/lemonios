@@ -380,9 +380,7 @@ extension ViewController: WKNavigationDelegate {
         //print("yes go")
         
         let message = [ "token": self.token ?? "" ]
-        wcSession.sendMessage(message, replyHandler: nil) { (error) in
-            print(error.localizedDescription)
-        }
+        try? wcSession.updateApplicationContext(message)
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
