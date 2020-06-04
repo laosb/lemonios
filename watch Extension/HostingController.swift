@@ -42,7 +42,7 @@ class HostingController: WKHostingController<ContentView>, WCSessionDelegate {
     }
     
     // MARK: WCSession Methods
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+    func session(_ session: WCSession, didReceiveApplicationContext message: [String : Any]) {
         
         let text = message["token"] as! String
         

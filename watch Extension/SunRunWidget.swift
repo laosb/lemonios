@@ -44,7 +44,7 @@ class LMWidgetSunRun: ObservableObject{
                                     self.validTimes = indexData?.object(forKey: "validTimes") as? Int
                                     self.mileage = latestData?.object(forKey: "mileage") as? Int
                                     self.date = latestData?.object(forKey: "date") as? String
-                                    self.date = String((self.date?.suffix(5))!)
+                                    self.date = String((self.date?.suffix(5) ?? ""))
                                 case .failure:
         //                            print(response)
                                     self.available = false

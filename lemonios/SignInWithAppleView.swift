@@ -86,11 +86,11 @@ struct SignInWithAppleView: UIViewRepresentable {
                             self.parent?.alertToBind(true, url!)
 //                            self.parent?.dismissLogin()
                         } else {
-                            self.parent?.onFinish(false, "Apple 登录失败。请尝试智慧杭电登录。")
+                            self.parent?.onFinish(false, "Apple 登录失败，请重试")
                         }
                     }
                 case .failure:
-                    self.parent?.onFinish(false, "Apple 登录失败。请尝试智慧杭电登录。")
+                    self.parent?.onFinish(false, "Apple 登录失败。请重试")
                 }
             }
         }
