@@ -26,17 +26,31 @@ struct ContentView: View {
                         Text("重试")
                     }
                 }
+            } else {
+                Button(action: {
+                    let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+                    let token = sharedUd?.string(forKey: "token")
+                    if token != "" {
+                        self.token = ""
+                        self.token = token ?? ""
+                    }
+                }) {
+                    HStack {
+                        Image(systemName: "goforward")
+                        Text("刷新")
+                    }
+                }
             }
-            ScheduleWidget(token)
-            CardWidget(token)
-            SunRunWidget(token)
-            ElectricWidget(token)
+            ScheduleWidget(self.token)
+            CardWidget(self.token)
+            SunRunWidget(self.token)
+            ElectricWidget(self.token)
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(token: "123")
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(token: "123")
+//    }
+//}
