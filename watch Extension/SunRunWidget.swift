@@ -23,34 +23,35 @@ class LMWidgetSunRun: ObservableObject{
     @Published var available: Bool?
     
     init(_ token: String) {
-        AF.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token)", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
-                        {
-                            response in switch response.result
-                            {
-                                case .success(let value):
-        //                            print(response.result)
-                                    let json = value
-                                    let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
-                                    let SunRunData = newRawData.object(forKey: "sunrun") as? NSDictionary
-                                    
-                                    self.available = SunRunData?.object(forKey: "available") as? Bool
-                                    let indexData = SunRunData?.object(forKey: "data") as? NSDictionary
-                                    self.endTime = indexData?.object(forKey: "endTime") as? String
-                                    let latestData = indexData?.object(forKey: "latest") as? NSDictionary
-                                    self.domain = latestData?.object(forKey: "domain") as? String
-                                    self.isValid = latestData?.object(forKey: "isvalid") as? Bool
-                                    let tempSpeed = latestData?.object(forKey: "speed") as? Double
-                                    self.speed = String(format:"%.2lf",tempSpeed ?? 0)
-                                    self.validTimes = indexData?.object(forKey: "validTimes") as? Int
-                                    self.mileage = latestData?.object(forKey: "mileage") as? Int
-                                    self.date = latestData?.object(forKey: "date") as? String
-                                    self.date = String((self.date?.suffix(5) ?? ""))
-                                case .failure:
-        //                            print(response)
-                                    self.available = false
-                            }
-                        }
-                    )
+        AF.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token)", "User-Agent": "Alamofire Lemon_watchOS"]).validate().responseJSON(completionHandler:
+            {
+                response in switch response.result
+                {
+                    case .success(let value):
+//                            print(response.result)
+                        let json = value
+                        let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
+                        let SunRunData = newRawData.object(forKey: "sunrun") as? NSDictionary
+                        
+                        self.available = SunRunData?.object(forKey: "available") as? Bool
+                        let indexData = SunRunData?.object(forKey: "data") as? NSDictionary
+                        self.endTime = indexData?.object(forKey: "endTime") as? String
+                        let latestData = indexData?.object(forKey: "latest") as? NSDictionary
+                        self.domain = latestData?.object(forKey: "domain") as? String
+                        self.isValid = latestData?.object(forKey: "isvalid") as? Bool
+                        let tempSpeed = latestData?.object(forKey: "speed") as? Double
+                        self.speed = String(format:"%.2lf",tempSpeed ?? 0)
+                        self.validTimes = indexData?.object(forKey: "validTimes") as? Int
+                        self.mileage = latestData?.object(forKey: "mileage") as? Int
+                        self.date = latestData?.object(forKey: "date") as? String
+                        self.date = String((self.date?.suffix(5) ?? ""))
+//                    print(response)
+                    case .failure:
+//                            print(response)
+                        self.available = false
+                }
+            }
+        )
     }
     
 }
