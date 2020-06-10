@@ -35,7 +35,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             AllInWidget(elecData: self.elecData, cardData: self.cardData, srData: self.srData, sData: self.sData, availabe: self.Av, isExpanded: self.isEx, cardChargeFunc: { cb in
                 self.extensionContext?.open(URL(string: "alipays://platformapi/startapp?saId=10000007&qrcode=https%3A%2F%2Fqr.alipay.com%2Fs7x07977akyiot2uv5pme45%3F_s%3Dweb-other")!) {success in cb(success)}
             },scheduleChargeFunc: { cb in
-                self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/#/sign/in")!
+                self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/?type=2&v=5")!
             )
             })
             
