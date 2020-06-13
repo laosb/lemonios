@@ -31,13 +31,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         var srData = LMWidgetSunRun()
 //        let token = ""
         if token != nil {
-            Alamofire.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
+            AF.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
                 {
                     response in switch response.result
                     {
-                        case .success:
+                        case .success(let value):
 //                            print(response.result)
-                            let json = response.result.value
+                            let json = value
                             let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                             let SunRunData = newRawData.object(forKey: "sunrun") as? NSDictionary
                             

@@ -30,13 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
-    func application(_ application: UIApplication,
-                     performActionFor shortcutItem: UIApplicationShortcutItem,
-                     completionHandler: (Bool) -> Void) {
-        
-        completionHandler(handleShortcut(shortcutItem))
-    }
-    
     //https://fleetingpixels.com/blog/2019/6/7/customising-nstoolbar-in-uikit-for-mac-marzipancatalyst
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
             // Called when a new scene session is being created.
@@ -53,33 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
       
             // Use this method to release any resources that were
             // specific to the discarded scenes, as they will not return.
-    }
-    
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        if #available(iOS 12.0, *) {
-            let activities = ["schedule", "card"]
-            let activity = String(userActivity.activityType.split(separator: ".").last ?? "")
-            if activities.contains(activity) {
-                self.shortcutName = activity
-                NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
-                userActivity.becomeCurrent()
-            }
-        }
-        return true
-    }
-    
-    internal func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        func getQueryStringParameter(url: String, param: String) -> String? {
-          guard let url = URLComponents(string: url) else { return nil }
-          return url.queryItems?.first(where: { $0.name == param })?.value
-        }
-        
-        let message = getQueryStringParameter(url: url.absoluteString, param: "auth")
-        if (message != nil) {
-            self.token = message
-            NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "IncomingToken")))
-        }
-        return true
     }
     
     func application(
@@ -110,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let tokenReportUrl = "https://api.hduhelp.com/devices/token"
         #endif
         
-        Alamofire.request(
+        AF.request(
             tokenReportUrl,
             method: .post,
             parameters: deviceInfo,
@@ -128,16 +94,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //      print("Failed to register: \(error)")
     }
     
-    private func handleShortcut(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
-        self.shortcutName = String(shortcutItem.type.split(separator: ".").last ?? "")
-        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShortcutFired")))
-        NSUserActivity(activityType: shortcutItem.type).becomeCurrent()
-        return true
+    func getShortcutItem() -> String? {
+        let sc = self.shortcutName
+        self.shortcutName = nil
+        return sc
     }
     
-    func getShortcutItem() -> String? { return self.shortcutName }
-    
-    func getIncomingToken() -> String? { return self.token }
+    func getIncomingToken() -> String? {
+        let token = self.token
+        self.token = nil
+        return token
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

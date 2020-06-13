@@ -41,25 +41,6 @@ struct ElectricWidget: View {
                             .font(.footnote)
                             .foregroundColor(.secondary)
                     }.padding()
-//                    HStack {
-//                        Button(action: {
-//                            self.chargeFunc? { success in
-//                                if !success {
-//                                    self.tipMessage = "⚠️充值依赖支付宝。请检查您是否安装支付宝。"
-//                                }
-//                            }
-//                        }) {
-//                            VStack {
-//                                Spacer()
-//                                Text("充值")
-//                                    .accentColor(Color.white)
-//                                Spacer()
-//                            }
-//                        }
-//                            .frame(width: 25.0)
-//                            .background(Color(red:0.20, green:0.60, blue:0.86))
-//                            .cornerRadius(12.5)
-//                    }.padding(10.0)
                 }
             } else {
                 Text("数据获取失败。请尝试打开杭电助手并登录。嘤~")

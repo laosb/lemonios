@@ -17,7 +17,7 @@ struct LMSchedule {
     var teacher: String?
 }
 
-struct scheduleWidget: View {
+struct ScheduleWidget: View {
     
     @State var tipMessage: String = ""
     var sData: Array<LMSchedule>?
@@ -36,9 +36,9 @@ struct scheduleWidget: View {
                 }
                 else if self.sData!.count != 0 {
                         List {
-                            scheduleDataView(realData: self.sData![0])
+                            ScheduleDataView(realData: self.sData![0])
                             if self.sData!.count >= 2 {
-                                scheduleDataView(realData: self.sData![1])
+                                ScheduleDataView(realData: self.sData![1])
                             }
                         }.environment(\.defaultMinListRowHeight, geometry.size.height/2)
                         VStack {
@@ -57,7 +57,7 @@ struct scheduleWidget: View {
                                 }
                             }
                                 .frame(width: 25.0)
-                                .background(Color(red:0.20, green:0.60, blue:0.86))
+                                .background(Color(LMUtils.getPrimaryColor()))
                                 .cornerRadius(12.5)
                         }.padding(10.0)
                 }

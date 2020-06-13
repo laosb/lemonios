@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nao-XZ-uh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nao-XZ-uh5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,25 +25,50 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" name="bottom_padding_color"/>
                             </view>
-                            <wkWebView multipleTouchEnabled="YES" contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" allowsLinkPreview="NO" customUserAgent="" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-fi-Y8X">
+                            <wkWebView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" allowsLinkPreview="NO" customUserAgent="" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-fi-Y8X">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="Lemon_iOS">
                                     <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naI-Y0-9EK" userLabel="LoadingCover">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xRe-gt-UIr">
+                                        <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="GyU-sS-8JV"/>
+                                            <constraint firstAttribute="width" constant="20" id="W1l-qK-eHv"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstItem="xRe-gt-UIr" firstAttribute="centerX" secondItem="naI-Y0-9EK" secondAttribute="centerX" id="DDk-R8-g1E"/>
+                                    <constraint firstItem="xRe-gt-UIr" firstAttribute="centerY" secondItem="naI-Y0-9EK" secondAttribute="centerY" id="yQJ-12-UMk"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yBe-gW-Qhm" firstAttribute="top" secondItem="UPR-MU-cag" secondAttribute="top" id="0ti-qP-CG7"/>
+                            <constraint firstAttribute="bottom" secondItem="naI-Y0-9EK" secondAttribute="bottom" id="2Bm-D6-luk"/>
+                            <constraint firstAttribute="trailing" secondItem="naI-Y0-9EK" secondAttribute="trailing" id="4Au-rn-Zbe"/>
                             <constraint firstItem="XTj-fi-Y8X" firstAttribute="leading" secondItem="UPR-MU-cag" secondAttribute="leading" id="8Cs-PL-Qic"/>
                             <constraint firstItem="UPR-MU-cag" firstAttribute="top" secondItem="XTj-fi-Y8X" secondAttribute="top" id="Csv-CV-at3"/>
                             <constraint firstItem="XTj-fi-Y8X" firstAttribute="height" secondItem="UPR-MU-cag" secondAttribute="height" id="DGZ-T0-V2I"/>
                             <constraint firstItem="yBe-gW-Qhm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="MYv-gc-HUB"/>
                             <constraint firstItem="8Ch-jE-sNu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ske-pe-ezr"/>
                             <constraint firstAttribute="bottom" secondItem="8Ch-jE-sNu" secondAttribute="bottom" id="VUB-Dg-x0x"/>
+                            <constraint firstItem="naI-Y0-9EK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aAf-2B-EvM"/>
+                            <constraint firstItem="naI-Y0-9EK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="abp-Iw-4qc"/>
                             <constraint firstItem="XTj-fi-Y8X" firstAttribute="trailing" secondItem="UPR-MU-cag" secondAttribute="trailing" id="fNh-E0-H8j"/>
                             <constraint firstItem="8Ch-jE-sNu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gWU-d5-cta"/>
                             <constraint firstItem="yBe-gW-Qhm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l4g-b1-9kh"/>
@@ -54,6 +79,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="杭电助手" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="jp1-fw-MgH"/>
                     <connections>
+                        <outlet property="loadingCover" destination="naI-Y0-9EK" id="Swx-Ux-4fD"/>
+                        <outlet property="statusBar" destination="8Ch-jE-sNu" id="UHi-RJ-dwa"/>
                         <outlet property="webView" destination="XTj-fi-Y8X" id="EvO-ah-WID"/>
                         <segue destination="CLS-2S-TuF" kind="presentation" identifier="gotoNewFuncGuide" modalPresentationStyle="formSheet" id="f9I-1a-SFT"/>
                         <segue destination="uUS-IR-8pm" kind="presentation" identifier="gotoLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Oqp-Ji-DpY"/>
@@ -61,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044.9275362318842" y="113.16964285714285"/>
+            <point key="canvasLocation" x="1038" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9jX-I1-7BQ">
@@ -79,17 +106,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIM-kp-8Lx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.78260869565219" y="113.16964285714285"/>
+            <point key="canvasLocation" x="129" y="113"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="8ya-b0-wDh">
             <objects>
                 <hostingController id="uUS-IR-8pm" customClass="LoginController" customModule="杭电助手" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uoL-XH-MbX"/>
+                    <connections>
+                        <segue destination="GVm-mt-UKS" kind="presentation" identifier="gotoBind" modalPresentationStyle="formSheet" id="vLK-br-6Zw"/>
+                    </connections>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDI-yK-Isy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951" y="-552"/>
+            <point key="canvasLocation" x="1951" y="-704"/>
         </scene>
         <!--New Func Guide Controller-->
         <scene sceneID="ohG-5S-dBN">
@@ -97,9 +127,18 @@
                 <hostingController id="CLS-2S-TuF" customClass="NewFuncGuideController" customModule="杭电助手" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qem-mJ-auE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951" y="113"/>
+            <point key="canvasLocation" x="1978" y="113"/>
+        </scene>
+        <!--Bind Controller-->
+        <scene sceneID="IgR-ZT-t0d">
+            <objects>
+                <hostingController id="GVm-mt-UKS" customClass="BindController" customModule="杭电助手" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qY-Bz-13S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925" y="-704"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
         <namedColor name="bottom_padding_color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,5 +147,4 @@
             <color red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>

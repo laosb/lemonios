@@ -34,13 +34,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             let token = sharedUd?.string(forKey: "token")
             var elecData = LMWidgetElec()
             if token != nil {
-                Alamofire.request("https://api.hduhelp.com/electric/fee", headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
+                AF.request("https://api.hduhelp.com/electric/fee", headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
                     {
                         response in switch response.result
                         {
-                            case .success:
+                            case .success(let value):
     //                            print(response.result)
-                                let json = response.result.value
+                                let json = value
                                 let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                                 let fee = newRawData.object(forKey: "fee") as? String
                                 let pos = newRawData.object(forKey: "roomName") as? String

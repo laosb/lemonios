@@ -1,14 +1,13 @@
 //
-//  WidgetNumberView.swift
-//  cardwidget
+//  widgetNumberView.swift
+//  allInWidget
 //
-//  Created by Shibo Lyu on 2019/11/10.
+//  Created by ljz on 2019/12/13.
 //  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
 //
 
-// TODO: Extract this into a framework so we won't deplicate this to all widgets.
-
 import SwiftUI
+
 
 struct WidgetNumberView: View {
     @State var number: String
@@ -25,11 +24,5 @@ struct WidgetNumberView: View {
                 Text(unit).bold()
             }
         }
-    }
-}
-
-struct WidgetNumberView_Previews: PreviewProvider {
-    static var previews: some View {
-        WidgetNumberView(number: "123.1", title: "测试", unit: "元")
     }
 }

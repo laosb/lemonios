@@ -1,6 +1,6 @@
 //
-//  scheduleWidget.swift
-//  schedulewidget
+//  ScheduleWidget.swift
+//  ScheduleWidget
 //
 //  Created by ljz on 2019/11/20.
 //  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
@@ -13,8 +13,8 @@ import Alamofire
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     func renderData(sData: Array<LMSchedule> , isA: Bool) {
-        let sVc = UIHostingController(rootView: scheduleWidget(sData: sData , availabe: isA){ cb in
-            self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/#/sign/in")!) { success in cb(success) }
+        let sVc = UIHostingController(rootView: ScheduleWidget(sData: sData , availabe: isA){ cb in
+            self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/?type=2&v=5")!) { success in cb(success) }
         })
         sVc.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
         sVc.view.frame = self.view.bounds
@@ -31,12 +31,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         var sData = Array<LMSchedule>()
         
         if token != nil {
-            Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
+            AF.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
                 "Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"
             ]).validate().responseJSON(completionHandler: { response in
                 switch response.result {
-                        case .success:
-                            let json = response.result.value
+                        case .success(let value):
+                            let json = value
                             let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                             let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
                             

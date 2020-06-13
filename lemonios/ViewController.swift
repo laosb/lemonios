@@ -14,6 +14,7 @@ import UserNotifications
 import WatchConnectivity
 import Alamofire
 import DeviceKit
+import os.log
 
 let primaryColor = UIColor(red:0.20, green:0.60, blue:0.86, alpha:1.0)
 
@@ -53,6 +54,8 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
     
 
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var loadingCover: UIView!
+    @IBOutlet weak var statusBar: UIView!
     
     weak var getTokenTimer: Timer?
     
@@ -66,16 +69,57 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         if Device.current.isPad {
             self.webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         }
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        webView.scrollView.bounces = false
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }
     
     func tryLoad(_ configUrl: String) {
-        Alamofire.request(configUrl).validate().responseJSON { response in
+        let currentVersion = Bundle.main.infoDictionary?["CFBundleVersion"] as! String
+        AF.request(configUrl).validate().responseJSON { response in
             switch response.result {
-            case .success:
-                if let json = response.result.value {
-                    UserDefaults.standard.set((json as! NSDictionary).object(forKey: "baseUrl"), forKey: "baseUrl")
-                    self.shortcutFired(nativeLogin: false)
+            case .success(let value):
+                let json = value
+                //print("!!!!!!")
+                //print(json)
+                var title: String?
+                var desc: String?
+                var link: String?
+                var group: String?
+                var isForce: Bool?
+                if currentVersion < "38"{
+                    let NS = json as! NSDictionary
+                    title = (NS.object(forKey: "testflightDialogTitle") as? String ?? nil)
+                    desc = (NS.object(forKey: "testflightDialogDesc") as? String ?? nil)
+                    link = (NS.object(forKey: "testflightLink") as? String ?? nil)
+                    isForce = (NS.object(forKey: "forceTestflight") as? Bool ?? nil)
+                    group = (NS.object(forKey: "testflightGroupLink") as? String ?? nil)
                 }
+                if title != nil && desc != nil && link != nil && group != nil {
+                    print("????")
+                    let alert = UIAlertController(title: "\(title!)", message: "\(desc!)", preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                    if isForce == false {
+                        alert.addAction(cancelAction)
+                        alert.addAction(UIAlertAction(title: "加入内测群", style: .default, handler: { _ in
+                            UIApplication.shared.open(URL(string: "\(group!)")!)
+                        }))
+                        alert.addAction(UIAlertAction(title: "参与内测", style: .default, handler: { _ in
+                            UIApplication.shared.open(URL(string: "\(link!)")!)
+                        }))
+                    }
+                    else if isForce == true {
+                        alert.addAction(UIAlertAction(title: "加入内测群", style: .default, handler: { _ in
+                            UIApplication.shared.open(URL(string: "\(group!)")!)
+                        }))
+                        alert.addAction(UIAlertAction(title: "参与内测", style: .default, handler: { _ in
+                            UIApplication.shared.open(URL(string: "\(link!)")!)
+                        }))
+                    }
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
             case .failure:
                 let alert = UIAlertController(title: "连接服务器失败", message: "请检查您是否允许杭电助手联网，以及您设备的网络连接。", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "重试", style: .default, handler: { _ in self.tryLoad(configUrl) }))
@@ -112,11 +156,11 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             wcSession.activate()
         }
         
-        Alamofire.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON {
+        AF.request("https://api.hduhelp.com/token/validate", encoding: JSONEncoding.default, headers:["Authorization": "token \(token ?? "")", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON {
             response in switch response.result {
-                case .success:
+                case .success(let value):
                     //self.tryLoad(configUrl)
-                    let json = response.result.value
+                    let json = value
                     let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                     let isValid = (newRawData.object(forKey: "isValid")) as! Bool
                     if isValid == false {
@@ -130,22 +174,21 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             }
         }
         tryLoad(configUrl)
-//        if isDelay == true {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-//                // Put your code which should be executed with a delay here
-//                let url = "https://ios.app.hduhelp.com/#/login?auth="+"\(token)"
-//
-//                //ios.app.hduhelp.com/#/login?auth={token}
-//            })
-//        }else {
-//            let url = "https://ios.app.hduhelp.com/#/login?auth="+"\(token)"
-//            self.tryLoad(url)
-//        }
-//
     }
     
-    @objc func shortcutFired (nativeLogin: Bool) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == #keyPath(WKWebView.estimatedProgress) {
+            if webView.estimatedProgress == 1.0 {
+                loadingCover.isHidden = true
+            } else {
+                loadingCover.isHidden = false
+            }
+        }
+    }
+    
+    @objc func shortcutFired (nativeLogin: Bool, route: String?) {
         let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+        os_log("shortcutFired func")
         
         #if targetEnvironment(macCatalyst)
         let shellCode = "lemonmac"
@@ -169,11 +212,10 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        webView!.navigationDelegate = self
-        webView!.uiDelegate = self
         var urlStr = String(format: urlTemplate, baseUrl, nativeVersion ?? "unknown", isDev)
         
         if let token = appDelegate.getIncomingToken() {
+            print("token", token)
             urlStr += "/login?auth=\(token)"
             sharedUd?.set(token, forKey: "token")
             sharedUd?.synchronize()
@@ -185,11 +227,14 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             urlStr += "/login?auth=\(token ?? "")"
             enableNotification()
         } else if let shortcut = appDelegate.getShortcutItem() {
+            print("shortcut", shortcut)
             if shortcut == "schedule" { urlStr += "/app/schedule" }
             if shortcut == "card" { urlStr += "/app/card" }
 //            if shortcut == "hdumap" {
 //                return self.performSegue(withIdentifier: "gotoHduMap", sender: self)
 //            }
+        } else if route != nil && (route?.starts(with: "/"))! {
+            urlStr += route!
         }
         
 //        print(urlStr)
@@ -198,7 +243,7 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             webView.load(URLRequest(url: URL(string: "about:blank")!))
         }
         let url = URL(string: urlStr)
-        print(urlStr)
+        //print(urlStr)
         let req = URLRequest(url: url!)
         webView!.load(req)
         
@@ -209,16 +254,6 @@ class ViewController: UIViewController, WKUIDelegate, INUIAddVoiceShortcutViewCo
             self.webView!.evaluateJavaScript("""
                 (() => {
                     window._setupDebug(19260817)
-                    const siwaBtn = document.getElementById('appleid-signin')
-                    if (siwaBtn) {
-                        siwaBtn.onclick = () => {
-                            console.log('Try SIWA')
-                            const btnLink = document.createElement('a')
-                            btnLink.href = "https://api.hduhelp.com/login/direct/apple?clientID=app&redirect=hduhelplemon%3A%2F%2Fapp.hduhelp.com"
-                            document.body.appendChild(btnLink)
-                            btnLink.click()
-                        }
-                    }
                     return window._hduhelpDebug.store.state.token || null
                 })()
             """, completionHandler: { returnValue, error in
@@ -292,7 +327,7 @@ extension ViewController: WKNavigationDelegate {
                 let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
                 sharedUd?.set(nil, forKey: "token")
                 sharedUd?.synchronize()
-                print("get logout")
+                //print("get logout")
                 self.performSegue(withIdentifier: "gotoLogin", sender: self)
             }
             if (url!.pathComponents.contains("toggleDev")) {
@@ -309,6 +344,18 @@ extension ViewController: WKNavigationDelegate {
                     UIApplication.shared.setAlternateIconName(iconName)
                 }
             }
+            if (url!.pathComponents.contains("setStatusBarColor")) {
+                let color = url!.lastPathComponent
+                UIView.animate(withDuration: 0.3) {
+                    self.statusBar.backgroundColor = UIColor(dynamicProvider: { coll in
+                        switch coll.userInterfaceStyle {
+                        case .dark: return UIColor(named: "status_bar_color")!
+                        default: return LMUtils.hexStringToUIColor(hex: color)
+                        }
+                    })
+                }
+                LMUtils.setPrimaryColor(hex: color)
+            }
 //            if (url!.pathComponents.contains("hduMap")) {
 //                self.performSegue(withIdentifier: "gotoHduMap", sender: self)
 //            }
@@ -316,7 +363,7 @@ extension ViewController: WKNavigationDelegate {
             return
         }
         
-        if navigationAction.navigationType == WKNavigationType.linkActivated {
+        if navigationAction.navigationType == .linkActivated {
             let url = navigationAction.request.url
             let safariView = SFSafariViewController(url: url!)
             safariView.preferredControlTintColor = primaryColor
@@ -330,12 +377,10 @@ extension ViewController: WKNavigationDelegate {
     
     // MARK: WCSession Methods
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("yes go")
+        //print("yes go")
         
         let message = [ "token": self.token ?? "" ]
-        wcSession.sendMessage(message, replyHandler: nil) { (error) in
-            print(error.localizedDescription)
-        }
+        try? wcSession.updateApplicationContext(message)
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {

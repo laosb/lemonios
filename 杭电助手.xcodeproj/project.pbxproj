@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A1796D42387F42A00E79489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1796D32387F42A00E79489 /* Alamofire */; };
-		2A1796D92387F51100E79489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1796D82387F51100E79489 /* Alamofire */; };
-		2A1796DB2387F51E00E79489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1796DA2387F51E00E79489 /* Alamofire */; };
-		2A1796DD2387F52600E79489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1796DC2387F52600E79489 /* Alamofire */; };
+		2A0ECFC2242A428400A261F7 /* ic_neon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0ECFBF242A428400A261F7 /* ic_neon@2x.png */; };
+		2A0ECFC3242A428400A261F7 /* ic_neon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0ECFC0242A428400A261F7 /* ic_neon.png */; };
+		2A0ECFC4242A428400A261F7 /* ic_neon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0ECFC1242A428400A261F7 /* ic_neon@3x.png */; };
 		2A1796E12388271700E79489 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1796E02388271700E79489 /* SceneDelegate.swift */; };
 		2A1E41272377F72B002FA52A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		2A1E412A2377F72B002FA52A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41292377F72B002FA52A /* TodayViewController.swift */; };
@@ -18,6 +17,20 @@
 		2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A1E41262377F72B002FA52A /* 一卡通.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
 		2A31BE9E2389107200AA9CFC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A31BE9D2389107200AA9CFC /* MenuController.swift */; };
+		2A364C40242CC29400D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C3F242CC29400D8EEB4 /* Alamofire */; };
+		2A364C43242CC2AE00D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C42242CC2AE00D8EEB4 /* DeviceKit */; };
+		2A364C45242CC2C800D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C44242CC2C800D8EEB4 /* Alamofire */; };
+		2A364C47242CC2C800D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C46242CC2C800D8EEB4 /* DeviceKit */; };
+		2A364C49242CC2CD00D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C48242CC2CD00D8EEB4 /* Alamofire */; };
+		2A364C4B242CC2CD00D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C4A242CC2CD00D8EEB4 /* DeviceKit */; };
+		2A364C4D242CC2D300D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C4C242CC2D300D8EEB4 /* Alamofire */; };
+		2A364C4F242CC2D300D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C4E242CC2D300D8EEB4 /* DeviceKit */; };
+		2A364C51242CC2D900D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C50242CC2D900D8EEB4 /* Alamofire */; };
+		2A364C53242CC2D900D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C52242CC2D900D8EEB4 /* DeviceKit */; };
+		2A364C55242CC2F200D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C54242CC2F200D8EEB4 /* Alamofire */; };
+		2A364C57242CC2F200D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C56242CC2F200D8EEB4 /* DeviceKit */; };
+		2A364C59242CC2F900D8EEB4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C58242CC2F900D8EEB4 /* Alamofire */; };
+		2A364C5B242CC2F900D8EEB4 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2A364C5A242CC2F900D8EEB4 /* DeviceKit */; };
 		2A39868423780E74005AB8AF /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
 		2A4558952299825700250D01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558942299825700250D01 /* AppDelegate.swift */; };
 		2A4558972299825700250D01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558962299825700250D01 /* ViewController.swift */; };
@@ -32,30 +45,9 @@
 		2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */; };
 		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A981807237AC39A005C5141 /* NewFuncGuideController.swift */; };
-		2AA008232385674800A05B03 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA008222385674800A05B03 /* DeviceKit */; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
-		2AAE599F23A36F6000233D56 /* ic_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE598A23A36F6000233D56 /* ic_blue.png */; };
-		2AAE59A023A36F6000233D56 /* ic_pride2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE598B23A36F6000233D56 /* ic_pride2.png */; };
-		2AAE59A123A36F6000233D56 /* ic_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE598C23A36F6000233D56 /* ic_dark@3x.png */; };
-		2AAE59A223A36F6000233D56 /* ic_pride.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE598D23A36F6000233D56 /* ic_pride.png */; };
-		2AAE59A323A36F6000233D56 /* ic_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE598E23A36F6000233D56 /* ic_purple.png */; };
-		2AAE59A423A36F6000233D56 /* ic_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE598F23A36F6000233D56 /* ic_dark@2x.png */; };
-		2AAE59A523A36F6000233D56 /* ic_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599023A36F6000233D56 /* ic_default.png */; };
-		2AAE59A623A36F6000233D56 /* ic_pride@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599123A36F6000233D56 /* ic_pride@2x.png */; };
-		2AAE59A723A36F6000233D56 /* ic_classic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599223A36F6000233D56 /* ic_classic@2x.png */; };
-		2AAE59A823A36F6000233D56 /* ic_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599323A36F6000233D56 /* ic_default@3x.png */; };
-		2AAE59A923A36F6000233D56 /* ic_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599423A36F6000233D56 /* ic_default@2x.png */; };
-		2AAE59AA23A36F6000233D56 /* ic_classic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599523A36F6000233D56 /* ic_classic@3x.png */; };
-		2AAE59AB23A36F6000233D56 /* ic_pride@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599623A36F6000233D56 /* ic_pride@3x.png */; };
-		2AAE59AC23A36F6000233D56 /* ic_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599723A36F6000233D56 /* ic_dark.png */; };
-		2AAE59AD23A36F6000233D56 /* ic_purple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599823A36F6000233D56 /* ic_purple@2x.png */; };
-		2AAE59AE23A36F6000233D56 /* ic_purple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599923A36F6000233D56 /* ic_purple@3x.png */; };
-		2AAE59AF23A36F6000233D56 /* ic_classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599A23A36F6000233D56 /* ic_classic.png */; };
-		2AAE59B023A36F6000233D56 /* ic_pride2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599B23A36F6000233D56 /* ic_pride2@3x.png */; };
-		2AAE59B123A36F6000233D56 /* ic_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599C23A36F6000233D56 /* ic_blue@2x.png */; };
-		2AAE59B223A36F6000233D56 /* ic_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599D23A36F6000233D56 /* ic_blue@3x.png */; };
-		2AAE59B323A36F6000233D56 /* ic_pride2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE599E23A36F6000233D56 /* ic_pride2@2x.png */; };
 		2AC9F92923996CD900D46B61 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F92723996CD900D46B61 /* Interface.storyboard */; };
+		2AC9F92B23996CDE00D46B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F92A23996CDE00D46B61 /* Assets.xcassets */; };
 		2AC9F93223996CDE00D46B61 /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AC9F93123996CDE00D46B61 /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AC9F93723996CDE00D46B61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93623996CDE00D46B61 /* ContentView.swift */; };
 		2AC9F93923996CDE00D46B61 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93823996CDE00D46B61 /* HostingController.swift */; };
@@ -64,12 +56,8 @@
 		2AC9F93F23996CDE00D46B61 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9F93E23996CDE00D46B61 /* NotificationView.swift */; };
 		2AC9F94423996CDF00D46B61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F94323996CDF00D46B61 /* Preview Assets.xcassets */; };
 		2AC9F94923996CDF00D46B61 /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2AC9F92523996CD900D46B61 /* watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2AC9F95323996D1D00D46B61 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2AC9F95223996D1D00D46B61 /* Alamofire */; };
-		2ACFE09C23A3AE68003D6E2D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACFE09B23A3AE68003D6E2D /* Images.xcassets */; };
-		2AD63D8D23997D6C0005C4F8 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */; };
 		2AD63D9123997EAA0005C4F8 /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD63D9023997EAA0005C4F8 /* CardWidget.swift */; };
 		2AD63D9223997ECF0005C4F8 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868123780BE0005AB8AF /* WidgetNumberView.swift */; };
-		2ADBF3B02375B928001BE5D5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AF2375B928001BE5D5 /* .gitignore */; };
 		2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		2ADBF3B92375BD31001BE5D5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3B82375BD31001BE5D5 /* TodayViewController.swift */; };
 		2ADBF3BC2375BD31001BE5D5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADBF3BA2375BD31001BE5D5 /* MainInterface.storyboard */; };
@@ -77,7 +65,43 @@
 		2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */; };
 		2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50EF22BFE1260005781E /* Intents.framework */; };
 		2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEC50F022BFE1260005781E /* IntentsUI.framework */; };
+		2AFF4F112419132100D2E411 /* SignInWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F102419132100D2E411 /* SignInWithAppleView.swift */; };
+		2AFF4F13241A366300D2E411 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F12241A366300D2E411 /* Utils.swift */; };
 		4E2661882386A6DF00B42004 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2661872386A6DF00B42004 /* MainInterface.storyboard */; };
+		4E4E377823ACF7AF00AAE077 /* ic_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376323ACF7AF00AAE077 /* ic_blue.png */; };
+		4E4E377923ACF7AF00AAE077 /* ic_pride2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376423ACF7AF00AAE077 /* ic_pride2.png */; };
+		4E4E377A23ACF7AF00AAE077 /* ic_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376523ACF7AF00AAE077 /* ic_dark@3x.png */; };
+		4E4E377B23ACF7AF00AAE077 /* ic_pride.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376623ACF7AF00AAE077 /* ic_pride.png */; };
+		4E4E377C23ACF7AF00AAE077 /* ic_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376723ACF7AF00AAE077 /* ic_purple.png */; };
+		4E4E377D23ACF7AF00AAE077 /* ic_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376823ACF7AF00AAE077 /* ic_dark@2x.png */; };
+		4E4E377E23ACF7AF00AAE077 /* ic_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376923ACF7AF00AAE077 /* ic_default.png */; };
+		4E4E377F23ACF7AF00AAE077 /* ic_pride@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376A23ACF7AF00AAE077 /* ic_pride@2x.png */; };
+		4E4E378023ACF7AF00AAE077 /* ic_classic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376B23ACF7AF00AAE077 /* ic_classic@2x.png */; };
+		4E4E378123ACF7AF00AAE077 /* ic_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376C23ACF7AF00AAE077 /* ic_default@3x.png */; };
+		4E4E378223ACF7AF00AAE077 /* ic_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376D23ACF7AF00AAE077 /* ic_default@2x.png */; };
+		4E4E378323ACF7AF00AAE077 /* ic_classic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376E23ACF7AF00AAE077 /* ic_classic@3x.png */; };
+		4E4E378423ACF7AF00AAE077 /* ic_pride@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E376F23ACF7AF00AAE077 /* ic_pride@3x.png */; };
+		4E4E378523ACF7AF00AAE077 /* ic_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377023ACF7AF00AAE077 /* ic_dark.png */; };
+		4E4E378623ACF7AF00AAE077 /* ic_purple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377123ACF7AF00AAE077 /* ic_purple@2x.png */; };
+		4E4E378723ACF7AF00AAE077 /* ic_purple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377223ACF7AF00AAE077 /* ic_purple@3x.png */; };
+		4E4E378823ACF7AF00AAE077 /* ic_classic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377323ACF7AF00AAE077 /* ic_classic.png */; };
+		4E4E378923ACF7AF00AAE077 /* ic_pride2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377423ACF7AF00AAE077 /* ic_pride2@3x.png */; };
+		4E4E378A23ACF7AF00AAE077 /* ic_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377523ACF7AF00AAE077 /* ic_blue@2x.png */; };
+		4E4E378B23ACF7AF00AAE077 /* ic_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377623ACF7AF00AAE077 /* ic_blue@3x.png */; };
+		4E4E378C23ACF7AF00AAE077 /* ic_pride2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4E377723ACF7AF00AAE077 /* ic_pride2@2x.png */; };
+		4E715613241A3AB500486040 /* ScheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* ScheduleDataView.swift */; };
+		4E715614241A3AB800486040 /* ScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* ScheduleWidget.swift */; };
+		4E715615241A3B5000486040 /* SunRunWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */; };
+		4E715616241A3BA500486040 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
+		4E715617241A3BCF00486040 /* CardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1E41392377F7D4002FA52A /* CardWidget.swift */; };
+		4E715618241A3C1100486040 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
+		4E715619241A3C1300486040 /* WidgetNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A39868323780E74005AB8AF /* WidgetNumberView.swift */; };
+		4E71561A241A3C3000486040 /* ElectricNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F22395F73800001387 /* ElectricNumberView.swift */; };
+		4E71561B241A3C3200486040 /* ElectricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F42395F75300001387 /* ElectricWidget.swift */; };
+		4E715621241A5B1400486040 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F12241A366300D2E411 /* Utils.swift */; };
+		4E715623241A5B3100486040 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F12241A366300D2E411 /* Utils.swift */; };
+		4E715624241A5B3300486040 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF4F12241A366300D2E411 /* Utils.swift */; };
+		4E71904B2487CD4D00F26F11 /* BindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E71904A2487CD4D00F26F11 /* BindView.swift */; };
 		4E7E7C7E238CC72900B097AD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C7D238CC72900B097AD /* LoginController.swift */; };
 		4E7E7C802390006500B097AD /* KeyboardGuardian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C7F2390006500B097AD /* KeyboardGuardian.swift */; };
 		4E7E7C82239000DA00B097AD /* GeometryGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7E7C81239000DA00B097AD /* GeometryGetter.swift */; };
@@ -92,12 +116,19 @@
 		4E9E83E42395F66400001387 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83E32395F66400001387 /* TodayViewController.swift */; };
 		4E9E83E72395F66400001387 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9E83E52395F66400001387 /* MainInterface.storyboard */; };
 		4E9E83EB2395F66400001387 /* 智能电费.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4E9E83E02395F66400001387 /* 智能电费.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4E9E83F12395F68900001387 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4E9E83F02395F68900001387 /* Alamofire */; };
 		4E9E83F32395F73800001387 /* ElectricNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F22395F73800001387 /* ElectricNumberView.swift */; };
 		4E9E83F52395F75300001387 /* ElectricWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9E83F42395F75300001387 /* ElectricWidget.swift */; };
+		4EA37207248628A300D003AC /* BindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA37206248628A300D003AC /* BindController.swift */; };
+		4EB70CD4246EAD9800B6926B /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB70CD3246EAD9800B6926B /* Stickers.xcassets */; };
+		4EB70CD8246EAD9800B6926B /* 杭电助手时柒.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EB70CD1246EAD9700B6926B /* 杭电助手时柒.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4EBC6EDD23A3C12300C44339 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
+		4EBC6EE023A3C12300C44339 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */; };
+		4EBC6EE323A3C12300C44339 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */; };
+		4EBC6EE723A3C12300C44339 /* all in widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4EBC6EDC23A3C12300C44339 /* all in widget.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4EBC6EFD23A3C55500C44339 /* AllInWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */; };
 		4EBDAA82238BEAD9009AB925 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBDAA81238BEAD9009AB925 /* LoginView.swift */; };
-		4ECFFB5C23857E94005B775B /* scheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* scheduleWidget.swift */; };
-		4ECFFB5E23857EB6005B775B /* scheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */; };
+		4ECFFB5C23857E94005B775B /* ScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5B23857E94005B775B /* ScheduleWidget.swift */; };
+		4ECFFB5E23857EB6005B775B /* ScheduleDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFB5D23857EB6005B775B /* ScheduleDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +188,20 @@
 			remoteGlobalIDString = 4E9E83DF2395F66400001387;
 			remoteInfo = electrictwidget;
 		};
+		4EB70CD6246EAD9800B6926B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB70CD0246EAD9700B6926B;
+			remoteInfo = "HDU help sticker";
+		};
+		4EBC6EE523A3C12300C44339 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EBC6EDB23A3C12300C44339;
+			remoteInfo = "all in widget";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -166,6 +211,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				4EBC6EE723A3C12300C44339 /* all in widget.appex in Embed App Extensions */,
+				4EB70CD8246EAD9800B6926B /* 杭电助手时柒.appex in Embed App Extensions */,
 				4E9E83EB2395F66400001387 /* 智能电费.appex in Embed App Extensions */,
 				2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */,
 				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
@@ -209,6 +256,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A0ECFBF242A428400A261F7 /* ic_neon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_neon@2x.png"; sourceTree = "<group>"; };
+		2A0ECFC0242A428400A261F7 /* ic_neon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_neon.png; sourceTree = "<group>"; };
+		2A0ECFC1242A428400A261F7 /* ic_neon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_neon@3x.png"; sourceTree = "<group>"; };
 		2A1796E02388271700E79489 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A1E41262377F72B002FA52A /* 一卡通.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "一卡通.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1E41292377F72B002FA52A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -239,7 +289,6 @@
 		2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2A5C40D6233F9AC200B9FF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A5C40E12340B23900B9FF02 /* 快捷课表.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "快捷课表.entitlements"; sourceTree = "<group>"; };
-		2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		2A981807237AC39A005C5141 /* NewFuncGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFuncGuideController.swift; sourceTree = "<group>"; };
 		2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HduMapViewController.swift; sourceTree = "<group>"; };
 		2AAE598A23A36F6000233D56 /* ic_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_blue.png; sourceTree = "<group>"; };
@@ -265,6 +314,7 @@
 		2AAE599E23A36F6000233D56 /* ic_pride2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_pride2@2x.png"; sourceTree = "<group>"; };
 		2AC9F92523996CD900D46B61 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC9F92823996CD900D46B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2AC9F92A23996CDE00D46B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AC9F92C23996CDE00D46B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC9F93123996CDE00D46B61 /* watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC9F93623996CDE00D46B61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -276,11 +326,8 @@
 		2AC9F94523996CDF00D46B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC9F94623996CDF00D46B61 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		2AC9F9542399755400D46B61 /* watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watch.entitlements; sourceTree = "<group>"; };
-		2ACFE09B23A3AE68003D6E2D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2AD63D8A239975720005C4F8 /* watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "watch Extension.entitlements"; sourceTree = "<group>"; };
-		2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetNumberView.swift; sourceTree = "<group>"; };
 		2AD63D9023997EAA0005C4F8 /* CardWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardWidget.swift; path = Widgets/CardWidget.swift; sourceTree = "<group>"; };
-		2AD799DD22B271900053BB4E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2ADBF3AD2375B7A1001BE5D5 /* SunRunWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRunWidget.swift; sourceTree = "<group>"; };
 		2ADBF3AF2375B928001BE5D5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "阳光长跑.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,18 +335,36 @@
 		2ADBF3BB2375BD31001BE5D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2ADBF3BD2375BD31001BE5D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ADBF3C82375D510001BE5D5 /* 阳光长跑.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "阳光长跑.entitlements"; sourceTree = "<group>"; };
-		2AE67998230FE77E00F26F07 /* GEOSwiftMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GEOSwiftMapKit.framework; path = Carthage/Build/iOS/GEOSwiftMapKit.framework; sourceTree = "<group>"; };
-		2AE67999230FE77E00F26F07 /* GEOSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GEOSwift.framework; path = Carthage/Build/iOS/GEOSwift.framework; sourceTree = "<group>"; };
-		2AE6799F230FE93900F26F07 /* geos.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = geos.framework.dSYM; path = Carthage/Build/iOS/geos.framework.dSYM; sourceTree = "<group>"; };
-		2AE679A0230FE93900F26F07 /* GEOSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GEOSwift.framework.dSYM; path = Carthage/Build/iOS/GEOSwift.framework.dSYM; sourceTree = "<group>"; };
-		2AE679A1230FE93900F26F07 /* geos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = geos.framework; path = Carthage/Build/iOS/geos.framework; sourceTree = "<group>"; };
-		2AE679A2230FE93900F26F07 /* GEOSwiftMapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GEOSwiftMapKit.framework.dSYM; path = Carthage/Build/iOS/GEOSwiftMapKit.framework.dSYM; sourceTree = "<group>"; };
 		2AE92061231C29BB002C9538 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2AEC50DC22BFD71F0005781E /* lemonios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lemonios.entitlements; sourceTree = "<group>"; };
 		2AEC50E322BFD92C0005781E /* opensubapp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = opensubapp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEC50EF22BFE1260005781E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2AEC50F022BFE1260005781E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		2AFF4F102419132100D2E411 /* SignInWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleView.swift; sourceTree = "<group>"; };
+		2AFF4F12241A366300D2E411 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4E2661872386A6DF00B42004 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		4E4E376323ACF7AF00AAE077 /* ic_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_blue.png; sourceTree = "<group>"; };
+		4E4E376423ACF7AF00AAE077 /* ic_pride2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pride2.png; sourceTree = "<group>"; };
+		4E4E376523ACF7AF00AAE077 /* ic_dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dark@3x.png"; sourceTree = "<group>"; };
+		4E4E376623ACF7AF00AAE077 /* ic_pride.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pride.png; sourceTree = "<group>"; };
+		4E4E376723ACF7AF00AAE077 /* ic_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_purple.png; sourceTree = "<group>"; };
+		4E4E376823ACF7AF00AAE077 /* ic_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dark@2x.png"; sourceTree = "<group>"; };
+		4E4E376923ACF7AF00AAE077 /* ic_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_default.png; sourceTree = "<group>"; };
+		4E4E376A23ACF7AF00AAE077 /* ic_pride@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_pride@2x.png"; sourceTree = "<group>"; };
+		4E4E376B23ACF7AF00AAE077 /* ic_classic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_classic@2x.png"; sourceTree = "<group>"; };
+		4E4E376C23ACF7AF00AAE077 /* ic_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_default@3x.png"; sourceTree = "<group>"; };
+		4E4E376D23ACF7AF00AAE077 /* ic_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_default@2x.png"; sourceTree = "<group>"; };
+		4E4E376E23ACF7AF00AAE077 /* ic_classic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_classic@3x.png"; sourceTree = "<group>"; };
+		4E4E376F23ACF7AF00AAE077 /* ic_pride@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_pride@3x.png"; sourceTree = "<group>"; };
+		4E4E377023ACF7AF00AAE077 /* ic_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_dark.png; sourceTree = "<group>"; };
+		4E4E377123ACF7AF00AAE077 /* ic_purple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_purple@2x.png"; sourceTree = "<group>"; };
+		4E4E377223ACF7AF00AAE077 /* ic_purple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_purple@3x.png"; sourceTree = "<group>"; };
+		4E4E377323ACF7AF00AAE077 /* ic_classic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_classic.png; sourceTree = "<group>"; };
+		4E4E377423ACF7AF00AAE077 /* ic_pride2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_pride2@3x.png"; sourceTree = "<group>"; };
+		4E4E377523ACF7AF00AAE077 /* ic_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_blue@2x.png"; sourceTree = "<group>"; };
+		4E4E377623ACF7AF00AAE077 /* ic_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_blue@3x.png"; sourceTree = "<group>"; };
+		4E4E377723ACF7AF00AAE077 /* ic_pride2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_pride2@2x.png"; sourceTree = "<group>"; };
+		4E71904A2487CD4D00F26F11 /* BindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindView.swift; sourceTree = "<group>"; };
 		4E7E7C7D238CC72900B097AD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4E7E7C7F2390006500B097AD /* KeyboardGuardian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardGuardian.swift; sourceTree = "<group>"; };
 		4E7E7C81239000DA00B097AD /* GeometryGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryGetter.swift; sourceTree = "<group>"; };
@@ -317,9 +382,19 @@
 		4E9E83EF2395F67500001387 /* electrictwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = electrictwidget.entitlements; sourceTree = "<group>"; };
 		4E9E83F22395F73800001387 /* ElectricNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricNumberView.swift; sourceTree = "<group>"; };
 		4E9E83F42395F75300001387 /* ElectricWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricWidget.swift; sourceTree = "<group>"; };
+		4EA37206248628A300D003AC /* BindController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindController.swift; sourceTree = "<group>"; };
+		4EB70CD1246EAD9700B6926B /* 杭电助手时柒.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "杭电助手时柒.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB70CD3246EAD9800B6926B /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		4EB70CD5246EAD9800B6926B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EBC6EDC23A3C12300C44339 /* all in widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "all in widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		4EBC6EE223A3C12300C44339 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4EBC6EE423A3C12300C44339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EBC6EED23A3C13600C44339 /* all in widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "all in widget.entitlements"; sourceTree = "<group>"; };
+		4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllInWidget.swift; sourceTree = "<group>"; };
 		4EBDAA81238BEAD9009AB925 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		4ECFFB5B23857E94005B775B /* scheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleWidget.swift; sourceTree = "<group>"; };
-		4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleDataView.swift; sourceTree = "<group>"; };
+		4ECFFB5B23857E94005B775B /* ScheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleWidget.swift; sourceTree = "<group>"; };
+		4ECFFB5D23857EB6005B775B /* ScheduleDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,7 +403,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1E41272377F72B002FA52A /* NotificationCenter.framework in Frameworks */,
-				2A1796DD2387F52600E79489 /* Alamofire in Frameworks */,
+				2A364C4D242CC2D300D8EEB4 /* Alamofire in Frameworks */,
+				2A364C4F242CC2D300D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,10 +412,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AA008232385674800A05B03 /* DeviceKit in Frameworks */,
 				2AEC50F122BFE1260005781E /* Intents.framework in Frameworks */,
+				2A364C43242CC2AE00D8EEB4 /* DeviceKit in Frameworks */,
+				2A364C40242CC29400D8EEB4 /* Alamofire in Frameworks */,
 				2AEC50F222BFE1260005781E /* IntentsUI.framework in Frameworks */,
-				2A1796D42387F42A00E79489 /* Alamofire in Frameworks */,
 				2A4558C72299A45200250D01 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +439,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */,
-				2A1796D92387F51100E79489 /* Alamofire in Frameworks */,
+				2A364C45242CC2C800D8EEB4 /* Alamofire in Frameworks */,
+				2A364C47242CC2C800D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +448,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AC9F95323996D1D00D46B61 /* Alamofire in Frameworks */,
+				2A364C55242CC2F200D8EEB4 /* Alamofire in Frameworks */,
+				2A364C57242CC2F200D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +458,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */,
-				2A1796DB2387F51E00E79489 /* Alamofire in Frameworks */,
+				2A364C49242CC2CD00D8EEB4 /* Alamofire in Frameworks */,
+				2A364C4B242CC2CD00D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +475,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9E83E12395F66400001387 /* NotificationCenter.framework in Frameworks */,
-				4E9E83F12395F68900001387 /* Alamofire in Frameworks */,
+				2A364C51242CC2D900D8EEB4 /* Alamofire in Frameworks */,
+				2A364C53242CC2D900D8EEB4 /* DeviceKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBC6ED923A3C12300C44339 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBC6EDD23A3C12300C44339 /* NotificationCenter.framework in Frameworks */,
+				2A364C59242CC2F900D8EEB4 /* Alamofire in Frameworks */,
+				2A364C5B242CC2F900D8EEB4 /* DeviceKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +501,6 @@
 				2A1E412B2377F72B002FA52A /* MainInterface.storyboard */,
 				2A1E412E2377F72B002FA52A /* Info.plist */,
 				2A1E41392377F7D4002FA52A /* CardWidget.swift */,
-				2AD63D8C23997D6C0005C4F8 /* WidgetNumberView.swift */,
 			);
 			path = cardwidget;
 			sourceTree = "<group>";
@@ -429,8 +518,11 @@
 				4E9E83E22395F66400001387 /* electrictwidget */,
 				2AC9F92623996CD900D46B61 /* watch */,
 				2AC9F93523996CDE00D46B61 /* watch Extension */,
+				4EBC6EDE23A3C12300C44339 /* all in widget */,
+				4EB70CD2246EAD9700B6926B /* HDU help sticker */,
 				2A4558922299825700250D01 /* Products */,
 				2A4558C52299A45200250D01 /* Frameworks */,
+				4E4E376123ACF74C00AAE077 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -447,6 +539,8 @@
 				4E9E83E02395F66400001387 /* 智能电费.appex */,
 				2AC9F92523996CD900D46B61 /* watch.app */,
 				2AC9F93123996CDE00D46B61 /* watch Extension.appex */,
+				4EBC6EDC23A3C12300C44339 /* all in widget.appex */,
+				4EB70CD1246EAD9700B6926B /* 杭电助手时柒.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -454,11 +548,12 @@
 		2A4558932299825700250D01 /* lemonios */ = {
 			isa = PBXGroup;
 			children = (
-				2AAE598923A36F6000233D56 /* icons */,
+				4E4E376223ACF7AF00AAE077 /* icons */,
 				4E937B0723799BF1009D93E0 /* newFuncGuide */,
 				2AEC50DC22BFD71F0005781E /* lemonios.entitlements */,
 				2A4558942299825700250D01 /* AppDelegate.swift */,
 				2A4558962299825700250D01 /* ViewController.swift */,
+				2AFF4F12241A366300D2E411 /* Utils.swift */,
 				2A45589E2299825800250D01 /* Assets.xcassets */,
 				2A4558982299825700250D01 /* Main.storyboard */,
 				2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */,
@@ -470,8 +565,11 @@
 				2A31BE9D2389107200AA9CFC /* MenuController.swift */,
 				4EBDAA81238BEAD9009AB925 /* LoginView.swift */,
 				4E7E7C7D238CC72900B097AD /* LoginController.swift */,
+				4E71904A2487CD4D00F26F11 /* BindView.swift */,
+				4EA37206248628A300D003AC /* BindController.swift */,
 				4E7E7C7F2390006500B097AD /* KeyboardGuardian.swift */,
 				4E7E7C81239000DA00B097AD /* GeometryGetter.swift */,
+				2AFF4F102419132100D2E411 /* SignInWithAppleView.swift */,
 			);
 			path = lemonios;
 			sourceTree = "<group>";
@@ -498,16 +596,8 @@
 			isa = PBXGroup;
 			children = (
 				2AE92061231C29BB002C9538 /* MapKit.framework */,
-				2AE679A1230FE93900F26F07 /* geos.framework */,
-				2AE6799F230FE93900F26F07 /* geos.framework.dSYM */,
-				2AE679A0230FE93900F26F07 /* GEOSwift.framework.dSYM */,
-				2AE679A2230FE93900F26F07 /* GEOSwiftMapKit.framework.dSYM */,
-				2AE67999230FE77E00F26F07 /* GEOSwift.framework */,
-				2AE67998230FE77E00F26F07 /* GEOSwiftMapKit.framework */,
 				2AEC50EF22BFE1260005781E /* Intents.framework */,
 				2AEC50F022BFE1260005781E /* IntentsUI.framework */,
-				2A8EA32922B2935300ECDC39 /* Alamofire.framework.dSYM */,
-				2AD799DD22B271900053BB4E /* Alamofire.framework */,
 				2A4558C62299A45200250D01 /* WebKit.framework */,
 				2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */,
 			);
@@ -520,39 +610,11 @@
 				2A5C40E12340B23900B9FF02 /* 快捷课表.entitlements */,
 				2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */,
 				4E2661872386A6DF00B42004 /* MainInterface.storyboard */,
-				4ECFFB5D23857EB6005B775B /* scheduleDataView.swift */,
-				4ECFFB5B23857E94005B775B /* scheduleWidget.swift */,
+				4ECFFB5D23857EB6005B775B /* ScheduleDataView.swift */,
+				4ECFFB5B23857E94005B775B /* ScheduleWidget.swift */,
 				2A5C40D6233F9AC200B9FF02 /* Info.plist */,
 			);
 			path = schedulewidget;
-			sourceTree = "<group>";
-		};
-		2AAE598923A36F6000233D56 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				2AAE598A23A36F6000233D56 /* ic_blue.png */,
-				2AAE598B23A36F6000233D56 /* ic_pride2.png */,
-				2AAE598C23A36F6000233D56 /* ic_dark@3x.png */,
-				2AAE598D23A36F6000233D56 /* ic_pride.png */,
-				2AAE598E23A36F6000233D56 /* ic_purple.png */,
-				2AAE598F23A36F6000233D56 /* ic_dark@2x.png */,
-				2AAE599023A36F6000233D56 /* ic_default.png */,
-				2AAE599123A36F6000233D56 /* ic_pride@2x.png */,
-				2AAE599223A36F6000233D56 /* ic_classic@2x.png */,
-				2AAE599323A36F6000233D56 /* ic_default@3x.png */,
-				2AAE599423A36F6000233D56 /* ic_default@2x.png */,
-				2AAE599523A36F6000233D56 /* ic_classic@3x.png */,
-				2AAE599623A36F6000233D56 /* ic_pride@3x.png */,
-				2AAE599723A36F6000233D56 /* ic_dark.png */,
-				2AAE599823A36F6000233D56 /* ic_purple@2x.png */,
-				2AAE599923A36F6000233D56 /* ic_purple@3x.png */,
-				2AAE599A23A36F6000233D56 /* ic_classic.png */,
-				2AAE599B23A36F6000233D56 /* ic_pride2@3x.png */,
-				2AAE599C23A36F6000233D56 /* ic_blue@2x.png */,
-				2AAE599D23A36F6000233D56 /* ic_blue@3x.png */,
-				2AAE599E23A36F6000233D56 /* ic_pride2@2x.png */,
-			);
-			path = icons;
 			sourceTree = "<group>";
 		};
 		2AC9F92623996CD900D46B61 /* watch */ = {
@@ -560,8 +622,8 @@
 			children = (
 				2AC9F9542399755400D46B61 /* watch.entitlements */,
 				2AC9F92723996CD900D46B61 /* Interface.storyboard */,
+				2AC9F92A23996CDE00D46B61 /* Assets.xcassets */,
 				2AC9F92C23996CDE00D46B61 /* Info.plist */,
-				2ACFE09B23A3AE68003D6E2D /* Images.xcassets */,
 			);
 			path = watch;
 			sourceTree = "<group>";
@@ -610,6 +672,65 @@
 			path = sunrunwidget;
 			sourceTree = "<group>";
 		};
+		4E4E376123ACF74C00AAE077 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE598C23A36F6000233D56 /* ic_dark@3x.png */,
+				2AAE599A23A36F6000233D56 /* ic_classic.png */,
+				2AAE599923A36F6000233D56 /* ic_purple@3x.png */,
+				2AAE599223A36F6000233D56 /* ic_classic@2x.png */,
+				2AAE599723A36F6000233D56 /* ic_dark.png */,
+				2AAE599C23A36F6000233D56 /* ic_blue@2x.png */,
+				2AAE598B23A36F6000233D56 /* ic_pride2.png */,
+				2AAE599E23A36F6000233D56 /* ic_pride2@2x.png */,
+				2AAE599023A36F6000233D56 /* ic_default.png */,
+				2AAE598E23A36F6000233D56 /* ic_purple.png */,
+				2AAE599823A36F6000233D56 /* ic_purple@2x.png */,
+				2AAE598F23A36F6000233D56 /* ic_dark@2x.png */,
+				2AAE599323A36F6000233D56 /* ic_default@3x.png */,
+				2AAE598A23A36F6000233D56 /* ic_blue.png */,
+				2AAE599B23A36F6000233D56 /* ic_pride2@3x.png */,
+				2AAE599123A36F6000233D56 /* ic_pride@2x.png */,
+				2AAE599623A36F6000233D56 /* ic_pride@3x.png */,
+				2AAE599523A36F6000233D56 /* ic_classic@3x.png */,
+				2AAE598D23A36F6000233D56 /* ic_pride.png */,
+				2AAE599423A36F6000233D56 /* ic_default@2x.png */,
+				2AAE599D23A36F6000233D56 /* ic_blue@3x.png */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		4E4E376223ACF7AF00AAE077 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				2A0ECFC0242A428400A261F7 /* ic_neon.png */,
+				2A0ECFBF242A428400A261F7 /* ic_neon@2x.png */,
+				2A0ECFC1242A428400A261F7 /* ic_neon@3x.png */,
+				4E4E376323ACF7AF00AAE077 /* ic_blue.png */,
+				4E4E376423ACF7AF00AAE077 /* ic_pride2.png */,
+				4E4E376523ACF7AF00AAE077 /* ic_dark@3x.png */,
+				4E4E376623ACF7AF00AAE077 /* ic_pride.png */,
+				4E4E376723ACF7AF00AAE077 /* ic_purple.png */,
+				4E4E376823ACF7AF00AAE077 /* ic_dark@2x.png */,
+				4E4E376923ACF7AF00AAE077 /* ic_default.png */,
+				4E4E376A23ACF7AF00AAE077 /* ic_pride@2x.png */,
+				4E4E376B23ACF7AF00AAE077 /* ic_classic@2x.png */,
+				4E4E376C23ACF7AF00AAE077 /* ic_default@3x.png */,
+				4E4E376D23ACF7AF00AAE077 /* ic_default@2x.png */,
+				4E4E376E23ACF7AF00AAE077 /* ic_classic@3x.png */,
+				4E4E376F23ACF7AF00AAE077 /* ic_pride@3x.png */,
+				4E4E377023ACF7AF00AAE077 /* ic_dark.png */,
+				4E4E377123ACF7AF00AAE077 /* ic_purple@2x.png */,
+				4E4E377223ACF7AF00AAE077 /* ic_purple@3x.png */,
+				4E4E377323ACF7AF00AAE077 /* ic_classic.png */,
+				4E4E377423ACF7AF00AAE077 /* ic_pride2@3x.png */,
+				4E4E377523ACF7AF00AAE077 /* ic_blue@2x.png */,
+				4E4E377623ACF7AF00AAE077 /* ic_blue@3x.png */,
+				4E4E377723ACF7AF00AAE077 /* ic_pride2@2x.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		4E937B0723799BF1009D93E0 /* newFuncGuide */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +753,27 @@
 			path = electrictwidget;
 			sourceTree = "<group>";
 		};
+		4EB70CD2246EAD9700B6926B /* HDU help sticker */ = {
+			isa = PBXGroup;
+			children = (
+				4EB70CD3246EAD9800B6926B /* Stickers.xcassets */,
+				4EB70CD5246EAD9800B6926B /* Info.plist */,
+			);
+			path = "HDU help sticker";
+			sourceTree = "<group>";
+		};
+		4EBC6EDE23A3C12300C44339 /* all in widget */ = {
+			isa = PBXGroup;
+			children = (
+				4EBC6EED23A3C13600C44339 /* all in widget.entitlements */,
+				4EBC6EDF23A3C12300C44339 /* TodayViewController.swift */,
+				4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */,
+				4EBC6EE423A3C12300C44339 /* Info.plist */,
+				4EBC6EFC23A3C55500C44339 /* AllInWidget.swift */,
+			);
+			path = "all in widget";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -649,7 +791,8 @@
 			);
 			name = cardwidget;
 			packageProductDependencies = (
-				2A1796DC2387F52600E79489 /* Alamofire */,
+				2A364C4C242CC2D300D8EEB4 /* Alamofire */,
+				2A364C4E242CC2D300D8EEB4 /* DeviceKit */,
 			);
 			productName = cardwidget;
 			productReference = 2A1E41262377F72B002FA52A /* 一卡通.appex */;
@@ -674,11 +817,13 @@
 				2A1E41302377F72B002FA52A /* PBXTargetDependency */,
 				4E9E83EA2395F66400001387 /* PBXTargetDependency */,
 				2AC9F94823996CDF00D46B61 /* PBXTargetDependency */,
+				4EBC6EE623A3C12300C44339 /* PBXTargetDependency */,
+				4EB70CD7246EAD9800B6926B /* PBXTargetDependency */,
 			);
 			name = "杭电助手";
 			packageProductDependencies = (
-				2AA008222385674800A05B03 /* DeviceKit */,
-				2A1796D32387F42A00E79489 /* Alamofire */,
+				2A364C3F242CC29400D8EEB4 /* Alamofire */,
+				2A364C42242CC2AE00D8EEB4 /* DeviceKit */,
 			);
 			productName = lemonios;
 			productReference = 2A4558912299825700250D01 /* 杭电助手.app */;
@@ -734,7 +879,8 @@
 			);
 			name = schedulewidget;
 			packageProductDependencies = (
-				2A1796D82387F51100E79489 /* Alamofire */,
+				2A364C44242CC2C800D8EEB4 /* Alamofire */,
+				2A364C46242CC2C800D8EEB4 /* DeviceKit */,
 			);
 			productName = schedulewidget;
 			productReference = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */;
@@ -771,7 +917,8 @@
 			);
 			name = "watch Extension";
 			packageProductDependencies = (
-				2AC9F95223996D1D00D46B61 /* Alamofire */,
+				2A364C54242CC2F200D8EEB4 /* Alamofire */,
+				2A364C56242CC2F200D8EEB4 /* DeviceKit */,
 			);
 			productName = "watch Extension";
 			productReference = 2AC9F93123996CDE00D46B61 /* watch Extension.appex */;
@@ -791,7 +938,8 @@
 			);
 			name = sunrunwidget;
 			packageProductDependencies = (
-				2A1796DA2387F51E00E79489 /* Alamofire */,
+				2A364C48242CC2CD00D8EEB4 /* Alamofire */,
+				2A364C4A242CC2CD00D8EEB4 /* DeviceKit */,
 			);
 			productName = sunrunwidget;
 			productReference = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */;
@@ -828,10 +976,47 @@
 			);
 			name = electrictwidget;
 			packageProductDependencies = (
-				4E9E83F02395F68900001387 /* Alamofire */,
+				2A364C50242CC2D900D8EEB4 /* Alamofire */,
+				2A364C52242CC2D900D8EEB4 /* DeviceKit */,
 			);
 			productName = electrictwidget;
 			productReference = 4E9E83E02395F66400001387 /* 智能电费.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		4EB70CD0246EAD9700B6926B /* HDU help sticker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EB70CDB246EAD9800B6926B /* Build configuration list for PBXNativeTarget "HDU help sticker" */;
+			buildPhases = (
+				4EB70CCF246EAD9700B6926B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HDU help sticker";
+			productName = "HDU help sticker";
+			productReference = 4EB70CD1246EAD9700B6926B /* 杭电助手时柒.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
+		4EBC6EDB23A3C12300C44339 /* all in widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBC6EEA23A3C12300C44339 /* Build configuration list for PBXNativeTarget "all in widget" */;
+			buildPhases = (
+				4EBC6ED823A3C12300C44339 /* Sources */,
+				4EBC6ED923A3C12300C44339 /* Frameworks */,
+				4EBC6EDA23A3C12300C44339 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "all in widget";
+			packageProductDependencies = (
+				2A364C58242CC2F900D8EEB4 /* Alamofire */,
+				2A364C5A242CC2F900D8EEB4 /* DeviceKit */,
+			);
+			productName = "all in widget";
+			productReference = 4EBC6EDC23A3C12300C44339 /* all in widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -840,7 +1025,7 @@
 		2A4558892299825600250D01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Inkwire Tech (Hangzhou) Co., Ltd.";
 				TargetAttributes = {
@@ -887,6 +1072,12 @@
 					4E9E83DF2395F66400001387 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					4EB70CD0246EAD9700B6926B = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					4EBC6EDB23A3C12300C44339 = {
+						CreatedOnToolsVersion = 11.3;
+					};
 				};
 			};
 			buildConfigurationList = 2A45588C2299825600250D01 /* Build configuration list for PBXProject "杭电助手" */;
@@ -899,8 +1090,8 @@
 			);
 			mainGroup = 2A4558882299825600250D01;
 			packageReferences = (
-				2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */,
-				2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */,
+				2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */,
+				2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */,
 			);
 			productRefGroup = 2A4558922299825700250D01 /* Products */;
 			projectDirPath = "";
@@ -916,6 +1107,8 @@
 				4E9E83DF2395F66400001387 /* electrictwidget */,
 				2AC9F92423996CD900D46B61 /* watch */,
 				2AC9F93023996CDE00D46B61 /* watch Extension */,
+				4EBC6EDB23A3C12300C44339 /* all in widget */,
+				4EB70CD0246EAD9700B6926B /* HDU help sticker */,
 			);
 		};
 /* End PBXProject section */
@@ -933,31 +1126,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AAE59A123A36F6000233D56 /* ic_dark@3x.png in Resources */,
-				2AAE59AF23A36F6000233D56 /* ic_classic.png in Resources */,
-				2AAE59AE23A36F6000233D56 /* ic_purple@3x.png in Resources */,
-				2AAE59A723A36F6000233D56 /* ic_classic@2x.png in Resources */,
-				2ADBF3B02375B928001BE5D5 /* .gitignore in Resources */,
-				2AAE59AC23A36F6000233D56 /* ic_dark.png in Resources */,
-				2AAE59B123A36F6000233D56 /* ic_blue@2x.png in Resources */,
-				2AAE59A023A36F6000233D56 /* ic_pride2.png in Resources */,
-				2AAE59B323A36F6000233D56 /* ic_pride2@2x.png in Resources */,
-				2AAE59A523A36F6000233D56 /* ic_default.png in Resources */,
-				2AAE59A323A36F6000233D56 /* ic_purple.png in Resources */,
-				2AAE59AD23A36F6000233D56 /* ic_purple@2x.png in Resources */,
-				2AAE59A423A36F6000233D56 /* ic_dark@2x.png in Resources */,
-				2AAE59A823A36F6000233D56 /* ic_default@3x.png in Resources */,
-				2AAE599F23A36F6000233D56 /* ic_blue.png in Resources */,
-				2AAE59B023A36F6000233D56 /* ic_pride2@3x.png in Resources */,
-				2AAE59A623A36F6000233D56 /* ic_pride@2x.png in Resources */,
+				4E4E378523ACF7AF00AAE077 /* ic_dark.png in Resources */,
+				4E4E377923ACF7AF00AAE077 /* ic_pride2.png in Resources */,
+				4E4E377B23ACF7AF00AAE077 /* ic_pride.png in Resources */,
+				4E4E378A23ACF7AF00AAE077 /* ic_blue@2x.png in Resources */,
+				4E4E378B23ACF7AF00AAE077 /* ic_blue@3x.png in Resources */,
+				4E4E377C23ACF7AF00AAE077 /* ic_purple.png in Resources */,
+				4E4E378723ACF7AF00AAE077 /* ic_purple@3x.png in Resources */,
+				4E4E377823ACF7AF00AAE077 /* ic_blue.png in Resources */,
+				4E4E378623ACF7AF00AAE077 /* ic_purple@2x.png in Resources */,
+				4E4E378323ACF7AF00AAE077 /* ic_classic@3x.png in Resources */,
+				4E4E377E23ACF7AF00AAE077 /* ic_default.png in Resources */,
+				2A0ECFC4242A428400A261F7 /* ic_neon@3x.png in Resources */,
+				4E4E378823ACF7AF00AAE077 /* ic_classic.png in Resources */,
 				2A4558A22299825800250D01 /* LaunchScreen.storyboard in Resources */,
-				2AAE59AB23A36F6000233D56 /* ic_pride@3x.png in Resources */,
+				4E4E377A23ACF7AF00AAE077 /* ic_dark@3x.png in Resources */,
+				4E4E378C23ACF7AF00AAE077 /* ic_pride2@2x.png in Resources */,
+				4E4E378423ACF7AF00AAE077 /* ic_pride@3x.png in Resources */,
+				4E4E378023ACF7AF00AAE077 /* ic_classic@2x.png in Resources */,
+				2A0ECFC3242A428400A261F7 /* ic_neon.png in Resources */,
 				2A45589F2299825800250D01 /* Assets.xcassets in Resources */,
-				2AAE59AA23A36F6000233D56 /* ic_classic@3x.png in Resources */,
-				2AAE59A223A36F6000233D56 /* ic_pride.png in Resources */,
-				2AAE59A923A36F6000233D56 /* ic_default@2x.png in Resources */,
+				4E4E378123ACF7AF00AAE077 /* ic_default@3x.png in Resources */,
+				4E4E377D23ACF7AF00AAE077 /* ic_dark@2x.png in Resources */,
+				4E4E378923ACF7AF00AAE077 /* ic_pride2@3x.png in Resources */,
 				2A45589A2299825700250D01 /* Main.storyboard in Resources */,
-				2AAE59B223A36F6000233D56 /* ic_blue@3x.png in Resources */,
+				2A0ECFC2242A428400A261F7 /* ic_neon@2x.png in Resources */,
+				4E4E377F23ACF7AF00AAE077 /* ic_pride@2x.png in Resources */,
+				4E4E378223ACF7AF00AAE077 /* ic_default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,8 +1182,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC9F92B23996CDE00D46B61 /* Assets.xcassets in Resources */,
 				2AC9F92923996CD900D46B61 /* Interface.storyboard in Resources */,
-				2ACFE09C23A3AE68003D6E2D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1218,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EB70CCF246EAD9700B6926B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB70CD4246EAD9800B6926B /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBC6EDA23A3C12300C44339 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBC6EE323A3C12300C44339 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1031,8 +1242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1E412A2377F72B002FA52A /* TodayViewController.swift in Sources */,
-				2AD63D8D23997D6C0005C4F8 /* WidgetNumberView.swift in Sources */,
+				4E715619241A3C1300486040 /* WidgetNumberView.swift in Sources */,
 				2A1E413A2377F7D4002FA52A /* CardWidget.swift in Sources */,
+				4E715624241A5B3300486040 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,10 +1252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA37207248628A300D003AC /* BindController.swift in Sources */,
+				4E71904B2487CD4D00F26F11 /* BindView.swift in Sources */,
 				4E937B13237A61C9009D93E0 /* newFuncView.swift in Sources */,
 				4E7E7C802390006500B097AD /* KeyboardGuardian.swift in Sources */,
 				4E7E7C7E238CC72900B097AD /* LoginController.swift in Sources */,
+				2AFF4F112419132100D2E411 /* SignInWithAppleView.swift in Sources */,
 				2A31BE9E2389107200AA9CFC /* MenuController.swift in Sources */,
+				2AFF4F13241A366300D2E411 /* Utils.swift in Sources */,
 				4E7E7C82239000DA00B097AD /* GeometryGetter.swift in Sources */,
 				2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */,
 				2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */,
@@ -1076,9 +1292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECFFB5C23857E94005B775B /* scheduleWidget.swift in Sources */,
-				4ECFFB5E23857EB6005B775B /* scheduleDataView.swift in Sources */,
+				4ECFFB5C23857E94005B775B /* ScheduleWidget.swift in Sources */,
+				4ECFFB5E23857EB6005B775B /* ScheduleDataView.swift in Sources */,
 				2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */,
+				4E715623241A5B3100486040 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1123,8 +1340,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9E83F32395F73800001387 /* ElectricNumberView.swift in Sources */,
+				4E715618241A3C1100486040 /* WidgetNumberView.swift in Sources */,
 				4E9E83E42395F66400001387 /* TodayViewController.swift in Sources */,
 				4E9E83F52395F75300001387 /* ElectricWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBC6ED823A3C12300C44339 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E71561A241A3C3000486040 /* ElectricNumberView.swift in Sources */,
+				4EBC6EFD23A3C55500C44339 /* AllInWidget.swift in Sources */,
+				4E715616241A3BA500486040 /* WidgetNumberView.swift in Sources */,
+				4E715613241A3AB500486040 /* ScheduleDataView.swift in Sources */,
+				4E715614241A3AB800486040 /* ScheduleWidget.swift in Sources */,
+				4E715621241A5B1400486040 /* Utils.swift in Sources */,
+				4E715617241A3BCF00486040 /* CardWidget.swift in Sources */,
+				4E715615241A3B5000486040 /* SunRunWidget.swift in Sources */,
+				4EBC6EE023A3C12300C44339 /* TodayViewController.swift in Sources */,
+				4E71561B241A3C3200486040 /* ElectricWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,6 +1410,17 @@
 			platformFilter = ios;
 			target = 4E9E83DF2395F66400001387 /* electrictwidget */;
 			targetProxy = 4E9E83E92395F66400001387 /* PBXContainerItemProxy */;
+		};
+		4EB70CD7246EAD9800B6926B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EB70CD0246EAD9700B6926B /* HDU help sticker */;
+			targetProxy = 4EB70CD6246EAD9800B6926B /* PBXContainerItemProxy */;
+		};
+		4EBC6EE623A3C12300C44339 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 4EBC6EDB23A3C12300C44339 /* all in widget */;
+			targetProxy = 4EBC6EE523A3C12300C44339 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1227,6 +1473,14 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
+		4EBC6EE123A3C12300C44339 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EBC6EE223A3C12300C44339 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1235,7 +1489,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1244,7 +1498,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
@@ -1259,7 +1513,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1268,7 +1522,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
@@ -1336,6 +1590,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -1390,6 +1645,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1400,9 +1656,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -1412,10 +1669,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1427,9 +1687,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = lemonios/lemonios.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -1439,10 +1700,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1454,7 +1718,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = lemoniosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1475,7 +1739,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = lemoniosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1495,7 +1759,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = lemoniosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1515,7 +1779,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3CA6TZ35K4;
+				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = lemoniosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1535,7 +1799,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1544,7 +1808,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -1559,7 +1823,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1568,7 +1832,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -1583,8 +1847,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "watch Extension/watch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_PREVIEWS = YES;
@@ -1594,9 +1859,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1610,8 +1876,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "watch Extension/watch Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_PREVIEWS = YES;
@@ -1621,9 +1888,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1638,14 +1906,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = watch/watch.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1660,14 +1930,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = watch/watch.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1681,7 +1953,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1690,7 +1962,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
@@ -1705,7 +1977,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1714,7 +1986,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
@@ -1767,7 +2039,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1776,10 +2048,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1790,7 +2063,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1799,10 +2072,99 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4EB70CD9246EAD9800B6926B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 53;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = "HDU help sticker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 2.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.HDU-help-sticker";
+				PRODUCT_NAME = "杭电助手时柒";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EB70CDA246EAD9800B6926B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 53;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = "HDU help sticker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 2.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.HDU-help-sticker";
+				PRODUCT_NAME = "杭电助手时柒";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4EBC6EE823A3C12300C44339 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "all in widget/all in widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 53;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = "all in widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.all-in-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EBC6EE923A3C12300C44339 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "all in widget/all in widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 53;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = "all in widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.2.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.all-in-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1910,62 +2272,115 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4EB70CDB246EAD9800B6926B /* Build configuration list for PBXNativeTarget "HDU help sticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EB70CD9246EAD9800B6926B /* Debug */,
+				4EB70CDA246EAD9800B6926B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EBC6EEA23A3C12300C44339 /* Build configuration list for PBXNativeTarget "all in widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBC6EE823A3C12300C44339 /* Debug */,
+				4EBC6EE923A3C12300C44339 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */ = {
+		2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alamofire/alamofire";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.9.1;
+				minimumVersion = 5.0.5;
 			};
 		};
-		2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+		2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/devicekit/DeviceKit";
+			repositoryURL = "https://github.com/devicekit/devicekit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2A1796D32387F42A00E79489 /* Alamofire */ = {
+		2A364C3F242CC29400D8EEB4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
 			productName = Alamofire;
 		};
-		2A1796D82387F51100E79489 /* Alamofire */ = {
+		2A364C42242CC2AE00D8EEB4 /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
-			productName = Alamofire;
-		};
-		2A1796DA2387F51E00E79489 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
-			productName = Alamofire;
-		};
-		2A1796DC2387F52600E79489 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
-			productName = Alamofire;
-		};
-		2AA008222385674800A05B03 /* DeviceKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2AA008212385674800A05B03 /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
 			productName = DeviceKit;
 		};
-		2AC9F95223996D1D00D46B61 /* Alamofire */ = {
+		2A364C44242CC2C800D8EEB4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
 			productName = Alamofire;
 		};
-		4E9E83F02395F68900001387 /* Alamofire */ = {
+		2A364C46242CC2C800D8EEB4 /* DeviceKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2A1796D22387F42A00E79489 /* XCRemoteSwiftPackageReference "alamofire" */;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C48242CC2CD00D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
 			productName = Alamofire;
+		};
+		2A364C4A242CC2CD00D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C4C242CC2D300D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C4E242CC2D300D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C50242CC2D900D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C52242CC2D900D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C54242CC2F200D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C56242CC2F200D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
+		};
+		2A364C58242CC2F900D8EEB4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		2A364C5A242CC2F900D8EEB4 /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
+			productName = DeviceKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 

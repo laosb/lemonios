@@ -17,13 +17,13 @@ class LMWidgetCard: ObservableObject {
     @Published var available: Bool?
     
     init (_ token: String) {
-        Alamofire.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token)", "User-Agent": "Alamofire Lemon_iOS"]).validate().responseJSON(completionHandler:
+        AF.request("https://api.hduhelp.com/infoStream/v3", headers:["Authorization": "token \(token)", "User-Agent": "Alamofire Lemon_watchOS"]).validate().responseJSON(completionHandler:
             {
                 response in switch response.result
                 {
-                    case .success:
+                    case .success(let value):
 //                            print(response.result)
-                        let json = response.result.value
+                        let json = value
                         let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                         let CardData = newRawData.object(forKey: "card") as? NSDictionary
                         
@@ -38,7 +38,7 @@ class LMWidgetCard: ObservableObject {
                         if remaining <= 15.0 {
                             self.tip = "⚠️ 余额较少，记得充值"
                         }
-                        
+                        print(response)
                     case .failure:
 //                            print(response)
                         self.available = false

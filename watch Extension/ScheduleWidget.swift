@@ -24,13 +24,13 @@ class LMSchedule: ObservableObject {
     @Published var LMData = Array<LMScheduleData>()
     @Published var available: Bool?
     init(_ token: String) {
-        Alamofire.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
+        AF.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
             "Authorization": "token \(token)",
-            "User-Agent": "Alamofire Lemon_iOS",
+            "User-Agent": "Alamofire Lemon_watchOS",
         ]).validate().responseJSON(completionHandler: { response in
             switch response.result {
-                    case .success:
-                        let json = response.result.value
+                    case .success(let value):
+                        let json = value
                         let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
                         let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
                         
@@ -54,9 +54,6 @@ class LMSchedule: ObservableObject {
                                 self.LMData.append(tempSData)
                             }
                         }
-//                            print("!!!!!!!!!!!!!!!!!!!")
-//                            print(tempData.count)
-//                            print(sData.count)
                         self.available = true
                     case .failure:
                         self.available = false
@@ -78,9 +75,6 @@ struct ScheduleWidget: View {
     }
     
     var body: some View {
-        
-        
-        
         //GeometryReader {geometry in
             VStack {
                 if self.scheduleData.available == nil || !self.scheduleData.available! {
@@ -96,26 +90,7 @@ struct ScheduleWidget: View {
                                 scheduleDataView(realData: self.scheduleData.LMData[1])
                                     .padding(.top)
                             }
-                        }//.environment(\.defaultMinListRowHeight, geometry.size.height/2)
-//                        VStack {
-//                            Button(action: {
-//                                self.chargeFunc? { success in
-//                                    if !success {
-//                                        self.tipMessage = ""
-//                                    }
-//                                }
-//                            }) {
-//                                VStack {
-//                                    Spacer()
-//                                    Text("签到")
-//                                        .accentColor(Color.white)
-//                                    Spacer()
-//                                }
-//                            }
-//                                .frame(width: 25.0)
-//                                .background(Color(red:0.20, green:0.60, blue:0.86))
-//                                .cornerRadius(12.5)
-//                        }.padding(10.0)
+                        }
                 }
                 else {
                     VStack(alignment: .center) {

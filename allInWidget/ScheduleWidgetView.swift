@@ -1,8 +1,8 @@
 //
-//  scheduleDataView.swift
-//  schedulewidget
+//  scheduleWidgetView.swift
+//  allInWidget
 //
-//  Created by ljz on 2019/11/20.
+//  Created by ljz on 2019/12/13.
 //  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
 //
 
@@ -23,9 +23,3 @@ struct scheduleDataView: View {
         }
     }
 }
-
-//struct scheduleDataView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        scheduleDataView(realData: )
-//    }
-//}

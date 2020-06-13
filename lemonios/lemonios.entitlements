@@ -8,6 +8,15 @@
 	<array>
 		<string>Default</string>
 	</array>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:appdev.hduhelp.com</string>
+		<string>applinks:app.hduhelp.com</string>
+		<string>applinks:applite.hduhelp.com</string>
+		<string>webcredentials:appdev.hduhelp.com</string>
+		<string>webcredentials:app.hduhelp.com</string>
+		<string>webcredentials:applite.hduhelp.com</string>
+	</array>
 	<key>com.apple.developer.siri</key>
 	<true/>
 	<key>com.apple.security.app-sandbox</key>
@@ -17,6 +26,8 @@
 		<string>group.help.hdu.lemon.ios</string>
 	</array>
 	<key>com.apple.security.network.client</key>
+	<true/>
+	<key>com.apple.security.personal-information.location</key>
 	<true/>
 </dict>
 </plist>
