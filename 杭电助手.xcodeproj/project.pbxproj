@@ -41,6 +41,8 @@
 		2A4558AD2299825900250D01 /* lemoniosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558AC2299825900250D01 /* lemoniosTests.swift */; };
 		2A4558B82299825900250D01 /* lemoniosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4558B72299825900250D01 /* lemoniosUITests.swift */; };
 		2A4558C72299A45200250D01 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4558C62299A45200250D01 /* WebKit.framework */; };
+		2A45652F24A7B15A000CB338 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45652E24A7B15A000CB338 /* Model.swift */; };
+		2A45653024A7BE11000CB338 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45652E24A7B15A000CB338 /* Model.swift */; };
 		2A5C40CF233F9AC200B9FF02 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */; };
 		2A5C40D2233F9AC200B9FF02 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */; };
 		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -298,6 +300,7 @@
 		2A4558B72299825900250D01 /* lemoniosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lemoniosUITests.swift; sourceTree = "<group>"; };
 		2A4558B92299825900250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A4558C62299A45200250D01 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2A45652E24A7B15A000CB338 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		2A5C40CD233F9AC200B9FF02 /* 下节课.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "下节课.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -659,6 +662,7 @@
 				2A88402124A1F7B70082580A /* WidgetSchedule.swift */,
 				2A88402324A1F7B80082580A /* Assets.xcassets */,
 				2A88402524A1F7B80082580A /* Info.plist */,
+				2A45652E24A7B15A000CB338 /* Model.swift */,
 			);
 			path = WidgetSchedule;
 			sourceTree = "<group>";
@@ -1340,6 +1344,7 @@
 				2A31BE9E2389107200AA9CFC /* MenuController.swift in Sources */,
 				2AFF4F13241A366300D2E411 /* Utils.swift in Sources */,
 				4E7E7C82239000DA00B097AD /* GeometryGetter.swift in Sources */,
+				2A45652F24A7B15A000CB338 /* Model.swift in Sources */,
 				2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */,
 				2A45589D2299825700250D01 /* lemonios.xcdatamodeld in Sources */,
 				4E937B0D237A46AB009D93E0 /* NewFuncRow.swift in Sources */,
@@ -1382,6 +1387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A45653024A7BE11000CB338 /* Model.swift in Sources */,
 				2A88402224A1F7B70082580A /* WidgetSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
