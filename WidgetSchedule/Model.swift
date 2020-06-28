@@ -17,7 +17,7 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
     var startTime: String
     var endTime: String
     var teacher: String
-    var isTomorrow: Bool
+    var isTomorrow: Bool = false
     
     private func baseDate () -> Date {
         isTomorrow
@@ -50,8 +50,17 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
         case isTomorrow = "IsTomorrow"
     }
     
+    private struct ResponseData: Codable {
+        var isTomorrow: Bool
+        var schedule: [LMWidgetScheduleItem]
+        
+        enum CodingKeys: String, CodingKey {
+            case isTomorrow = "IsTomorrow"
+            case schedule = "Schedule"
+        }
+    }
     private struct Response: Codable {
-        var data: [LMWidgetScheduleItem]
+        var data: ResponseData
     }
     
     private static var token: String? {
@@ -72,10 +81,18 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
         ).validate().responseDecodable(of: Response.self) { res in
             switch res.result {
             case .success(let response):
-                print("success")
-                completion(response.data)
+                var items = response.data.schedule
+                if response.data.isTomorrow {
+                    items = items.map { item in
+                        var newItem = item
+                        newItem.isTomorrow = true
+                        return newItem
+                    }
+                }
+                completion(items)
             case .failure(let error):
-                print(error)
+                NSLog("error")
+                NSLog(error.errorDescription!)
                 completion(nil)
             }
         }

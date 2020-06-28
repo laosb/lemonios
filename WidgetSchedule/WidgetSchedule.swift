@@ -22,20 +22,16 @@ struct Provider: TimelineProvider {
 
     public func timeline(with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [ScheduleEntry] = []
-        print("start fetching")
 
         LMWidgetScheduleItem.fetchData { items in
-            print("fetching")
             guard items != nil else {
                 // Error happened.
-                print("errored")
                 let timeline = Timeline(entries: [ScheduleEntry(date: Date(), items: [], errored: true)], policy: .atEnd)
                 completion(timeline)
                 return
             }
             var remainingItems = items!
             var startingDate = Date()
-            print(remainingItems)
             if remainingItems.isEmpty {
                 entries.append(
                     ScheduleEntry(date: startingDate, items: [], errored: false)
@@ -44,7 +40,6 @@ struct Provider: TimelineProvider {
                     // Sometimes there could be a schedule change. So refetch after an hour.
                     Calendar.current.date(byAdding: .hour, value: 1, to: Date())!
                 ))
-                print(timeline)
                 completion(timeline)
                 return
             }
