@@ -22,16 +22,32 @@ struct Provider: TimelineProvider {
 
     public func timeline(with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [ScheduleEntry] = []
+        print("start fetching")
 
         LMWidgetScheduleItem.fetchData { items in
+            print("fetching")
             guard items != nil else {
                 // Error happened.
+                print("errored")
                 let timeline = Timeline(entries: [ScheduleEntry(date: Date(), items: [], errored: true)], policy: .atEnd)
                 completion(timeline)
                 return
             }
             var remainingItems = items!
             var startingDate = Date()
+            print(remainingItems)
+            if remainingItems.isEmpty {
+                entries.append(
+                    ScheduleEntry(date: startingDate, items: [], errored: false)
+                )
+                let timeline = Timeline(entries: entries, policy: .after(
+                    // Sometimes there could be a schedule change. So refetch after an hour.
+                    Calendar.current.date(byAdding: .hour, value: 1, to: Date())!
+                ))
+                print(timeline)
+                completion(timeline)
+                return
+            }
             while !remainingItems.isEmpty {
                 let firstItem = remainingItems.first!
                 entries.append(
@@ -68,7 +84,7 @@ struct WidgetScheduleEntryView : View {
             Text(item.course).font(.title)
             Text(item.classRoom).bold() + Text(" · " + item.teacher)
             Text("\(item.isTomorrow ? "明天" : "")\(item.startTime)-\(item.endTime)")
-        }
+        }.frame(minWidth: 0, maxWidth: .infinity)
     }
     func emptyView () -> some View {
         HStack {
@@ -81,32 +97,38 @@ struct WidgetScheduleEntryView : View {
     @ViewBuilder
     var body: some View {
         VStack {
-            switch family {
-            case .systemSmall:
-                VStack(alignment: .leading) {
-                    Text("下节课").font(.footnote).foregroundColor(.accentColor)
-                    Spacer()
-                    if entry.items.count > 0 {
-                        itemView(entry.items[0])
-                    } else {
-                        emptyView()
+            if entry.errored {
+                Spacer()
+                Text("发生错误").opacity(0.8)
+                Spacer()
+            } else {
+                switch family {
+                case .systemSmall:
+                    VStack(alignment: .leading) {
+                        Text("下节课").font(.footnote).bold().foregroundColor(.accentColor)
+                        Spacer()
+                        if entry.items.count > 0 {
+                            itemView(entry.items[0])
+                        } else {
+                            emptyView()
+                        }
                     }
-                }
-            case .systemMedium:
-                VStack(alignment: .leading) {
-                    Text("之后的课").font(.footnote).foregroundColor(.accentColor)
-                    Spacer()
-                    if entry.items.count > 0 {
-                        HStack(alignment: .bottom) {
-                            ForEach(entry.items) { item in
-                                itemView(item).frame(minWidth: 0, maxWidth: .infinity)
-                            }
-                        }.frame(minWidth: 0, maxWidth: .infinity)
-                    } else {
-                        emptyView()
+                case .systemMedium:
+                    VStack(alignment: .leading) {
+                        Text("之后的课").font(.footnote).bold().foregroundColor(.accentColor)
+                        Spacer()
+                        if entry.items.count > 0 {
+                            HStack(alignment: .bottom) {
+                                ForEach(entry.items) { item in
+                                    itemView(item)
+                                }
+                            }.frame(minWidth: 0, maxWidth: .infinity)
+                        } else {
+                            emptyView()
+                        }
                     }
+                default: Text("尚不支持此尺寸")
                 }
-            default: Text("尚不支持此尺寸")
             }
         }.padding()
     }
@@ -114,7 +136,7 @@ struct WidgetScheduleEntryView : View {
 
 @main
 struct WidgetSchedule: Widget {
-    private let kind: String = "WidgetSchedule"
+    private let kind: String = "help.hdu.lemonios.WidgetSchedule"
 
     public var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider(), placeholder: PlaceholderView()) { entry in

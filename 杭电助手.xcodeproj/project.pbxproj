@@ -2464,8 +2464,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alamofire/alamofire";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.5;
+				branch = master;
+				kind = branch;
 			};
 		};
 		2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */ = {

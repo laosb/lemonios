@@ -66,14 +66,16 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
         AF.request(
             "https://api.hduhelp.com/base/student/schedule/now",
             headers: [
-                "User-Agent": "Lemon_iOS_WidgetKit/\(Self.version ?? "Unknown")",
+                "User-Agent": "Lemon_iOS_WidgetKit/\(Self.version ?? "Unknown") Lemon_iOS/\(Self.version ?? "Unknown") Alamofire Lemon_iOS",
                 "Authorization": "token \(Self.token ?? "")"
             ]
         ).validate().responseDecodable(of: Response.self) { res in
             switch res.result {
             case .success(let response):
+                print("success")
                 completion(response.data)
-            case .failure:
+            case .failure(let error):
+                print(error)
                 completion(nil)
             }
         }

@@ -65,7 +65,11 @@ struct SignInWithAppleView: UIViewRepresentable {
                 ],
                 encoding: URLEncoding.queryString,
                 headers: [ "User-Agent": "Lemon_iOS" ]
-            ).validate().responseJSON { res in
+            ).validate().responseData{ res in
+                if case .success(let content) = res.result {
+                    print("data:", content.base64EncodedString())
+                }
+            }.responseJSON { res in
                 switch res.result {
                 case .success(let val):
                     let value = val as! NSDictionary
@@ -89,8 +93,9 @@ struct SignInWithAppleView: UIViewRepresentable {
                             self.parent?.onFinish(false, "Apple 登录失败，请重试")
                         }
                     }
-                case .failure:
-                    self.parent?.onFinish(false, "Apple 登录失败。请重试")
+                case .failure(let error):
+                    print("result:", res.result)
+                    self.parent?.onFinish(false, "Apple 登录失败。请重试。")
                 }
             }
         }
