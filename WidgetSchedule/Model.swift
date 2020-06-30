@@ -40,6 +40,9 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
     var endTimeInDate: Date {
         dateFromTimeString(endTime, baseDate: baseDate())
     }
+    var shortClassRoom: String {
+        classRoom.replacingOccurrences(of: "第(\\d+)教研楼(.+)", with: "$1教$2", options: [.regularExpression])
+    }
     
     enum CodingKeys: String, CodingKey {
         case course = "COURSE"
@@ -47,7 +50,6 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
         case startTime = "STARTTIME"
         case endTime = "ENDTIME"
         case teacher = "TEACHER"
-        case isTomorrow = "IsTomorrow"
     }
     
     private struct ResponseData: Codable {

@@ -77,7 +77,7 @@ struct WidgetScheduleEntryView : View {
     func itemView (_ item: LMWidgetScheduleItem) -> some View {
         VStack(alignment: .leading) {
             Text(item.course).font(.title)
-            Text(item.classRoom).bold() + Text(" · " + item.teacher)
+            Text(item.shortClassRoom).bold() + Text(" · " + item.teacher)
             Text("\(item.isTomorrow ? "明天" : "")\(item.startTime)-\(item.endTime)")
         }.frame(minWidth: 0, maxWidth: .infinity)
     }
