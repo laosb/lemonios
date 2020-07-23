@@ -9,15 +9,16 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
+struct ScheduleProvider: TimelineProvider {
     public typealias Entry = ScheduleEntry
+    
+    public static let placeholderEntry = ScheduleEntry(date: Date(), items: [
+        LMWidgetScheduleItem(course: "大学英语", classRoom: "7教123", startTime: "8:05", endTime: "11:35", teacher: "竺寿", isTomorrow: false),
+        LMWidgetScheduleItem(course: "办公自动化软件", classRoom: "3教317", startTime: "13:30", endTime: "16:10", teacher: "竺寿", isTomorrow: false)
+    ], errored: false)
 
     public func snapshot(with context: Context, completion: @escaping (ScheduleEntry) -> ()) {
-        let entry = ScheduleEntry(date: Date(), items: [
-            LMWidgetScheduleItem(course: "大学英语", classRoom: "7教123", startTime: "8:05", endTime: "11:35", teacher: "竺寿", isTomorrow: false),
-            LMWidgetScheduleItem(course: "办公自动化软件", classRoom: "3教317", startTime: "13:30", endTime: "16:10", teacher: "竺寿", isTomorrow: false)
-        ], errored: false)
-        completion(entry)
+        completion(ScheduleProvider.placeholderEntry)
     }
 
     public func timeline(with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
@@ -64,15 +65,9 @@ struct ScheduleEntry: TimelineEntry {
     let errored: Bool
 }
 
-struct PlaceholderView : View {
-    var body: some View {
-        Text("解锁以查看")
-    }
-}
-
 struct WidgetScheduleEntryView : View {
     @Environment(\.widgetFamily) var family: WidgetFamily
-    var entry: Provider.Entry
+    var entry: ScheduleProvider.Entry
     
     func itemView (_ item: LMWidgetScheduleItem) -> some View {
         VStack(alignment: .leading) {
@@ -129,16 +124,26 @@ struct WidgetScheduleEntryView : View {
     }
 }
 
-@main
-struct WidgetSchedule: Widget {
+struct ScheduleWidget: Widget {
     private let kind: String = "help.hdu.lemonios.WidgetSchedule"
 
     public var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider(), placeholder: PlaceholderView()) { entry in
+        StaticConfiguration(kind: kind, provider: ScheduleProvider()) { entry in
             WidgetScheduleEntryView(entry: entry)
         }
         .configurationDisplayName("下节课")
         .description("显示接下来的几节课。")
         .supportedFamilies([.systemSmall, .systemMedium])
+    }
+}
+
+struct ScheduleWidget_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            WidgetScheduleEntryView(entry: ScheduleProvider.placeholderEntry)
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            WidgetScheduleEntryView(entry: ScheduleProvider.placeholderEntry)
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+        }
     }
 }
