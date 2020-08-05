@@ -13,12 +13,16 @@ struct ScheduleProvider: TimelineProvider {
     public typealias Entry = ScheduleEntry
     
     public static let placeholderEntry = ScheduleEntry(date: Date(), items: [
-        LMWidgetScheduleItem(course: "大学英语", classRoom: "7教123", startTime: "8:05", endTime: "11:35", teacher: "竺寿", isTomorrow: false),
-        LMWidgetScheduleItem(course: "办公自动化软件", classRoom: "3教317", startTime: "13:30", endTime: "16:10", teacher: "竺寿", isTomorrow: false)
+        LMWidgetScheduleItem(course: "----", classRoom: "-教---", startTime: "--:--", endTime: "--:--", teacher: "--", isTomorrow: false),
+        LMWidgetScheduleItem(course: "----", classRoom: "-教---", startTime: "--:--", endTime: "--:--", teacher: "--", isTomorrow: false),
     ], errored: false)
 
     public func snapshot(with context: Context, completion: @escaping (ScheduleEntry) -> ()) {
         completion(ScheduleProvider.placeholderEntry)
+    }
+
+    public func placeholder(in context: Context) -> ScheduleEntry {
+        ScheduleProvider.placeholderEntry
     }
 
     public func timeline(with context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
