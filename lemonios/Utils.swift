@@ -8,6 +8,15 @@
 
 import Foundation
 import UIKit
+import WebKit
+
+#if targetEnvironment(macCatalyst)
+extension WKWebView {
+  override open var safeAreaInsets: UIEdgeInsets {
+    UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+  }
+}
+#endif
 
 struct LMUtils {
     
