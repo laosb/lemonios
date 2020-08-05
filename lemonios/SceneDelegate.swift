@@ -86,9 +86,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         #if targetEnvironment(macCatalyst)
         if let windowScene = scene as? UIWindowScene {
+            windowScene.sizeRestrictions?.minimumSize = CGSize(width: 700, height: 400)
             if let titlebar = windowScene.titlebar {
+                titlebar.toolbar?.isVisible = false
                 titlebar.titleVisibility = .hidden
-                titlebar.autoHidesToolbarInFullScreen = true
             }
         }
         #endif
