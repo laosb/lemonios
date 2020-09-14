@@ -93,7 +93,7 @@ struct SignInWithAppleView: UIViewRepresentable {
               self.parent?.onFinish(false, "Apple 登录失败，请重试")
             }
           }
-        case .failure(let _):
+        case .failure:
           print("result:", res.result)
           self.parent?.onFinish(false, "Apple 登录失败。请重试。")
         }
