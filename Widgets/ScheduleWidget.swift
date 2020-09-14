@@ -75,11 +75,15 @@ struct WidgetScheduleEntryView : View {
   @Environment(\.widgetFamily) var family: WidgetFamily
   var entry: ScheduleProvider.Entry
 
+  let checkInUrl = URL(string: "https://skl.hduhelp.com/?type=2&v=5")!
+  let scheduleAppUrl = URL(string: "hduhelplemon://#/app/schedule")!
+
   func itemView (_ item: LMWidgetScheduleItem) -> some View {
     VStack(alignment: .leading) {
-      Text(item.course).font(.title)
-      Text(item.shortClassRoom).bold() + Text(" · " + item.teacher)
-      Text("\(item.isTomorrow ? "明天" : "")\(item.startTime)-\(item.endTime)")
+      Text(item.course).font(.title2)
+      Text(item.shortClassRoom).bold() + Text(item.teacher).font(.footnote)
+
+      Text(item.isTomorrow ? "明日" : "").font(.footnote) + Text("\(item.startTime)-\(item.endTime)")
     }.frame(minWidth: 0, maxWidth: .infinity)
   }
   func emptyView () -> some View {
@@ -88,6 +92,22 @@ struct WidgetScheduleEntryView : View {
       Text("今明两日无课").opacity(0.8)
       Spacer()
     }.frame(minHeight: 0, maxHeight: .infinity)
+  }
+  func titleView () -> some View {
+    HStack(alignment: .center) {
+      Text(family == .systemSmall ? "下节课" : "之后的课").bold().foregroundColor(.accentColor)
+      Spacer()
+      switch family {
+      case .systemSmall: Text("点击签到").font(.footnote).foregroundColor(.gray)
+      default:
+        Link("上课啦签到", destination: checkInUrl)
+          .padding(.horizontal, 10)
+          .padding(.vertical, 5)
+          .foregroundColor(.white)
+          .background(Color.blue)
+          .clipShape(Capsule())
+      }
+    }
   }
 
   @ViewBuilder
@@ -101,17 +121,17 @@ struct WidgetScheduleEntryView : View {
         switch family {
         case .systemSmall:
           VStack(alignment: .leading) {
-            Text("下节课").font(.footnote).bold().foregroundColor(.accentColor)
+            titleView()
             Spacer()
             if entry.items.count > 0 {
-              itemView(entry.items[0])
+              itemView(entry.items[0]).frame(minWidth: 0, maxWidth: .infinity)
             } else {
               emptyView()
             }
-          }
+          }.widgetURL(checkInUrl)
         case .systemMedium:
           VStack(alignment: .leading) {
-            Text("之后的课").font(.footnote).bold().foregroundColor(.accentColor)
+            titleView()
             Spacer()
             if entry.items.count > 0 {
               HStack(alignment: .bottom) {
@@ -122,7 +142,7 @@ struct WidgetScheduleEntryView : View {
             } else {
               emptyView()
             }
-          }
+          }.widgetURL(scheduleAppUrl)
         default: Text("尚不支持此尺寸")
         }
       }
