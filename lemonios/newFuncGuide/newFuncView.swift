@@ -21,10 +21,8 @@ struct NewFuncView: View {
             NavigationView {
                 List {
                     NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
-                        version: "2.2.2", content: [
-                            "修复了课表小组件中的「签到」功能。",
-                            "新增杭电助手拟人形象「时柒」贴纸包，可以在iMessage中使用。该贴纸包亦将或已在其它IM平台发布。",
-                            "修复了watchOS无法获取数据的问题"
+                        version: "2.3", content: [
+                            "为iOS 14用户新增全新「下节课」组件，有两个尺寸可选。可以在主屏幕/今天视图进入编辑模式添加。",
                         ]
                     ))
                 }

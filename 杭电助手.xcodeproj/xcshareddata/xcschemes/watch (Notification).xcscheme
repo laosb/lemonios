@@ -56,8 +56,10 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "watch Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/&#x676d;&#x7535;&#x52a9;&#x624b;">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2AC9F92423996CD900D46B61"
@@ -65,7 +67,7 @@
             BlueprintName = "watch"
             ReferencedContainer = "container:&#x676d;&#x7535;&#x52a9;&#x624b;.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,8 +77,10 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "watch Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/&#x676d;&#x7535;&#x52a9;&#x624b;">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2AC9F92423996CD900D46B61"
@@ -84,7 +88,16 @@
             BlueprintName = "watch"
             ReferencedContainer = "container:&#x676d;&#x7535;&#x52a9;&#x624b;.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2AC9F92423996CD900D46B61"
+            BuildableName = "watch.app"
+            BlueprintName = "watch"
+            ReferencedContainer = "container:&#x676d;&#x7535;&#x52a9;&#x624b;.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
