@@ -46,6 +46,14 @@
 		2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A981808237AC39A005C5141 /* NewFuncGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A981807237AC39A005C5141 /* NewFuncGuideController.swift */; };
 		2AA10FDD230ECFE500AE639A /* HduMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */; };
+		2AA6C74424C9869B00C12CEB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88401C24A1F7B70082580A /* WidgetKit.framework */; };
+		2AA6C74524C9869B00C12CEB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88401E24A1F7B70082580A /* SwiftUI.framework */; };
+		2AA6C74824C9869B00C12CEB /* Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6C74724C9869B00C12CEB /* Widgets.swift */; };
+		2AA6C74A24C9869C00C12CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6C74924C9869C00C12CEB /* Assets.xcassets */; };
+		2AA6C74E24C9869C00C12CEB /* WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AA6C74324C9869B00C12CEB /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AA6C75324C986C000C12CEB /* ScheduleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88402124A1F7B70082580A /* ScheduleWidget.swift */; };
+		2AA6C75424C986C000C12CEB /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45652E24A7B15A000CB338 /* ScheduleModel.swift */; };
+		2AA6C75624C9875000C12CEB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA6C75524C9875000C12CEB /* Alamofire */; };
 		2AC9F92923996CD900D46B61 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F92723996CD900D46B61 /* Interface.storyboard */; };
 		2AC9F92B23996CDE00D46B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC9F92A23996CDE00D46B61 /* Assets.xcassets */; };
 		2AC9F93223996CDE00D46B61 /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AC9F93123996CDE00D46B61 /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -160,6 +168,13 @@
 			remoteGlobalIDString = 2A5C40CC233F9AC200B9FF02;
 			remoteInfo = schedulewidget;
 		};
+		2AA6C74C24C9869C00C12CEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A4558892299825600250D01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AA6C74224C9869B00C12CEB;
+			remoteInfo = WidgetsExtension;
+		};
 		2AC9F93323996CDE00D46B61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A4558892299825600250D01 /* Project object */;
@@ -217,6 +232,7 @@
 				2A1E41312377F72B002FA52A /* 一卡通.appex in Embed App Extensions */,
 				2A5C40D9233F9AC200B9FF02 /* 下节课.appex in Embed App Extensions */,
 				2ADBF3C02375BD31001BE5D5 /* 阳光长跑.appex in Embed App Extensions */,
+				2AA6C74E24C9869C00C12CEB /* WidgetsExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,13 +300,22 @@
 		2A4558B72299825900250D01 /* lemoniosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lemoniosUITests.swift; sourceTree = "<group>"; };
 		2A4558B92299825900250D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A4558C62299A45200250D01 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2A45652E24A7B15A000CB338 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		2A5C40CD233F9AC200B9FF02 /* 下节课.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "下节课.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		2A5C40D1233F9AC200B9FF02 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2A5C40D6233F9AC200B9FF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A5C40E12340B23900B9FF02 /* 快捷课表.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "快捷课表.entitlements"; sourceTree = "<group>"; };
+		2A88401C24A1F7B70082580A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2A88401E24A1F7B70082580A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2A88402124A1F7B70082580A /* ScheduleWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleWidget.swift; sourceTree = "<group>"; };
 		2A981807237AC39A005C5141 /* NewFuncGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFuncGuideController.swift; sourceTree = "<group>"; };
 		2AA10FDC230ECFE500AE639A /* HduMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HduMapViewController.swift; sourceTree = "<group>"; };
+		2AA6C74324C9869B00C12CEB /* WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AA6C74724C9869B00C12CEB /* Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets.swift; sourceTree = "<group>"; };
+		2AA6C74924C9869C00C12CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2AA6C74B24C9869C00C12CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA6C74F24C9869D00C12CEB /* WidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetsExtension.entitlements; sourceTree = "<group>"; };
 		2AAE598A23A36F6000233D56 /* ic_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_blue.png; sourceTree = "<group>"; };
 		2AAE598B23A36F6000233D56 /* ic_pride2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pride2.png; sourceTree = "<group>"; };
 		2AAE598C23A36F6000233D56 /* ic_dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_dark@3x.png"; sourceTree = "<group>"; };
@@ -337,7 +362,6 @@
 		2ADBF3C82375D510001BE5D5 /* 阳光长跑.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "阳光长跑.entitlements"; sourceTree = "<group>"; };
 		2AE92061231C29BB002C9538 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2AEC50DC22BFD71F0005781E /* lemonios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lemonios.entitlements; sourceTree = "<group>"; };
-		2AEC50E322BFD92C0005781E /* opensubapp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = opensubapp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEC50EF22BFE1260005781E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		2AEC50F022BFE1260005781E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		2AFF4F102419132100D2E411 /* SignInWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleView.swift; sourceTree = "<group>"; };
@@ -444,6 +468,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AA6C74024C9869B00C12CEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA6C75624C9875000C12CEB /* Alamofire in Frameworks */,
+				2AA6C74524C9869B00C12CEB /* SwiftUI.framework in Frameworks */,
+				2AA6C74424C9869B00C12CEB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AC9F92E23996CDE00D46B61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,13 +494,6 @@
 				2ADBF3B62375BD31001BE5D5 /* NotificationCenter.framework in Frameworks */,
 				2A364C49242CC2CD00D8EEB4 /* Alamofire in Frameworks */,
 				2A364C4B242CC2CD00D8EEB4 /* DeviceKit in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2AEC50E022BFD92C0005781E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +535,7 @@
 		2A4558882299825600250D01 = {
 			isa = PBXGroup;
 			children = (
+				2AA6C74F24C9869D00C12CEB /* WidgetsExtension.entitlements */,
 				2ADBF3AF2375B928001BE5D5 /* .gitignore */,
 				2A4558932299825700250D01 /* lemonios */,
 				2A4558AB2299825900250D01 /* lemoniosTests */,
@@ -520,6 +548,7 @@
 				2AC9F93523996CDE00D46B61 /* watch Extension */,
 				4EBC6EDE23A3C12300C44339 /* all in widget */,
 				4EB70CD2246EAD9700B6926B /* HDU help sticker */,
+				2AA6C74624C9869B00C12CEB /* Widgets */,
 				2A4558922299825700250D01 /* Products */,
 				2A4558C52299A45200250D01 /* Frameworks */,
 				4E4E376123ACF74C00AAE077 /* Recovered References */,
@@ -532,7 +561,6 @@
 				2A4558912299825700250D01 /* 杭电助手.app */,
 				2A4558A82299825900250D01 /* 杭电助手Tests.xctest */,
 				2A4558B32299825900250D01 /* 杭电助手UITests.xctest */,
-				2AEC50E322BFD92C0005781E /* opensubapp.appex */,
 				2A5C40CD233F9AC200B9FF02 /* 下节课.appex */,
 				2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */,
 				2A1E41262377F72B002FA52A /* 一卡通.appex */,
@@ -541,6 +569,7 @@
 				2AC9F93123996CDE00D46B61 /* watch Extension.appex */,
 				4EBC6EDC23A3C12300C44339 /* all in widget.appex */,
 				4EB70CD1246EAD9700B6926B /* 杭电助手时柒.appex */,
+				2AA6C74324C9869B00C12CEB /* WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -600,6 +629,8 @@
 				2AEC50F022BFE1260005781E /* IntentsUI.framework */,
 				2A4558C62299A45200250D01 /* WebKit.framework */,
 				2A5C40CE233F9AC200B9FF02 /* NotificationCenter.framework */,
+				2A88401C24A1F7B70082580A /* WidgetKit.framework */,
+				2A88401E24A1F7B70082580A /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -615,6 +646,18 @@
 				2A5C40D6233F9AC200B9FF02 /* Info.plist */,
 			);
 			path = schedulewidget;
+			sourceTree = "<group>";
+		};
+		2AA6C74624C9869B00C12CEB /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				2A88402124A1F7B70082580A /* ScheduleWidget.swift */,
+				2A45652E24A7B15A000CB338 /* ScheduleModel.swift */,
+				2AA6C74724C9869B00C12CEB /* Widgets.swift */,
+				2AA6C74924C9869C00C12CEB /* Assets.xcassets */,
+				2AA6C74B24C9869C00C12CEB /* Info.plist */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 		2AC9F92623996CD900D46B61 /* watch */ = {
@@ -819,6 +862,7 @@
 				2AC9F94823996CDF00D46B61 /* PBXTargetDependency */,
 				4EBC6EE623A3C12300C44339 /* PBXTargetDependency */,
 				4EB70CD7246EAD9800B6926B /* PBXTargetDependency */,
+				2AA6C74D24C9869C00C12CEB /* PBXTargetDependency */,
 			);
 			name = "杭电助手";
 			packageProductDependencies = (
@@ -886,6 +930,26 @@
 			productReference = 2A5C40CD233F9AC200B9FF02 /* 下节课.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		2AA6C74224C9869B00C12CEB /* WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AA6C75224C9869D00C12CEB /* Build configuration list for PBXNativeTarget "WidgetsExtension" */;
+			buildPhases = (
+				2AA6C73F24C9869B00C12CEB /* Sources */,
+				2AA6C74024C9869B00C12CEB /* Frameworks */,
+				2AA6C74124C9869B00C12CEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetsExtension;
+			packageProductDependencies = (
+				2AA6C75524C9875000C12CEB /* Alamofire */,
+			);
+			productName = WidgetsExtension;
+			productReference = 2AA6C74324C9869B00C12CEB /* WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2AC9F92423996CD900D46B61 /* watch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AC9F94E23996CDF00D46B61 /* Build configuration list for PBXNativeTarget "watch" */;
@@ -943,23 +1007,6 @@
 			);
 			productName = sunrunwidget;
 			productReference = 2ADBF3B52375BD31001BE5D5 /* 阳光长跑.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		2AEC50E222BFD92C0005781E /* opensubapp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2AEC50EB22BFD92C0005781E /* Build configuration list for PBXNativeTarget "opensubapp" */;
-			buildPhases = (
-				2AEC50DF22BFD92C0005781E /* Sources */,
-				2AEC50E022BFD92C0005781E /* Frameworks */,
-				2AEC50E122BFD92C0005781E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = opensubapp;
-			productName = opensubapp;
-			productReference = 2AEC50E322BFD92C0005781E /* opensubapp.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		4E9E83DF2395F66400001387 /* electrictwidget */ = {
@@ -1025,8 +1072,8 @@
 		2A4558892299825600250D01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Inkwire Tech (Hangzhou) Co., Ltd.";
 				TargetAttributes = {
 					2A1E41252377F72B002FA52A = {
@@ -1057,6 +1104,9 @@
 					2A5C40CC233F9AC200B9FF02 = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					2AA6C74224C9869B00C12CEB = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					2AC9F92423996CD900D46B61 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -1065,9 +1115,6 @@
 					};
 					2ADBF3B42375BD31001BE5D5 = {
 						CreatedOnToolsVersion = 11.2;
-					};
-					2AEC50E222BFD92C0005781E = {
-						CreatedOnToolsVersion = 10.2.1;
 					};
 					4E9E83DF2395F66400001387 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -1100,7 +1147,6 @@
 				2A4558902299825700250D01 /* 杭电助手 */,
 				2A4558A72299825900250D01 /* 杭电助手Tests */,
 				2A4558B22299825900250D01 /* 杭电助手UITests */,
-				2AEC50E222BFD92C0005781E /* opensubapp */,
 				2A5C40CC233F9AC200B9FF02 /* schedulewidget */,
 				2ADBF3B42375BD31001BE5D5 /* sunrunwidget */,
 				2A1E41252377F72B002FA52A /* cardwidget */,
@@ -1109,6 +1155,7 @@
 				2AC9F93023996CDE00D46B61 /* watch Extension */,
 				4EBC6EDB23A3C12300C44339 /* all in widget */,
 				4EB70CD0246EAD9700B6926B /* HDU help sticker */,
+				2AA6C74224C9869B00C12CEB /* WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -1178,6 +1225,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AA6C74124C9869B00C12CEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA6C74A24C9869C00C12CEB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AC9F92323996CD900D46B61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1200,13 +1255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADBF3BC2375BD31001BE5D5 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2AEC50E122BFD92C0005781E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1299,6 +1347,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AA6C73F24C9869B00C12CEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA6C75424C986C000C12CEB /* ScheduleModel.swift in Sources */,
+				2AA6C75324C986C000C12CEB /* ScheduleWidget.swift in Sources */,
+				2AA6C74824C9869B00C12CEB /* Widgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AC9F92D23996CDE00D46B61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1325,13 +1383,6 @@
 				2A39868423780E74005AB8AF /* WidgetNumberView.swift in Sources */,
 				2ADBF3C42375BD3D001BE5D5 /* SunRunWidget.swift in Sources */,
 				2ADBF3B92375BD31001BE5D5 /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2AEC50DF22BFD92C0005781E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1387,6 +1438,11 @@
 			platformFilter = ios;
 			target = 2A5C40CC233F9AC200B9FF02 /* schedulewidget */;
 			targetProxy = 2A5C40D7233F9AC200B9FF02 /* PBXContainerItemProxy */;
+		};
+		2AA6C74D24C9869C00C12CEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AA6C74224C9869B00C12CEB /* WidgetsExtension */;
+			targetProxy = 2AA6C74C24C9869C00C12CEB /* PBXContainerItemProxy */;
 		};
 		2AC9F93423996CDE00D46B61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1489,7 +1545,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1498,13 +1554,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1513,7 +1570,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = cardwidget/cardwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = cardwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1522,13 +1579,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.cardwidget;
 				PRODUCT_NAME = "一卡通";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -1558,6 +1616,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1620,6 +1679,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1659,7 +1719,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -1669,7 +1729,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1678,6 +1738,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1690,7 +1751,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -1700,7 +1761,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1709,6 +1770,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -1799,7 +1861,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1808,13 +1870,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1823,7 +1886,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1832,13 +1895,74 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		2AA6C75024C9869D00C12CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 59;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.3;
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		2AA6C75124C9869D00C12CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 59;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				INFOPLIST_FILE = Widgets/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.3;
+				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -1849,7 +1973,7 @@
 				CODE_SIGN_ENTITLEMENTS = "watch Extension/watch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_PREVIEWS = YES;
@@ -1859,7 +1983,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1867,6 +1991,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
 			};
 			name = Debug;
@@ -1878,7 +2003,7 @@
 				CODE_SIGN_ENTITLEMENTS = "watch Extension/watch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_PREVIEWS = YES;
@@ -1888,7 +2013,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1896,6 +2021,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
 			};
 			name = Release;
@@ -1908,11 +2034,11 @@
 				CODE_SIGN_ENTITLEMENTS = watch/watch.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1920,6 +2046,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
 			};
 			name = Debug;
@@ -1932,11 +2059,11 @@
 				CODE_SIGN_ENTITLEMENTS = watch/watch.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1944,6 +2071,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
 			};
 			name = Release;
@@ -1953,7 +2081,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1962,13 +2090,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1977,7 +2106,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1986,51 +2115,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		2AEC50EC22BFD92C0005781E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LG57TUQ726;
-				INFOPLIST_FILE = opensubapp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.opensubapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2AEC50ED22BFD92C0005781E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LG57TUQ726;
-				INFOPLIST_FILE = opensubapp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.opensubapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -2039,7 +2131,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2048,13 +2140,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -2063,7 +2156,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2072,13 +2165,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -2089,15 +2183,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = "HDU help sticker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.HDU-help-sticker";
 				PRODUCT_NAME = "杭电助手时柒";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -2108,15 +2203,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = "HDU help sticker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.HDU-help-sticker";
 				PRODUCT_NAME = "杭电助手时柒";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -2126,7 +2222,7 @@
 				CODE_SIGN_ENTITLEMENTS = "all in widget/all in widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = "all in widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2135,13 +2231,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.all-in-widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -2151,7 +2248,7 @@
 				CODE_SIGN_ENTITLEMENTS = "all in widget/all in widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 59;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = "all in widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2160,13 +2257,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.all-in-widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -2227,6 +2325,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2AA6C75224C9869D00C12CEB /* Build configuration list for PBXNativeTarget "WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AA6C75024C9869D00C12CEB /* Debug */,
+				2AA6C75124C9869D00C12CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AC9F94A23996CDF00D46B61 /* Build configuration list for PBXNativeTarget "watch Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2250,15 +2357,6 @@
 			buildConfigurations = (
 				2ADBF3C22375BD31001BE5D5 /* Debug */,
 				2ADBF3C32375BD31001BE5D5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2AEC50EB22BFD92C0005781E /* Build configuration list for PBXNativeTarget "opensubapp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2AEC50EC22BFD92C0005781E /* Debug */,
-				2AEC50ED22BFD92C0005781E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2298,7 +2396,7 @@
 			repositoryURL = "https://github.com/alamofire/alamofire";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.5;
+				minimumVersion = 5.2.1;
 			};
 		};
 		2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */ = {
@@ -2381,6 +2479,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A364C41242CC2AE00D8EEB4 /* XCRemoteSwiftPackageReference "devicekit" */;
 			productName = DeviceKit;
+		};
+		2AA6C75524C9875000C12CEB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A364C3E242CC29400D8EEB4 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
