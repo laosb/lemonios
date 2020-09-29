@@ -100,7 +100,7 @@ struct WidgetScheduleEntryView : View {
       switch family {
       case .systemSmall: Text("点击签到").font(.footnote).foregroundColor(.gray)
       default:
-        Link("上课啦签到", destination: checkInUrl)
+        Link("签到", destination: checkInUrl)
           .padding(.horizontal, 10)
           .padding(.vertical, 5)
           .foregroundColor(.white)
