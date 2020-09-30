@@ -12,10 +12,22 @@ import SwiftUI
 struct ScheduleProvider: TimelineProvider {
   public typealias Entry = ScheduleEntry
 
-  public static let placeholderEntry = ScheduleEntry(date: Date(), items: [
-    LMWidgetScheduleItem(course: "----", classRoom: "-教---", startTime: "--:--", endTime: "--:--", teacher: "--", isTomorrow: false),
-    LMWidgetScheduleItem(course: "----", classRoom: "-教---", startTime: "--:--", endTime: "--:--", teacher: "--", isTomorrow: false),
-  ], errored: false)
+  private static let placeholderItem = LMWidgetScheduleItem(
+    course: "----",
+    classroom: "-教---",
+    startTime: Date(),
+    endTime: Date(),
+    startTimeStr: "--:--",
+    endTimeStr: "--:--",
+    teacher: "--",
+    isTomorrow: false
+  )
+
+  public static let placeholderEntry = ScheduleEntry(
+    date: Date(),
+    items: Array(repeating: placeholderItem, count: 2),
+    errored: false
+  )
 
   func placeholder(in context: Context) -> ScheduleEntry { Self.placeholderEntry }
 
@@ -23,9 +35,7 @@ struct ScheduleProvider: TimelineProvider {
     completion(ScheduleProvider.placeholderEntry)
   }
 
-  public func getPlaceholder(in context: Context) -> ScheduleEntry {
-    ScheduleProvider.placeholderEntry
-  }
+  public func getPlaceholder(in context: Context) -> ScheduleEntry { Self.placeholderEntry }
 
   public func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
     var entries: [ScheduleEntry] = []
@@ -44,8 +54,8 @@ struct ScheduleProvider: TimelineProvider {
           ScheduleEntry(date: startingDate, items: [], errored: false)
         )
         let timeline = Timeline(entries: entries, policy: .after(
-          // Sometimes there could be a schedule change. So refetch after an hour.
-          Calendar.current.date(byAdding: .hour, value: 1, to: Date())!
+          // Sometimes there could be a schedule change. So refetch after 30 min.
+          Calendar.current.date(byAdding: .minute, value: 30, to: Date())!
         ))
         completion(timeline)
         return
@@ -55,7 +65,7 @@ struct ScheduleProvider: TimelineProvider {
         entries.append(
           ScheduleEntry(date: startingDate, items: remainingItems, errored: false)
         )
-        startingDate = firstItem.endTimeInDate
+        startingDate = firstItem.endTime
         remainingItems.removeFirst()
       }
 
@@ -83,7 +93,7 @@ struct WidgetScheduleEntryView : View {
       Text(item.course).font(.title2)
       Text(item.shortClassRoom).bold() + Text(item.teacher).font(.footnote)
 
-      Text(item.isTomorrow ? "明日" : "").font(.footnote) + Text("\(item.startTime)-\(item.endTime)")
+      Text(item.isTomorrow ?? false ? "明日" : "").font(.footnote) + Text("\(item.startTimeStr)-\(item.endTimeStr)")
     }.frame(minWidth: 0, maxWidth: .infinity)
   }
   func emptyView () -> some View {
