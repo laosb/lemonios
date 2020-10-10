@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nao-XZ-uh5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nao-XZ-uh5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +29,7 @@
                             </view>
                             <wkWebView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" allowsLinkPreview="NO" customUserAgent="" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-fi-Y8X">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="Lemon_iOS">
                                     <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -44,17 +46,42 @@
                                             <constraint firstAttribute="width" constant="20" id="W1l-qK-eHv"/>
                                         </constraints>
                                     </activityIndicatorView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NEY-xM-m91" userLabel="LoadingCover">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="MRv-IV-RiR">
+                                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="FMQ-Xc-wYI"/>
+                                                    <constraint firstAttribute="width" constant="20" id="VEB-yh-NEk"/>
+                                                </constraints>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstItem="MRv-IV-RiR" firstAttribute="centerY" secondItem="NEY-xM-m91" secondAttribute="centerY" id="OHC-2o-Goa"/>
+                                            <constraint firstItem="MRv-IV-RiR" firstAttribute="centerX" secondItem="NEY-xM-m91" secondAttribute="centerX" id="xKp-P6-9hb"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstItem="xRe-gt-UIr" firstAttribute="centerX" secondItem="naI-Y0-9EK" secondAttribute="centerX" id="DDk-R8-g1E"/>
+                                    <constraint firstAttribute="trailing" secondItem="naI-Y0-9EK" secondAttribute="trailing" id="Jqx-oC-nNX"/>
+                                    <constraint firstAttribute="bottom" secondItem="naI-Y0-9EK" secondAttribute="bottom" id="PJq-gm-s32"/>
+                                    <constraint firstAttribute="leading" secondItem="naI-Y0-9EK" secondAttribute="leading" id="QzE-lK-Erv"/>
+                                    <constraint firstAttribute="top" secondItem="naI-Y0-9EK" secondAttribute="top" id="S7B-bG-Y6V"/>
                                     <constraint firstItem="xRe-gt-UIr" firstAttribute="centerY" secondItem="naI-Y0-9EK" secondAttribute="centerY" id="yQJ-12-UMk"/>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="UPR-MU-cag"/>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -75,7 +102,6 @@
                             <constraint firstAttribute="bottom" secondItem="yBe-gW-Qhm" secondAttribute="bottom" id="lnx-gt-a7X"/>
                             <constraint firstItem="8Ch-jE-sNu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZR-7i-94f"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="UPR-MU-cag"/>
                     </view>
                     <navigationItem key="navigationItem" title="杭电助手" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="jp1-fw-MgH"/>
                     <connections>
@@ -84,6 +110,7 @@
                         <outlet property="webView" destination="XTj-fi-Y8X" id="EvO-ah-WID"/>
                         <segue destination="CLS-2S-TuF" kind="presentation" identifier="gotoNewFuncGuide" modalPresentationStyle="formSheet" id="f9I-1a-SFT"/>
                         <segue destination="uUS-IR-8pm" kind="presentation" identifier="gotoLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Oqp-Ji-DpY"/>
+                        <segue destination="QMS-BO-MXC" kind="presentation" identifier="showSklSetup" modalPresentationStyle="formSheet" id="ha9-uS-nY0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,6 +164,14 @@
             </objects>
             <point key="canvasLocation" x="2925" y="-704"/>
         </scene>
+        <!--Skl Setup View Controller-->
+        <scene sceneID="LBa-po-cCl">
+            <objects>
+                <hostingController id="QMS-BO-MXC" customClass="SklSetupViewController" customModule="杭电助手" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZ9-dS-W3W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1977" y="908"/>
+        </scene>
     </scenes>
     <color key="tintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
@@ -146,5 +181,8 @@
         <namedColor name="status_bar_color">
             <color red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

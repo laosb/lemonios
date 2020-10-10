@@ -10,8 +10,14 @@
 
 import UIKit
 import os.log
+import SafariServices
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+  enum AlternativeView {
+    case sklSetupView
+    case safariView(url: URL)
+  }
 
   var window: UIWindow?
   var fired = false
@@ -22,11 +28,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     if let url = urlContexts.first?.url {
       routeUrl(url: url)
     } else {
-      fire(nativeLogin: false, route: nil)
+      fire(nativeLogin: false)
     }
   }
 
-  func fire(nativeLogin: Bool, route: String?) {
+  func fire(nativeLogin: Bool, route: String? = nil, altView: AlternativeView? = nil) {
     if fired { return }
     fired = true
     let _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
@@ -39,6 +45,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let innerVc = vc?.viewControllers[0] as? ViewController
     innerVc?.loadViewIfNeeded()
     innerVc?.shortcutFired(nativeLogin: nativeLogin, route: route)
+    if altView != nil {
+      switch altView! {
+      case .sklSetupView:
+        innerVc?.performSegue(withIdentifier: "showSklSetup", sender: nil)
+      case let .safariView(url):
+        let safariView = SFSafariViewController(url: url)
+        safariView.preferredControlTintColor = primaryColor
+        innerVc?.present(safariView, animated: true)
+      }
+    }
   }
 
   func routeUrl(url: URL) {
@@ -56,12 +72,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let hash = components.fragment
 
     if scheme != "hduhelplemon" && (host?.hasSuffix("hduhelp.com") ?? true) {
-      UIApplication.shared.open(url)
+      fire(nativeLogin: true, route: nil, altView: .safariView(url: url))
+    }
+
+    if path == "/_skl_setup" {
+      fire(nativeLogin: true, route: nil, altView: .sklSetupView)
     }
 
     if path == "/login", let auth = params?.first(where: { $0.name == "auth" }) {
       app.token = auth.value
-      fire(nativeLogin: false, route: nil)
+      fire(nativeLogin: false)
     } else {
       fire(nativeLogin: false, route: hash)
     }

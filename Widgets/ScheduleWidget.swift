@@ -9,6 +9,25 @@
 import WidgetKit
 import SwiftUI
 
+struct CapsuleLinkModifier: ViewModifier {
+  var color: Color
+  var bg: Color
+
+  func body(content: Content) -> some View {
+    content
+      .padding(.horizontal, 10)
+      .padding(.vertical, 5)
+      .foregroundColor(color)
+      .background(bg)
+      .clipShape(Capsule())
+  }
+}
+extension View {
+  func capsuleLink(color: Color = .white, bg: Color = .blue) -> some View {
+    self.modifier(CapsuleLinkModifier(color: color, bg: bg))
+  }
+}
+
 struct ScheduleProvider: TimelineProvider {
   public typealias Entry = ScheduleEntry
 
@@ -85,8 +104,12 @@ struct WidgetScheduleEntryView : View {
   @Environment(\.widgetFamily) var family: WidgetFamily
   var entry: ScheduleProvider.Entry
 
-  let checkInUrl = URL(string: "https://skl.hduhelp.com/?type=2&v=5")!
+  var checkInUrlString: String? {
+    let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+    return sharedUd!.string(forKey: "sklUrl")
+  }
   let scheduleAppUrl = URL(string: "hduhelplemon://#/app/schedule")!
+  let sklSetupUrl = URL(string: "hduhelplemon:///_skl_setup")!
 
   func itemView (_ item: LMWidgetScheduleItem) -> some View {
     VStack(alignment: .leading) {
@@ -108,19 +131,28 @@ struct WidgetScheduleEntryView : View {
       Text(family == .systemSmall ? "下节课" : "之后的课").bold().foregroundColor(.accentColor)
       Spacer()
       switch family {
-      case .systemSmall: Text("点击签到").font(.footnote).foregroundColor(.gray)
+      case .systemSmall:
+        Text(
+          checkInUrlString != nil ? "点击签到" : "设置签到"
+        ).font(.footnote).foregroundColor(.gray)
       default:
-        Link("签到", destination: checkInUrl)
-          .padding(.horizontal, 10)
-          .padding(.vertical, 5)
-          .foregroundColor(.white)
-          .background(Color.blue)
-          .clipShape(Capsule())
+        HStack(spacing: 5) {
+          if checkInUrlString != nil {
+            Link(destination: sklSetupUrl) {
+              Image(systemName: "gear")
+                .imageScale(.medium)
+                .font(.body)
+            }
+              .capsuleLink(color: .white, bg: .gray)
+            Link("签到", destination: URL(string: checkInUrlString!)!).capsuleLink()
+          } else {
+            Link("设置签到", destination: sklSetupUrl).capsuleLink()
+          }
+        }
       }
     }
   }
 
-  @ViewBuilder
   var body: some View {
     VStack {
       if entry.errored {
@@ -138,7 +170,11 @@ struct WidgetScheduleEntryView : View {
             } else {
               emptyView()
             }
-          }.widgetURL(checkInUrl)
+          }.widgetURL(
+            checkInUrlString != nil
+            ? URL(string: checkInUrlString!)!
+            : sklSetupUrl
+          )
         case .systemMedium:
           VStack(alignment: .leading) {
             titleView()
