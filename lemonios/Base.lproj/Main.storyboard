@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,44 +40,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xRe-gt-UIr">
-                                        <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                        <rect key="frame" x="197" y="553" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="GyU-sS-8JV"/>
                                             <constraint firstAttribute="width" constant="20" id="W1l-qK-eHv"/>
                                         </constraints>
                                     </activityIndicatorView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NEY-xM-m91" userLabel="LoadingCover">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <subviews>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="MRv-IV-RiR">
-                                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="FMQ-Xc-wYI"/>
-                                                    <constraint firstAttribute="width" constant="20" id="VEB-yh-NEk"/>
-                                                </constraints>
-                                            </activityIndicatorView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" notEnabled="YES"/>
-                                        </accessibility>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rYY-B0-ckL" userLabel="LoadingSticker">
+                                        <rect key="frame" x="132" y="373" width="150" height="150"/>
                                         <constraints>
-                                            <constraint firstItem="MRv-IV-RiR" firstAttribute="centerY" secondItem="NEY-xM-m91" secondAttribute="centerY" id="OHC-2o-Goa"/>
-                                            <constraint firstItem="MRv-IV-RiR" firstAttribute="centerX" secondItem="NEY-xM-m91" secondAttribute="centerX" id="xKp-P6-9hb"/>
+                                            <constraint firstAttribute="height" constant="150" id="api-Ah-GfX"/>
+                                            <constraint firstAttribute="width" constant="150" id="fUC-Jc-fln"/>
                                         </constraints>
-                                    </view>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstItem="xRe-gt-UIr" firstAttribute="centerX" secondItem="naI-Y0-9EK" secondAttribute="centerX" id="DDk-R8-g1E"/>
-                                    <constraint firstAttribute="trailing" secondItem="naI-Y0-9EK" secondAttribute="trailing" id="Jqx-oC-nNX"/>
-                                    <constraint firstAttribute="bottom" secondItem="naI-Y0-9EK" secondAttribute="bottom" id="PJq-gm-s32"/>
-                                    <constraint firstAttribute="leading" secondItem="naI-Y0-9EK" secondAttribute="leading" id="QzE-lK-Erv"/>
-                                    <constraint firstAttribute="top" secondItem="naI-Y0-9EK" secondAttribute="top" id="S7B-bG-Y6V"/>
-                                    <constraint firstItem="xRe-gt-UIr" firstAttribute="centerY" secondItem="naI-Y0-9EK" secondAttribute="centerY" id="yQJ-12-UMk"/>
+                                    <constraint firstItem="rYY-B0-ckL" firstAttribute="centerY" secondItem="naI-Y0-9EK" secondAttribute="centerY" id="4Db-UT-8OI"/>
+                                    <constraint firstItem="xRe-gt-UIr" firstAttribute="top" secondItem="rYY-B0-ckL" secondAttribute="bottom" constant="30" id="7n0-RN-GwL"/>
+                                    <constraint firstItem="xRe-gt-UIr" firstAttribute="centerX" secondItem="naI-Y0-9EK" secondAttribute="centerX" id="h0j-jW-eXd"/>
+                                    <constraint firstItem="rYY-B0-ckL" firstAttribute="centerX" secondItem="naI-Y0-9EK" secondAttribute="centerX" id="s5p-dG-IgR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -106,6 +91,7 @@
                     <navigationItem key="navigationItem" title="杭电助手" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="jp1-fw-MgH"/>
                     <connections>
                         <outlet property="loadingCover" destination="naI-Y0-9EK" id="Swx-Ux-4fD"/>
+                        <outlet property="loadingSticker" destination="rYY-B0-ckL" id="LZC-y6-7n9"/>
                         <outlet property="statusBar" destination="8Ch-jE-sNu" id="UHi-RJ-dwa"/>
                         <outlet property="webView" destination="XTj-fi-Y8X" id="EvO-ah-WID"/>
                         <segue destination="CLS-2S-TuF" kind="presentation" identifier="gotoNewFuncGuide" modalPresentationStyle="formSheet" id="f9I-1a-SFT"/>
@@ -115,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="113"/>
+            <point key="canvasLocation" x="1037.68115942029" y="112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9jX-I1-7BQ">

@@ -11,6 +11,7 @@ import CoreData
 import UserNotifications
 import Alamofire
 import DeviceKit
+import WidgetKit
 
 struct LMDeviceInfo: Encodable {
   let DeviceToken: String
@@ -29,7 +30,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
-    // Override point for customization after application launch.
+    // Migration.
+    let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
+    var migratedTo = sharedUd?.integer(forKey: "migratedTo") ?? 0
+
+    // Migrations BEGIN
+    if migratedTo < 64 {
+      sharedUd?.setValue(nil, forKey: "sklUrl")
+      if #available(iOS 14.0, *) {
+        WidgetCenter.shared.reloadTimelines(ofKind: "help.hdu.lemonios.WidgetSchedule")
+      }
+      migratedTo = 64
+    }
+    // Migrations END
+
+    sharedUd?.setValue(migratedTo, forKey: "migratedTo")
     return true
   }
 

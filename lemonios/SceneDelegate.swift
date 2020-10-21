@@ -71,8 +71,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let params = components.queryItems
     let hash = components.fragment
 
-    if scheme != "hduhelplemon" && (host?.hasSuffix("hduhelp.com") ?? true) {
-      fire(nativeLogin: true, route: nil, altView: .safariView(url: url))
+    if scheme != "hduhelplemon" {
+      if host?.hasSuffix("hduhelp.com") ?? true {
+        fire(nativeLogin: true, route: nil, altView: .safariView(url: url))
+      } else {
+        UIApplication.shared.open(url)
+      }
     }
 
     if path == "/_skl_setup" {

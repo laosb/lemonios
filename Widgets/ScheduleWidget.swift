@@ -106,7 +106,8 @@ struct WidgetScheduleEntryView : View {
 
   var checkInUrlString: String? {
     let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
-    return sharedUd!.string(forKey: "sklUrl")
+    let url = sharedUd!.string(forKey: "sklUrl")
+    return url != nil && !url!.isEmpty ? url : "yibanapp:///"
   }
   let scheduleAppUrl = URL(string: "hduhelplemon://#/app/schedule")!
   let sklSetupUrl = URL(string: "hduhelplemon:///_skl_setup")!
@@ -138,12 +139,12 @@ struct WidgetScheduleEntryView : View {
       default:
         HStack(spacing: 5) {
           if checkInUrlString != nil {
-            Link(destination: sklSetupUrl) {
-              Image(systemName: "gear")
-                .imageScale(.medium)
-                .font(.body)
-            }
-              .capsuleLink(color: .white, bg: .gray)
+//            Link(destination: sklSetupUrl) {
+//              Image(systemName: "gear")
+//                .imageScale(.medium)
+//                .font(.body)
+//            }
+//              .capsuleLink(color: .white, bg: .gray)
             Link("签到", destination: URL(string: checkInUrlString!)!).capsuleLink()
           } else {
             Link("设置签到", destination: sklSetupUrl).capsuleLink()

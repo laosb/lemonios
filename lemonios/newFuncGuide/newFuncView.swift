@@ -21,9 +21,9 @@ struct NewFuncView: View {
       NavigationView {
         List {
           NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
-            version: "2.3.1", content: [
-              "修复了iOS 14「下节课」小组件中签到提示应用不存在的问题。",
-              "因上课啦及易班的限制，首次使用小组件的签到功能前，请先点击小组件上的「设置签到」按提示完成设置后方可使用。"
+            version: "2.3.3", content: [
+              "新增「我」-「设置」-「小组件设置」，「下节课」小组件签到行为现可在启动易班和直接打开上课啦中选择。",
+              "「杭电助手时柒」贴纸包有了更可爱的图标并多了一张贴纸。时柒也来到了app的载入页。"
             ]
           ))
         }
