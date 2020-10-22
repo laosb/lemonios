@@ -379,6 +379,12 @@ extension ViewController: WKNavigationDelegate {
       return
     }
 
+    if navigationAction.request.url?.scheme == "hduhelplemon" {
+      decisionHandler(.cancel)
+      UIApplication.shared.open(navigationAction.request.url!)
+      return
+    }
+
     if navigationAction.navigationType == .linkActivated {
       let url = navigationAction.request.url
       let safariView = SFSafariViewController(url: url!)
