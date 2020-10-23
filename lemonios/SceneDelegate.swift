@@ -72,6 +72,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let hash = components.fragment
 
     if scheme != "hduhelplemon" {
+      if scheme == "yibans" {
+        UIApplication.shared.open(url)
+      }
       if host?.hasSuffix("hduhelp.com") ?? true {
         fire(nativeLogin: true, route: nil, altView: .safariView(url: url))
       } else {

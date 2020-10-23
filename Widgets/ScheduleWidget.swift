@@ -107,7 +107,7 @@ struct WidgetScheduleEntryView : View {
   var checkInUrlString: String? {
     let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
     let url = sharedUd!.string(forKey: "sklUrl")
-    return url != nil && !url!.isEmpty ? url : "yibanapp:///"
+    return url != nil && !url!.isEmpty ? url : "yibans:///"
   }
   let scheduleAppUrl = URL(string: "hduhelplemon://#/app/schedule")!
   let sklSetupUrl = URL(string: "hduhelplemon:///_skl_setup")!
