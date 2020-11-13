@@ -109,8 +109,15 @@ struct WidgetScheduleEntryView : View {
     let url = sharedUd!.string(forKey: "sklUrl")
     return url != nil && !url!.isEmpty ? url : "yibans:///"
   }
-  let scheduleAppUrl = URL(string: "hduhelplemon://#/app/schedule")!
-  let sklSetupUrl = URL(string: "hduhelplemon:///_skl_setup")!
+  static let scheduleAppUrl = URL(string: "hduhelplemon://#/app/schedule")!
+  static let sklSetupUrl = URL(string: "hduhelplemon:///_skl_setup")!
+  #if arch(x86_64)
+  let widgetUrl = scheduleAppUrl
+  #else
+  let widgetUrl = checkInUrlString != nil
+    ? URL(string: checkInUrlString!)!
+    : sklSetupUrl
+  #endif
 
   func itemView (_ item: LMWidgetScheduleItem) -> some View {
     VStack(alignment: .leading) {
@@ -131,6 +138,8 @@ struct WidgetScheduleEntryView : View {
     HStack(alignment: .center) {
       Text(family == .systemSmall ? "下节课" : "之后的课").bold().foregroundColor(.accentColor)
       Spacer()
+      #if !arch(x86_64)
+      // Intel Macs don't support Yiban App, so no way can it support checkin.
       switch family {
       case .systemSmall:
         Text(
@@ -151,6 +160,7 @@ struct WidgetScheduleEntryView : View {
           }
         }
       }
+      #endif
     }
   }
 
@@ -171,11 +181,7 @@ struct WidgetScheduleEntryView : View {
             } else {
               emptyView()
             }
-          }.widgetURL(
-            checkInUrlString != nil
-            ? URL(string: checkInUrlString!)!
-            : sklSetupUrl
-          )
+          }.widgetURL(widgetUrl)
         case .systemMedium:
           VStack(alignment: .leading) {
             titleView()
@@ -189,7 +195,7 @@ struct WidgetScheduleEntryView : View {
             } else {
               emptyView()
             }
-          }.widgetURL(scheduleAppUrl)
+          }.widgetURL(Self.scheduleAppUrl)
         default: Text("尚不支持此尺寸")
         }
       }
