@@ -32,14 +32,8 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
   private struct Response: Codable {
     var data: ResponseData
   }
-
-  private static var token: String? {
-    let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
-    return sharedUd?.string(forKey: "token")
-  }
-  private static var version: String? {
-    Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-  }
+  
+  static let common = SMWidgetCommon()
 
   static func fetchData (completion: @escaping ([Self]?) -> Void) {
     let decoder = JSONDecoder()
@@ -47,10 +41,7 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
 
     AF.request(
       "https://api.hduhelp.com/base/v2/student/schedule/now",
-      headers: [
-        "User-Agent": "Lemon_iOS_WidgetKit/\(Self.version ?? "Unknown") Lemon_iOS/\(Self.version ?? "Unknown") Alamofire Lemon_iOS",
-        "Authorization": "token \(Self.token ?? "")"
-      ]
+      headers: common.getHeaders()
     ).validate().responseDecodable(of: Response.self, decoder: decoder) { res in
       switch res.result {
       case .success(let response):

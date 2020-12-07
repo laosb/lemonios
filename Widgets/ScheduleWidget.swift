@@ -104,7 +104,9 @@ struct WidgetScheduleEntryView : View {
   @Environment(\.widgetFamily) var family: WidgetFamily
   var entry: ScheduleProvider.Entry
 
-  var checkInUrlString: String? {
+  let common = SMWidgetCommon()
+
+  static var checkInUrlString: String? {
     let sharedUd = UserDefaults.init(suiteName: "group.help.hdu.lemon.ios")
     let url = sharedUd!.string(forKey: "sklUrl")
     return url != nil && !url!.isEmpty ? url : "yibans:///"
@@ -114,8 +116,8 @@ struct WidgetScheduleEntryView : View {
   #if arch(x86_64)
   let widgetUrl = scheduleAppUrl
   #else
-  let widgetUrl = checkInUrlString != nil
-    ? URL(string: checkInUrlString!)!
+  let widgetUrl = Self.checkInUrlString != nil
+    ? URL(string: Self.checkInUrlString!)!
     : sklSetupUrl
   #endif
 
@@ -143,20 +145,20 @@ struct WidgetScheduleEntryView : View {
       switch family {
       case .systemSmall:
         Text(
-          checkInUrlString != nil ? "点击签到" : "设置签到"
+          Self.checkInUrlString != nil ? "点击签到" : "设置签到"
         ).font(.footnote).foregroundColor(.gray)
       default:
         HStack(spacing: 5) {
-          if checkInUrlString != nil {
+          if Self.checkInUrlString != nil {
 //            Link(destination: sklSetupUrl) {
 //              Image(systemName: "gear")
 //                .imageScale(.medium)
 //                .font(.body)
 //            }
 //              .capsuleLink(color: .white, bg: .gray)
-            Link("签到", destination: URL(string: checkInUrlString!)!).capsuleLink()
+            Link("签到", destination: URL(string: Self.checkInUrlString!)!).capsuleLink()
           } else {
-            Link("设置签到", destination: sklSetupUrl).capsuleLink()
+            Link("设置签到", destination: Self.sklSetupUrl).capsuleLink()
           }
         }
       }
@@ -167,9 +169,7 @@ struct WidgetScheduleEntryView : View {
   var body: some View {
     VStack {
       if entry.errored {
-        Spacer()
-        Text("发生错误").opacity(0.8)
-        Spacer()
+        common.errorView()
       } else {
         switch family {
         case .systemSmall:

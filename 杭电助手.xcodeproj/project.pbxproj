@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0C3193257E29BB00D465AF /* SchoolCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C3113257E1C3100D465AF /* SchoolCardModel.swift */; };
+		2A0C31AA257E29C100D465AF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C3136257E202A00D465AF /* Common.swift */; };
+		2A0C31C1257E2F3500D465AF /* SchoolCardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C314E257E294900D465AF /* SchoolCardWidget.swift */; };
 		2A0ECFC2242A428400A261F7 /* ic_neon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0ECFBF242A428400A261F7 /* ic_neon@2x.png */; };
 		2A0ECFC3242A428400A261F7 /* ic_neon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0ECFC0242A428400A261F7 /* ic_neon.png */; };
 		2A0ECFC4242A428400A261F7 /* ic_neon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A0ECFC1242A428400A261F7 /* ic_neon@3x.png */; };
@@ -274,6 +277,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A0C3113257E1C3100D465AF /* SchoolCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCardModel.swift; sourceTree = "<group>"; };
+		2A0C3136257E202A00D465AF /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2A0C314E257E294900D465AF /* SchoolCardWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCardWidget.swift; sourceTree = "<group>"; };
 		2A0ECFBF242A428400A261F7 /* ic_neon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_neon@2x.png"; sourceTree = "<group>"; };
 		2A0ECFC0242A428400A261F7 /* ic_neon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_neon.png; sourceTree = "<group>"; };
 		2A0ECFC1242A428400A261F7 /* ic_neon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_neon@3x.png"; sourceTree = "<group>"; };
@@ -664,8 +670,11 @@
 		2AA6C74624C9869B00C12CEB /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				2A88402124A1F7B70082580A /* ScheduleWidget.swift */,
+				2A0C3136257E202A00D465AF /* Common.swift */,
 				2A45652E24A7B15A000CB338 /* ScheduleModel.swift */,
+				2A88402124A1F7B70082580A /* ScheduleWidget.swift */,
+				2A0C3113257E1C3100D465AF /* SchoolCardModel.swift */,
+				2A0C314E257E294900D465AF /* SchoolCardWidget.swift */,
 				2AA6C74724C9869B00C12CEB /* Widgets.swift */,
 				2AA6C74924C9869C00C12CEB /* Assets.xcassets */,
 				2AA6C74B24C9869C00C12CEB /* Info.plist */,
@@ -1370,6 +1379,9 @@
 				2AA6C75424C986C000C12CEB /* ScheduleModel.swift in Sources */,
 				2AA6C75324C986C000C12CEB /* ScheduleWidget.swift in Sources */,
 				2AA6C74824C9869B00C12CEB /* Widgets.swift in Sources */,
+				2A0C31C1257E2F3500D465AF /* SchoolCardWidget.swift in Sources */,
+				2A0C3193257E29BB00D465AF /* SchoolCardModel.swift in Sources */,
+				2A0C31AA257E29C100D465AF /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1936,6 +1948,7 @@
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = Widgets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1968,6 +1981,7 @@
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = Widgets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
