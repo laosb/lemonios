@@ -177,8 +177,6 @@
 	<string>public.app-category.utilities</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>开启定位将允许杭电地图等功能展示您的实时位置。</string>
 	<key>NSUserActivityTypes</key>
 	<dict>
 		<key>OpenCard</key>
