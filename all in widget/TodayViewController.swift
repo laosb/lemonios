@@ -15,7 +15,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     var sData = Array<LMSchedule>()
     var srData = LMWidgetSunRun()
     var elecData = LMWidgetElec()
-    var cardData = LMWidgetCard()
     //var allVc: UIHostingController<AllInWidget>?
     var Av: Bool = false
     var isEx: Bool = false
@@ -32,7 +31,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
            }
         //print(self.sData.count)
         allVc = UIHostingController(rootView:
-            AllInWidget(elecData: self.elecData, cardData: self.cardData, srData: self.srData, sData: self.sData, availabe: self.Av, isExpanded: self.isEx, cardChargeFunc: { cb in
+            AllInWidget(elecData: self.elecData, srData: self.srData, sData: self.sData, availabe: self.Av, isExpanded: self.isEx, cardChargeFunc: { cb in
                 self.extensionContext?.open(URL(string: "alipays://platformapi/startapp?saId=10000007&qrcode=https%3A%2F%2Fqr.alipay.com%2Fs7x07977akyiot2uv5pme45%3F_s%3Dweb-other")!) {success in cb(success)}
             },scheduleChargeFunc: { cb in
                 self.extensionContext?.open(URL(string: "https://skl.hduhelp.com/?type=2&v=5")!
@@ -125,20 +124,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                         self.srData.date = latestData?.object(forKey: "date") as? String
                     //self.renderData(srData: srData)
                         
-                        
-                        let CardData = newRawData.object(forKey: "card") as? NSDictionary
-                        
-                        self.cardData.available = CardData?.object(forKey: "available") as? Bool
-                        indexData = CardData?.object(forKey: "data") as? NSDictionary
-                        
-                        let remaining = indexData?.object(forKey: "remaining") as? Double ?? 0
-                        self.cardData.remaining = String(format:"%.2lf", abs(remaining) < 0.01 ? 0.0 : remaining)
-                        let today = (indexData?.object(forKey: "today") as? Double ?? 0) * -1
-                        self.cardData.today = String(format:"%.2lf", abs(today) < 0.01 ? 0.0 : today)
-                        
-                        if remaining <= 15.0 {
-                            self.cardData.tip = "⚠️ 余额较少，记得充值"
-                        }
                         self.Av = true
                     case .failure:
                         //                            print(response)

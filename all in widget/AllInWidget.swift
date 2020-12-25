@@ -12,7 +12,6 @@ import Alamofire
 struct AllInWidget: View {
     
     var elecData: LMWidgetElec?
-    var cardData: LMWidgetCard?
     var srData: LMWidgetSunRun?
     var sData: Array<LMSchedule>?
     var availabe: Bool?
@@ -27,8 +26,6 @@ struct AllInWidget: View {
                 Divider()
                 ScheduleWidget(sData: self.sData, availabe: self.availabe ?? false, chargeFunc: self.scheduleChargeFunc).frame(height: 110)
                 Divider()
-                CardWidget(cardData: self.cardData, chargeFunc: self.cardChargeFunc).frame(height: 90)
-                Divider()
                 SunRunWidget(srData: self.srData).frame(height: 90)
                 Divider()
                 ElectricWidget(elecData: self.elecData).frame(height: 90)
@@ -37,9 +34,7 @@ struct AllInWidget: View {
                 Spacer()
             }
             else {
-                CardWidget(cardData: self.cardData, chargeFunc: self.cardChargeFunc).frame(height: 100)
-            }
-            
+              ScheduleWidget(sData: self.sData, availabe: self.availabe ?? false, chargeFunc: self.scheduleChargeFunc).frame(height: 110)            }
         }
     }
 }
