@@ -56,7 +56,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let token = sharedUd?.string(forKey: "token")
         if token != nil {
             sData.removeAll()
-            AF.request("https://api.hduhelp.com/base/student/schedule/now", headers: [
+            AF.request("https://api.hduhelp.com/slamon_base/student/schedule/now", headers: [
                 "Authorization": "token \(token ?? "")"
             ]).validate().responseJSON(completionHandler: { response in
                 switch response.result {
@@ -64,18 +64,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                     self.sData.removeAll()
                     let json = value
                     let newRawData = (json as! NSDictionary).object(forKey: "data") as! NSDictionary
-                    let tempData = (newRawData.object(forKey: "Schedule") as! Array<NSDictionary>)
+                    let tempData = (newRawData.object(forKey: "scheduleSlots") as! Array<NSDictionary>)
                     var rip: Int
                     if (tempData.count >= 2) {
                         rip = 2
                     } else {rip = tempData.count}
                     for i in 0..<rip {
-                        let course = tempData[i].object(forKey: "COURSE") as! String
-                        let classRoom = tempData[i].object(forKey: "CLASSROOM") as! String
-                        let isTomorrow = newRawData.object(forKey: "IsTomorrow") as! Bool
-                        let startTime = tempData[i].object(forKey: "STARTTIME") as! String
-                        let endTime = tempData[i].object(forKey: "ENDTIME") as! String
-                        let teacher = tempData[i].object(forKey: "TEACHER") as! String
+                        let course = tempData[i].object(forKey: "course") as! String
+                        let classRoom = tempData[i].object(forKey: "classroom") as! String
+                        let isTomorrow = newRawData.object(forKey: "isTomorrow") as! Bool
+                        let startTime = tempData[i].object(forKey: "startTimeStr") as! String
+                        let endTime = tempData[i].object(forKey: "endTimeStr") as! String
+                        let teacher = tempData[i].object(forKey: "teacher") as! String
                         
                         var tempSData = LMSchedule()
                         tempSData.classRoom = classRoom
@@ -112,7 +112,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                         let SunRunData = newRawData.object(forKey: "sunrun") as? NSDictionary
                         
                         self.srData.available = SunRunData?.object(forKey: "available") as? Bool
-                        var indexData = SunRunData?.object(forKey: "data") as? NSDictionary
+                        let indexData = SunRunData?.object(forKey: "data") as? NSDictionary
                         self.srData.endTime = indexData?.object(forKey: "endTime") as? String
                         let latestData = indexData?.object(forKey: "latest") as? NSDictionary
                         self.srData.domain = latestData?.object(forKey: "domain") as? String

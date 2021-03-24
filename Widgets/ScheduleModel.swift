@@ -40,7 +40,7 @@ struct LMWidgetScheduleItem: Codable, Identifiable {
     decoder.dateDecodingStrategy = .secondsSince1970
 
     AF.request(
-      "https://api.hduhelp.com/base/v2/student/schedule/now",
+      "https://api.hduhelp.com/salmon_base/student/schedule/now",
       headers: common.getHeaders()
     ).validate().responseDecodable(of: Response.self, decoder: decoder) { res in
       switch res.result {
