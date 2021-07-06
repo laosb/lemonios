@@ -1589,7 +1589,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -1599,7 +1599,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1621,7 +1621,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -1631,7 +1631,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1731,7 +1731,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1740,7 +1740,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -1756,7 +1756,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "schedulewidget/快捷课表.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = schedulewidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1765,7 +1765,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.schedulewidget;
 				PRODUCT_NAME = "下节课";
 				SKIP_INSTALL = YES;
@@ -1785,7 +1785,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = Widgets/Info.plist;
@@ -1796,7 +1796,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.Widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1818,7 +1818,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = Widgets/Info.plist;
@@ -1829,7 +1829,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.Widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1849,7 +1849,7 @@
 				CODE_SIGN_ENTITLEMENTS = "watch Extension/watch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_PREVIEWS = YES;
@@ -1859,7 +1859,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1879,7 +1879,7 @@
 				CODE_SIGN_ENTITLEMENTS = "watch Extension/watch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_ASSET_PATHS = "\"watch Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				ENABLE_PREVIEWS = YES;
@@ -1889,7 +1889,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1910,11 +1910,11 @@
 				CODE_SIGN_ENTITLEMENTS = watch/watch.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1935,11 +1935,11 @@
 				CODE_SIGN_ENTITLEMENTS = watch/watch.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1957,7 +1957,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1966,7 +1966,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
@@ -1982,7 +1982,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "sunrunwidget/阳光长跑.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = sunrunwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1991,7 +1991,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.sunrunwidget;
 				PRODUCT_NAME = "阳光长跑";
 				SKIP_INSTALL = YES;
@@ -2007,7 +2007,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2016,7 +2016,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
@@ -2032,7 +2032,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = electrictwidget/electrictwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = electrictwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2041,7 +2041,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = help.hdu.lemon.ios.electrictwidget;
 				PRODUCT_NAME = "智能电费";
 				SKIP_INSTALL = YES;
@@ -2059,11 +2059,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = "HDU help sticker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.HDU-help-sticker";
 				PRODUCT_NAME = "杭电助手时柒";
 				SKIP_INSTALL = YES;
@@ -2079,11 +2079,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = "HDU help sticker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.HDU-help-sticker";
 				PRODUCT_NAME = "杭电助手时柒";
 				SKIP_INSTALL = YES;
@@ -2098,7 +2098,7 @@
 				CODE_SIGN_ENTITLEMENTS = "all in widget/all in widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = "all in widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2107,7 +2107,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.all-in-widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2124,7 +2124,7 @@
 				CODE_SIGN_ENTITLEMENTS = "all in widget/all in widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 69;
+				CURRENT_PROJECT_VERSION = 80;
 				DEVELOPMENT_TEAM = LG57TUQ726;
 				INFOPLIST_FILE = "all in widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2133,7 +2133,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.4;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "help.hdu.lemon.ios.all-in-widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

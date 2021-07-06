@@ -21,9 +21,8 @@ struct NewFuncView: View {
       NavigationView {
         List {
           NewFuncRow(versionContent: LMNewFuncGuideVersionContent(
-            version: "2.4", content: [
-              "新增「一卡通」小组件，适用于iOS 14、macOS 11及以上版本。有三种尺寸可选。",
-              "请注意，旧的适用iOS 13及以下版本的小组件已经逐步停止维护，请注意升级。"
+            version: "2.5", content: [
+              "稳定性更新。"
             ]
           ))
         }
