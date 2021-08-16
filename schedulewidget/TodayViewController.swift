@@ -3,7 +3,7 @@
 //  ScheduleWidget
 //
 //  Created by ljz on 2019/11/20.
-//  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 //
 import UIKit
 import NotificationCenter

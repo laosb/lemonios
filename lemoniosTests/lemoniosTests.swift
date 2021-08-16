@@ -3,7 +3,7 @@
 //  lemoniosTests
 //
 //  Created by Wexpo Lyu on 2019/5/25.
-//  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 //
 
 import XCTest

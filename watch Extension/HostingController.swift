@@ -3,7 +3,7 @@
 //  watch Extension
 //
 //  Created by Shibo Lyu on 2019/12/6.
-//  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 //
 
 // https://medium.com/better-programming/watchconnectivity-swift-1f8cffb7c7a9

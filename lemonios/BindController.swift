@@ -3,7 +3,7 @@
 //  杭电助手
 //
 //  Created by ljz on 2020/6/2.
-//  Copyright © 2020 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 //
 
 import Foundation

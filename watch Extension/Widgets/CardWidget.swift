@@ -3,7 +3,7 @@
 //  lemonios
 //
 //  Created by ljz on 2019/10/30.
-//  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 //
 
 import SwiftUI

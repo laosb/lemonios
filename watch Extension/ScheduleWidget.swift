@@ -3,7 +3,7 @@
 //  watch Extension
 //
 //  Created by ljz on 2019/12/6.
-//  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 //
 
 import SwiftUI

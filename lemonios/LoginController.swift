@@ -3,7 +3,7 @@
 //  杭电助手
 //
 //  Created by ljz on 2019/11/26.
-//  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 ///Users/ljz/Desktop/HDU_IOS/lemonios/lemonios/AppDelegate.swift
 
 import Foundation

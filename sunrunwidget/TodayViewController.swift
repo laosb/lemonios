@@ -3,7 +3,7 @@
 //  sunrunwidget
 //
 //  Created by Shibo Lyu on 2019/11/8.
-//  Copyright © 2019 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 //
 
 import UIKit

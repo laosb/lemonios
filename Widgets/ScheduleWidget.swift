@@ -3,7 +3,7 @@
 //  WidgetSchedule
 //
 //  Created by Shibo Lyu on 2020/6/23.
-//  Copyright © 2020 Inkwire Tech (Hangzhou) Co., Ltd. All rights reserved.
+//  Licensed under MIT License (https://laosb.mit-license.org).
 //
 
 import WidgetKit
